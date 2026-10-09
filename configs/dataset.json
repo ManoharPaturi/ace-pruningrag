@@ -1,0 +1,9 @@
+{
+  "repository": "fishsure/RM3QA",
+  "revision": "f56a19b1348559be73b7ae4e4626d0d2ed778b21",
+  "filename": "RM3QA_5web.jsonl.bz2",
+  "path": "data/raw/RM3QA_5web.jsonl.bz2",
+  "bytes": 64803084,
+  "sha256": "8a6732c65020ff39a14b605a2daf67721528eca0727645c3a877aaf82170a9bc",
+  "purpose": "phase1_data_validation_and_retrieval_smoke_only"
+}

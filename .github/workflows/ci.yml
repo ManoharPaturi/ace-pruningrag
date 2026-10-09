@@ -1,0 +1,38 @@
+name: Checks
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.10"
+      - run: uv sync --locked --no-editable --python 3.12
+      - run: uv run --no-editable ruff check src tests scripts
+      - run: uv run --no-editable ruff format --check src tests scripts
+      - run: uv run --no-editable pytest -q
+
+  data-smoke:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.10"
+      - run: uv sync --locked --no-editable --python 3.12
+      - run: uv run --no-editable ace-rag fetch-data
+      - run: uv run --no-editable ace-rag profile-data --output runs/ci/dataset_profile.json
+      - run: uv run --no-editable ace-rag smoke --output runs/ci/smoke
+      - run: uv run --no-editable python scripts/verify_smoke.py --run runs/ci/smoke
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase1-real-data-smoke
+          path: runs/ci/
+          retention-days: 7

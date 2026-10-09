@@ -1,0 +1,23 @@
+{
+  "status": "retrieval_smoke_completed",
+  "experiment_id": "phase1-bm25-retrieval-smoke-v1",
+  "queries": 25,
+  "mean_candidates": 72.12,
+  "mean_selected_chunks": 3,
+  "mean_context_words": 575.2,
+  "maximum_context_words": 600,
+  "mean_retrieval_seconds": 0.005521656759083271,
+  "llm_calls": 0,
+  "api_cost_usd": 0,
+  "answer_accuracy": null,
+  "retrieval_recall": null,
+  "complete_evidence": null,
+  "token_count": null,
+  "published_baseline_reproduced": false,
+  "limitations": [
+    "Web-only BM25 smoke; no API retrieval, generator, router, dense model, or reranker.",
+    "First records in file order; not a representative quality evaluation.",
+    "Whitespace words are a smoke-test limit, not model context tokens.",
+    "Evidence completeness and retrieval relevance labels are not available."
+  ]
+}
