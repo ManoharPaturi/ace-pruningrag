@@ -1,0 +1,20 @@
+{
+  "scope": "lexical_selection_engineering_smoke",
+  "tokenizer": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181",
+  "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "assets": [
+    {
+      "local_path": "data/tokenizers/bge-m3/tokenizer.json",
+      "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/tokenizer.json",
+      "bytes": 17098108,
+      "sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08"
+    }
+  ],
+  "max_total_bytes": 18000000,
+  "dataset_config": "configs/dataset.json",
+  "limit": 25,
+  "pool_size": 10,
+  "chunk_words": 200,
+  "context_tokens": 1536,
+  "max_items": 3
+}

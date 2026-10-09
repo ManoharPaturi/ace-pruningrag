@@ -1,0 +1,33 @@
+{
+  "status": "selection_engineering_smoke_completed",
+  "queries": 25,
+  "methods": [
+    "top_k",
+    "mmr",
+    "coverage",
+    "joint",
+    "exact"
+  ],
+  "budget_tokens": 1536,
+  "tokenizer": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181",
+  "maximum_context_tokens": {
+    "top_k": 1518,
+    "mmr": 1518,
+    "coverage": 1254,
+    "joint": 1518,
+    "exact": 1518
+  },
+  "maximum_joint_objective_gap": 0.0035678879972170785,
+  "answer_accuracy": null,
+  "evidence_completeness": null,
+  "published_baseline_reproduced": false,
+  "llm_calls": 0,
+  "limitations": [
+    "Engineering smoke on first file-order queries; no held-out quality evaluation.",
+    "Query-term occurrence is a lexical proxy, not evidence requirement support.",
+    "No predicted true requirement groups or conflicts: both features disabled.",
+    "Exact search optimizes this experimental objective, not gold evidence quality.",
+    "BGE tokenizer counts evidence including provenance; generator prompt overhead absent.",
+    "Web-only real pool; API joint selection is currently unit-tested only."
+  ]
+}

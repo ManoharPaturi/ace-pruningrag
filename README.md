@@ -60,3 +60,7 @@ Raw datasets, model weights, credentials, caches, and full traces are ignored. C
 5. Full ablations, research package, and FastAPI/Next.js demo.
 
 Original resources: [PruningRAG code](https://github.com/USTCAGI/PruningRAG), [paper](https://arxiv.org/abs/2409.13694), and [RM3QA dataset](https://huggingface.co/datasets/fishsure/RM3QA). Upstream code reuse terms are unresolved; this repository currently contains an independent implementation and references to the original work.
+
+## Phase 2 selection milestone
+
+The shared evidence selector now implements top-K, MMR, coverage-only, joint pair selection, and bounded exact search. A real 25-question smoke and independent verifier check 125 contexts with a pinned tokenizer. This is an engineering milestone; lexical proxies do not establish evidence completeness or answer quality. See [Phase 2 report](docs/PHASE2_SELECTION.md) for the objective, results, reproducible commands, and remaining evaluation gates.
