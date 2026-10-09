@@ -1,0 +1,145 @@
+{
+  "config": {
+    "revision": "pinned-BGE-model-pair",
+    "scope": "adapted_web_retrieval_smoke",
+    "max_total_bytes": 4700000000,
+    "assets": [
+      {
+        "local_path": "data/models/encoder/config.json",
+        "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/config.json",
+        "bytes": 687,
+        "sha256": "26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa"
+      },
+      {
+        "local_path": "data/models/encoder/tokenizer_config.json",
+        "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/tokenizer_config.json",
+        "bytes": 444,
+        "sha256": "a62b2b6784f990259fddef5f16388693a8043be4f69179e6a5257eeb3f9abac4"
+      },
+      {
+        "local_path": "data/models/encoder/special_tokens_map.json",
+        "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/special_tokens_map.json",
+        "bytes": 964,
+        "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835"
+      },
+      {
+        "local_path": "data/models/encoder/pytorch_model.bin",
+        "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/pytorch_model.bin",
+        "bytes": 2271145830,
+        "sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38"
+      },
+      {
+        "local_path": "data/models/encoder/tokenizer.json",
+        "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/tokenizer.json",
+        "bytes": 17098108,
+        "sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08"
+      },
+      {
+        "local_path": "data/models/encoder/sentencepiece.bpe.model",
+        "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/sentencepiece.bpe.model",
+        "bytes": 5069051,
+        "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+      },
+      {
+        "local_path": "data/models/reranker/config.json",
+        "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3/resolve/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e/config.json",
+        "bytes": 795,
+        "sha256": "13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a"
+      },
+      {
+        "local_path": "data/models/reranker/tokenizer_config.json",
+        "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3/resolve/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e/tokenizer_config.json",
+        "bytes": 1173,
+        "sha256": "7e4c1cc848840aeccdd763458c18dd525eb0f795c992e00ebe9c28554e7db2d4"
+      },
+      {
+        "local_path": "data/models/reranker/special_tokens_map.json",
+        "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3/resolve/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e/special_tokens_map.json",
+        "bytes": 964,
+        "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835"
+      },
+      {
+        "local_path": "data/models/reranker/model.safetensors",
+        "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3/resolve/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e/model.safetensors",
+        "bytes": 2271071852,
+        "sha256": "d9e3e081faff1eefb84019509b2f5558fd74c1a05a2c7db22f74174fcedb5286"
+      },
+      {
+        "local_path": "data/models/reranker/tokenizer.json",
+        "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3/resolve/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e/tokenizer.json",
+        "bytes": 17098273,
+        "sha256": "69564b696052886ed0ac63fa393e928384e0f8caada38c1f4864a9bfbf379c15"
+      },
+      {
+        "local_path": "data/models/reranker/sentencepiece.bpe.model",
+        "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3/resolve/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e/sentencepiece.bpe.model",
+        "bytes": 5069051,
+        "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+      }
+    ],
+    "models": {
+      "encoder": {
+        "repository": "BAAI/bge-m3",
+        "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+        "directory": "data/models/encoder",
+        "weight_file": "pytorch_model.bin",
+        "weight_sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38"
+      },
+      "reranker": {
+        "repository": "BAAI/bge-reranker-v2-m3",
+        "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+        "directory": "data/models/reranker",
+        "weight_file": "model.safetensors",
+        "weight_sha256": "d9e3e081faff1eefb84019509b2f5558fd74c1a05a2c7db22f74174fcedb5286"
+      }
+    },
+    "dataset_config": "configs/dataset.json",
+    "limit": 5,
+    "chunk_words": 200,
+    "top_k": 3,
+    "max_context_words": 600,
+    "dense_top_k": 10,
+    "batch_size": 4,
+    "max_encoder_tokens": 8192,
+    "max_pair_tokens": 8192,
+    "precision": "float32",
+    "seed": 42,
+    "publication_results": false
+  },
+  "dataset": {
+    "repository": "fishsure/RM3QA",
+    "revision": "f56a19b1348559be73b7ae4e4626d0d2ed778b21",
+    "filename": "RM3QA_5web.jsonl.bz2",
+    "path": "data/raw/RM3QA_5web.jsonl.bz2",
+    "bytes": 64803084,
+    "sha256": "8a6732c65020ff39a14b605a2daf67721528eca0727645c3a877aaf82170a9bc",
+    "purpose": "phase1_data_validation_and_retrieval_smoke_only"
+  },
+  "query_ids": [
+    "7bb29eb4-12f9-45f9-bf8a-66832b3c8962",
+    "a2486535-98e7-4876-9880-80374eac2fa8",
+    "161a89f3-7a70-4e12-a1a2-7832e098b0a7",
+    "30395ec2-4247-4a23-8003-37dcfdf1531c",
+    "55b219e5-ba31-4318-a73d-551f0fb9c546"
+  ],
+  "config_sha256": "6ff59584e6b2b5c2291375a56562039cab5ca008f20c3b6993d6643cdb969cff",
+  "trace_sha256": "8a96ab9332b65efa0ac4cec03cc50cb6d73e457aaa5ccebad6e81e0e4f87d13c",
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "source_sha256": {
+    "src/ace_pruningrag/__init__.py": "f0cd4d60ccc731f9c99fca9f902c57d0f4c8c225ca36522a4fa72fae25e4b32e",
+    "src/ace_pruningrag/artifacts.py": "a0a81f3c7559d7ac4ef454c76a0667ace757c52c058fb622a03eb1c6376019cd",
+    "src/ace_pruningrag/assets.py": "5f620a9f45696f4304769c92960ca0750f3c50f283f2707ef7b25cc2c0f3d3fb",
+    "src/ace_pruningrag/cli.py": "58948fa25db426745bb9774bdb7c34b846b63cd86861d37c17255f0dbadd7feb",
+    "src/ace_pruningrag/compatibility.py": "c5ea574867400232095aec84c9d98ca21838b9363e8950b7f677ab2fab2d8e14",
+    "src/ace_pruningrag/dataset.py": "e12a34b02d0a15e444c01049ef1057e51ad3e9cc07c5eea6cc15bfa1a15805fe",
+    "src/ace_pruningrag/evidence.py": "b117b7e1d83f8acf3f7be01199e88921a07400319a5aeacc02daeefc69243def",
+    "src/ace_pruningrag/experiment.py": "8bd8654447a8936df953047c5b40c6eb1b44dc1d036e299c8a0865c6d5555224",
+    "src/ace_pruningrag/fetch.py": "f08e24a4cd5ba8e75ab41ce88fe2939c2430f6f2d87aa1946d2f89c762c70089",
+    "src/ace_pruningrag/finance_api.py": "6338f11c04127520271962e1ed6635cea7cff56b9c5b636c856c521f8053e77d",
+    "src/ace_pruningrag/learned_retrieval.py": "0abb6d75aa84cdeb3a646715b79cab6ab03d0f82f49ec5526a109974972a3054",
+    "src/ace_pruningrag/metrics.py": "72e50ee92d918b2afdf95e46bf1cd4c2ef794adf5f88998fcec511938a46ec6d",
+    "src/ace_pruningrag/retrieval.py": "5ca0cd749f9997642767b4519920b8cdb406d455e395277060e959d0de360f2d",
+    "src/ace_pruningrag/upstream.py": "7242dfe3b79fae37e25c98f582379c3b4bf97e7c3c47d0729416b16930cc0cfd"
+  }
+}

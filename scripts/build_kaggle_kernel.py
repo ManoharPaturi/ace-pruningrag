@@ -9,9 +9,11 @@ import zlib
 from pathlib import Path
 
 
-def build(root: Path, output: Path, owner: str) -> dict:
+def build(root: Path, output: Path, owner: str, mode: str = "bootstrap") -> dict:
     if not re.fullmatch(r"[A-Za-z0-9_-]+", owner):
         raise ValueError("invalid Kaggle owner")
+    if mode not in {"bootstrap", "retrieval"}:
+        raise ValueError("unsupported kernel mode")
     paths = sorted((root / "src/ace_pruningrag").glob("*.py"))
     paths += [
         root / "configs" / name
@@ -21,6 +23,15 @@ def build(root: Path, output: Path, owner: str) -> dict:
             "retrieval_smoke.json",
         )
     ]
+    if mode == "retrieval":
+        paths += [
+            root / "configs" / name
+            for name in (
+                "compatibility.json",
+                "crag_finance.json",
+                "learned_smoke.json",
+            )
+        ]
     files = {str(path.relative_to(root)): path.read_text(encoding="utf-8") for path in paths}
     hashes = {name: hashlib.sha256(value.encode()).hexdigest() for name, value in files.items()}
     payload = base64.b64encode(
@@ -33,15 +44,18 @@ def build(root: Path, output: Path, owner: str) -> dict:
             ).encode()
         )
     ).decode()
-    template = (root / "scripts/kaggle_bootstrap.py").read_text(encoding="utf-8")
+    template_name = "kaggle_bootstrap.py" if mode == "bootstrap" else "kaggle_retrieval_pilot.py"
+    template = (root / "scripts" / template_name).read_text(encoding="utf-8")
     if template.count('PAYLOAD = "__BUNDLE__"') != 1:
         raise ValueError("bundle placeholder missing or repeated")
     source = template.replace('PAYLOAD = "__BUNDLE__"', f"PAYLOAD = {payload!r}")
     output.mkdir(parents=True, exist_ok=False)
     (output / "bootstrap.py").write_text(source, encoding="utf-8")
     metadata = {
-        "id": f"{owner}/ace-pruningrag-phase1-bootstrap",
-        "title": "ACE PruningRAG Phase1 Bootstrap",
+        "id": f"{owner}/ace-pruningrag-phase1-"
+        + ("bootstrap" if mode == "bootstrap" else "retrieval-pilot"),
+        "title": "ACE PruningRAG Phase1 "
+        + ("Bootstrap" if mode == "bootstrap" else "Retrieval Pilot"),
         "code_file": "bootstrap.py",
         "language": "python",
         "kernel_type": "script",
@@ -64,5 +78,6 @@ if __name__ == "__main__":
     parser.add_argument("--owner", required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--root", type=Path, default=Path.cwd())
+    parser.add_argument("--mode", choices=["bootstrap", "retrieval"], default="bootstrap")
     args = parser.parse_args()
-    print(json.dumps(build(args.root.resolve(), args.output, args.owner), indent=2))
+    print(json.dumps(build(args.root.resolve(), args.output, args.owner, args.mode), indent=2))

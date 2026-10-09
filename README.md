@@ -6,7 +6,11 @@ The research hypothesis is that selecting complementary web/API evidence jointly
 
 The revised roadmap was approved on 9 October 2026. See [the review](ROADMAP_REVIEW.md), [original roadmap](ACE_PruningRAG_5_Phase_Research_Roadmap.pdf), [evaluation protocol](docs/EVALUATION_PROTOCOL.md), and [reproduction report](docs/REPRODUCTION_REPORT.md).
 
-Phase 1 status: 26 tests pass; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test` and `data-smoke` checks.
+Phase 1 status: 36 tests pass; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test`, `data-smoke`, and `finance-smoke` checks.
+
+Continuation: a separate compatibility copy resolves the startup constructor mismatch for `noise=0`, and two finance endpoints pass real HTTP tests on original CRAG snapshots. See [the continuation report](docs/PHASE1_CONTINUATION.md) for scope, source hashes, and the bounded learned-retrieval pilot.
+
+The five-query BGE-M3/BGE-reranker pilot completed on dual T4 GPUs. All returned contexts were independently verified; it is an adapted retrieval smoke with no generated answers or accuracy claims.
 
 ## Quick start
 

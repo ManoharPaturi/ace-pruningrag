@@ -1,0 +1,25 @@
+{
+  "status": "phase1_retrieval_pilot_completed",
+  "queries": 5,
+  "cuda_available": true,
+  "torch_version": "2.11.0+cu128",
+  "gpus": [
+    "Tesla T4",
+    "Tesla T4"
+  ],
+  "published_baseline_reproduced": false,
+  "llm_calls": 0,
+  "kernel": "ionrey/ace-pruningrag-phase1-retrieval-pilot",
+  "version": 1,
+  "source_bundle_verified": true,
+  "evidence_provenance_verified": true,
+  "finance_matches_local": true,
+  "artifacts_sha256": {
+    "bundle_manifest.json": "ad41fc342c47bbd368e05230e845366ed5960075834f4116e5f8ef0a04d4edae",
+    "compatibility.json": "d9accf0acb1e3ec531f02d6cdb52b67122c8aa6d634526add7eee40dc7551829",
+    "completion.json": "36368d9994774574c2d5c76f5e2d471a766f40a953887ec1f6ce6c63a6c20c8c",
+    "finance_smoke.json": "037e6c9235aff6c83694bfcc3da81283e6bc4716ca883be6948d4a742d8350f7",
+    "learned/manifest.json": "099707dec1a2c36eb8048d6dfaefe525baf1454405425c17caf2fd5db75c915f",
+    "learned/summary.json": "55e62beeff45b075b234218c78165470bb35fbf5a233b823b03c528c9e4d05d6"
+  }
+}

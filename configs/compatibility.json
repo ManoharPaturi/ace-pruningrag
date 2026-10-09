@@ -1,0 +1,6 @@
+{
+  "upstream_config": "configs/upstream.json",
+  "main_sha256": "58667230d76bc54d41b1976c9e2457f9f4891466d7110e8133d7270a346724ae",
+  "supported_noise": 0,
+  "scope": "startup_constructor_compatibility_only"
+}

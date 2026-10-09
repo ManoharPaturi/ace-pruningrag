@@ -1,0 +1,46 @@
+{
+  "repository": "facebookresearch/CRAG",
+  "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+  "max_total_bytes": 2000000,
+  "scope": "company_to_ticker_and_market_cap_only",
+  "assets": [
+    {
+      "path": "mock_api/cragkg/finance/company_name.dict",
+      "local_path": "data/crag/finance/company_name.dict",
+      "bytes": 614789,
+      "sha256": "e92fcfb64911508705b59af046cfff8b4edc38ddd6dff391c27870f2cac94ca6",
+      "url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/finance/company_name.dict"
+    },
+    {
+      "path": "mock_api/cragkg/finance/finance_marketcap.sqlite",
+      "local_path": "data/crag/finance/finance_marketcap.sqlite",
+      "bytes": 303104,
+      "sha256": "3357344b67e039dc424c54d19f561ff2c97b7507df74d0388430984b62ca89cf",
+      "url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/finance/finance_marketcap.sqlite"
+    }
+  ],
+  "db_path": "data/crag/finance/finance_marketcap.sqlite",
+  "company_path": "data/crag/finance/company_name.dict",
+  "probe_queries": [
+    {
+      "endpoint": "/finance/get_ticker_by_name",
+      "query": "Apple Inc. Common Stock",
+      "expected": "AAPL"
+    },
+    {
+      "endpoint": "/finance/get_market_capitalization",
+      "query": "AAPL",
+      "expected": 2784634449820.876
+    },
+    {
+      "endpoint": "/finance/get_market_capitalization",
+      "query": "MSFT",
+      "expected": 3027754157239.0
+    },
+    {
+      "endpoint": "/finance/get_market_capitalization",
+      "query": "NONEXISTENT_SANITY_TICKER",
+      "expect_missing": true
+    }
+  ]
+}
