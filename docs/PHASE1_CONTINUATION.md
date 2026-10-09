@@ -44,6 +44,12 @@ Verified outcome: [private Kaggle pilot](https://www.kaggle.com/code/ionrey/ace-
 
 Mean per-query times in this small smoke were approximately 0.0075 seconds for BM25, 5.54 seconds for dense retrieval, and 6.39 seconds for dense+reranker. These exclude downloads/model loading and are not a representative speed benchmark. Encoder input length reached 1,931 tokens and reranker pair length 539; neither exceeded the 8,192-token cap, and no truncation was used. Accuracy and evidence recall remain null. Compact summaries, manifests, and completion records are in `results/phase1/learned_pilot_*.json`; full traces and logs remain ignored.
 
+### Inference environment isolation
+
+Version 1 completed, but its global pip install conflicted with Kaggle's bundled Gradio/Diffusers requirements. The current runner installs only the five pinned inference libraries into a temporary `--target` directory and starts inference in a fresh process that prepends that directory. It reuses the existing CUDA/PyTorch installation without changing the base library files.
+
+The driver checks actual imported library versions and records them with the results. The parent records base package versions before and after the run and requires them to match. A separate version 2 run tests this change under the same five-query protocol; version 1 artifacts remain preserved.
+
 ```bash
 uv run --no-editable python scripts/build_kaggle_kernel.py --mode retrieval --owner ionrey --output runs/kaggle/retrieval-kernel-v1
 uv tool run --from kaggle==2.2.4 kaggle kernels push -p runs/kaggle/retrieval-kernel-v1 --accelerator NvidiaTeslaT4 -t 1800

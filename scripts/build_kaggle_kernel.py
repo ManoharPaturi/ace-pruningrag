@@ -32,6 +32,7 @@ def build(root: Path, output: Path, owner: str, mode: str = "bootstrap") -> dict
                 "learned_smoke.json",
             )
         ]
+        paths.append(root / "scripts/learned_driver.py")
     files = {str(path.relative_to(root)): path.read_text(encoding="utf-8") for path in paths}
     hashes = {name: hashlib.sha256(value.encode()).hexdigest() for name, value in files.items()}
     payload = base64.b64encode(
