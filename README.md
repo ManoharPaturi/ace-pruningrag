@@ -64,3 +64,7 @@ Original resources: [PruningRAG code](https://github.com/USTCAGI/PruningRAG), [p
 ## Phase 2 selection milestone
 
 The shared evidence selector now implements top-K, MMR, coverage-only, joint pair selection, and bounded exact search. A real 25-question smoke and independent verifier check 125 contexts with a pinned tokenizer. This is an engineering milestone; lexical proxies do not establish evidence completeness or answer quality. See [Phase 2 report](docs/PHASE2_SELECTION.md) for the objective, results, reproducible commands, and remaining evaluation gates.
+
+## Phase 3 routing engineering
+
+Fixed-web, all-available, and heuristic adaptive routing now share one evidence-token budget and explicitly gate unavailable or unknown-date API snapshots. All 2,706 genuine questions produced 8,118 independently verified plans; all policies had the same usable allocation because only web was eligible. No quality or cost advantage is claimed. Human review exports now import immutably with source-span validation. There are 69 passing tests. See [Phase 3 report](docs/PHASE3_ROUTING.md) for results and outstanding scientific gates.

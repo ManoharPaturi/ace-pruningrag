@@ -1,0 +1,13 @@
+{
+  "scope": "phase3_inference_only_routing_plan_smoke",
+  "dataset_config": "configs/dataset.json",
+  "limit": 2706,
+  "total_budget_tokens": 1536,
+  "reserved_tokens": 256,
+  "policies": ["fixed_web", "all_available", "adaptive"],
+  "capabilities": [
+    {"name": "web", "available": true, "requires_as_of": false, "as_of_date": null},
+    {"name": "finance_market_cap", "available": true, "requires_as_of": true, "as_of_date": null},
+    {"name": "finance_ticker", "available": true, "requires_as_of": true, "as_of_date": null}
+  ]
+}

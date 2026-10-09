@@ -1,0 +1,39 @@
+{
+  "status": "routing_plan_smoke_completed",
+  "queries": 2706,
+  "plans": 8118,
+  "equivalent_allocations": 2706,
+  "blocked_hint_counts": {
+    "company_history:capability_not_provisioned": 7,
+    "finance_market_cap:snapshot_date_unknown": 50,
+    "finance_prices:capability_not_provisioned": 106,
+    "finance_ticker:snapshot_date_unknown": 2,
+    "finance_timeseries:capability_not_provisioned": 4,
+    "movie_knowledge:capability_not_provisioned": 318,
+    "sports_stats:capability_not_provisioned": 5
+  },
+  "allocated_source_counts": {
+    "fixed_web": {
+      "web": 2706
+    },
+    "all_available": {
+      "web": 2706
+    },
+    "adaptive": {
+      "web": 2706
+    }
+  },
+  "actual_source_calls": 0,
+  "actual_llm_calls": 0,
+  "answer_accuracy": null,
+  "quality_cost_tradeoff_measured": false,
+  "scientific_phase3_complete": false,
+  "limitations": [
+    "Planning-only audit; no source calls, generated answers, or latency savings measured.",
+    "Keyword scores are heuristic hints, not probabilities or validated source labels.",
+    "Unknown-date finance snapshots cannot be assumed aligned to historical question time.",
+    "Blocked hints do not establish that web evidence cannot answer the question.",
+    "Reserve is a planned allowance, not a verified generator prompt token count.",
+    "Web eligibility does not certify every page is temporally valid."
+  ]
+}

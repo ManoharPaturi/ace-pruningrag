@@ -1,0 +1,20 @@
+{
+  "status": "review_export_validated",
+  "records": 5,
+  "decisions": {
+    "reviewed": 3,
+    "needs_changes": 2
+  },
+  "verified_source_spans": 20,
+  "export_sha256": "c9e1a6858d9fe925850ab79f7e0794bd82c01789449433a41de378e0462be0c3",
+  "query_ids": [
+    "7bb29eb4-12f9-45f9-bf8a-66832b3c8962",
+    "a2486535-98e7-4876-9880-80374eac2fa8",
+    "161a89f3-7a70-4e12-a1a2-7832e098b0a7",
+    "30395ec2-4247-4a23-8003-37dcfdf1531c",
+    "55b219e5-ba31-4318-a73d-551f0fb9c546"
+  ],
+  "complete_evidence_labels_available": false,
+  "evaluation_gate_complete": false,
+  "scope": "Human decisions over AI-assisted development drafts; no held-out quality claim."
+}
