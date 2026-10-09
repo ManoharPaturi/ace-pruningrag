@@ -1,0 +1,15 @@
+{
+  "src/ace_pruningrag/__init__.py": "f0cd4d60ccc731f9c99fca9f902c57d0f4c8c225ca36522a4fa72fae25e4b32e",
+  "src/ace_pruningrag/artifacts.py": "a0a81f3c7559d7ac4ef454c76a0667ace757c52c058fb622a03eb1c6376019cd",
+  "src/ace_pruningrag/cli.py": "0f12887d2f9d867ccdc7a2a1a32e7d29ac10b473ad4fca1fe3f306b5f34dedb1",
+  "src/ace_pruningrag/dataset.py": "e12a34b02d0a15e444c01049ef1057e51ad3e9cc07c5eea6cc15bfa1a15805fe",
+  "src/ace_pruningrag/evidence.py": "b117b7e1d83f8acf3f7be01199e88921a07400319a5aeacc02daeefc69243def",
+  "src/ace_pruningrag/experiment.py": "8bd8654447a8936df953047c5b40c6eb1b44dc1d036e299c8a0865c6d5555224",
+  "src/ace_pruningrag/fetch.py": "f08e24a4cd5ba8e75ab41ce88fe2939c2430f6f2d87aa1946d2f89c762c70089",
+  "src/ace_pruningrag/metrics.py": "72e50ee92d918b2afdf95e46bf1cd4c2ef794adf5f88998fcec511938a46ec6d",
+  "src/ace_pruningrag/retrieval.py": "14fdbca78c2dfaa8c6fc7ebdbcd0874a4878a11a802a0d5862c3e835722a88be",
+  "src/ace_pruningrag/upstream.py": "7242dfe3b79fae37e25c98f582379c3b4bf97e7c3c47d0729416b16930cc0cfd",
+  "configs/dataset.json": "e087b2483e7fcf0f6bb78e7e447fae76f513eb4d86bf658596f761ea26f606e6",
+  "configs/upstream.json": "4e6a5a389f7f0db1f9b40e970e6d7df9e607dd0b83f5325a88a21fe013a4abe7",
+  "configs/retrieval_smoke.json": "38acec5729fa2dc49fe738086528399552a771b9279e60e1906f91fe0bc75966"
+}

@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-10-09T12:42:38.581083+00:00",
+  "created_at_utc": "2026-10-09T12:57:08.862479+00:00",
   "config": {
     "experiment_id": "phase1-bm25-retrieval-smoke-v1",
     "dataset_config": "configs/dataset.json",
@@ -35,9 +35,9 @@
     "src/ace_pruningrag/fetch.py": "f08e24a4cd5ba8e75ab41ce88fe2939c2430f6f2d87aa1946d2f89c762c70089",
     "src/ace_pruningrag/metrics.py": "72e50ee92d918b2afdf95e46bf1cd4c2ef794adf5f88998fcec511938a46ec6d",
     "src/ace_pruningrag/retrieval.py": "14fdbca78c2dfaa8c6fc7ebdbcd0874a4878a11a802a0d5862c3e835722a88be",
-    "src/ace_pruningrag/upstream.py": "34392d42a4a35c15391512e2e91c9ab4f24a5e6af5dd5cb03a8fe63b5c3f406b"
+    "src/ace_pruningrag/upstream.py": "7242dfe3b79fae37e25c98f582379c3b4bf97e7c3c47d0729416b16930cc0cfd"
   },
-  "git_head_at_run": null,
+  "git_head_at_run": "6d6d1644f75516f90fca5807608ccaa714a75623",
   "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.3.2)]",
   "platform": "macOS-27.0.1-arm64-arm-64bit",
   "query_ids": [
@@ -69,5 +69,5 @@
   ],
   "seed": 42,
   "randomness": "none; deterministic rank ties use evidence ID",
-  "trace_sha256": "24c8f783351472b18c5ca39fba64c2e2ac5171ae0b9ea8c28fb08d9c0658ac0e"
+  "trace_sha256": "f1ecc4935680c02250b4ab129b15351e9aca1ec74bde45674828576d43757488"
 }

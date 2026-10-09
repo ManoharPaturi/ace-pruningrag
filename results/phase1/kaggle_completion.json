@@ -1,0 +1,26 @@
+{
+  "status": "bootstrap_completed",
+  "cuda_available": true,
+  "retrieval_queries": 25,
+  "published_baseline_reproduced": false,
+  "scope": "GPU arithmetic, data validation, upstream audit, offline BM25 retrieval",
+  "model_weight_downloads": 0,
+  "llm_calls": 0,
+  "kernel": "ionrey/ace-pruningrag-phase1-bootstrap",
+  "version": 1,
+  "url": "https://www.kaggle.com/code/ionrey/ace-pruningrag-phase1-bootstrap",
+  "source_bundle_verified": true,
+  "trace_spans_verified": true,
+  "selected_evidence_content_and_order_matches_local": true,
+  "maximum_score_delta": 3.552713678800501e-15,
+  "score_comparison_absolute_tolerance": 1e-12,
+  "artifacts_sha256": {
+    "bm25-smoke/manifest.json": "aa57b68e857f05053e4e42ab601dae481dbecedb58fcdbfd2ade0ff20413920a",
+    "bm25-smoke/summary.json": "d4d367a695ed6b90e6222c0a97aa6754b31f7d076c0c45567def2f6e89dd80c8",
+    "bundle_manifest.json": "b15e2c3ad9fc4484613ca5eaa3439bb429a087ac76755e16a6c8fd0d19b397f0",
+    "completion.json": "fed181610958ee417fb47b8f34db876cbc75987472c72f7f19779473ad785006",
+    "dataset_profile.json": "e921dd3d01bcf0efd7757e440e45738834db6b5be509ebca938bc324f44c40fa",
+    "hardware.json": "1f64b6a9800b9f84b100ec021dede0048cf632fc17d00a01ed9d64eb623077d8",
+    "upstream_audit.json": "6972d778ce0319c37c0de614fb54e3fd41e487fbca7c7e3c9470e5475fc97d99"
+  }
+}

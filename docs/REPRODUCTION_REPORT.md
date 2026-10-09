@@ -14,11 +14,12 @@ Date: 9 October 2026. Status: development infrastructure and real-data retrieval
 - No `kg_info`, `kg_infos`, `api_results`, `supporting_facts`, or `evidence_ids` fields occurred in the downloaded variant. A compatible API server/snapshot is needed for original structured retrieval. Evidence completeness labels require a reviewed extension.
 - First 25 real records passed an independent BM25 retrieval smoke. Mean candidate count 72.12; 3 selected chunks per query; mean context size 575.2 whitespace words; maximum 600 words. These are retrieval plumbing measurements, not model-quality results.
 - Independent trace verification checked query IDs, original source character spans, source URLs, word counts, absence of gold answer fields, and context limits.
-- 25 local tests passed. Lint and formatting passed. CI runs these checks and a separate real-data smoke job.
+- 26 local tests passed. Lint and formatting passed. CI runs these checks and a separate real-data smoke job.
 - Main-branch protection requires PRs and the `test`/`data-smoke` checks, with enforcement for administrators.
 - Private Kaggle bootstrap completed as `ionrey/ace-pruningrag-phase1-bootstrap`, version 1. Downloaded artifacts confirm two Tesla T4 GPUs (15,636,037,632 bytes each), CUDA 12.8, PyTorch 2.11.0, and Python 3.13.15. Arithmetic smoke passed on both GPUs.
 - Kaggle validated all 2,706 records and completed the same 25-query retrieval smoke. The downloaded source-bundle manifest matches the submitted allowlisted bundle. All selected evidence matches the committed-source local run, and remote trace spans/budgets were independently verified against local pinned raw data.
 - The checked-in local smoke manifest now points to implementation commit `6d6d1644f75516f90fca5807608ccaa714a75623`. Earlier development traces remain preserved in ignored run directories.
+- Local/Kaggle selected evidence content and order matched for all 25 queries. Original BM25 scores differed by at most approximately `3.6e-15` because of unordered term accumulation. The current implementation sorts query terms before scoring, with a regression test comparing three process hash seeds. Original remote artifacts remain preserved with their source hashes.
 
 ## Confirmed reproduction blockers
 
