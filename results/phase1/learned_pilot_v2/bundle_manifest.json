@@ -1,0 +1,23 @@
+{
+  "src/ace_pruningrag/__init__.py": "f0cd4d60ccc731f9c99fca9f902c57d0f4c8c225ca36522a4fa72fae25e4b32e",
+  "src/ace_pruningrag/artifacts.py": "a0a81f3c7559d7ac4ef454c76a0667ace757c52c058fb622a03eb1c6376019cd",
+  "src/ace_pruningrag/assets.py": "5f620a9f45696f4304769c92960ca0750f3c50f283f2707ef7b25cc2c0f3d3fb",
+  "src/ace_pruningrag/cli.py": "58948fa25db426745bb9774bdb7c34b846b63cd86861d37c17255f0dbadd7feb",
+  "src/ace_pruningrag/compatibility.py": "24b88df2e75097290a7474e6faf26b768c191a06a96e840c8ce2bbefa7ded433",
+  "src/ace_pruningrag/dataset.py": "e12a34b02d0a15e444c01049ef1057e51ad3e9cc07c5eea6cc15bfa1a15805fe",
+  "src/ace_pruningrag/evidence.py": "b117b7e1d83f8acf3f7be01199e88921a07400319a5aeacc02daeefc69243def",
+  "src/ace_pruningrag/experiment.py": "8bd8654447a8936df953047c5b40c6eb1b44dc1d036e299c8a0865c6d5555224",
+  "src/ace_pruningrag/fetch.py": "f08e24a4cd5ba8e75ab41ce88fe2939c2430f6f2d87aa1946d2f89c762c70089",
+  "src/ace_pruningrag/finance_api.py": "6338f11c04127520271962e1ed6635cea7cff56b9c5b636c856c521f8053e77d",
+  "src/ace_pruningrag/learned_retrieval.py": "0abb6d75aa84cdeb3a646715b79cab6ab03d0f82f49ec5526a109974972a3054",
+  "src/ace_pruningrag/metrics.py": "72e50ee92d918b2afdf95e46bf1cd4c2ef794adf5f88998fcec511938a46ec6d",
+  "src/ace_pruningrag/retrieval.py": "5ca0cd749f9997642767b4519920b8cdb406d455e395277060e959d0de360f2d",
+  "src/ace_pruningrag/upstream.py": "7242dfe3b79fae37e25c98f582379c3b4bf97e7c3c47d0729416b16930cc0cfd",
+  "configs/dataset.json": "e087b2483e7fcf0f6bb78e7e447fae76f513eb4d86bf658596f761ea26f606e6",
+  "configs/upstream.json": "4e6a5a389f7f0db1f9b40e970e6d7df9e607dd0b83f5325a88a21fe013a4abe7",
+  "configs/retrieval_smoke.json": "38acec5729fa2dc49fe738086528399552a771b9279e60e1906f91fe0bc75966",
+  "configs/compatibility.json": "08c31d0c80dccd8c9861ba557b33c5f46815d8e65d3160946eb2cfe516ae1f3c",
+  "configs/crag_finance.json": "92532c2f0174669dc7ec8a7bcdd936e73c0f9b8858c29ccea91f80cd436dcbb9",
+  "configs/learned_smoke.json": "6ff59584e6b2b5c2291375a56562039cab5ca008f20c3b6993d6643cdb969cff",
+  "scripts/learned_driver.py": "196ed3282bc564d8c6039136b75b677ba175cc51be39516df67ee1e6db7fbfbf"
+}

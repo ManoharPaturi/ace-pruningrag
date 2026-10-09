@@ -50,6 +50,10 @@ Version 1 completed, but its global pip install conflicted with Kaggle's bundled
 
 The driver checks actual imported library versions and records them with the results. The parent records base package versions before and after the run and requires them to match. A separate version 2 run tests this change under the same five-query protocol; version 1 artifacts remain preserved.
 
+Version 2 completed successfully. Its returned source bundle and all 15 contexts passed independent verification, and its finance results match the local snapshot probes. The base environment retained Transformers 5.16.1, Hugging Face Hub 1.29.0, Tokenizers 0.23.1, Safetensors 0.8.0, and SentencePiece 0.2.2 before and after execution. The fresh inference process used the explicitly checked pins: Transformers 4.57.3, Hub 0.36.0, Tokenizers 0.22.1, Safetensors 0.6.2, and SentencePiece 0.2.1, with PyTorch 2.11.0/CUDA 12.8.
+
+Version-2 artifacts are stored separately in `results/phase1/learned_pilot_v2/`. Both runs are retained; this validation does not create an answer-quality metric or remove the original baseline's remaining artifact dependencies.
+
 ```bash
 uv run --no-editable python scripts/build_kaggle_kernel.py --mode retrieval --owner ionrey --output runs/kaggle/retrieval-kernel-v1
 uv tool run --from kaggle==2.2.4 kaggle kernels push -p runs/kaggle/retrieval-kernel-v1 --accelerator NvidiaTeslaT4 -t 1800
