@@ -2,14 +2,24 @@
 
 import base64
 import hashlib
+import importlib.metadata
 import json
-import os
 import subprocess
 import sys
 import zlib
 from pathlib import Path
 
 PAYLOAD = "__BUNDLE__"
+
+
+def package_versions(names):
+    versions = {}
+    for name in names:
+        try:
+            versions[name] = importlib.metadata.version(name)
+        except importlib.metadata.PackageNotFoundError:
+            versions[name] = None
+    return versions
 
 
 def main():
@@ -49,7 +59,17 @@ def main():
     write_json(output / "finance_smoke.json", finance_smoke(finance_config, root))
     fetch_dataset(read_json(root / "configs/dataset.json"), root)
     print("Compatibility copy and real finance API probes passed", flush=True)
-    # Pin the small inference stack, preserving Kaggle's installed CUDA/PyTorch runtime.
+    package_names = (
+        "transformers",
+        "huggingface_hub",
+        "tokenizers",
+        "safetensors",
+        "sentencepiece",
+    )
+    base_versions = package_versions(package_names)
+    overlay = root / "inference-deps"
+    # Install only the selected libraries in an isolated directory. The fresh
+    # driver process prepends it; Kaggle's base environment is never modified.
     subprocess.run(
         [
             sys.executable,
@@ -57,6 +77,9 @@ def main():
             "pip",
             "install",
             "--quiet",
+            "--no-deps",
+            "--target",
+            str(overlay),
             "transformers==4.57.3",
             "huggingface_hub==0.36.0",
             "tokenizers==0.22.1",
@@ -65,26 +88,32 @@ def main():
         ],
         check=True,
     )
-    os.environ["USE_TF"] = "0"
-    os.environ["USE_FLAX"] = "0"
     model_config = read_json(root / "configs/learned_smoke.json")
     print("Downloading pinned BGE weights (about 4.6 GB), temporary files only", flush=True)
     fetch_assets(model_config, root)
-    from ace_pruningrag.learned_retrieval import learned_smoke
-
-    summary = learned_smoke(root / "configs/learned_smoke.json", root, output / "learned")
-    import torch
-
+    subprocess.run(
+        [
+            sys.executable,
+            str(root / "scripts/learned_driver.py"),
+            "--root",
+            str(root),
+            "--overlay",
+            str(overlay),
+            "--output",
+            str(output),
+        ],
+        check=True,
+    )
+    after = package_versions(package_names)
+    if base_versions != after:
+        raise ValueError("Kaggle base package versions changed")
     write_json(
-        output / "completion.json",
+        output / "environment_isolation.json",
         {
-            "status": "phase1_retrieval_pilot_completed",
-            "queries": summary["queries"],
-            "cuda_available": torch.cuda.is_available(),
-            "torch_version": torch.__version__,
-            "gpus": [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())],
-            "published_baseline_reproduced": False,
-            "llm_calls": 0,
+            "base_before": base_versions,
+            "base_after": after,
+            "base_preserved": True,
+            "inference_packages": "isolated --target directory in a fresh process",
         },
     )
 
