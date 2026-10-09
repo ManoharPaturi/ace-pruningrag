@@ -2,7 +2,7 @@
 
 Implementation changes go through feature branches and pull requests. Do not push project changes directly to `main` or merge before required CI checks pass.
 
-The empty initial `main` commit exists only as the base for the first pull request. It contains no project files. The Phase 1 implementation is submitted from `feat/phase1-reproduction-foundation`.
+The empty initial `main` commit exists only as the base for the first pull request. It contains no project files. The Phase 1 foundation was submitted from `feat/phase1-reproduction-foundation` and merged through PR #1. Later Kaggle validation artifacts and the repeatability fix use `feat/phase1-kaggle-validation` and a separate PR.
 
 Required checks:
 

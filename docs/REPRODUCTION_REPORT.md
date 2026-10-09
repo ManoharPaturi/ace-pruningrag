@@ -4,7 +4,7 @@ Date: 9 October 2026. Status: development infrastructure and real-data retrieval
 
 ## Completed
 
-- New private GitHub repository and feature-branch/PR workflow. Empty `main` provides the first PR base and contains no implementation.
+- New private GitHub repository and feature-branch/PR workflow. An empty initial `main` commit provided the first PR base. The foundation was subsequently merged through PR #1; later validation artifacts and the repeatability fix are submitted in a follow-up PR.
 - Python 3.12 package and locked development dependencies. Runtime research infrastructure uses the standard library.
 - PruningRAG preserved as a clean, detached upstream checkout at `cfae4e46e73144b07df84d7760f759e39db54062`.
 - Hash-verified small RM3QA release at dataset revision `f56a19b1348559be73b7ae4e4626d0d2ed778b21`.
