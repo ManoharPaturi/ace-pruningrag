@@ -1,0 +1,53 @@
+{
+  "status": "learned_retrieval_smoke_completed",
+  "queries": 5,
+  "scope": "adapted_web_retrieval_smoke",
+  "models": {
+    "encoder": {
+      "repository": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "directory": "data/models/encoder",
+      "weight_file": "pytorch_model.bin",
+      "weight_sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38"
+    },
+    "reranker": {
+      "repository": "BAAI/bge-reranker-v2-m3",
+      "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+      "directory": "data/models/reranker",
+      "weight_file": "model.safetensors",
+      "weight_sha256": "d9e3e081faff1eefb84019509b2f5558fd74c1a05a2c7db22f74174fcedb5286"
+    }
+  },
+  "precision": "float32",
+  "mean_retrieval_seconds": {
+    "bm25": 0.007311616600020443,
+    "dense": 5.628035334599986,
+    "dense_reranked": 6.493045406599981
+  },
+  "mean_context_words": {
+    "bm25": 585,
+    "dense": 566.8,
+    "dense_reranked": 562.8
+  },
+  "max_encoder_tokens_observed": 1931,
+  "max_pair_tokens_observed": 539,
+  "llm_calls": 0,
+  "answer_accuracy": null,
+  "retrieval_recall": null,
+  "published_baseline_reproduced": false,
+  "limitations": [
+    "Independent adapted web-only retrieval, not the released PruningRAG pipeline.",
+    "200-word chunks and a 600-word limit; not the original token chunking protocol.",
+    "Only five smoke queries; no supporting-evidence labels or answer-quality evaluation.",
+    "Dense+reranker latency includes both stages; downloads and loading are excluded."
+  ],
+  "runtime": {
+    "transformers": "4.57.3",
+    "huggingface_hub": "0.36.0",
+    "safetensors": "0.6.2",
+    "tokenizers": "0.22.1",
+    "sentencepiece": "0.2.1",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8"
+  }
+}

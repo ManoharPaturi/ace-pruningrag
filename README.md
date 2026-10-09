@@ -12,6 +12,8 @@ Continuation: a separate compatibility copy resolves the startup constructor mis
 
 The five-query BGE-M3/BGE-reranker pilot completed on dual T4 GPUs. All returned contexts were independently verified; it is an adapted retrieval smoke with no generated answers or accuracy claims.
 
+The isolated version-2 rerun also passed, with actual inference versions recorded and Kaggle's base package versions unchanged. Original and rerun artifacts are retained separately.
+
 ## Quick start
 
 Install Python 3.12 and [uv](https://docs.astral.sh/uv/). Run from the repository root:
