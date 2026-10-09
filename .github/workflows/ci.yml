@@ -31,6 +31,9 @@ jobs:
       - run: uv run --no-editable ace-rag profile-data --output runs/ci/dataset_profile.json
       - run: uv run --no-editable ace-rag smoke --output runs/ci/smoke
       - run: uv run --no-editable python scripts/verify_smoke.py --run runs/ci/smoke
+      - run: uv run --locked --no-editable --extra selection ace-rag fetch-selection
+      - run: uv run --locked --no-editable --extra selection ace-rag selection-smoke --output runs/ci/selection
+      - run: uv run --locked --no-editable --extra selection python scripts/verify_selection.py --run runs/ci/selection
       - uses: actions/upload-artifact@v7.0.2
         with:
           name: phase1-real-data-smoke

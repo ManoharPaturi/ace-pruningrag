@@ -9,6 +9,9 @@ description = "Reproducible cross-source evidence selection research"
 requires-python = ">=3.12"
 dependencies = []
 
+[project.optional-dependencies]
+selection = ["tokenizers==0.22.1"]
+
 [project.scripts]
 ace-rag = "ace_pruningrag.cli:main"
 

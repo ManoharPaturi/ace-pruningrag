@@ -12,6 +12,7 @@ from .dataset import profile_dataset, verify_dataset
 from .experiment import retrieval_smoke
 from .fetch import fetch_dataset
 from .finance_api import finance_smoke
+from .selection_experiment import selection_smoke
 from .upstream import audit_upstream, checkout_upstream
 
 
@@ -28,10 +29,14 @@ def main(argv: list[str] | None = None) -> int:
         "prepare-upstream",
         "fetch-finance",
         "finance-smoke",
+        "fetch-selection",
+        "selection-smoke",
     ):
         command = sub.add_parser(name)
         default = "configs/dataset.json"
-        if name == "prepare-upstream":
+        if "selection" in name:
+            default = "configs/selection_smoke.json"
+        elif name == "prepare-upstream":
             default = "configs/compatibility.json"
         elif "finance" in name:
             default = "configs/crag_finance.json"
@@ -40,7 +45,14 @@ def main(argv: list[str] | None = None) -> int:
         elif name == "smoke":
             default = "configs/retrieval_smoke.json"
         command.add_argument("--config", type=Path, default=Path(default))
-        if name in ("profile-data", "audit-upstream", "smoke", "prepare-upstream", "finance-smoke"):
+        if name in (
+            "profile-data",
+            "audit-upstream",
+            "smoke",
+            "prepare-upstream",
+            "finance-smoke",
+            "selection-smoke",
+        ):
             command.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
     root = args.root.resolve()
@@ -49,7 +61,7 @@ def main(argv: list[str] | None = None) -> int:
         config = read_json(config_path)
         if args.command == "fetch-data":
             result = {"dataset": str(fetch_dataset(config, root)), "status": "hash_verified"}
-        elif args.command == "fetch-finance":
+        elif args.command in ("fetch-finance", "fetch-selection"):
             result = fetch_assets(config, root)
         elif args.command == "finance-smoke":
             result = finance_smoke(config, root)
@@ -69,6 +81,8 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "audit-upstream":
             result = audit_upstream(config, root)
             write_json(root / args.output, result)
+        elif args.command == "selection-smoke":
+            result = selection_smoke(config_path, root, root / args.output)
         else:
             result = retrieval_smoke(config_path, root, root / args.output)
         # Full profile IDs and dependency inventory belong in the artifact, not the console.
