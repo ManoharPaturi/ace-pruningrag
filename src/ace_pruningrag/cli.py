@@ -6,9 +6,12 @@ import sys
 from pathlib import Path
 
 from .artifacts import read_json, write_json
+from .assets import fetch_assets
+from .compatibility import prepare_compatibility
 from .dataset import profile_dataset, verify_dataset
 from .experiment import retrieval_smoke
 from .fetch import fetch_dataset
+from .finance_api import finance_smoke
 from .upstream import audit_upstream, checkout_upstream
 
 
@@ -16,15 +19,28 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="ACE-PruningRAG Phase 1 research tools")
     parser.add_argument("--root", type=Path, default=Path.cwd(), help="repository root")
     sub = parser.add_subparsers(dest="command", required=True)
-    for name in ("fetch-data", "profile-data", "fetch-upstream", "audit-upstream", "smoke"):
+    for name in (
+        "fetch-data",
+        "profile-data",
+        "fetch-upstream",
+        "audit-upstream",
+        "smoke",
+        "prepare-upstream",
+        "fetch-finance",
+        "finance-smoke",
+    ):
         command = sub.add_parser(name)
         default = "configs/dataset.json"
-        if "upstream" in name:
+        if name == "prepare-upstream":
+            default = "configs/compatibility.json"
+        elif "finance" in name:
+            default = "configs/crag_finance.json"
+        elif "upstream" in name:
             default = "configs/upstream.json"
         elif name == "smoke":
             default = "configs/retrieval_smoke.json"
         command.add_argument("--config", type=Path, default=Path(default))
-        if name in ("profile-data", "audit-upstream", "smoke"):
+        if name in ("profile-data", "audit-upstream", "smoke", "prepare-upstream", "finance-smoke"):
             command.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
     root = args.root.resolve()
@@ -33,6 +49,18 @@ def main(argv: list[str] | None = None) -> int:
         config = read_json(config_path)
         if args.command == "fetch-data":
             result = {"dataset": str(fetch_dataset(config, root)), "status": "hash_verified"}
+        elif args.command == "fetch-finance":
+            result = fetch_assets(config, root)
+        elif args.command == "finance-smoke":
+            result = finance_smoke(config, root)
+            write_json(root / args.output, result)
+        elif args.command == "prepare-upstream":
+            result = prepare_compatibility(
+                read_json(root / config["upstream_config"]),
+                config,
+                root,
+                root / args.output,
+            )
         elif args.command == "fetch-upstream":
             result = {"checkout": str(checkout_upstream(config, root)), "commit": config["commit"]}
         elif args.command == "profile-data":

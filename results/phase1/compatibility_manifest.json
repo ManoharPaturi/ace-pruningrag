@@ -1,0 +1,26 @@
+{
+  "status": "compatibility_copy_prepared",
+  "upstream_commit": "cfae4e46e73144b07df84d7760f759e39db54062",
+  "source_main_sha256": "58667230d76bc54d41b1976c9e2457f9f4891466d7110e8133d7270a346724ae",
+  "patched_main_sha256": "b1350cc0a85913c77dde988a0449f1c9c4f7e269b270f5b67383ecb8e0bba51c",
+  "supported_noise": 0,
+  "upstream_clean_after": true,
+  "signature_check": {
+    "id": "retriever_constructor",
+    "status": "pass",
+    "main_line": 161,
+    "constructor_line": 24,
+    "passed_positional": 10,
+    "accepted_positional": 10,
+    "detail": "Static signature check; heavy upstream dependencies are not imported."
+  },
+  "changes": [
+    "Guard against nonzero noise",
+    "Remove unsupported constructor argument"
+  ],
+  "limitations": [
+    "Startup compatibility only; no model/API pipeline execution is implied.",
+    "Nonzero noise experiments remain unsupported rather than silently changing behavior.",
+    "Original model/router assets and mock API configuration are still required."
+  ]
+}

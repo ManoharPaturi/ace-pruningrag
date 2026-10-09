@@ -2,6 +2,8 @@
 
 Date: 9 October 2026. Status: development infrastructure and real-data retrieval smoke completed; full published baseline reproduction is blocked.
 
+This report records the initial foundation. Later compatibility fixes, finance snapshot restoration, and learned-retrieval work are documented in [the continuation report](PHASE1_CONTINUATION.md).
+
 ## Completed
 
 - New private GitHub repository and feature-branch/PR workflow. An empty initial `main` commit provided the first PR base. The foundation was subsequently merged through PR #1; later validation artifacts and the repeatability fix are submitted in a follow-up PR.
