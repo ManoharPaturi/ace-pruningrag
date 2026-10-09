@@ -1,0 +1,129 @@
+{
+  "status": "blocked",
+  "upstream_commit": "cfae4e46e73144b07df84d7760f759e39db54062",
+  "environment": {
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "checks": [
+    {
+      "id": "upstream_integrity",
+      "status": "pass",
+      "commit": "cfae4e46e73144b07df84d7760f759e39db54062",
+      "clean": true
+    },
+    {
+      "id": "python_syntax",
+      "status": "pass",
+      "errors": []
+    },
+    {
+      "id": "retriever_constructor",
+      "status": "blocked",
+      "main_line": 159,
+      "constructor_line": 24,
+      "passed_positional": 11,
+      "accepted_positional": 10,
+      "detail": "Static signature check; heavy upstream dependencies are not imported."
+    },
+    {
+      "id": "local_imports",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "id": "asset:models/router/domain",
+      "status": "blocked",
+      "detail": "Local presence only; checkpoint integrity is not verified."
+    },
+    {
+      "id": "asset:Meta-Llama-3.1-8B-Instruct",
+      "status": "blocked",
+      "detail": "Local presence only; checkpoint integrity is not verified."
+    },
+    {
+      "id": "asset:models/retrieve/embedding_models/bge-m3",
+      "status": "blocked",
+      "detail": "Local presence only; checkpoint integrity is not verified."
+    },
+    {
+      "id": "asset:models/retrieve/reranker_models/bge-reranker-v2-m3",
+      "status": "blocked",
+      "detail": "Local presence only; checkpoint integrity is not verified."
+    },
+    {
+      "id": "asset:models/retrieve/embedding_models/all-MiniLM-L6-v2",
+      "status": "blocked",
+      "detail": "Local presence only; checkpoint integrity is not verified."
+    },
+    {
+      "id": "service:generator",
+      "status": "unverified",
+      "port": 8000,
+      "listening": false,
+      "detail": "TCP reachability is not a model/API compatibility test."
+    },
+    {
+      "id": "service:mock_api",
+      "status": "unverified",
+      "port": 8001,
+      "listening": false,
+      "detail": "TCP reachability is not a model/API compatibility test."
+    },
+    {
+      "id": "service:source_selector",
+      "status": "unverified",
+      "port": 8002,
+      "listening": false,
+      "detail": "TCP reachability is not a model/API compatibility test."
+    },
+    {
+      "id": "upstream_environment",
+      "status": "unverified",
+      "detail": "Versions in audit process only; remote GPU environment not provisioned.",
+      "packages": {
+        "accelerate": null,
+        "beautifulsoup4": null,
+        "bitsandbytes": null,
+        "blingfire": null,
+        "hf-transfer": null,
+        "huggingface-hub": null,
+        "loguru": null,
+        "lxml": null,
+        "openai": null,
+        "sentence_transformers": null,
+        "torch": null,
+        "transformers": null,
+        "peft": null,
+        "llama-index": null,
+        "llama-index-embeddings-huggingface": null,
+        "llama-index-llms-huggingface": null,
+        "llama-index-retrievers-bm25": null,
+        "llama-index-vector-stores-milvus": null,
+        "langchain": null,
+        "langchain-community": null,
+        "langchain-openai": null,
+        "langchain-milvus": null,
+        "newspaper3k": null,
+        "pycountry": null,
+        "vllm": null
+      }
+    },
+    {
+      "id": "mock_api_backing_data",
+      "status": "unverified",
+      "detail": "Client code exists; compatible server and backing data remain to validate."
+    },
+    {
+      "id": "paper_configuration",
+      "status": "unverified",
+      "detail": "Released defaults differ from README; exact target experiment not locked."
+    }
+  ],
+  "limitations": [
+    "No generator, embedding, reranker, router, or judge was executed.",
+    "No paid inference or model-weight download was performed.",
+    "A passing static audit alone would not establish reproduction readiness."
+  ]
+}

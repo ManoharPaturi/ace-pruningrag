@@ -1,0 +1,17 @@
+{
+  "repository_url": "https://github.com/USTCAGI/PruningRAG.git",
+  "commit": "cfae4e46e73144b07df84d7760f759e39db54062",
+  "checkout": ".cache/upstream/PruningRAG",
+  "required_assets": [
+    "models/router/domain",
+    "Meta-Llama-3.1-8B-Instruct",
+    "models/retrieve/embedding_models/bge-m3",
+    "models/retrieve/reranker_models/bge-reranker-v2-m3",
+    "models/retrieve/embedding_models/all-MiniLM-L6-v2"
+  ],
+  "services": [
+    {"role": "generator", "host": "127.0.0.1", "port": 8000},
+    {"role": "mock_api", "host": "127.0.0.1", "port": 8001},
+    {"role": "source_selector", "host": "127.0.0.1", "port": 8002}
+  ]
+}

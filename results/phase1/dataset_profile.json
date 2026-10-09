@@ -1,0 +1,73 @@
+{
+  "status": "validated",
+  "rows": 2706,
+  "web_pages": 13530,
+  "empty_web_pages": 0,
+  "numeric_alternate_answers": 49,
+  "sha256": "8a6732c65020ff39a14b605a2daf67721528eca0727645c3a877aaf82170a9bc",
+  "distributions": {
+    "domain": {
+      "finance": 661,
+      "movie": 611,
+      "music": 373,
+      "open": 542,
+      "sports": 519
+    },
+    "question_type": {
+      "aggregation": 315,
+      "comparison": 333,
+      "false_premise": 309,
+      "multi-hop": 231,
+      "post-processing": 108,
+      "set": 249,
+      "simple": 754,
+      "simple_w_condition": 407
+    },
+    "static_or_dynamic": {
+      "fast-changing": 353,
+      "real-time": 267,
+      "slow-changing": 583,
+      "static": 1503
+    },
+    "split": {
+      "0": 1371,
+      "1": 1335
+    },
+    "web_pages_per_query": {
+      "5": 2706
+    },
+    "answer_types": {
+      "int": 6,
+      "str": 2700
+    },
+    "alternate_answer_types": {
+      "float": 1,
+      "int": 48,
+      "str": 67
+    },
+    "row_fields": {
+      "alt_ans": 2706,
+      "answer": 2706,
+      "domain": 2706,
+      "interaction_id": 2706,
+      "query": 2706,
+      "query_time": 2706,
+      "question_type": 2706,
+      "search_results": 2706,
+      "split": 2706,
+      "static_or_dynamic": 2706
+    }
+  },
+  "optional_field_counts": {
+    "kg_info": 0,
+    "kg_infos": 0,
+    "api_results": 0,
+    "supporting_facts": 0,
+    "evidence_ids": 0
+  },
+  "limitations": [
+    "Observed split values have not been assigned train/dev/test semantics.",
+    "Field presence does not establish human-verified supporting-evidence labels.",
+    "Raw answers remain unchanged; normalized answer strings are an evaluation view only."
+  ]
+}

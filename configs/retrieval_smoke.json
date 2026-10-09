@@ -1,0 +1,15 @@
+{
+  "experiment_id": "phase1-bm25-retrieval-smoke-v1",
+  "dataset_config": "configs/dataset.json",
+  "limit": 25,
+  "sampling": "first_25_records_in_pinned_file_order",
+  "chunk_words": 200,
+  "top_k": 3,
+  "max_context_words": 600,
+  "bm25_k1": 1.5,
+  "bm25_b": 0.75,
+  "seed": 42,
+  "scope": "web_only_offline_retrieval_no_generation_no_judge",
+  "token_budget": null,
+  "publication_results": false
+}
