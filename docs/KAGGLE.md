@@ -2,6 +2,8 @@
 
 Kaggle is the selected remote compute target. The initial job validates GPU arithmetic, the pinned dataset, the upstream setup audit, and offline BM25 retrieval. It does not download model weights or claim a PruningRAG reproduction.
 
+Verified first run: [private bootstrap](https://www.kaggle.com/code/ionrey/ace-pruningrag-phase1-bootstrap), version 1, completed on two Tesla T4 GPUs. CUDA arithmetic passed on both. The full dataset profile and 25-query trace verification passed, with identical selected evidence on the local and remote runs. See `results/phase1/kaggle_*.json` for hardware, completion, bundle, and smoke artifacts.
+
 The builder embeds only allowlisted first-party Python sources and experiment JSON configurations. It does not upload the private GitHub token, Kaggle token, raw data, caches, or upstream code. The job independently downloads the public pinned dataset and upstream checkout. Raw data and the checkout stay in `/tmp`; small result artifacts go to `/kaggle/working/phase1`.
 
 Use one authenticated account for the first job. Additional API keys are not needed for this bounded bootstrap.

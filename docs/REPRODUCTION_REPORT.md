@@ -16,7 +16,9 @@ Date: 9 October 2026. Status: development infrastructure and real-data retrieval
 - Independent trace verification checked query IDs, original source character spans, source URLs, word counts, absence of gold answer fields, and context limits.
 - 25 local tests passed. Lint and formatting passed. CI runs these checks and a separate real-data smoke job.
 - Main-branch protection requires PRs and the `test`/`data-smoke` checks, with enforcement for administrators.
-- Private Kaggle GPU bootstrap submitted as `ionrey/ace-pruningrag-phase1-bootstrap`, version 1. Submission alone is not proof of completion or usable GPU hardware; remote outcome is recorded separately.
+- Private Kaggle bootstrap completed as `ionrey/ace-pruningrag-phase1-bootstrap`, version 1. Downloaded artifacts confirm two Tesla T4 GPUs (15,636,037,632 bytes each), CUDA 12.8, PyTorch 2.11.0, and Python 3.13.15. Arithmetic smoke passed on both GPUs.
+- Kaggle validated all 2,706 records and completed the same 25-query retrieval smoke. The downloaded source-bundle manifest matches the submitted allowlisted bundle. All selected evidence matches the committed-source local run, and remote trace spans/budgets were independently verified against local pinned raw data.
+- The checked-in local smoke manifest now points to implementation commit `6d6d1644f75516f90fca5807608ccaa714a75623`. Earlier development traces remain preserved in ignored run directories.
 
 ## Confirmed reproduction blockers
 
