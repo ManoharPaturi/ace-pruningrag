@@ -1,4 +1,4 @@
-"""Phase 1 command-line entry points."""
+"""Research command-line entry points."""
 
 import argparse
 import json
@@ -12,12 +12,14 @@ from .dataset import profile_dataset, verify_dataset
 from .experiment import retrieval_smoke
 from .fetch import fetch_dataset
 from .finance_api import finance_smoke
+from .reviews import import_review
+from .routing_experiment import routing_smoke
 from .selection_experiment import selection_smoke
 from .upstream import audit_upstream, checkout_upstream
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="ACE-PruningRAG Phase 1 research tools")
+    parser = argparse.ArgumentParser(description="ACE-PruningRAG research tools")
     parser.add_argument("--root", type=Path, default=Path.cwd(), help="repository root")
     sub = parser.add_subparsers(dest="command", required=True)
     for name in (
@@ -31,10 +33,14 @@ def main(argv: list[str] | None = None) -> int:
         "finance-smoke",
         "fetch-selection",
         "selection-smoke",
+        "routing-smoke",
+        "import-review",
     ):
         command = sub.add_parser(name)
         default = "configs/dataset.json"
-        if "selection" in name:
+        if name == "routing-smoke":
+            default = "configs/routing_smoke.json"
+        elif "selection" in name:
             default = "configs/selection_smoke.json"
         elif name == "prepare-upstream":
             default = "configs/compatibility.json"
@@ -52,8 +58,12 @@ def main(argv: list[str] | None = None) -> int:
             "prepare-upstream",
             "finance-smoke",
             "selection-smoke",
+            "routing-smoke",
+            "import-review",
         ):
             command.add_argument("--output", type=Path, required=True)
+        if name == "import-review":
+            command.add_argument("--export", type=Path, required=True)
     args = parser.parse_args(argv)
     root = args.root.resolve()
     config_path = root / args.config
@@ -81,6 +91,10 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "audit-upstream":
             result = audit_upstream(config, root)
             write_json(root / args.output, result)
+        elif args.command == "import-review":
+            result = import_review(args.export.resolve(), config, root, root / args.output)
+        elif args.command == "routing-smoke":
+            result = routing_smoke(config_path, root, root / args.output)
         elif args.command == "selection-smoke":
             result = selection_smoke(config_path, root, root / args.output)
         else:

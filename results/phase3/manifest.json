@@ -1,0 +1,69 @@
+{
+  "config": {
+    "scope": "phase3_inference_only_routing_plan_smoke",
+    "dataset_config": "configs/dataset.json",
+    "limit": 2706,
+    "total_budget_tokens": 1536,
+    "reserved_tokens": 256,
+    "policies": [
+      "fixed_web",
+      "all_available",
+      "adaptive"
+    ],
+    "capabilities": [
+      {
+        "name": "web",
+        "available": true,
+        "requires_as_of": false,
+        "as_of_date": null
+      },
+      {
+        "name": "finance_market_cap",
+        "available": true,
+        "requires_as_of": true,
+        "as_of_date": null
+      },
+      {
+        "name": "finance_ticker",
+        "available": true,
+        "requires_as_of": true,
+        "as_of_date": null
+      }
+    ]
+  },
+  "config_sha256": "435e3646519647663e25df12a84b80d2ba9d7a4ef609b3b0c3a790c1c3307be6",
+  "dataset": {
+    "repository": "fishsure/RM3QA",
+    "revision": "f56a19b1348559be73b7ae4e4626d0d2ed778b21",
+    "filename": "RM3QA_5web.jsonl.bz2",
+    "path": "data/raw/RM3QA_5web.jsonl.bz2",
+    "bytes": 64803084,
+    "sha256": "8a6732c65020ff39a14b605a2daf67721528eca0727645c3a877aaf82170a9bc",
+    "purpose": "phase1_data_validation_and_retrieval_smoke_only"
+  },
+  "trace_sha256": "5942b20118f8feea828d495dd9bbf7d9fc17d0ef4d13116c396f2c4afa60f385",
+  "source_sha256": {
+    "src/ace_pruningrag/__init__.py": "f0cd4d60ccc731f9c99fca9f902c57d0f4c8c225ca36522a4fa72fae25e4b32e",
+    "src/ace_pruningrag/artifacts.py": "a0a81f3c7559d7ac4ef454c76a0667ace757c52c058fb622a03eb1c6376019cd",
+    "src/ace_pruningrag/assets.py": "5f620a9f45696f4304769c92960ca0750f3c50f283f2707ef7b25cc2c0f3d3fb",
+    "src/ace_pruningrag/cli.py": "49f973455e3a8661f5e5f2df0f3ff2c5241b841da7619bdd4312f778f652dd7a",
+    "src/ace_pruningrag/compatibility.py": "24b88df2e75097290a7474e6faf26b768c191a06a96e840c8ce2bbefa7ded433",
+    "src/ace_pruningrag/dataset.py": "e12a34b02d0a15e444c01049ef1057e51ad3e9cc07c5eea6cc15bfa1a15805fe",
+    "src/ace_pruningrag/evidence.py": "b117b7e1d83f8acf3f7be01199e88921a07400319a5aeacc02daeefc69243def",
+    "src/ace_pruningrag/experiment.py": "8bd8654447a8936df953047c5b40c6eb1b44dc1d036e299c8a0865c6d5555224",
+    "src/ace_pruningrag/fetch.py": "f08e24a4cd5ba8e75ab41ce88fe2939c2430f6f2d87aa1946d2f89c762c70089",
+    "src/ace_pruningrag/finance_api.py": "6338f11c04127520271962e1ed6635cea7cff56b9c5b636c856c521f8053e77d",
+    "src/ace_pruningrag/learned_retrieval.py": "0abb6d75aa84cdeb3a646715b79cab6ab03d0f82f49ec5526a109974972a3054",
+    "src/ace_pruningrag/metrics.py": "72e50ee92d918b2afdf95e46bf1cd4c2ef794adf5f88998fcec511938a46ec6d",
+    "src/ace_pruningrag/retrieval.py": "5ca0cd749f9997642767b4519920b8cdb406d455e395277060e959d0de360f2d",
+    "src/ace_pruningrag/reviews.py": "e5a3b35935cd6578152ec5f457b35c9848c943d307506a73d7b36a44b0f7073e",
+    "src/ace_pruningrag/routing.py": "f2112cc3e95b087077fef7aa18e2edeeb0a59e1f5553e2e3e79cfd96d166d681",
+    "src/ace_pruningrag/routing_experiment.py": "ae9f451fbdabb4055805cde4d72de10eaa7eb00abccbd0c97d5b4f53a2f5cc84",
+    "src/ace_pruningrag/selection.py": "634f92d939eac47ac4c360119a2d3d8e95004861dde72b39dc1347d359bcafad",
+    "src/ace_pruningrag/selection_experiment.py": "d5bd6b03acf71c2cbd01cf9aaf8ca0090079d92a624dbe504ce51e6a94963b7d",
+    "src/ace_pruningrag/upstream.py": "7242dfe3b79fae37e25c98f582379c3b4bf97e7c3c47d0729416b16930cc0cfd"
+  },
+  "query_id_count": 2706,
+  "query_ids_sha256": "fce7b655fbe928b1d38c55a36a601364c6cacefe9c59feef1a5ffd671583fc68",
+  "query_order": "all release records in file order; full list retained in ignored run and CI artifacts"
+}

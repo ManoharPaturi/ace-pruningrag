@@ -7,7 +7,7 @@ The empty initial `main` commit exists only as the base for the first pull reque
 Required checks:
 
 - `test`: locked Python environment, lint, formatting, and unit/integration tests.
-- `data-smoke`: hash-verified real RM3QA download, full schema validation, 25-query offline retrieval, and independent trace provenance/budget verification. Also runs the pinned-tokenizer Phase 2 selection smoke and verifies all five methods against original evidence and exact objective search.
+- `data-smoke`: hash-verified real RM3QA download, full schema validation, 25-query offline retrieval, and independent trace provenance/budget verification. Also runs the pinned-tokenizer Phase 2 selection smoke and verifies all five methods against original evidence and exact objective search. The same job also audits and independently verifies 8,118 Phase 3 source/budget plans on all 2,706 real questions.
 - `finance-smoke`: hash-verified original CRAG finance assets and real loopback HTTP probes.
 
 `data-smoke` does not run an LLM or claim scientific performance. Uploaded CI artifacts contain summaries and bounded traces, not the raw dataset or credentials.
