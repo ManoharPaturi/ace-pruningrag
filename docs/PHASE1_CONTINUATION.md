@@ -40,6 +40,10 @@ The encoder uses normalized CLS embeddings and cosine similarity; the reranker s
 
 This is explicitly an adapted retrieval smoke: 200-word chunks differ from released token/Markdown chunking, and the five questions have no gold supporting-evidence labels. Context counts, timings, and successful inference are not answer-quality or evidence-completeness claims. Actual completion will be recorded only after downloading and verifying output artifacts.
 
+Verified outcome: [private Kaggle pilot](https://www.kaggle.com/code/ionrey/ace-pruningrag-phase1-retrieval-pilot), version 1, completed on two Tesla T4 GPUs. All five queries ran BM25, dense retrieval, and dense+reranker retrieval. Returned source bundles match the submitted bundle; all 15 selected contexts were independently checked against the pinned raw dataset, including candidate IDs, exact source content/spans, and budgets. Remote finance probes match the local verified results.
+
+Mean per-query times in this small smoke were approximately 0.0075 seconds for BM25, 5.54 seconds for dense retrieval, and 6.39 seconds for dense+reranker. These exclude downloads/model loading and are not a representative speed benchmark. Encoder input length reached 1,931 tokens and reranker pair length 539; neither exceeded the 8,192-token cap, and no truncation was used. Accuracy and evidence recall remain null. Compact summaries, manifests, and completion records are in `results/phase1/learned_pilot_*.json`; full traces and logs remain ignored.
+
 ```bash
 uv run --no-editable python scripts/build_kaggle_kernel.py --mode retrieval --owner ionrey --output runs/kaggle/retrieval-kernel-v1
 uv tool run --from kaggle==2.2.4 kaggle kernels push -p runs/kaggle/retrieval-kernel-v1 --accelerator NvidiaTeslaT4 -t 1800
@@ -48,6 +52,8 @@ uv tool run --from kaggle==2.2.4 kaggle kernels push -p runs/kaggle/retrieval-ke
 ## Artifact discovery
 
 The authors' earlier competition repository and `fishsure/bge-m3-router` provide leads for a BGE-based router. They do not establish availability of the paper's fine-tuned Llama-3.1 source selector/domain adapter, so they are not substituted. The main PruningRAG release has no attached release assets, and the original router checkpoint is still unresolved.
+
+The competition repository's shared Google Drive folder was also inspected through its public page. Its router subfolder exposes a `bge-m3` folder, reinforcing the distinction from the required Llama adapter. No private account access or messages to maintainers were used in this search.
 
 The paper's table for 5 web pages with Llama-3.1-8B and pruning is a possible reproduction target. Before freezing that target, exact router/model assets, prompts, dataset split semantics, token chunking, all API snapshots, and the original judge must be resolved. The current adapted smoke does not claim to replicate that table.
 

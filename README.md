@@ -10,6 +10,8 @@ Phase 1 status: 36 tests pass; the pinned 2,706-record dataset validates; the 25
 
 Continuation: a separate compatibility copy resolves the startup constructor mismatch for `noise=0`, and two finance endpoints pass real HTTP tests on original CRAG snapshots. See [the continuation report](docs/PHASE1_CONTINUATION.md) for scope, source hashes, and the bounded learned-retrieval pilot.
 
+The five-query BGE-M3/BGE-reranker pilot completed on dual T4 GPUs. All returned contexts were independently verified; it is an adapted retrieval smoke with no generated answers or accuracy claims.
+
 ## Quick start
 
 Install Python 3.12 and [uv](https://docs.astral.sh/uv/). Run from the repository root:
