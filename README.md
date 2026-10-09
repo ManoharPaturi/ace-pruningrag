@@ -6,6 +6,8 @@ The research hypothesis is that selecting complementary web/API evidence jointly
 
 The revised roadmap was approved on 9 October 2026. See [the review](ROADMAP_REVIEW.md), [original roadmap](ACE_PruningRAG_5_Phase_Research_Roadmap.pdf), [evaluation protocol](docs/EVALUATION_PROTOCOL.md), and [reproduction report](docs/REPRODUCTION_REPORT.md).
 
+Phase 1 status: 26 tests pass; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test` and `data-smoke` checks.
+
 ## Quick start
 
 Install Python 3.12 and [uv](https://docs.astral.sh/uv/). Run from the repository root:

@@ -6,7 +6,7 @@
   "mean_selected_chunks": 3,
   "mean_context_words": 575.2,
   "maximum_context_words": 600,
-  "mean_retrieval_seconds": 0.005339413356268779,
+  "mean_retrieval_seconds": 0.01337863904000642,
   "llm_calls": 0,
   "api_cost_usd": 0,
   "answer_accuracy": null,

@@ -27,7 +27,8 @@ def bm25_rank(
     if average == 0:
         return sorted(((item, 0.0) for item in evidence), key=lambda pair: pair[0].evidence_id)
     frequency = Counter(term for count in counts for term in count)
-    query_terms = set(terms(query))
+    # Stable accumulation order avoids hash-seed-dependent floating-point scores.
+    query_terms = sorted(set(terms(query)))
     ranked = []
     for item, count, length in zip(evidence, counts, lengths, strict=True):
         score = 0.0

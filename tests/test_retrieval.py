@@ -1,3 +1,6 @@
+import os
+import subprocess
+import sys
 from dataclasses import replace
 
 import pytest
@@ -42,3 +45,25 @@ def test_deterministic_ties_and_empty_text(row):
 def test_invalid_bm25_parameters(k1, b):
     with pytest.raises(ValueError):
         bm25_rank("query", [], k1=k1, b=b)
+
+
+def test_scores_are_identical_across_process_hash_seeds():
+    code = """
+import json
+from ace_pruningrag.evidence import Evidence
+from ace_pruningrag.retrieval import bm25_rank
+texts = ["alpha beta beta gamma delta epsilon", "alpha delta", "gamma epsilon zeta zeta"]
+items = [Evidence(str(i), "fixture", "web", i, "url", "title", "time", "page_result",
+                  0, len(text), text, len(text.split())) for i,text in enumerate(texts)]
+print(json.dumps([(e.evidence_id, score) for e,score in
+                  bm25_rank("alpha beta gamma delta epsilon zeta", items)]))
+"""
+    outputs = [
+        subprocess.check_output(
+            [sys.executable, "-c", code],
+            text=True,
+            env={**os.environ, "PYTHONHASHSEED": seed},
+        )
+        for seed in ("1", "2", "42")
+    ]
+    assert len(set(outputs)) == 1
