@@ -5,13 +5,16 @@ import hashlib
 import itertools
 import json
 import math
+import re
 import statistics
 from collections import Counter, defaultdict
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from transformers import AutoTokenizer
 
 from ace_pruningrag.artifacts import read_json, sha256_file, write_json
+from ace_pruningrag.daily_prices import DailyPrices
 from ace_pruningrag.dataset import iter_records, verify_dataset
 from ace_pruningrag.evidence import web_chunks
 from ace_pruningrag.retrieval import bm25_rank
@@ -25,10 +28,22 @@ def verify(root: Path, run: Path) -> dict:
     tokenizer = AutoTokenizer.from_pretrained(
         root / config["generator"]["directory"], local_files_only=True, trust_remote_code=False
     )
+    historical = config["scope"] == "adapted_historical_routing_diagnostic"
+    if historical:
+        assert config == read_json(root / "configs/historical_routing.json")
+        prices = DailyPrices(read_json(root / "configs/crag_prices.json"), root)
     records = {
         r.interaction_id: r
-        for r in itertools.islice(
-            iter_records(verify_dataset(manifest["dataset"], root)), config["limit"]
+        for r in (
+            (
+                r
+                for r in iter_records(verify_dataset(manifest["dataset"], root))
+                if r.interaction_id in config["query_ids"]
+            )
+            if historical
+            else itertools.islice(
+                iter_records(verify_dataset(manifest["dataset"], root)), config["limit"]
+            )
         )
     }
     assert list(records) == manifest["query_ids"]
@@ -62,20 +77,65 @@ def verify(root: Path, run: Path) -> dict:
         assert row["query"] == q.query and row["query_time"] == q.query_time
         pool = bm25_rank(q.query, web_chunks(q, config["chunk_words"]))[: config["candidate_limit"]]
         original = {e.evidence_id: e.as_dict() for e, _ in pool}
-        # Current original daily-price probes end Feb 28, before all 50 question dates.
-        assert row["actual_source_calls"] == {"web": 1, "finance": 0}
-        assert row["candidate_ids"] == [e.evidence_id for e, _ in pool]
+        api_used = historical and (
+            row["policy"] == "all_available"
+            or (
+                row["policy"] == "adaptive"
+                and re.search(
+                    r"\b(?:stock price|share price|best performer|daily moves|price change)\b",
+                    q.query,
+                    re.I,
+                )
+                is not None
+            )
+        )
+        expected_candidates = [e.evidence_id for e, _ in pool]
+        if api_used:
+            api_rows = [e for e in row["selected"] if e["source_kind"] == "api"]
+            # The short API row ranks first on relevance and must fit this frozen budget.
+            assert len(api_rows) == 1
+            e = api_rows[0]
+            question_date = datetime.strptime(q.query_time, "%m/%d/%Y, %H:%M:%S PT").date()
+            requested = (question_date - timedelta(days=1)).isoformat()
+            assert e["requested_date"] == requested < question_date.isoformat()
+            assert e["available_as_of"] == question_date.isoformat()
+            possessives = {
+                t.upper() for t in re.findall(r"\b([A-Za-z][A-Za-z0-9]{2,5})['’]s\b", q.query)
+            }
+            assert e["ticker"] in possessives
+            response = prices.lookup(e["ticker"], requested)
+            assert len(response) == 1
+            timestamp, values = next(iter(response.items()))
+            price_hash = sha256_file(prices.path)
+            api = {
+                "content": f"{e['ticker']} closing price on {requested}: {values['Close']}",
+                "source_ref": f"crag:{price_hash}/finance_price/{e['ticker']}/{timestamp}",
+                "ticker": e["ticker"],
+                "requested_date": requested,
+                "row_timestamp": timestamp,
+                "available_as_of": question_date.isoformat(),
+                "close": values["Close"],
+                "snapshot_sha256": price_hash,
+                "limitations": "Currency and adjustment basis are not established by this row.",
+            }
+            identity = hashlib.sha256(json.dumps(api, sort_keys=True).encode()).hexdigest()
+            original[identity] = dict(api, evidence_id=identity, source_kind="api")
+            expected_candidates.append(identity)
+        assert row["actual_source_calls"] == {"web": 1, "finance": int(bool(api_used))}
+        assert row["candidate_ids"] == expected_candidates
         assert row["actual_llm_calls"] == 1
         assert not any(key in row for key in ("answer", "domain", "split", "alt_ans"))
         assert len(row["selected"]) <= config["max_items"]
         assert len({e["evidence_id"] for e in row["selected"]}) == len(row["selected"])
         for e in row["selected"]:
             assert e == original[e["evidence_id"]]
-            page = q.search_results[e["page_index"]]
-            assert page[e["field"]][e["char_start"] : e["char_end"]] == e["content"]
+            if e["source_kind"] == "web":
+                page = q.search_results[e["page_index"]]
+                assert page[e["field"]][e["char_start"] : e["char_end"]] == e["content"]
         context = "\n\n".join(
-            f"[{e['evidence_id']}] web "
-            f"{e['source_url'] or 'page:' + str(e['page_index'])}\n{e['content']}"
+            f"[{e['evidence_id']}] {e['source_kind']} "
+            f"{e.get('source_url') or e.get('source_ref') or 'page:' + str(e['page_index'])}"
+            f"\n{e['content']}"
             for e in sorted(row["selected"], key=lambda e: e["evidence_id"])
         )
         msg = [
@@ -122,7 +182,54 @@ def verify(root: Path, run: Path) -> dict:
             for key in ("generation_seconds", "retrieval_seconds")
         )
         assert row["plan"]["total_budget"] == config["total_tokens"]
-        assert row["plan"]["allocations"] == [["web", row["plan"]["evidence_budget"]]]
+        allocations = dict(row["plan"]["allocations"])
+        assert set(allocations) == ({"web", "finance_prices"} if api_used else {"web"})
+        assert sum(allocations.values()) == row["plan"]["evidence_budget"]
+        budget = row["plan"]["evidence_budget"]
+        assert allocations == (
+            {"finance_prices": (budget + 1) // 2, "web": budget // 2}
+            if api_used
+            else {"web": budget}
+        )
+        empty_msg = [
+            msg[0],
+            {
+                "role": "user",
+                "content": (
+                    f"Question timestamp: {q.query_time}\nQuestion: {q.query}\n"
+                    "<evidence>\n\n</evidence>\nAnswer:"
+                ),
+            },
+        ]
+        empty_count = len(
+            tokenizer.apply_chat_template(empty_msg, tokenize=True, add_generation_prompt=True)
+        )
+        assert row["plan"]["reserved_tokens"] == empty_count + config["max_new_tokens"]
+        for source, kind in (("web", "web"), ("finance_prices", "api")):
+            subset = [e for e in row["selected"] if e["source_kind"] == kind]
+            parts = []
+            for e in sorted(subset, key=lambda e: e["evidence_id"]):
+                ref = (
+                    (e["source_url"] or "page:" + str(e["page_index"]))
+                    if kind == "web"
+                    else e["source_ref"]
+                )
+                parts.append(f"[{e['evidence_id']}] {kind} {ref}\n{e['content']}")
+            subcontext = "\n\n".join(parts)
+            submsg = [
+                msg[0],
+                {
+                    "role": "user",
+                    "content": (
+                        f"Question timestamp: {q.query_time}\nQuestion: {q.query}\n"
+                        f"<evidence>\n{subcontext}\n</evidence>\nAnswer:"
+                    ),
+                },
+            ]
+            count = len(
+                tokenizer.apply_chat_template(submsg, tokenize=True, add_generation_prompt=True)
+            )
+            assert max(0, count - empty_count) <= allocations.get(source, 0)
         assert (
             row["plan"]["evidence_budget"] + row["plan"]["reserved_tokens"]
             == config["total_tokens"]
@@ -145,9 +252,9 @@ def verify(root: Path, run: Path) -> dict:
         )
         assert reported["semantic_accuracy"] is None and reported["unsupported_claim_rate"] is None
     assert summary["actual_llm_calls"] == len(rows)
-    assert (
-        summary["actual_web_retrieval_calls"] == len(rows) and summary["actual_finance_calls"] == 0
-    )
+    assert summary["actual_web_retrieval_calls"] == len(rows) and summary[
+        "actual_finance_calls"
+    ] == sum(r["actual_source_calls"]["finance"] for r in rows)
     assert summary["published_baseline_reproduced"] is False
     return {
         "status": "independently_verified",

@@ -57,6 +57,7 @@ jobs:
       - run: uv run --locked --no-editable python scripts/prices_smoke.py --output runs/ci/prices_smoke.json
       - run: uv run --locked --no-editable ace-rag fetch-data
       - run: uv run --locked --no-editable python scripts/price_eligibility_audit.py --output runs/ci/price_eligibility.json
+      - run: uv run --locked --no-editable --extra generation python scripts/historical_preflight.py --output runs/ci/historical-preflight
       - uses: actions/upload-artifact@v7.0.2
         with:
           name: phase1-real-finance-smoke
@@ -64,4 +65,5 @@ jobs:
             runs/ci/finance_smoke.json
             runs/ci/prices_smoke.json
             runs/ci/price_eligibility.json
+            runs/ci/historical-preflight/
           retention-days: 7

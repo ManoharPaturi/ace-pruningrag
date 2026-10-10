@@ -1,0 +1,14 @@
+[
+  {
+    "case": "api_value",
+    "tamper_rejected": true
+  },
+  {
+    "case": "token_count",
+    "tamper_rejected": true
+  },
+  {
+    "case": "source_budget",
+    "tamper_rejected": true
+  }
+]

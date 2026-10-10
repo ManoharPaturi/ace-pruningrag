@@ -11,6 +11,7 @@ def main():
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--overlay", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--config", default="configs/generated_pilot.json")
     args = parser.parse_args()
     sys.path.insert(0, str(args.overlay))
     sys.path.insert(0, str(args.root / "src"))
@@ -44,7 +45,7 @@ def main():
     audit = prices.audit()
     write_json(args.output / "price_audit.json", audit)
     result = generated_pilot(
-        args.root / "configs/generated_pilot.json",
+        args.root / args.config,
         args.root,
         args.output / "generated",
         runtime,
