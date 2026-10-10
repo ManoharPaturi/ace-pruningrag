@@ -28,6 +28,8 @@ jobs:
           version: "0.12.10"
       - run: uv sync --locked --no-editable --python 3.12
       - run: uv run --no-editable ace-rag fetch-data
+      - run: uv run --locked --no-editable python scripts/prospective_evaluation.py freeze --output runs/ci/prospective
+      - run: uv run --locked --no-editable python scripts/prospective_evaluation.py verify --packet runs/ci/prospective/packet.json --output runs/ci/prospective-verified
       - run: uv run --no-editable ace-rag profile-data --output runs/ci/dataset_profile.json
       - run: uv run --no-editable ace-rag smoke --output runs/ci/smoke
       - run: uv run --no-editable python scripts/verify_smoke.py --run runs/ci/smoke
