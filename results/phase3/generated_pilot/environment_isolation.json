@@ -1,0 +1,17 @@
+{
+  "base_before": {
+    "transformers": "5.16.1",
+    "huggingface_hub": "1.29.0",
+    "tokenizers": "0.23.1",
+    "safetensors": "0.8.0",
+    "sentencepiece": "0.2.2"
+  },
+  "base_after": {
+    "transformers": "5.16.1",
+    "huggingface_hub": "1.29.0",
+    "tokenizers": "0.23.1",
+    "safetensors": "0.8.0",
+    "sentencepiece": "0.2.2"
+  },
+  "base_preserved": true
+}

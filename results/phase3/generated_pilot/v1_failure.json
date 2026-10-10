@@ -1,0 +1,12 @@
+{
+  "status": "excluded_generation_failure",
+  "kernel_version": 1,
+  "generator_dtype": "float16",
+  "queries": 50,
+  "generated_outputs": 150,
+  "observed_failure": "Every output consists of 96 repeated token IDs equal to zero, decoded as punctuation.",
+  "trace_sha256": "49e5f2264eb91ef4674b412791e0d2295b950c4647f41b81887421a1107b82a1",
+  "explanation": "Likely numerical failure; original run did not retain logits, so cause is not directly proven.",
+  "quality_metrics_admitted": false,
+  "repair": "Float32 weights; finite-parameter and per-generation-step score checks; fresh full rerun."
+}

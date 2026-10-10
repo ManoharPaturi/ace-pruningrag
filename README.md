@@ -68,3 +68,7 @@ The shared evidence selector now implements top-K, MMR, coverage-only, joint pai
 ## Phase 3 routing engineering
 
 Fixed-web, all-available, and heuristic adaptive routing now share one evidence-token budget and explicitly gate unavailable or unknown-date API snapshots. All 2,706 genuine questions produced 8,118 independently verified plans; all policies had the same usable allocation because only web was eligible. No quality or cost advantage is claimed. Human review exports now import immutably with source-span validation. There are 69 passing tests. See [Phase 3 report](docs/PHASE3_ROUTING.md) for results and outstanding scientific gates.
+
+## Executed Phase 3 pilot
+
+The guarded float32 Qwen development pilot generated and independently verified 150 answers across 50 genuine questions and three matched-budget policies. Each policy had 4 literal reference matches, 12 abstentions, and 34 pending semantic judgments. Prompts/answers were identical because only web was date-compatible; no routing advantage is claimed. The failed float16 run is retained and excluded. See [executed pilot report](docs/PHASE3_GENERATED_PILOT.md). There are 77 passing tests plus real-tokenizer and historical-price CI checks.
