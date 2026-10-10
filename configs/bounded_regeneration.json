@@ -1,0 +1,12 @@
+{
+  "scope": "historical_development_bounded_regeneration",
+  "baseline_config": "configs/historical_routing.json",
+  "max_extra_rounds": 1,
+  "max_total_llm_calls": 26,
+  "per_round_total_tokens": 2048,
+  "per_request_total_reserved_tokens_cap": 4096,
+  "trigger": "missing_sufficient_structured_dated_price",
+  "retry_policy": "all_available",
+  "regenerate_existing_abstentions_with_missing_evidence": true,
+  "publication_results": false
+}

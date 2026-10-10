@@ -57,7 +57,7 @@ jobs:
       - run: uv run --locked --no-editable python scripts/prices_smoke.py --output runs/ci/prices_smoke.json
       - run: uv run --locked --no-editable ace-rag fetch-data
       - run: uv run --locked --no-editable python scripts/price_eligibility_audit.py --output runs/ci/price_eligibility.json
-      - run: uv run --locked --no-editable --extra generation python scripts/historical_preflight.py --output runs/ci/historical-preflight
+      - run: uv run --locked --no-editable --extra generation python scripts/historical_preflight.py --retry --output runs/ci/historical-preflight
       - run: uv run --locked --no-editable python scripts/reliability_replay.py --input runs/ci/historical-preflight/prepared.jsonl --output runs/ci/reliability
       - uses: actions/upload-artifact@v7.0.2
         with:
