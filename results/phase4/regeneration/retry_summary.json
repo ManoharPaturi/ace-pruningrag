@@ -1,0 +1,73 @@
+{
+  "status": "bounded_regeneration_completed",
+  "protocol": {
+    "scope": "historical_development_bounded_regeneration",
+    "baseline_config": "configs/historical_routing.json",
+    "max_extra_rounds": 1,
+    "max_total_llm_calls": 26,
+    "per_round_total_tokens": 2048,
+    "per_request_total_reserved_tokens_cap": 4096,
+    "trigger": "missing_sufficient_structured_dated_price",
+    "retry_policy": "all_available",
+    "regenerate_existing_abstentions_with_missing_evidence": true,
+    "publication_results": false
+  },
+  "initial_llm_calls": 18,
+  "extra_llm_calls": 8,
+  "total_llm_calls": 26,
+  "actual_judge_calls": 0,
+  "extra_web_calls": 8,
+  "extra_finance_calls": 8,
+  "extra_validation_price_reads": 8,
+  "inventory_reads": 26,
+  "total_input_tokens": 29568,
+  "total_output_tokens": 465,
+  "maximum_combined_reserved_tokens": 2872,
+  "extra_generation_seconds": 13.531217198999911,
+  "per_policy": {
+    "fixed_web": {
+      "requests": 6,
+      "retries": 6,
+      "before_verdicts": {
+        "missing_dated_evidence": 2,
+        "generator_abstained": 4
+      },
+      "after_verdicts": {
+        "unparsed_or_unsupported_details": 2,
+        "supported_price_field": 3,
+        "generator_abstained": 1
+      }
+    },
+    "all_available": {
+      "requests": 6,
+      "retries": 0,
+      "before_verdicts": {
+        "unparsed_or_unsupported_details": 2,
+        "supported_price_field": 3,
+        "generator_abstained": 1
+      },
+      "after_verdicts": {
+        "unparsed_or_unsupported_details": 2,
+        "supported_price_field": 3,
+        "generator_abstained": 1
+      }
+    },
+    "adaptive": {
+      "requests": 6,
+      "retries": 2,
+      "before_verdicts": {
+        "unparsed_or_unsupported_details": 2,
+        "supported_price_field": 1,
+        "generator_abstained": 3
+      },
+      "after_verdicts": {
+        "unparsed_or_unsupported_details": 2,
+        "supported_price_field": 3,
+        "generator_abstained": 1
+      }
+    }
+  },
+  "human_semantic_accuracy": null,
+  "held_out_evaluation": false,
+  "full_phase4_research_gate_passed": false
+}

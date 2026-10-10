@@ -119,7 +119,13 @@ def prepare_context(query, config, policy, tokenize, capabilities, api_fetch=Non
 
 
 def generated_pilot(
-    config_path: Path, root: Path, output: Path, runtime: dict, price_audit: dict, prices
+    config_path: Path,
+    root: Path,
+    output: Path,
+    runtime: dict,
+    price_audit: dict,
+    prices,
+    retry: bool = False,
 ) -> dict:
     import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer, LogitsProcessor
@@ -374,4 +380,21 @@ def generated_pilot(
             },
         },
     )
+    if retry:
+        if not historical:
+            raise ValueError("retry is limited to the frozen historical diagnostic")
+        from .regeneration import regenerate
+
+        retry_summary = regenerate(
+            root,
+            output.parent / "regenerated",
+            rows,
+            {r.interaction_id: r.inference_input() for r in selected_records},
+            model,
+            tokenizer,
+            FiniteScores(),
+            prices,
+            price_audit["asset_sha256"],
+        )
+        return dict(summary, retry_summary=retry_summary)
     return summary

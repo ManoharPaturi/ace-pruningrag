@@ -1,0 +1,74 @@
+[
+  {
+    "interaction_id": "932c1332-de1e-4cb2-ab46-e738442ae19f",
+    "policy": "fixed_web",
+    "combined_reserved_tokens": 2560,
+    "source_calls": {
+      "web": 1,
+      "finance": 1
+    }
+  },
+  {
+    "interaction_id": "7a9cad56-6204-45c0-9889-6d6571ca7a9c",
+    "policy": "fixed_web",
+    "combined_reserved_tokens": 2663,
+    "source_calls": {
+      "web": 1,
+      "finance": 1
+    }
+  },
+  {
+    "interaction_id": "74b4339f-ada0-423d-b71c-c06da30f20d6",
+    "policy": "fixed_web",
+    "combined_reserved_tokens": 1624,
+    "source_calls": {
+      "web": 1,
+      "finance": 1
+    }
+  },
+  {
+    "interaction_id": "d5d46781-7470-4f15-9c0f-8c1702164f2a",
+    "policy": "fixed_web",
+    "combined_reserved_tokens": 2538,
+    "source_calls": {
+      "web": 1,
+      "finance": 1
+    }
+  },
+  {
+    "interaction_id": "b3057146-e638-4c52-97fc-f133785dfb7b",
+    "policy": "fixed_web",
+    "combined_reserved_tokens": 2821,
+    "source_calls": {
+      "web": 1,
+      "finance": 1
+    }
+  },
+  {
+    "interaction_id": "b3057146-e638-4c52-97fc-f133785dfb7b",
+    "policy": "adaptive",
+    "combined_reserved_tokens": 2821,
+    "source_calls": {
+      "web": 1,
+      "finance": 1
+    }
+  },
+  {
+    "interaction_id": "435cc8d8-3a4f-483d-a4fb-3f1376359871",
+    "policy": "fixed_web",
+    "combined_reserved_tokens": 2872,
+    "source_calls": {
+      "web": 1,
+      "finance": 1
+    }
+  },
+  {
+    "interaction_id": "435cc8d8-3a4f-483d-a4fb-3f1376359871",
+    "policy": "adaptive",
+    "combined_reserved_tokens": 2872,
+    "source_calls": {
+      "web": 1,
+      "finance": 1
+    }
+  }
+]

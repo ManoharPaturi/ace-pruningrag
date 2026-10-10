@@ -12,6 +12,7 @@ def main():
     parser.add_argument("--overlay", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--config", default="configs/generated_pilot.json")
+    parser.add_argument("--retry", action="store_true")
     args = parser.parse_args()
     sys.path.insert(0, str(args.overlay))
     sys.path.insert(0, str(args.root / "src"))
@@ -51,13 +52,16 @@ def main():
         runtime,
         audit,
         prices,
+        retry=args.retry,
     )
     write_json(
         args.output / "completion.json",
         {
             "status": result["status"],
             "queries": result["queries"],
-            "actual_llm_calls": result["actual_llm_calls"],
+            "actual_llm_calls": result.get("retry_summary", {}).get(
+                "total_llm_calls", result["actual_llm_calls"]
+            ),
             "runtime": runtime,
         },
     )

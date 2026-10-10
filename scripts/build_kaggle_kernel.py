@@ -12,7 +12,7 @@ from pathlib import Path
 def build(root: Path, output: Path, owner: str, mode: str = "bootstrap") -> dict:
     if not re.fullmatch(r"[A-Za-z0-9_-]+", owner):
         raise ValueError("invalid Kaggle owner")
-    if mode not in {"bootstrap", "retrieval", "generation", "historical"}:
+    if mode not in {"bootstrap", "retrieval", "generation", "historical", "regeneration"}:
         raise ValueError("unsupported kernel mode")
     paths = sorted((root / "src/ace_pruningrag").glob("*.py"))
     paths += [
@@ -33,11 +33,13 @@ def build(root: Path, output: Path, owner: str, mode: str = "bootstrap") -> dict
             )
         ]
         paths.append(root / "scripts/learned_driver.py")
-    if mode in {"generation", "historical"}:
+    if mode in {"generation", "historical", "regeneration"}:
         paths += [root / "configs" / name for name in ("generated_pilot.json", "crag_prices.json")]
         paths.append(root / "scripts/generated_driver.py")
-        if mode == "historical":
+        if mode in {"historical", "regeneration"}:
             paths.append(root / "configs/historical_routing.json")
+    if mode == "regeneration":
+        paths.append(root / "configs/bounded_regeneration.json")
     files = {str(path.relative_to(root)): path.read_text(encoding="utf-8") for path in paths}
     hashes = {name: hashlib.sha256(value.encode()).hexdigest() for name, value in files.items()}
     payload = base64.b64encode(
@@ -55,15 +57,20 @@ def build(root: Path, output: Path, owner: str, mode: str = "bootstrap") -> dict
         "retrieval": "kaggle_retrieval_pilot.py",
         "generation": "kaggle_generated_pilot.py",
         "historical": "kaggle_generated_pilot.py",
+        "regeneration": "kaggle_generated_pilot.py",
     }[mode]
     template = (root / "scripts" / template_name).read_text(encoding="utf-8")
     if template.count('PAYLOAD = "__BUNDLE__"') != 1:
         raise ValueError("bundle placeholder missing or repeated")
-    if mode == "historical":
+    if mode in {"historical", "regeneration"}:
         template = template.replace(
             'str(root / "scripts/generated_driver.py"),',
             'str(root / "scripts/generated_driver.py"), "--config", '
             '"configs/historical_routing.json",',
+        )
+    if mode == "regeneration":
+        template = template.replace(
+            '"configs/historical_routing.json",', '"configs/historical_routing.json", "--retry",'
         )
     source = template.replace('PAYLOAD = "__BUNDLE__"', f"PAYLOAD = {payload!r}")
     output.mkdir(parents=True, exist_ok=False)
@@ -85,12 +92,15 @@ def build(root: Path, output: Path, owner: str, mode: str = "bootstrap") -> dict
         "kernel_sources": [],
         "model_sources": [],
     }
-    if mode in {"generation", "historical"}:
+    if mode in {"generation", "historical", "regeneration"}:
         metadata["id"] = f"{owner}/ace-pruningrag-phase3-generated-pilot"
         metadata["title"] = "ACE PruningRAG Phase3 Generated Pilot"
     if mode == "historical":
         metadata["id"] = f"{owner}/ace-pruningrag-historical-routing-diagnostic"
         metadata["title"] = "ACE PruningRAG Historical Routing Diagnostic"
+    if mode == "regeneration":
+        metadata["id"] = f"{owner}/ace-pruningrag-bounded-regeneration"
+        metadata["title"] = "ACE PruningRAG Bounded Regeneration"
     (output / "kernel-metadata.json").write_text(json.dumps(metadata, indent=2) + "\n")
     (output / "bundle-manifest.json").write_text(json.dumps(hashes, indent=2) + "\n")
     return metadata
@@ -103,7 +113,7 @@ if __name__ == "__main__":
     parser.add_argument("--root", type=Path, default=Path.cwd())
     parser.add_argument(
         "--mode",
-        choices=["bootstrap", "retrieval", "generation", "historical"],
+        choices=["bootstrap", "retrieval", "generation", "historical", "regeneration"],
         default="bootstrap",
     )
     args = parser.parse_args()

@@ -1,0 +1,95 @@
+{
+  "status": "adapted_generated_pilot_completed",
+  "queries": 6,
+  "actual_llm_calls": 18,
+  "actual_web_retrieval_calls": 18,
+  "actual_finance_calls": 10,
+  "price_preflight_calls": 6,
+  "generator": {
+    "repository": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "directory": "data/models/generator",
+    "license": "Apache-2.0",
+    "dtype": "float32",
+    "device": "cuda:0"
+  },
+  "policies": {
+    "fixed_web": {
+      "queries": 6,
+      "outcomes": {
+        "needs_semantic_review": 2,
+        "abstained": 4
+      },
+      "exact_agreement_rate": 0.0,
+      "abstention_rate": 0.6666666666666666,
+      "mean_input_tokens": 1265.1666666666667,
+      "mean_output_tokens": 11.5,
+      "maximum_total_tokens": 1567,
+      "mean_generation_seconds": 1.667043810833358,
+      "mean_retrieval_seconds": 0.17543102650002615,
+      "semantic_accuracy": null,
+      "unsupported_claim_rate": null
+    },
+    "all_available": {
+      "queries": 6,
+      "outcomes": {
+        "needs_semantic_review": 5,
+        "abstained": 1
+      },
+      "exact_agreement_rate": 0.0,
+      "abstention_rate": 0.16666666666666666,
+      "mean_input_tokens": 1055.8333333333333,
+      "mean_output_tokens": 21.333333333333332,
+      "maximum_total_tokens": 1258,
+      "mean_generation_seconds": 1.6130549483334182,
+      "mean_retrieval_seconds": 0.15863964116666315,
+      "semantic_accuracy": null,
+      "unsupported_claim_rate": null
+    },
+    "adaptive": {
+      "queries": 6,
+      "outcomes": {
+        "needs_semantic_review": 3,
+        "abstained": 3
+      },
+      "exact_agreement_rate": 0.0,
+      "abstention_rate": 0.5,
+      "mean_input_tokens": 1161.6666666666667,
+      "mean_output_tokens": 15.666666666666666,
+      "maximum_total_tokens": 1567,
+      "mean_generation_seconds": 1.5491241389999761,
+      "mean_retrieval_seconds": 0.17088953433339307,
+      "semantic_accuracy": null,
+      "unsupported_claim_rate": null
+    }
+  },
+  "model_loading_seconds": 7.270649555000091,
+  "numerical_diagnostic": {
+    "dtype": "float32",
+    "all_parameters_finite": true,
+    "per_step_scores_guarded": true
+  },
+  "runtime": {
+    "transformers": "4.57.3",
+    "huggingface_hub": "0.36.0",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.6.2",
+    "sentencepiece": "0.2.1",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpus": [
+      "Tesla T4",
+      "Tesla T4"
+    ]
+  },
+  "full_scientific_phase3_complete": false,
+  "published_baseline_reproduced": false,
+  "limitations": [
+    "Adapted generator and price executor; not original PruningRAG reproduction.",
+    "Six availability-selected development questions, not a representative benchmark.",
+    "Non-exact answers require independent semantic and grounding review.",
+    "Price availability requires actual matching rows; no invented data."
+  ],
+  "identical_prompts_across_policies": 0,
+  "identical_predictions_across_policies": 1
+}
