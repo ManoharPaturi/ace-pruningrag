@@ -185,6 +185,12 @@ def verify(root: Path, run: Path) -> dict:
         allocations = dict(row["plan"]["allocations"])
         assert set(allocations) == ({"web", "finance_prices"} if api_used else {"web"})
         assert sum(allocations.values()) == row["plan"]["evidence_budget"]
+        budget = row["plan"]["evidence_budget"]
+        assert allocations == (
+            {"finance_prices": (budget + 1) // 2, "web": budget // 2}
+            if api_used
+            else {"web": budget}
+        )
         empty_msg = [
             msg[0],
             {

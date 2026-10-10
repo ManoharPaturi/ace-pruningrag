@@ -1,0 +1,117 @@
+{
+  "scope": "Prespecified pure numeric price-value diagnostic, not independent semantic review",
+  "absolute_tolerance": 1e-06,
+  "per_policy": {
+    "fixed_web": {
+      "questions": 6,
+      "pure_numeric_predictions": 0,
+      "price_value_matches": 0,
+      "rows": [
+        {
+          "interaction_id": "932c1332-de1e-4cb2-ab46-e738442ae19f",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "7a9cad56-6204-45c0-9889-6d6571ca7a9c",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "74b4339f-ada0-423d-b71c-c06da30f20d6",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "d5d46781-7470-4f15-9c0f-8c1702164f2a",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "b3057146-e638-4c52-97fc-f133785dfb7b",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "435cc8d8-3a4f-483d-a4fb-3f1376359871",
+          "pure_numeric": false,
+          "matches_price_field": false
+        }
+      ]
+    },
+    "all_available": {
+      "questions": 6,
+      "pure_numeric_predictions": 2,
+      "price_value_matches": 2,
+      "rows": [
+        {
+          "interaction_id": "932c1332-de1e-4cb2-ab46-e738442ae19f",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "7a9cad56-6204-45c0-9889-6d6571ca7a9c",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "74b4339f-ada0-423d-b71c-c06da30f20d6",
+          "pure_numeric": true,
+          "matches_price_field": true
+        },
+        {
+          "interaction_id": "d5d46781-7470-4f15-9c0f-8c1702164f2a",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "b3057146-e638-4c52-97fc-f133785dfb7b",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "435cc8d8-3a4f-483d-a4fb-3f1376359871",
+          "pure_numeric": true,
+          "matches_price_field": true
+        }
+      ]
+    },
+    "adaptive": {
+      "questions": 6,
+      "pure_numeric_predictions": 1,
+      "price_value_matches": 1,
+      "rows": [
+        {
+          "interaction_id": "932c1332-de1e-4cb2-ab46-e738442ae19f",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "7a9cad56-6204-45c0-9889-6d6571ca7a9c",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "74b4339f-ada0-423d-b71c-c06da30f20d6",
+          "pure_numeric": true,
+          "matches_price_field": true
+        },
+        {
+          "interaction_id": "d5d46781-7470-4f15-9c0f-8c1702164f2a",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "b3057146-e638-4c52-97fc-f133785dfb7b",
+          "pure_numeric": false,
+          "matches_price_field": false
+        },
+        {
+          "interaction_id": "435cc8d8-3a4f-483d-a4fb-3f1376359871",
+          "pure_numeric": false,
+          "matches_price_field": false
+        }
+      ]
+    }
+  }
+}
