@@ -1,0 +1,7 @@
+{
+  "status": "real_tokenizer_preflight_completed",
+  "requests": 150,
+  "maximum_reserved_request_tokens": 2028,
+  "actual_llm_calls": 0,
+  "config_sha256": "223dd11154b5681cbba90aa98d0bcde3111f820a2049d950e97a9edaee6371a8"
+}

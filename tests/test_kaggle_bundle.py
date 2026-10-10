@@ -69,3 +69,23 @@ def test_retrieval_bundle_includes_fresh_process_driver_and_excludes_secrets(tmp
     assert "scripts/learned_driver.py" in json.loads(decoded)["files"]
     assert metadata["id"].endswith("retrieval-pilot")
     assert metadata["is_private"] is True
+
+
+def test_generation_bundle_is_private_and_contains_only_allowed_protocol_files(tmp_path):
+    root = tmp_path / "repo"
+    for directory in ("src/ace_pruningrag", "configs", "scripts"):
+        (root / directory).mkdir(parents=True)
+    (root / "src/ace_pruningrag/__init__.py").write_text("# fixture\n")
+    for name in ("dataset", "upstream", "retrieval_smoke", "generated_pilot", "crag_prices"):
+        (root / "configs" / f"{name}.json").write_text("{}")
+    (root / "scripts/generated_driver.py").write_text("# driver\n")
+    (root / "scripts/kaggle_generated_pilot.py").write_text('PAYLOAD = "__BUNDLE__"\n')
+    (root / "configs/private-review.json").write_text("private-review-sentinel")
+    out = tmp_path / "kernel"
+    metadata = builder.build(root, out, "fixture-owner", "generation")
+    payload = (out / "bootstrap.py").read_text().split("=", 1)[1].strip().strip("'")
+    files = json.loads(zlib.decompress(base64.b64decode(payload)))["files"]
+    assert "configs/generated_pilot.json" in files and "scripts/generated_driver.py" in files
+    assert "private-review-sentinel" not in str(files)
+    assert metadata["is_private"] is True
+    assert metadata["id"] == "fixture-owner/ace-pruningrag-phase3-generated-pilot"
