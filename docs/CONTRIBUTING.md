@@ -15,3 +15,5 @@ Required checks:
 Use a separate run directory for every experiment. Keep upstream untouched. Preserve the source hashes and configuration for every result. Do not commit raw credentials, model weights, datasets, or full research caches.
 
 The repository is now public. Contributors submit PRs from forks; only `ManoharPaturi` currently has repository write access and can merge. PRs and required checks apply to administrators too. No approval count is required because owner-authored PRs cannot be self-approved; the owner must review the change and merge after checks pass. Do not add collaborators with write access without revisiting this access policy.
+
+The generated pilot adds 150 CPU preparations using the pinned generator tokenizer to `data-smoke`, and original daily-price download/hash/date probes to `finance-smoke`. CI runs no large model or synthetic substitute for GPU inference. Kaggle outputs are independently verified separately; non-exact answers stay pending semantic review.

@@ -1,6 +1,6 @@
 # Phase 3: executed generated-answer comparison
 
-This report covers an adapted development pilot, separate from the original PruningRAG paper reproduction and publication validation. Final run results will be filled after independent verification of the guarded float32 rerun.
+This report covers an adapted development pilot, separate from the original PruningRAG paper reproduction and publication validation. The guarded float32 run is complete and independently verified. The executable pilot is complete; the broader scientific/publication gate remains open.
 
 ## Frozen execution contract
 
@@ -23,6 +23,36 @@ The original price snapshot is 136,196,096 bytes, SHA-256 `05fa78f8d319ae2a7f599
 Run version 1 executed 150 calls but every output consisted of 96 repetitions of token 0, decoded as punctuation. Its structural/token/provenance check initially passed; content inspection identified the failed generation. It is retained and explicitly excluded from quality evaluation. Because that run did not save logits, a numerical explanation is suspected rather than directly proven.
 
 An intermediate version 2 was superseded after detecting that a metadata precision edit had not changed the loader. It is not admitted into evaluation. The guarded rerun changes the loader to float32, rejects non-finite model parameters, and checks generation scores on every decoding step. The independent verifier also requires the guarded float32 contract and rejects the all-token-zero failure pattern. Model/prompt/data choices remain fixed; no output-based answer tuning is performed.
+
+## Verified results — Kaggle version 3
+
+The genuine run generated 150 answers: 50 questions under each of three policies. All 150 outputs passed independent source-span, prompt-token, decoding, budget, numerical-contract, and summary-statistic checks. All submitted bundle hashes match the recovered bundle and current execution source. Kaggle base package versions were preserved.
+
+| Policy | Exact agreement | Abstained | Semantic review pending | Mean generation | Mean retrieval |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Fixed web | 4/50 (8%) | 12/50 (24%) | 34/50 | 2.093 s | 0.237 s |
+| All available | 4/50 (8%) | 12/50 (24%) | 34/50 | 2.083 s | 0.239 s |
+| Adaptive | 4/50 (8%) | 12/50 (24%) | 34/50 | 2.087 s | 0.240 s |
+
+All 50 questions had identical prompts and predictions across policies because only web was eligible for evidence execution. Therefore this run shows **no measured answer-quality advantage** for adaptive routing under the available-source constraint. The small timing differences are runtime variation. Exact agreement is not an 8% semantic-accuracy claim: punctuation, equivalent names, or valid paraphrases may remain among the 34 pending judgments, as may incorrect or unsupported answers.
+
+Mean prompt tokens: 1,511.46. Mean generated tokens: 15.32. Maximum actual prompt plus output: 1,938 of 2,048. Maximum prompt plus reserved output allowance: 2,028. Actual benchmark calls: 150 web retrievals, 150 generations, zero finance evidence calls. Two shared price-eligibility lookups occurred before policy execution; the price audit also probes historical rows. Model loading took 6.865 seconds, reported separately. The requested machine exposed two Tesla T4 GPUs; this small float32 model ran on cuda:0.
+
+Full predictions and logs remain under ignored `runs/kaggle/generated-output-v3`. Compact reports and immutable contracts are in `results/phase3/generated_pilot`. The earlier failed and superseded submissions remain separate; version 1's failure summary is tracked and its zero-agreement result is excluded from evaluation.
+
+## Prespecified first-five failure analysis
+
+The first five questions were reviewed before generation. The following is AI-assisted analysis against that earlier review, not new human grading of model outputs; the 34 non-exact results remain pending in the formal metrics.
+
+| Question | Generated output | Diagnostic finding |
+| --- | --- | --- |
+| Nash 3-point attempts | `14.2` | Does not match the previously reviewed seasonal 3PA values; a quantity/statistic mismatch. |
+| Movie/person/device | Speculative list of films, cut off at the output cap | Does not establish the requested relation from the inspected evidence; violates the intended concise/abstention behavior. |
+| Salesforce CEO's previous employer | `Salesforce previously worked at Informatica.` | Confuses the requested person/employer relation and disagrees with the reviewed Oracle reference. |
+| 2021 Visual Effects Oscar | `'Tenet'` | Matches the reviewed ceremony-year answer semantically, but quotes prevent literal agreement; this illustrates why 8% is not semantic accuracy. |
+| Dow daily winner | `SPDR Dow Jones Industrial Average ETF (DIA)` | An ETF is not a constituent company, and its mention does not establish historical daily performance. |
+
+Finite numerical inference does not establish grounding. These cases motivate later source sufficiency, entity/type checks, and independently graded verification; they do not support a claim that reliability is solved.
 
 ## Metrics and boundaries
 
