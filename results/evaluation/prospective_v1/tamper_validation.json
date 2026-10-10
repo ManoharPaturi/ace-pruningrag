@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "mutation": "source_span",
+      "rejected": true,
+      "independent_source_reconstruction": true
+    },
+    {
+      "mutation": "exclusion_ledger",
+      "rejected": true,
+      "independent_source_reconstruction": true
+    }
+  ],
+  "original_packet_unchanged": true
+}

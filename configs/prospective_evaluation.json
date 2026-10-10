@@ -1,0 +1,22 @@
+{
+  "scope": "prospective_web_candidate_evidence_review",
+  "dataset_config": "configs/dataset.json",
+  "sample_size": 50,
+  "seed": "ace-prospective-2026-10-10-v1",
+  "candidate_limit": 12,
+  "chunk_words": 120,
+  "exposure_sources": [
+    "results/phase1/retrieval_smoke_manifest.json",
+    "results/phase1/learned_pilot_manifest.json",
+    "results/phase1/learned_pilot_v2/manifest.json",
+    "results/phase2/manifest.json",
+    "results/phase3/manifest.json",
+    "results/phase3/generated_pilot/manifest.json",
+    "results/phase3/price_eligibility.json",
+    "results/phase3/historical_routing/manifest.json",
+    "results/phase4/regeneration/initial_manifest.json"
+  ],
+  "exclude_shared_canonical_urls": true,
+  "exclude_duplicate_normalized_questions": true,
+  "publication_evaluation_ready": false
+}

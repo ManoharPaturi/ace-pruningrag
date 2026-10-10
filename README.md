@@ -6,7 +6,7 @@ The research hypothesis is that selecting complementary web/API evidence jointly
 
 The revised roadmap was approved on 9 October 2026. See [the review](ROADMAP_REVIEW.md), [original roadmap](ACE_PruningRAG_5_Phase_Research_Roadmap.pdf), [evaluation protocol](docs/EVALUATION_PROTOCOL.md), and [reproduction report](docs/REPRODUCTION_REPORT.md).
 
-Phase 1 status: 37 tests pass; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test`, `data-smoke`, and `finance-smoke` checks.
+Current engineering checks: 121 tests pass; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test`, `data-smoke`, and `finance-smoke` checks.
 
 Continuation: a separate compatibility copy resolves the startup constructor mismatch for `noise=0`, and two finance endpoints pass real HTTP tests on original CRAG snapshots. See [the continuation report](docs/PHASE1_CONTINUATION.md) for scope, source hashes, and the bounded learned-retrieval pilot.
 
@@ -72,3 +72,5 @@ Fixed-web, all-available, and heuristic adaptive routing now share one evidence-
 ## Executed Phase 3 pilot
 
 The guarded float32 Qwen development pilot generated and independently verified 150 answers across 50 genuine questions and three matched-budget policies. Each policy had 4 literal reference matches, 12 abstentions, and 34 pending semantic judgments. Prompts/answers were identical because only web was date-compatible; no routing advantage is claimed. The failed float16 run is retained and excluded. See [executed pilot report](docs/PHASE3_GENERATED_PILOT.md). There are 77 passing tests plus real-tokenizer and historical-price CI checks.
+
+The next evaluation milestone freezes 50 prospective web questions and 600 evidence excerpts, excluding 90 documented pilot/audit IDs and shared source pages. A readable human review packet and strict import validator are ready; decisions remain pending. See [the prospective evaluation protocol](docs/PROSPECTIVE_EVALUATION.md). This is not a sealed publication benchmark or a demonstrated quality improvement.
