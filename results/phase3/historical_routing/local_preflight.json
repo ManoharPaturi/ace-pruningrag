@@ -1,0 +1,7 @@
+{
+  "status": "historical_preflight_completed",
+  "requests": 18,
+  "maximum_reserved_tokens": 1657,
+  "actual_llm_calls": 0,
+  "finance_calls": 10
+}

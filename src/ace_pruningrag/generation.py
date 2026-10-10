@@ -125,8 +125,12 @@ def generated_pilot(
     from transformers import AutoModelForCausalLM, AutoTokenizer, LogitsProcessor
 
     config = read_json(config_path)
-    if config["scope"] != "adapted_phase3_generated_answer_pilot" or config["limit"] != 50:
-        raise ValueError("only frozen 50-question adapted pilot allowed")
+    historical = config["scope"] == "adapted_historical_routing_diagnostic"
+    if historical:
+        if config["limit"] != 6 or len(set(config["query_ids"])) != 6:
+            raise ValueError("only frozen six-question historical diagnostic allowed")
+    elif config["scope"] != "adapted_phase3_generated_answer_pilot" or config["limit"] != 50:
+        raise ValueError("only frozen adapted protocols allowed")
     if (
         config["policies"] != ["fixed_web", "all_available", "adaptive"]
         or config["sampling"] is not False
@@ -188,7 +192,14 @@ def generated_pilot(
     ids = []
     rows = []
     with (output / "predictions.jsonl").open("x", encoding="utf-8") as stream:
-        for index, record in enumerate(islice(iter_records(dataset), config["limit"])):
+        selected_records = (
+            [r for r in iter_records(dataset) if r.interaction_id in config["query_ids"]]
+            if historical
+            else list(islice(iter_records(dataset), config["limit"]))
+        )
+        if historical and [r.interaction_id for r in selected_records] != config["query_ids"]:
+            raise ValueError("historical query IDs/order differ from frozen protocol")
+        for index, record in enumerate(selected_records):
             query = record.inference_input()
             ids.append(query.interaction_id)
             import re
@@ -235,6 +246,14 @@ def generated_pilot(
                     "response": response,
                     "snapshot_sha256": price_audit["asset_sha256"],
                 }
+
+            if historical:
+                from .historical_comparison import historical_source
+
+                capabilities, api_fetch = historical_source(
+                    query, prices, price_audit["asset_sha256"]
+                )
+                preflight_calls += 1
 
             # Rotate which policy runs first to reduce systematic warm-up/order bias.
             order = config["policies"][index % 3 :] + config["policies"][: index % 3]
@@ -305,7 +324,11 @@ def generated_pilot(
         "published_baseline_reproduced": False,
         "limitations": [
             "Adapted generator and price executor; not original PruningRAG reproduction.",
-            "First 50 file-order development questions, no held-out publication benchmark.",
+            (
+                "Six availability-selected development questions, not a representative benchmark."
+                if historical
+                else "First 50 file-order development questions, no held-out publication benchmark."
+            ),
             "Non-exact answers require independent semantic and grounding review.",
             "Price availability requires actual matching rows; no invented data.",
         ],

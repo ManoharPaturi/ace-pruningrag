@@ -89,3 +89,27 @@ def test_generation_bundle_is_private_and_contains_only_allowed_protocol_files(t
     assert "private-review-sentinel" not in str(files)
     assert metadata["is_private"] is True
     assert metadata["id"] == "fixture-owner/ace-pruningrag-phase3-generated-pilot"
+
+
+def test_historical_bundle_keeps_original_protocol_and_selects_new_driver_config(tmp_path):
+    root = Path(__file__).resolve().parents[1]
+    out = tmp_path / "historical"
+    metadata = builder.build(root, out, "fixture-owner", "historical")
+    source = (out / "bootstrap.py").read_text()
+    assert '"--config", "configs/historical_routing.json"' in source
+    import ast
+
+    tree = ast.parse(source)
+    payload = next(
+        ast.literal_eval(node.value)
+        for node in tree.body
+        if isinstance(node, ast.Assign)
+        and any(isinstance(target, ast.Name) and target.id == "PAYLOAD" for target in node.targets)
+    )
+    files = json.loads(zlib.decompress(base64.b64decode(payload)))["files"]
+    original = json.loads(files["configs/generated_pilot.json"])
+    historical = json.loads(files["configs/historical_routing.json"])
+    assert original["limit"] == 50 and historical["limit"] == 6
+    assert original["generator"] == historical["generator"]
+    assert original["system_prompt"] == historical["system_prompt"]
+    assert metadata["id"].endswith("historical-routing-diagnostic") and metadata["is_private"]
