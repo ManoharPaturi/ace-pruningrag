@@ -23,6 +23,23 @@ new benchmark. Exact word matching still produces entity ambiguities such as
 `FUND`, `FOUR`, and `BDC`, and shorter tickers are deliberately omitted. A single
 candidate does not prove the question mentions only one company.
 
+## Implemented prior-day adapter
+
+A bounded executor now resolves a single explicit possessive ticker and a
+previous-calendar-day closing-price request. It rejects current-day quotes,
+comparisons, ranges, and missing dates rather than substituting a different
+price. Evidence retains the exact original row timestamp, requested day,
+availability date, close value, and snapshot hash. Currency and adjustment
+basis remain unspecified rather than invented.
+
+The full real-data scan prepares **six** supported requests: UBSI, WNW, CSLM,
+BLACW, AEAE, and TBMC, all for 2024-02-27 from questions dated 2024-02-28.
+The query IDs and original response provenance are frozen in the compact
+report before any new generation. This is a small development diagnostic,
+not a representative 50-question benchmark. No model outputs or gold answers
+selected these six cases. This adapter is separate from the original first-50
+generation contract; that run is preserved unchanged.
+
 ## Next execution contract
 
 1. Resolve the entity and requested period from the question without gold labels.
@@ -39,8 +56,9 @@ candidate does not prove the question mentions only one company.
 5. Independently verify API responses, selected provenance, final prompts, token
    budgets, and paired source/model calls, then review actual generated answers.
 
-No new GPU run was launched from these candidates. The source/date preparation
-must pass before another run can measure a meaningful routing difference. The
+No new GPU run was launched from these candidates. The six prepared prior-day
+requests provide the next bounded routing diagnostic; broader candidate
+requests still need source/date preparation before generation. The
 existing first-50 generated run and its human review remain separate.
 
 ## Reproduce

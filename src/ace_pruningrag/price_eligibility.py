@@ -10,6 +10,7 @@ from urllib.parse import quote
 from .artifacts import sha256_file
 from .daily_prices import DailyPrices
 from .dataset import QueryInput, iter_records, verify_dataset
+from .historical_prices import prior_close_evidence, prior_close_request
 from .routing import source_hints
 
 
@@ -45,10 +46,26 @@ def audit_price_eligibility(dataset_config: dict, price_config: dict, root: Path
     counts = Counter()
     existing_eligible = []
     expansion = []
+    prior_close_preparations = []
+    price_hash = sha256_file(prices.path)
     for record in iter_records(data):
         query = record.inference_input()
         counts["questions"] += 1
         date = datetime.strptime(query.query_time, "%m/%d/%Y, %H:%M:%S PT").date().isoformat()
+        request = prior_close_request(query, inventory)
+        if request is not None:
+            evidence = prior_close_evidence(request, prices, price_hash)
+            prior_close_preparations.append(
+                {
+                    "interaction_id": query.interaction_id,
+                    "request": {
+                        "ticker": request.ticker,
+                        "requested_date": request.requested_date,
+                        "available_as_of": request.available_as_of,
+                    },
+                    "evidence": evidence,
+                }
+            )
         hinted = "finance_prices" in source_hints(query.query)
         counts["price_hinted_questions"] += hinted
         symbols = current_symbols(query)
@@ -81,12 +98,16 @@ def audit_price_eligibility(dataset_config: dict, price_config: dict, root: Path
     return {
         "status": "full_dataset_price_eligibility_audited",
         "dataset_sha256": sha256_file(data),
-        "prices_sha256": sha256_file(prices.path),
+        "prices_sha256": price_hash,
         "counts": dict(counts),
         "current_date_eligible_queries": existing_eligible,
         "explicit_ticker_expansion_candidates": expansion,
         "expansion_candidate_count": len(expansion),
         "cached_history_reads": len(histories),
+        "prior_close_preparations": prior_close_preparations,
+        "prior_close_supported_count": sum(
+            item["evidence"] is not None for item in prior_close_preparations
+        ),
         "current_executor_relevant_comparison_ready": counts[
             "current_date_eligible_and_price_hinted"
         ]

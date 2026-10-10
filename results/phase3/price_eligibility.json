@@ -202,6 +202,123 @@
   ],
   "expansion_candidate_count": 35,
   "cached_history_reads": 46,
+  "prior_close_preparations": [
+    {
+      "interaction_id": "932c1332-de1e-4cb2-ab46-e738442ae19f",
+      "request": {
+        "ticker": "UBSI",
+        "requested_date": "2024-02-27",
+        "available_as_of": "2024-02-28"
+      },
+      "evidence": {
+        "content": "UBSI closing price on 2024-02-27: 34.40999984741211",
+        "source_ref": "crag:05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac/finance_price/UBSI/2024-02-27 00:00:00 EST",
+        "ticker": "UBSI",
+        "requested_date": "2024-02-27",
+        "row_timestamp": "2024-02-27 00:00:00 EST",
+        "available_as_of": "2024-02-28",
+        "close": 34.40999984741211,
+        "snapshot_sha256": "05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac",
+        "limitations": "Currency and adjustment basis are not established by this row."
+      }
+    },
+    {
+      "interaction_id": "7a9cad56-6204-45c0-9889-6d6571ca7a9c",
+      "request": {
+        "ticker": "WNW",
+        "requested_date": "2024-02-27",
+        "available_as_of": "2024-02-28"
+      },
+      "evidence": {
+        "content": "WNW closing price on 2024-02-27: 1.2400000095367432",
+        "source_ref": "crag:05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac/finance_price/WNW/2024-02-27 00:00:00 EST",
+        "ticker": "WNW",
+        "requested_date": "2024-02-27",
+        "row_timestamp": "2024-02-27 00:00:00 EST",
+        "available_as_of": "2024-02-28",
+        "close": 1.2400000095367432,
+        "snapshot_sha256": "05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac",
+        "limitations": "Currency and adjustment basis are not established by this row."
+      }
+    },
+    {
+      "interaction_id": "74b4339f-ada0-423d-b71c-c06da30f20d6",
+      "request": {
+        "ticker": "CSLM",
+        "requested_date": "2024-02-27",
+        "available_as_of": "2024-02-28"
+      },
+      "evidence": {
+        "content": "CSLM closing price on 2024-02-27: 11.01099967956543",
+        "source_ref": "crag:05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac/finance_price/CSLM/2024-02-27 00:00:00 EST",
+        "ticker": "CSLM",
+        "requested_date": "2024-02-27",
+        "row_timestamp": "2024-02-27 00:00:00 EST",
+        "available_as_of": "2024-02-28",
+        "close": 11.01099967956543,
+        "snapshot_sha256": "05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac",
+        "limitations": "Currency and adjustment basis are not established by this row."
+      }
+    },
+    {
+      "interaction_id": "d5d46781-7470-4f15-9c0f-8c1702164f2a",
+      "request": {
+        "ticker": "BLACW",
+        "requested_date": "2024-02-27",
+        "available_as_of": "2024-02-28"
+      },
+      "evidence": {
+        "content": "BLACW closing price on 2024-02-27: 0.012500000186264515",
+        "source_ref": "crag:05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac/finance_price/BLACW/2024-02-27 00:00:00 EST",
+        "ticker": "BLACW",
+        "requested_date": "2024-02-27",
+        "row_timestamp": "2024-02-27 00:00:00 EST",
+        "available_as_of": "2024-02-28",
+        "close": 0.012500000186264515,
+        "snapshot_sha256": "05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac",
+        "limitations": "Currency and adjustment basis are not established by this row."
+      }
+    },
+    {
+      "interaction_id": "b3057146-e638-4c52-97fc-f133785dfb7b",
+      "request": {
+        "ticker": "AEAE",
+        "requested_date": "2024-02-27",
+        "available_as_of": "2024-02-28"
+      },
+      "evidence": {
+        "content": "AEAE closing price on 2024-02-27: 11.095800399780273",
+        "source_ref": "crag:05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac/finance_price/AEAE/2024-02-27 00:00:00 EST",
+        "ticker": "AEAE",
+        "requested_date": "2024-02-27",
+        "row_timestamp": "2024-02-27 00:00:00 EST",
+        "available_as_of": "2024-02-28",
+        "close": 11.095800399780273,
+        "snapshot_sha256": "05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac",
+        "limitations": "Currency and adjustment basis are not established by this row."
+      }
+    },
+    {
+      "interaction_id": "435cc8d8-3a4f-483d-a4fb-3f1376359871",
+      "request": {
+        "ticker": "TBMC",
+        "requested_date": "2024-02-27",
+        "available_as_of": "2024-02-28"
+      },
+      "evidence": {
+        "content": "TBMC closing price on 2024-02-27: 10.529999732971191",
+        "source_ref": "crag:05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac/finance_price/TBMC/2024-02-27 00:00:00 EST",
+        "ticker": "TBMC",
+        "requested_date": "2024-02-27",
+        "row_timestamp": "2024-02-27 00:00:00 EST",
+        "available_as_of": "2024-02-28",
+        "close": 10.529999732971191,
+        "snapshot_sha256": "05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac",
+        "limitations": "Currency and adjustment basis are not established by this row."
+      }
+    }
+  ],
+  "prior_close_supported_count": 6,
   "current_executor_relevant_comparison_ready": false,
   "expansion_ready_for_generation": false,
   "limitations": [
