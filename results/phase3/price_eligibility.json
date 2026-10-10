@@ -1,0 +1,213 @@
+{
+  "status": "full_dataset_price_eligibility_audited",
+  "dataset_sha256": "8a6732c65020ff39a14b605a2daf67721528eca0727645c3a877aaf82170a9bc",
+  "prices_sha256": "05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac",
+  "counts": {
+    "questions": 2706,
+    "price_hinted_questions": 106,
+    "current_single_entity_questions": 44,
+    "current_date_eligible": 2,
+    "current_date_eligible_and_price_hinted": 0
+  },
+  "current_date_eligible_queries": [
+    {
+      "interaction_id": "3dbed55e-66a3-4dcd-907d-096f49387e41",
+      "ticker": "MSFT",
+      "date": "2024-02-28",
+      "price_hinted": false
+    },
+    {
+      "interaction_id": "6ed9dc10-0df5-4e16-b0df-e11967edb740",
+      "ticker": "MSFT",
+      "date": "2024-02-26",
+      "price_hinted": false
+    }
+  ],
+  "explicit_ticker_expansion_candidates": [
+    {
+      "interaction_id": "e236c396-9a53-4af8-bfe7-cbbe9c30e87a",
+      "ticker_candidate": "SFWL",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "90f91bf5-ecc1-4942-8d11-df359894e49a",
+      "ticker_candidate": "XPEV",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "cf35e327-6ae5-40c7-89d5-ee2f91934b3f",
+      "ticker_candidate": "EDBL",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "15d28e34-405b-42a8-8a73-41fcb9584845",
+      "ticker_candidate": "GDTC",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "9322141c-b6f9-4dc3-aed4-f54e6b2931a2",
+      "ticker_candidate": "AMTD",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "85cc35f3-7ee5-45c5-86e8-a435e2f26a72",
+      "ticker_candidate": "SPI",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "7b543b99-87b2-4ee4-a057-7bdc15f2374b",
+      "ticker_candidate": "BEPC",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "6a26d212-caa7-4839-a55c-31968284f438",
+      "ticker_candidate": "SPI",
+      "date": "2024-02-23"
+    },
+    {
+      "interaction_id": "932c1332-de1e-4cb2-ab46-e738442ae19f",
+      "ticker_candidate": "UBSI",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "195bedd6-a1fb-435f-bc9a-f2d3268ff1e9",
+      "ticker_candidate": "LEVI",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "7a9cad56-6204-45c0-9889-6d6571ca7a9c",
+      "ticker_candidate": "WNW",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "793bc67f-1f93-4813-8e84-79cc0a60ff1a",
+      "ticker_candidate": "SRM",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "78d2f02a-e8af-459d-bf7b-5eded9f5a019",
+      "ticker_candidate": "ABTS",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "fc59bde1-b2b1-414c-8074-9ee95b407b87",
+      "ticker_candidate": "GPI",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "942c6814-797d-4fe0-9412-c224aa90549f",
+      "ticker_candidate": "OPXS",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "03220362-8d05-4003-821a-7776365a87ee",
+      "ticker_candidate": "IMPPP",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "f2b8d885-027e-4948-aad3-fca3b9175344",
+      "ticker_candidate": "KHC",
+      "date": "2024-02-23"
+    },
+    {
+      "interaction_id": "74b4339f-ada0-423d-b71c-c06da30f20d6",
+      "ticker_candidate": "CSLM",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "07c155bc-34c4-4e8e-a1ae-73615b52bfc1",
+      "ticker_candidate": "DCFCW",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "34579085-769f-456c-8799-3ddb69845a51",
+      "ticker_candidate": "SIRI",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "86015df5-ca9a-4ac1-8786-2acfc629bf0e",
+      "ticker_candidate": "DBVT",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "501ac991-79ec-4865-b8c1-f6a5938a6906",
+      "ticker_candidate": "FOUR",
+      "date": "2024-02-23"
+    },
+    {
+      "interaction_id": "2902e5a3-531f-4811-869e-af5d5a2b5d76",
+      "ticker_candidate": "FUND",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "f5be62d6-bd82-4417-b08e-2eef81cd4ba7",
+      "ticker_candidate": "SATS",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "b4b0c8ad-a68a-4207-913d-7081850fc299",
+      "ticker_candidate": "NMR",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "0f000fec-9542-47c0-b1cf-368a0c42ad35",
+      "ticker_candidate": "BKN",
+      "date": "2024-02-23"
+    },
+    {
+      "interaction_id": "3c2e3f1f-3cc7-4fa4-a19c-ecd6e6a6d720",
+      "ticker_candidate": "PHUN",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "9c68588a-aa1e-4139-93b1-ecf7b2af31c9",
+      "ticker_candidate": "NDAQ",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "cd2a6a07-04c5-46d3-b5f6-34e8fcd18e73",
+      "ticker_candidate": "RCM",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "6fbc6a0b-06f9-4a46-86fa-0da8dd8fd8a7",
+      "ticker_candidate": "GLPI",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "02168244-0ceb-4dc4-822b-cee786c77189",
+      "ticker_candidate": "ALCC",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "d3cc29cf-de2f-4929-9541-8cac851efd12",
+      "ticker_candidate": "GLADZ",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "cffd08de-e949-4398-a1e0-9d30219db7c5",
+      "ticker_candidate": "NTRB",
+      "date": "2024-02-23"
+    },
+    {
+      "interaction_id": "74eb57be-2fb5-41d4-b247-88bad35c3bee",
+      "ticker_candidate": "BDC",
+      "date": "2024-02-28"
+    },
+    {
+      "interaction_id": "1c6e396c-4153-4efd-8b23-e63d304f9d17",
+      "ticker_candidate": "FRSH",
+      "date": "2024-02-28"
+    }
+  ],
+  "expansion_candidate_count": 35,
+  "cached_history_reads": 46,
+  "current_executor_relevant_comparison_ready": false,
+  "expansion_ready_for_generation": false,
+  "limitations": [
+    "Keyword relevance and ticker candidates are not human evidence-necessity labels.",
+    "Same-date availability does not prove the requested historical range is covered.",
+    "A completed daily OHLC row can leak later prices into an intraday question.",
+    "Expansion candidates require entity and requested-time validation before generation."
+  ]
+}
