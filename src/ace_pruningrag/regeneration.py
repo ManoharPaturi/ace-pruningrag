@@ -59,6 +59,8 @@ def regenerate(root, output, rows, queries, model, tokenizer, guard, prices, sna
         after = before
         final_prediction = row["prediction"]
         if retry_needed(request, row["selected"]):
+            if len(rows) + len(retries) >= protocol["max_total_llm_calls"]:
+                raise ValueError("stop before exceeding total model-call cap")
             caps, fetch = historical_source(q, prices, snapshot)
             validation_reads += 1
             prepared = prepare_context(q, config, "all_available", tokenize, caps, fetch)

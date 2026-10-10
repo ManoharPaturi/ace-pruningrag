@@ -79,7 +79,7 @@ def verify_retry(root, run):
             prepared = prepare_context(original, config, "all_available", tokenize, caps, fetch)
             assert retry["retry_policy"] == protocol["retry_policy"] == "all_available"
             assert retry["selected"] == prepared["evidence"]
-            assert retry["plan"] == prepared["plan"]
+            assert retry["plan"] == json.loads(json.dumps(prepared["plan"]))
             assert retry["candidate_ids"] == prepared["candidate_ids"]
             assert (
                 retry["actual_source_calls"] == prepared["source_calls"] == {"web": 1, "finance": 1}

@@ -1,0 +1,17 @@
+{
+  "kernel": "ionrey/ace-pruningrag-bounded-regeneration",
+  "runs": [
+    {
+      "version": 1,
+      "status": "completed_superseded",
+      "llm_calls": 26,
+      "reason": "pre-call total-limit guard added in version 2"
+    },
+    {
+      "version": 2,
+      "status": "completed_independently_verified_admitted",
+      "llm_calls": 26
+    }
+  ],
+  "total_gpu_generations": 52
+}

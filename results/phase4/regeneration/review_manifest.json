@@ -1,0 +1,7 @@
+{
+  "scope": "Last actual generation, before conservative verifier filtering",
+  "initial_trace_sha256": "4bacd65c561ad26acb07a2a78de70e04191ef1f9669867e59bfa6caf08ee6bc6",
+  "retry_trace_sha256": "13835929b5148ab9a7f7747d5fc37f52ff6b8f5c6ac30144be0a649fbfc274af",
+  "trace_sha256": "f0169b7fa9b6970cd1ffdb2205adf5bc469b03553662e6026873bc26913db376",
+  "answers": 18
+}

@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "mutation": "price_value",
+      "rejected": true,
+      "trace_digest_rebound": true
+    },
+    {
+      "mutation": "cumulative_token_count",
+      "rejected": true,
+      "trace_digest_rebound": true
+    }
+  ],
+  "original_trace_unchanged": true
+}

@@ -1,0 +1,13 @@
+{
+  "status": "independently_verified",
+  "initial": {
+    "status": "independently_verified",
+    "queries": 6,
+    "generated_answers": 18,
+    "actual_llm_calls": 18,
+    "maximum_reserved_tokens": 1657
+  },
+  "retries": 8,
+  "total_llm_calls": 26,
+  "maximum_combined_reserved_tokens": 2872
+}

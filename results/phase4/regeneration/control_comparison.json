@@ -1,0 +1,10 @@
+{
+  "initial_questions": 6,
+  "initial_predictions": 18,
+  "same_prompt_as_previous_run": 18,
+  "same_prediction_as_previous_run": 18,
+  "retry_answers": 8,
+  "same_retry_prompt_as_all_source_control": 8,
+  "same_retry_answer_as_all_source_control": 8,
+  "scope": "Same development cases, not independent questions or held-out quality estimates"
+}

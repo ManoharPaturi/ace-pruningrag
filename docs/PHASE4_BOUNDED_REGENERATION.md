@@ -22,10 +22,10 @@ The independent output verifier first runs the existing initial-generation verif
 uv run --locked --no-editable --extra generation python scripts/historical_preflight.py \
   --retry --output runs/phase4/regeneration-preflight-v1
 uv run --locked --no-editable python scripts/build_kaggle_kernel.py \
-  --owner ionrey --mode regeneration --output runs/kaggle/regeneration-kernel-v1
+  --owner ionrey --mode regeneration --output runs/kaggle/regeneration-kernel-v2
 uv run --locked --no-editable --extra generation python scripts/verify_regeneration.py \
-  --run runs/kaggle/regeneration-output-v1/phase3-pilot \
-  --output runs/phase4/regeneration-verification-v1.json
+  --run runs/kaggle/regeneration-output-v2/phase3-pilot \
+  --output runs/phase4/regeneration-verification-v2.json
 ```
 
 Outputs refuse overwriting. Full traces remain ignored; compact summaries and hashes are tracked. The private execution target is https://www.kaggle.com/code/ionrey/ace-pruningrag-bounded-regeneration.
@@ -33,3 +33,21 @@ Outputs refuse overwriting. Full traces remain ignored; compact summaries and ha
 ## Research boundary
 
 These previously inspected six cases are development data. Completing the execution and verification does not complete the full Phase 4 research gate: a reviewed held-out extension, genuine comparable cross-source conflicts, and independently reviewed semantic quality remain necessary. Keep costs, supported-price coverage, and abstentions visible together; a verifier that withholds everything is not a successful answerer.
+
+## Measured development comparison
+
+| Initial routing | Model calls without retry | Extra model calls | Verified price-field answers before → after |
+| --- | ---: | ---: | ---: |
+| fixed web | 6 | 6 | 0/6 → 3/6 |
+| all available | 6 | 0 | 3/6 → 3/6 |
+| adaptive | 6 | 2 | 1/6 → 3/6 |
+
+All 18 initial prompts and predictions match the previous historical GPU run. All eight retry prompts and predictions match their corresponding all-source control. This makes direct all-source retrieval the cheaper option on these six cases; the bounded retry repairs a missed-source first round, but it does not demonstrate an advantage over the direct all-source control.
+
+Raw generator abstentions fall from 4/6 to 1/6 for fixed-web requests and from 3/6 to 1/6 for adaptive requests. Three price-field answers per policy survive the strict verifier. UBSI and WNW dollar-denominated prose remains withheld because currency is not established; BLACW remains an abstention. Withheld/unparsed prose is not automatically factually wrong.
+
+The admitted run's total cost is 26 model calls, eight additional web retrievals, eight routed price lookups, eight retry eligibility price reads, and 26 additional inventory reads. Initial-round costs remain separately recorded: 18 web retrievals, ten routed finance calls, six eligibility price reads and six inventory reads. The initial three-ticker price audit makes six further price reads. Total request inputs and outputs, per-call timings, and token reserves are recorded in the compact summaries; verifier/review-building work is separate from inference cost.
+
+A readable packet contains the last actual model answer and exact prompt evidence for all 18 policy/query pairs, with generation round marked. It shows raw generated answers **before** conservative verification filtering, so reviewers can judge both meaning and grounding. Reviewer decisions start pending. It does not manufacture human labels or rewrite model predictions.
+
+The admitted private kernel is version 2, which checks the total call limit before an extra generation. Version 1 also completed 26 calls; version 2 repeats the experiment with the earlier stop guard. Total GPU generations across both jobs are 52, rather than 26. Both runs are preserved, and only version 2 is admitted as the current implementation result. The final run uses 29,568 input tokens and 465 output tokens across all 26 calls; maximum cumulative reserved tokens are 2,872. The eight retry generations take about 13.53 seconds together, excluding model loading and asset download.

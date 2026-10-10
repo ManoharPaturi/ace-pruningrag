@@ -33,6 +33,8 @@ def build(run: Path, output: Path):
 <p class="muted">Input {variant["input_tokens"]} tokens ·
 Output {variant["output_tokens"]} tokens ·
 {variant["generation_seconds"]:.2f}s ·
+Generation round {variant.get("regeneration_round", 1)} ·
+Source policy: {html.escape(variant.get("retry_policy", variant["policy"]).replace("_", " "))} ·
 Automatic status: {html.escape(variant["evaluation"]["outcome"].replace("_", " "))}</p>{evidence}
 <label>Your correctness decision<select class="decision">
 <option value="pending">Pending</option>
@@ -59,6 +61,7 @@ I inspected this answer and its evidence.</label></section>''')
     payload = json.dumps(rows, ensure_ascii=True).replace("<", "\\u003c")
     page = (Path(__file__).parent / "templates/generated_review.html").read_text()
     page = page.replace("__CARDS__", "".join(cards)).replace("__DATA__", payload)
+    page = page.replace("50 questions", f"{len(grouped)} questions")
     page = page.replace(
         "__RUN_HASH__", hashlib.sha256((run / "predictions.jsonl").read_bytes()).hexdigest()
     )
