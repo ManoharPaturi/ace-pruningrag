@@ -1,0 +1,17 @@
+{
+  "checks": [
+    {
+      "mutation": "price_value",
+      "rejected": true,
+      "expected_failure": "differs from original SQLite row",
+      "trace_digest_rebound": true
+    },
+    {
+      "mutation": "duplicate_pair",
+      "rejected": true,
+      "expected_failure": "18 unique pairs",
+      "trace_digest_rebound": true
+    }
+  ],
+  "original_trace_unchanged": true
+}

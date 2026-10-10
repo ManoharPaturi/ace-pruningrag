@@ -1,0 +1,142 @@
+{
+  "scope": "Phase 4 historical development replay; no new model generation or human labels",
+  "input_sha256": "9076d7382981538d66119935b306713bf020aac2cbfc659fa632cacc6f97beb6",
+  "snapshot_sha256": "05fa78f8d319ae2a7f5990b50f8b6f1d17be1f650bf5fb814721e1fc2d4a56ac",
+  "method_sha256": {
+    "src/ace_pruningrag/reliability.py": "daa118e731962f537bed8b9bf527b77b81ddf90975f8183a41ee47b8ad47ff79",
+    "src/ace_pruningrag/historical_prices.py": "2a9d08b691ab18f7bd2bd08df99b0abc9c00c2de6f1e3b0a55a9ab3170a6215a",
+    "scripts/reliability_replay.py": "3b6309ebd61cb3e955fa507c99a8a4b474e718e7cfd1358bb6e32b9416f88275"
+  },
+  "questions": 6,
+  "original_requests": 18,
+  "variants": 3,
+  "actual_new_llm_calls": 0,
+  "actual_judge_calls": 0,
+  "shared_validation_price_reads": 12,
+  "shared_inventory_reads": 6,
+  "max_extra_api_calls_per_request_per_variant": 1,
+  "max_evidence_rounds": 2,
+  "actual_replay_extra_api_calls": 16,
+  "input_predictions_present": false,
+  "per_variant_policy": [
+    {
+      "variant": "retry_and_verify",
+      "policy": "adaptive",
+      "requests": 6,
+      "sufficient_dated_price": 6,
+      "extra_api_calls": 2,
+      "verdicts": {
+        "preparation_only": 6
+      },
+      "released_answers": 0,
+      "withheld_answers": null
+    },
+    {
+      "variant": "retry_and_verify",
+      "policy": "all_available",
+      "requests": 6,
+      "sufficient_dated_price": 6,
+      "extra_api_calls": 0,
+      "verdicts": {
+        "preparation_only": 6
+      },
+      "released_answers": 0,
+      "withheld_answers": null
+    },
+    {
+      "variant": "retry_and_verify",
+      "policy": "fixed_web",
+      "requests": 6,
+      "sufficient_dated_price": 6,
+      "extra_api_calls": 6,
+      "verdicts": {
+        "preparation_only": 6
+      },
+      "released_answers": 0,
+      "withheld_answers": null
+    },
+    {
+      "variant": "retry_without_conflict_guard",
+      "policy": "adaptive",
+      "requests": 6,
+      "sufficient_dated_price": 6,
+      "extra_api_calls": 2,
+      "verdicts": {
+        "preparation_only": 6
+      },
+      "released_answers": 0,
+      "withheld_answers": null
+    },
+    {
+      "variant": "retry_without_conflict_guard",
+      "policy": "all_available",
+      "requests": 6,
+      "sufficient_dated_price": 6,
+      "extra_api_calls": 0,
+      "verdicts": {
+        "preparation_only": 6
+      },
+      "released_answers": 0,
+      "withheld_answers": null
+    },
+    {
+      "variant": "retry_without_conflict_guard",
+      "policy": "fixed_web",
+      "requests": 6,
+      "sufficient_dated_price": 6,
+      "extra_api_calls": 6,
+      "verdicts": {
+        "preparation_only": 6
+      },
+      "released_answers": 0,
+      "withheld_answers": null
+    },
+    {
+      "variant": "verify_only",
+      "policy": "adaptive",
+      "requests": 6,
+      "sufficient_dated_price": 4,
+      "extra_api_calls": 0,
+      "verdicts": {
+        "preparation_only": 6
+      },
+      "released_answers": 0,
+      "withheld_answers": null
+    },
+    {
+      "variant": "verify_only",
+      "policy": "all_available",
+      "requests": 6,
+      "sufficient_dated_price": 6,
+      "extra_api_calls": 0,
+      "verdicts": {
+        "preparation_only": 6
+      },
+      "released_answers": 0,
+      "withheld_answers": null
+    },
+    {
+      "variant": "verify_only",
+      "policy": "fixed_web",
+      "requests": 6,
+      "sufficient_dated_price": 0,
+      "extra_api_calls": 0,
+      "verdicts": {
+        "preparation_only": 6
+      },
+      "released_answers": 0,
+      "withheld_answers": null
+    }
+  ],
+  "human_semantic_review_complete": false,
+  "full_phase4_research_gate_passed": false,
+  "limitations": [
+    "Six previously inspected development questions, not a held-out evaluation.",
+    "Web prose is unparsed, not asserted conflict-free or unsupported.",
+    "Retry adds verifier evidence only; it does not regenerate or improve model answers.",
+    "Currency and adjustment basis unknown; currency prose fails closed.",
+    "A supported price field is not an independent semantic correctness label.",
+    "Conflict ablation requires controlled tests: no natural comparable conflict here."
+  ],
+  "decisions_sha256": "93b1436ae18e208d47a45e3ee92f2a6747f8dbbb84c74d9ec5b727632e6a54b4"
+}
