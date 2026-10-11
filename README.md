@@ -4,6 +4,8 @@ Adaptive cross-source evidence selection for multi-source retrieval-augmented ge
 
 The research hypothesis is that selecting complementary web/API evidence jointly can improve complete evidence coverage and grounded answers under a fixed token budget. This repository begins with a pinned PruningRAG setup audit and real RM3QA data validation. No research improvement or full baseline reproduction is claimed yet.
 
+For a new contributor, start with the [phase tracker and project handoff](docs/PROJECT_HANDOFF.md).
+
 The revised roadmap was approved on 9 October 2026. See [the review](ROADMAP_REVIEW.md), [original roadmap](ACE_PruningRAG_5_Phase_Research_Roadmap.pdf), [evaluation protocol](docs/EVALUATION_PROTOCOL.md), and [reproduction report](docs/REPRODUCTION_REPORT.md).
 
 Current engineering checks: 121 tests pass; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test`, `data-smoke`, and `finance-smoke` checks.
