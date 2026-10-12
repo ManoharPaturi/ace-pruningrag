@@ -1,8 +1,8 @@
 # ACE-PruningRAG: phase tracker and contributor handoff
 
-**Updated:** 12 October 2026 (Asia/Kolkata)  
-**Repository:** https://github.com/ManoharPaturi/ace-pruningrag  
-**Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`  
+**Updated:** 12 October 2026 (Asia/Kolkata)
+**Repository:** https://github.com/ManoharPaturi/ace-pruningrag
+**Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
 **Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation commit `ca6a090`.
 **Local continuation state:** additional audit progress and an abstention-validation change are uncommitted; see section 11. This file distinguishes these states so a fresh clone is not mistaken for the owner’s full workspace.
