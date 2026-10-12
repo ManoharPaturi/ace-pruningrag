@@ -45,7 +45,7 @@ Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evalua
 - [ ] Audit entity/event overlap beyond URL/text checks.
 - [x] Add an explicit-ID five-selector runner and complete 250-request tokenizer preflight (PR #16, pending merge).
 - [ ] Complete GPU generation and verify all 250 outputs; review semantic outcomes separately.
-- [x] Finish the separate AI-assisted legacy audit: complete for all 50 questions / 150 responses; broader run audits remain.
+- [x] Finish the separate AI-assisted legacy audit: complete for all 50 questions / 150 responses; historical/regeneration audits also complete; queued cohort remains.
 - [ ] Establish genuine cross-source necessity and compare source-only controls.
 - [ ] Extend reliability beyond the narrow historical-price contract.
 - [ ] Complete full baselines, ablations, cost/coverage reporting and statistical analysis.
@@ -302,7 +302,7 @@ Read [current-version completion audit](VERSION1_COMPLETION_AUDIT.md) and [next-
 | Preflight complete | [local preflight](../results/version1/cohort/local_preflight.json) | 50 questions, 250 prepared requests, maximum reserved tokens 2,036; **zero actual generation calls** |
 | Submitted GPU bundle | [bundle manifest](../results/version1/cohort/submitted_bundle_manifest.json), owner’s `runs/kaggle/cohort-kernel-v1/` | Private kernel `ionrey/ace-pruningrag-prospective-selectors`, version 1; last live status QUEUED, no failure message |
 | Legacy verification | [generation verification](../results/version1/legacy_generation_verification.json), [human validation](../results/version1/legacy_human_validation.json) | All 150 accepted development outputs and 150 original human records revalidated; two question-level human judgments remain uncertain |
-| PR audit progress | [review progress](../results/version1/legacy_review_progress.json), [AI audit validation](../results/version1/legacy_ai_audit_validation.json) | Nine AI review batches cover all 50 distinct questions / 150 responses; historical and regeneration audits still remain |
+| PR audit progress | [review progress](../results/version1/legacy_review_progress.json), [AI audit validation](../results/version1/legacy_ai_audit_validation.json) | Nine AI review batches cover all 50 distinct questions / 150 responses; historical and regeneration audits are also complete |
 | PR code/test | `src/ace_pruningrag/response_audit.py`, `tests/test_response_audit.py` | Added rejection of an abstention verdict that contradicts actual answer text; covered by the 132-test workspace check |
 | Private audit records | owner’s `runs/version1/legacy-ai-audit-batch1.json` through `legacy-ai-audit-batch9.json` | Must be transferred with the exact original predictions trace to reproduce audit validation; these are ignored and absent from Git |
 
@@ -362,10 +362,17 @@ If the existing job cannot be accessed, agree on ownership of a replacement run 
 ### Remaining implementation order
 
 1. Reproduce validation of the complete 50-question / 150-response legacy AI source audit after obtaining the nine private batches and exact trace. Keep AI judgments separate from original human decisions; validate binding without treating it as independent semantic proof.
-2. Complete and independently verify the queued 250-response experiment. Audit each actual answer and its evidence before publishing semantic claims. Also freshly audit the historical 18-output and regeneration 26-call traces before claiming every run is reviewed.
+2. Complete and independently verify the queued 250-response experiment. Audit each actual answer and its evidence before publishing semantic claims. Historical 18-output and regeneration 26-call traces are now freshly verified and AI-assessed; recover their three private audit files for reproduction. Do not extend this claim to failed/superseded kernels.
 3. Obtain independent evidence/answer review, audit entity/event overlap and resolve ambiguous references. AI inspection does not close this gate.
 4. Establish genuine cross-source cases with reviewed atomic requirements and source-only controls. Generalize entity/date/unit verification and measure all extra retrieval/model calls.
 5. Complete missing baselines and ablations, paired quality/coverage/cost analysis, evidence-backed report and cited FastAPI/Next.js demo. Resolve original reproduction artifacts or retain an explicit adapted-only scope.
 6. Finalize the next-version plan from observed failures, using a fresh evaluation cohort that excludes all inspected/tuned-on questions. Keep unfinished current-version gates visible.
 
 **Done means:** code works, exact traces and costs are verified, review provenance is preserved, required CI passes, limitations/results are documented, and the owner has reviewed and merged the PR. Research completion additionally requires the open scientific gates in section 2. A queued job or merged feature alone is not a completed phase.
+
+
+### Latest accepted-run audit checkpoint
+
+The historical and regeneration verification and AI inspection are complete: [44-record audit](../results/version1/historical_regeneration_ai_audit.json), [historical verification](../results/version1/historical_reverification.json), [regeneration verification](../results/version1/regeneration_reverification.json). Total inspected accepted response records are 194, across 50 legacy questions and six historical questions with repeated controls/retries. This is not an independent 194-case benchmark.
+
+Transfer `runs/version1/historical-ai-audit-v1.json`, `regeneration_initial-ai-audit-v1.json` and `regeneration_retry-ai-audit-v1.json` with the exact original traces. All eight retries matched direct all-source controls; dollar-denominated answers remain uncertain where currency metadata is absent. BLACW remains an abstention with an available numeric field. The queued 250-response run, scientific gates and demo are still unfinished.

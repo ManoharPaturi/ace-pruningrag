@@ -12,7 +12,7 @@ Audit opened 12 October 2026. The user requested completion of the current versi
 | Main complementary-evidence scientific hypothesis | Reviewed atomic support labels, genuine cross-source cases, source-only controls | Not achieved; current real candidate pools are web-only and groups/conflicts are disabled | Retain this limitation; build genuine cross-source evaluation |
 | Explicit prospective-cohort generation | Frozen packet/config/IDs, 250 requests, GPU traces | New runner added; tokenizer preflight complete; private GPU job submitted | Verify all outputs against original inputs and decoding |
 | Source routing and bounded reliability | Historical runs, independent verifiers, source/time/price-field checks | Narrow six-case implementation verified; general source/claim verification absent | Audit old and new responses; preserve scope and negative outcomes |
-| Check every response | Per-answer audit records bound to exact prediction/prompt/evidence | Legacy 50-question / 150-response AI source audit complete; new cohort outputs not yet available; historical/regeneration response audits remain | AI-assisted review of each output; do not label it independent human review |
+| Check every response | Per-answer audit records bound to exact prediction/prompt/evidence | Legacy 50-question / 150-response AI source audit complete; new cohort outputs not yet available; historical/regeneration response audits now complete as recorded below | AI-assisted review of each output; do not label it independent human review |
 | Independent human annotation and semantic evaluation | Attested reviewer exports matched to frozen traces | First-50 development review exists; prospective evidence and newer answer review unresolved | Preserve missing/uncertain status; AI review cannot satisfy the independent-human gate |
 | Final paired metrics, costs and report | Completed experiment outputs, scoring definitions, uncertainty calculations | Partially implemented; full evaluated comparison incomplete | Separate literal agreement, AI judgments, human labels, coverage and costs |
 | FastAPI/Next.js cited demo | Running app, API/data flow and evidence-linked answers | Not implemented | Build and verify after research flow stabilizes |
@@ -66,4 +66,21 @@ Additional failure mechanisms include incomplete qualifying sets, missing compar
 
 The NHL example violates the never-won-Hart constraint: official records identify Esposito as a winner. The WTA comparison goes the other direction: official records support Keys above Kasatkina at year-end 2023, but the selected model evidence lacks that comparison. External checks are retained in private review records and were not injected into generation. Sources: [NHL Hart winners](https://www.nhl.com/news/topic/nhl-awards/nhl-hart-memorial-trophy-winners-complete-list-287743272), [WTA Keys statistics](https://www.wtatennis.com/players/316959/madison-keys/stats), [WTA match notes](https://wtafiles.wtatennis.com/pdf/matchnotes/2025/2014_4.pdf).
 
-The existing prospective-selector job was checked live and remains QUEUED with no failure message. No new generation result is claimed. The historical and regeneration traces, general cross-source evaluation, independent human gates and product packaging still require completion.
+The existing prospective-selector job was checked live and remains QUEUED with no failure message. No new generation result is claimed. The historical and regeneration traces have now been freshly verified and assessed below. General cross-source evaluation, independent human gates and product packaging still require completion.
+
+
+### Historical and regeneration audits completed (12 October)
+
+Fresh independent reconstruction passed for the six-question historical run (18 outputs; maximum reserved request 1,657 tokens) and admitted regeneration run (18 initial outputs plus eight real retries; maximum combined reserve 2,872 tokens). Verification checks the pinned dataset and price snapshot, dated row identity, reconstructed selections/prompts, decoded output IDs, eligibility, decisions and recorded costs. See [historical verification](../results/version1/historical_reverification.json), [regeneration verification](../results/version1/regeneration_reverification.json) and [AI audit bindings](../results/version1/historical_regeneration_ai_audit.json).
+
+All **44 actual response records** have separate hash-bound AI assessments: 18 historical, 18 regeneration initial and eight retry outputs. The two initial runs match in every reviewed field. All eight retries match the same question's direct all-available control in prediction, prompt hash and selected evidence. These are six shared questions, not 44 independent cases.
+
+| Run | Correct within pinned price-field contract | Incorrect | Uncertain monetary claim | Abstained |
+| --- | ---: | ---: | ---: | ---: |
+| Historical initial | 4 | 2 | 4 | 8 |
+| Regeneration initial | 4 | 2 | 4 | 8 |
+| Eight retries | 5 | 0 | 2 | 1 |
+
+The two web-only substantive answers use wrong-period quotes: UBSI from July 2024 and WNW from October 2023 for a February 2024 query. API-based UBSI/WNW responses agree numerically with the dated rows but add dollars without established currency metadata, so full monetary claims remain uncertain. BLACW abstains even when the dated close is available. Correct entries refer to the exact pinned price-field contract; this review does not independently establish real-market currency, adjustment basis or snapshot accuracy.
+
+The accepted current-run audit coverage is now **194 response records** (150 legacy plus 44 historical/regeneration), not 194 independent questions. The pending cohort's 250 responses are not included. Failed/superseded runs remain retained and excluded from accepted outcome claims; no blanket all-version review is asserted.
