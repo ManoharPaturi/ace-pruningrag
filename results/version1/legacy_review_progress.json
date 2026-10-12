@@ -2,10 +2,13 @@
   "scope": "AI-assisted source audit; not independent human regrading",
   "verified_legacy_responses": 150,
   "validated_human_review_records": 150,
-  "ai_reviewed_responses": 6,
-  "ai_reviewed_questions": 2,
+  "ai_reviewed_responses": 24,
+  "ai_reviewed_questions": 8,
   "legacy_questions_total": 50,
   "full_ai_response_audit_complete": false,
-  "audit_sha256": "b9c71c2151a077833308be09f33ef25c306d41709399d64f0f9e199686e0fd4f",
+  "batch_sha256": {
+    "batch1": "b9c71c2151a077833308be09f33ef25c306d41709399d64f0f9e199686e0fd4f",
+    "batch2": "7c80d983c10cc3de80280c80a3e524ad8d4dc5510ad2649c219cdddf027871ff"
+  },
   "independent_human_labels_changed": false
 }

@@ -37,3 +37,13 @@ The user authorized autonomous checking. New review records produced by this ass
 - Revalidated the preserved 150 human review records. Full prediction coverage holds; the same two question-level correctness judgments remain uncertain.
 - Began a separate AI-assisted source audit of those two uncertain questions, covering six policy responses. The Grand Slam question lacks event/category specificity; the Halloween evidence does not substantiate a three-film all-time viewing ranking. Original human labels remain untouched. This is not a completed audit of all 50 legacy questions.
 - The explicit 250-request tokenizer preflight completed. The new private GPU job is submitted; remote execution and output verification remain pending. Do not interpret preparation as completed generation.
+
+### Additional response audit findings
+
+A second AI-assisted batch inspected six more distinct legacy questions (18 policy responses), bringing current AI review coverage to 8/50 legacy questions and 24/150 responses. The three original policy variants have identical prompts, selected evidence and predictions for these cases; each assessment remains bound to its own trace identity.
+
+Observed failures include metric/unit confusion (assists per 48 minutes versus three-point attempts per game), entity/relation confusion (an acquisition target substituted for a CEO's former employer), ETF recommendations substituted for dated constituent performance, and speculative/truncated movie examples without supporting evidence. One Tenet answer is semantically supported despite literal punctuation differences.
+
+The animated-film case exposes a different failure: supplied source text supports the model's Incredibles/2004 answer, but official ceremony records give Finding Nemo in 2004 and The Incredibles in 2005, honoring 2004 releases. Grounding in the supplied text and world correctness therefore need separate judgments. Sources: [Academy 2004 ceremony](https://www.oscars.org/oscars/ceremonies/2004), [Academy 2005 ceremony](https://www.oscars.org/oscars/ceremonies/2005). External audit evidence was not added to the original model's input and human labels were not changed.
+
+A structural AI-audit validator rejects changed predictions, prompt/evidence bindings, duplicate reviews and false promotion to human validation. Its successful result proves binding and coverage only; it does not independently prove the assistant's semantic judgments. The full response audit remains incomplete.

@@ -33,3 +33,15 @@ The next version should address observed failure mechanisms rather than add feat
 5. Which original reproduction assets are obtainable, and which remain unavailable?
 
 This is a plan, not a completed experiment or a promised improvement. Finalize priorities and acceptance metrics after all current outputs are available and reviewed.
+
+## Observed failure requirements from the current audit
+
+- Represent metric and unit explicitly: assists/48 minutes cannot satisfy three-point attempts/game.
+- Bind entity roles and relations: company acquisition is not a CEO employment history.
+- Distinguish daily constituent performance from generic index/ETF recommendations.
+- Separate release year, award ceremony year, source publication time and question time.
+- Check source factual quality separately from whether an answer follows the supplied text.
+- Review dataset-reference quality for open or underspecified questions; a reference mismatch alone is insufficient to prove an answer wrong.
+- Treat output truncation and speculative examples as observable failure modes, while keeping unresolved meaning explicitly uncertain.
+
+These findings are AI-assisted development observations, not completed independent evaluation.
