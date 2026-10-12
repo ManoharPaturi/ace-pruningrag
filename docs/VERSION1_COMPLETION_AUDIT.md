@@ -30,3 +30,10 @@ The user authorized autonomous checking. New review records produced by this ass
 ## Completion status
 
 **The overall goal is not yet achieved.** Passing unit tests, submitting a GPU job, or drafting this document is not completion. Keep the active goal until the actual requirements are verified or genuine external blockers satisfy the blocked audit. Update this table as evidence arrives. The original roadmap's open research gates remain visible even when a deployable adapted implementation exists.
+
+## Evidence added during this audit
+
+- Revalidated all 150 accepted first-50 development generations against the pinned inputs, prompt/output budgets, decoded token IDs and literal/abstention definitions. Maximum reserved request tokens remain 2,028.
+- Revalidated the preserved 150 human review records. Full prediction coverage holds; the same two question-level correctness judgments remain uncertain.
+- Began a separate AI-assisted source audit of those two uncertain questions, covering six policy responses. The Grand Slam question lacks event/category specificity; the Halloween evidence does not substantiate a three-film all-time viewing ranking. Original human labels remain untouched. This is not a completed audit of all 50 legacy questions.
+- The explicit 250-request tokenizer preflight completed. The new private GPU job is submitted; remote execution and output verification remain pending. Do not interpret preparation as completed generation.

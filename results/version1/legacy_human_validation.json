@@ -1,0 +1,80 @@
+{
+  "status": "generated_review_export_validated",
+  "export_sha256": "43095c2af919cc272194841875597fef9e28794f1c79dbcdb0adccc7f0d47863",
+  "predictions_sha256": "6858c1e0a46cbe7acc4d7306ee0a29706aa2afa52cc89892bd5f54f9c6ef4827",
+  "review_records": 150,
+  "distinct_questions": 50,
+  "full_prediction_coverage": true,
+  "all_correctness_resolved": false,
+  "per_policy": {
+    "adaptive": {
+      "predictions": 50,
+      "review_records": 50,
+      "decisions": {
+        "incorrect": 23,
+        "correct": 13,
+        "abstained": 12,
+        "uncertain": 2
+      },
+      "support": {
+        "unsupported": 23,
+        "supported": 15,
+        "not_applicable": 12
+      },
+      "confirmed_correct_fraction": 0.26,
+      "correct_fraction_bounds": [
+        0.26,
+        0.3
+      ],
+      "unresolved_correctness": 2
+    },
+    "all_available": {
+      "predictions": 50,
+      "review_records": 50,
+      "decisions": {
+        "incorrect": 23,
+        "correct": 13,
+        "abstained": 12,
+        "uncertain": 2
+      },
+      "support": {
+        "unsupported": 23,
+        "supported": 15,
+        "not_applicable": 12
+      },
+      "confirmed_correct_fraction": 0.26,
+      "correct_fraction_bounds": [
+        0.26,
+        0.3
+      ],
+      "unresolved_correctness": 2
+    },
+    "fixed_web": {
+      "predictions": 50,
+      "review_records": 50,
+      "decisions": {
+        "incorrect": 23,
+        "correct": 13,
+        "abstained": 12,
+        "uncertain": 2
+      },
+      "support": {
+        "unsupported": 23,
+        "supported": 15,
+        "not_applicable": 12
+      },
+      "confirmed_correct_fraction": 0.26,
+      "correct_fraction_bounds": [
+        0.26,
+        0.3
+      ],
+      "unresolved_correctness": 2
+    }
+  },
+  "uncertain_query_ids": [
+    "642bbc21-ed9d-42e7-8455-382a6f2b0f08",
+    "9263d16c-88a7-408c-9679-56afbe542fa4"
+  ],
+  "scientific_phase3_complete": false,
+  "scope": "Human-reviewed development pilot; policy variants are not independent questions."
+}
