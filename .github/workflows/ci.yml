@@ -39,6 +39,7 @@ jobs:
       - run: uv run --locked --no-editable ace-rag routing-smoke --output runs/ci/routing
       - run: uv run --locked --no-editable python scripts/verify_routing.py --run runs/ci/routing
       - run: uv run --locked --no-editable --extra generation python scripts/generated_preflight.py --output runs/ci/generated-preflight
+      - run: uv run --locked --no-editable --extra generation python scripts/cohort_preflight.py --output runs/ci/cohort-preflight
       - uses: actions/upload-artifact@v7.0.2
         with:
           name: phase1-real-data-smoke

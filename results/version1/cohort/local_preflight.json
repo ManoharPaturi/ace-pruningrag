@@ -1,0 +1,8 @@
+{
+  "status": "cohort_preflight_completed",
+  "queries": 50,
+  "requests": 250,
+  "maximum_reserved_tokens": 2036,
+  "actual_llm_calls": 0,
+  "packet_sha256": "324b5c35dc08ac43ce9c841f1a6a35086007badc8436b1d139f2fb01d3a80b33"
+}
