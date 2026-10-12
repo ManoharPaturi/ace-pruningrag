@@ -46,6 +46,14 @@ def validate_ai_audits(paths, trace):
                 "abstained",
             ):
                 raise ValueError("unknown AI semantic verdict")
+            abstained = original["prediction"].strip().casefold() in (
+                "i don't know",
+                "i don't know.",
+                "i do not know",
+                "i do not know.",
+            )
+            if (review["semantic_assessment"] == "abstained") != abstained:
+                raise ValueError("AI abstention verdict contradicts the actual response")
             if not all(
                 isinstance(review.get(k), str) and review[k].strip()
                 for k in ("grounding_assessment", "reason")

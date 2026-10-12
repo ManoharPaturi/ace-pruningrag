@@ -5,7 +5,7 @@
 **Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
 **Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation commit `ca6a090`.
-**Local continuation state:** additional audit progress and an abstention-validation change are uncommitted; see section 11. This file distinguishes these states so a fresh clone is not mistaken for the owner’s full workspace.
+**Local continuation state:** complete legacy AI audit and abstention-validation change are included in this PR update; see section 11. This file distinguishes these states so a fresh clone is not mistaken for the owner’s full workspace.
 
 ## 1. Read this first
 
@@ -45,7 +45,7 @@ Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evalua
 - [ ] Audit entity/event overlap beyond URL/text checks.
 - [x] Add an explicit-ID five-selector runner and complete 250-request tokenizer preflight (PR #16, pending merge).
 - [ ] Complete GPU generation and verify all 250 outputs; review semantic outcomes separately.
-- [ ] Finish the separate AI-assisted legacy audit: currently 32/50 questions, 96/150 responses in the local workspace.
+- [x] Finish the separate AI-assisted legacy audit: complete for all 50 questions / 150 responses; broader run audits remain.
 - [ ] Establish genuine cross-source necessity and compare source-only controls.
 - [ ] Extend reliability beyond the narrow historical-price contract.
 - [ ] Complete full baselines, ablations, cost/coverage reporting and statistical analysis.
@@ -182,7 +182,7 @@ uv run --locked --no-editable ruff format --check src tests scripts
 uv run --locked --no-editable pytest -q
 ```
 
-The current owner workspace has **132 passing tests** (12 October). This includes a local uncommitted test; it is not the merged-main test count. All three required CI jobs passed on PR #16 implementation commit `ca6a090`; CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
+The current owner workspace has **132 passing tests** (12 October). This includes the PR abstention-consistency test; it is not the merged-main test count. All three required CI jobs passed on PR #16 implementation commit `ca6a090`; CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
 
 Download data and run a small retrieval check, using a new output directory:
 
@@ -294,7 +294,7 @@ After each accepted milestone, update the phase table/checklist, verified main c
 
 ### Read and transfer these first
 
-Read [current-version completion audit](VERSION1_COMPLETION_AUDIT.md) and [next-version plan](VERSION2_PLAN.md). They are PR #16 documents, not merged-main claims. Their early audit coverage narrative is older than the local 32-question progress below; use the compact progress file for current counts.
+Read [current-version completion audit](VERSION1_COMPLETION_AUDIT.md) and [next-version plan](VERSION2_PLAN.md). They are PR #16 documents, not merged-main claims. Earlier dated audit batches describe partial progress; the latest compact progress file records complete first-50 coverage.
 
 | State | Files / artifact | What the friend must know |
 | --- | --- | --- |
@@ -302,11 +302,11 @@ Read [current-version completion audit](VERSION1_COMPLETION_AUDIT.md) and [next-
 | Preflight complete | [local preflight](../results/version1/cohort/local_preflight.json) | 50 questions, 250 prepared requests, maximum reserved tokens 2,036; **zero actual generation calls** |
 | Submitted GPU bundle | [bundle manifest](../results/version1/cohort/submitted_bundle_manifest.json), owner’s `runs/kaggle/cohort-kernel-v1/` | Private kernel `ionrey/ace-pruningrag-prospective-selectors`, version 1; last live status QUEUED, no failure message |
 | Legacy verification | [generation verification](../results/version1/legacy_generation_verification.json), [human validation](../results/version1/legacy_human_validation.json) | All 150 accepted development outputs and 150 original human records revalidated; two question-level human judgments remain uncertain |
-| Uncommitted local progress | [review progress](../results/version1/legacy_review_progress.json), [AI audit validation](../results/version1/legacy_ai_audit_validation.json) | Six AI review batches cover 32 distinct questions / 96 responses; 18 questions / 54 responses remain. Pushed code’s earlier progress is 8 questions / 24 responses |
-| Uncommitted local code/test | `src/ace_pruningrag/response_audit.py`, `tests/test_response_audit.py` | Added rejection of an abstention verdict that contradicts actual answer text; preserve and review this diff before continuing |
-| Private audit records | owner’s `runs/version1/legacy-ai-audit-batch1.json` through `legacy-ai-audit-batch6.json` | Must be transferred with the exact original predictions trace to reproduce audit validation; these are ignored and absent from Git |
+| PR audit progress | [review progress](../results/version1/legacy_review_progress.json), [AI audit validation](../results/version1/legacy_ai_audit_validation.json) | Nine AI review batches cover all 50 distinct questions / 150 responses; historical and regeneration audits still remain |
+| PR code/test | `src/ace_pruningrag/response_audit.py`, `tests/test_response_audit.py` | Added rejection of an abstention verdict that contradicts actual answer text; covered by the 132-test workspace check |
+| Private audit records | owner’s `runs/version1/legacy-ai-audit-batch1.json` through `legacy-ai-audit-batch9.json` | Must be transferred with the exact original predictions trace to reproduce audit validation; these are ignored and absent from Git |
 
-Do not reset or discard the owner’s four pre-existing modified files. A branch push does not include ignored run artifacts. Transfer the full relevant directories through an owner-approved private channel, without credentials. Preserve hashes and original human exports; do not silently replace judgments with AI assessments.
+The audit progress and validation changes have been preserved in this PR update. Do not discard other local changes when continuing. A branch push does not include ignored run artifacts. Transfer the full relevant directories through an owner-approved private channel, without credentials. Preserve hashes and original human exports; do not silently replace judgments with AI assessments.
 
 ### Get the pending implementation
 
@@ -322,7 +322,7 @@ uv run --locked --no-editable ruff check src tests scripts
 uv run --locked --no-editable ruff format --check src tests scripts
 ```
 
-If `upstream` already exists, inspect `git remote -v` and use it rather than adding it again. Incorporate the owner’s local patch after reviewing it. Owner merging PR #16 changes the base: fetch again and use the latest main for subsequent PRs.
+If `upstream` already exists, inspect `git remote -v` and use it rather than adding it again. Review the PR diff and recover the ignored private artifacts before validating historical audit records. Owner merging PR #16 changes the base: fetch again and use the latest main for subsequent PRs.
 
 ### Resume the cohort experiment
 
@@ -361,7 +361,7 @@ If the existing job cannot be accessed, agree on ownership of a replacement run 
 
 ### Remaining implementation order
 
-1. Preserve the local patch and complete source inspection for the remaining 18 legacy questions. Bind each of the three policy response records to its actual prediction, prompt hash and selected evidence; keep AI judgments separate from human decisions.
+1. Reproduce validation of the complete 50-question / 150-response legacy AI source audit after obtaining the nine private batches and exact trace. Keep AI judgments separate from original human decisions; validate binding without treating it as independent semantic proof.
 2. Complete and independently verify the queued 250-response experiment. Audit each actual answer and its evidence before publishing semantic claims. Also freshly audit the historical 18-output and regeneration 26-call traces before claiming every run is reviewed.
 3. Obtain independent evidence/answer review, audit entity/event overlap and resolve ambiguous references. AI inspection does not close this gate.
 4. Establish genuine cross-source cases with reviewed atomic requirements and source-only controls. Generalize entity/date/unit verification and measure all extra retrieval/model calls.

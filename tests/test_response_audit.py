@@ -74,3 +74,12 @@ def test_duplicate_batch_assessments_rejected(tmp_path):
     write_json(path, audit)
     with pytest.raises(ValueError):
         validate_ai_audits([path], trace)
+
+
+def test_false_abstention_label_rejected(tmp_path):
+    trace, audit = packet(tmp_path)
+    audit["reviews"][0]["semantic_assessment"] = "abstained"
+    path = tmp_path / "audit.json"
+    write_json(path, audit)
+    with pytest.raises(ValueError, match="abstention"):
+        validate_ai_audits([path], trace)

@@ -6,13 +6,13 @@ Audit opened 12 October 2026. The user requested completion of the current versi
 
 | Requirement | Authoritative evidence | Audit result | Next action |
 | --- | --- | --- | --- |
-| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; new branch checks pending | Run required checks on final branch |
+| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 132 local tests pass; all required CI passed on ca6a090; rerun required on latest head | Run required checks on final branch |
 | Faithful original PruningRAG baseline | Original router/checkpoints, full API backing data and paper model/evaluator contract | Not achieved; upstream releases empty and `models/router` lookup returned 404 during fresh audit | Obtain original artifacts or keep adapted-only claims explicit; do not invent a reproduced baseline |
 | Shared-budget five-selector implementation | Selection code, smoke traces and budget verifiers | Implemented; prior contexts were engineering smoke | Execute the separately scoped explicit-cohort comparison |
 | Main complementary-evidence scientific hypothesis | Reviewed atomic support labels, genuine cross-source cases, source-only controls | Not achieved; current real candidate pools are web-only and groups/conflicts are disabled | Retain this limitation; build genuine cross-source evaluation |
 | Explicit prospective-cohort generation | Frozen packet/config/IDs, 250 requests, GPU traces | New runner added; tokenizer preflight complete; private GPU job submitted | Verify all outputs against original inputs and decoding |
 | Source routing and bounded reliability | Historical runs, independent verifiers, source/time/price-field checks | Narrow six-case implementation verified; general source/claim verification absent | Audit old and new responses; preserve scope and negative outcomes |
-| Check every response | Per-answer audit records bound to exact prediction/prompt/evidence | New cohort outputs not yet available; broader audit unfinished | AI-assisted review of each output; do not label it independent human review |
+| Check every response | Per-answer audit records bound to exact prediction/prompt/evidence | Legacy 50-question / 150-response AI source audit complete; new cohort outputs not yet available; historical/regeneration response audits remain | AI-assisted review of each output; do not label it independent human review |
 | Independent human annotation and semantic evaluation | Attested reviewer exports matched to frozen traces | First-50 development review exists; prospective evidence and newer answer review unresolved | Preserve missing/uncertain status; AI review cannot satisfy the independent-human gate |
 | Final paired metrics, costs and report | Completed experiment outputs, scoring definitions, uncertainty calculations | Partially implemented; full evaluated comparison incomplete | Separate literal agreement, AI judgments, human labels, coverage and costs |
 | FastAPI/Next.js cited demo | Running app, API/data flow and evidence-linked answers | Not implemented | Build and verify after research flow stabilizes |
@@ -46,4 +46,24 @@ Observed failures include metric/unit confusion (assists per 48 minutes versus t
 
 The animated-film case exposes a different failure: supplied source text supports the model's Incredibles/2004 answer, but official ceremony records give Finding Nemo in 2004 and The Incredibles in 2005, honoring 2004 releases. Grounding in the supplied text and world correctness therefore need separate judgments. Sources: [Academy 2004 ceremony](https://www.oscars.org/oscars/ceremonies/2004), [Academy 2005 ceremony](https://www.oscars.org/oscars/ceremonies/2005). External audit evidence was not added to the original model's input and human labels were not changed.
 
-A structural AI-audit validator rejects changed predictions, prompt/evidence bindings, duplicate reviews and false promotion to human validation. Its successful result proves binding and coverage only; it does not independently prove the assistant's semantic judgments. The full response audit remains incomplete.
+A structural AI-audit validator rejects changed predictions, prompt/evidence bindings, duplicate reviews and false promotion to human validation. Its successful result proves binding and coverage only; it does not independently prove the assistant's semantic judgments. The full version-wide response audit remains incomplete; the legacy first-50 subset is now fully inspected as recorded below.
+
+
+### Completed first-50 AI-assisted source audit (12 October)
+
+All **50 distinct questions / 150 policy responses** now have assessments bound to exact predictions, prompt hashes and selected evidence IDs. Nine private batches are preserved under `runs/version1/`; compact [progress](../results/version1/legacy_review_progress.json) and [validation](../results/version1/legacy_ai_audit_validation.json) record their hashes and complete trace coverage. The validator also rejects abstention labels that contradict actual response text.
+
+| AI assessment | Distinct questions | Policy responses |
+| --- | ---: | ---: |
+| Correct under the recorded interpretation | 12 | 36 |
+| Incorrect | 15 | 45 |
+| Uncertain / underspecified | 11 | 33 |
+| Abstained | 12 | 36 |
+
+These are assistant judgments, not independently validated semantic accuracy. All three policies had identical prompts, evidence and outputs for these cases, so the response counts are repeated variants rather than independent observations. Original human labels remain unchanged; differences require explicit adjudication rather than silent replacement.
+
+Additional failure mechanisms include incomplete qualifying sets, missing comparison operands, selecting irrelevant page navigation numbers, franchise installment confusion, source facts from the wrong period, and non-exhaustive counts with an undefined universe. The F1 example satisfies the threshold for Schumacher but omits other qualifying drivers; this is an answer-completeness ambiguity. Tesla's Q1 EPS was recast as a fiscal-year value and omitted the quarterly series.
+
+The NHL example violates the never-won-Hart constraint: official records identify Esposito as a winner. The WTA comparison goes the other direction: official records support Keys above Kasatkina at year-end 2023, but the selected model evidence lacks that comparison. External checks are retained in private review records and were not injected into generation. Sources: [NHL Hart winners](https://www.nhl.com/news/topic/nhl-awards/nhl-hart-memorial-trophy-winners-complete-list-287743272), [WTA Keys statistics](https://www.wtatennis.com/players/316959/madison-keys/stats), [WTA match notes](https://wtafiles.wtatennis.com/pdf/matchnotes/2025/2014_4.pdf).
+
+The existing prospective-selector job was checked live and remains QUEUED with no failure message. No new generation result is claimed. The historical and regeneration traces, general cross-source evaluation, independent human gates and product packaging still require completion.

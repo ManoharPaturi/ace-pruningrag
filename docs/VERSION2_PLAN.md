@@ -45,3 +45,16 @@ This is a plan, not a completed experiment or a promised improvement. Finalize p
 - Treat output truncation and speculative examples as observable failure modes, while keeping unresolved meaning explicitly uncertain.
 
 These findings are AI-assisted development observations, not completed independent evaluation.
+
+
+## Priorities after the completed legacy source audit
+
+The first-50 AI-assisted review is complete; prospective-selector, historical and regeneration analysis still remain. The observed failures support this implementation order:
+
+1. **Define the requested answer shape.** Query-only requirements must represent one example versus the complete qualifying set, quarterly series versus annual aggregate, both operands of a comparison, and the population behind a count/superlative. Leave ambiguous intent unresolved rather than inventing a singleton answer.
+2. **Bind every measurement to its entity, relation and period.** Record instrument versus company, assists versus attempts, per-game versus per-48-minutes, career total versus one-opponent total, and franchise installment or award year. Negative eligibility such as never won is a required fact, not optional context.
+3. **Remove boilerplate before ranking while preserving exact source spans.** Navigation numbers and unrelated linked articles should not be treated as evidentiary counts. Compare filtered and original retrieval as a retained ablation; do not assume filtering improves answers before measurement.
+4. **Score support and factual correctness separately.** Keep externally correct but unsupported responses visible, and flag source chronology/quality conflicts even when the generator follows its context. Record external review evidence separately from the generation trace.
+5. **Measure complete evidence rather than keyword overlap.** Include missing comparison operands and incomplete answer sets as explicit negative cases. A source-only control must show which requirements remain unsatisfied; diverse source IDs alone do not demonstrate complementarity.
+
+Promotion requires fresh reviewed cases with the old inspected questions excluded, fixed generator controls, full cumulative costs, and independent evaluation of both answer quality and evidence support. These priorities do not close the current version's unfinished deliverables.
