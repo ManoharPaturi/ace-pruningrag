@@ -68,7 +68,7 @@ Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evalua
 | Review imports | [generated_reviews.py](../src/ace_pruningrag/generated_reviews.py), [reviews.py](../src/ace_pruningrag/reviews.py), [prospective.py](../src/ace_pruningrag/prospective.py) | Hash/provenance binding, attestation checks, duplicate rejection, immutable original exports and explicit unresolved counts |
 | Execution and verification | [scripts](../scripts), [CI](../.github/workflows/ci.yml) | Private allowlisted Kaggle bundles; isolated inference dependencies; independent trace verifiers; three required CI jobs |
 
-No general web claim extractor, trained router, full knowledge graph API, production backend, or Next.js application is implemented yet.
+A local FastAPI/Next.js replay and fresh-retrieval explorer is implemented in PR #16; see [demo setup](DEMO.md). Live model inference and deployment remain unfinished. No general web claim extractor, trained router or full knowledge graph API is implemented yet.
 
 ## 4. Verified experiments and what they mean
 
@@ -176,13 +176,13 @@ For a friend without write access, fork first using their own GitHub account:
 ```bash
 gh repo fork ManoharPaturi/ace-pruningrag --clone
 cd ace-pruningrag
-uv sync --locked --no-editable --python 3.12
+uv sync --locked --no-editable --extra demo --python 3.12
 uv run --locked --no-editable ruff check src tests scripts
 uv run --locked --no-editable ruff format --check src tests scripts
-uv run --locked --no-editable pytest -q
+uv run --locked --no-editable --extra demo pytest -q
 ```
 
-The current owner workspace has **132 passing tests** (12 October). This includes the PR abstention-consistency test; it is not the merged-main test count. All three required CI jobs passed on PR #16 implementation commit `ca6a090`; CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
+The current owner workspace has **135 passing tests with the demo extra** (12 October). This includes the PR abstention-consistency test; it is not the merged-main test count. All three required CI jobs passed on PR #16 implementation commit `ca6a090`; CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
 
 Download data and run a small retrieval check, using a new output directory:
 
@@ -303,7 +303,7 @@ Read [current-version completion audit](VERSION1_COMPLETION_AUDIT.md) and [next-
 | Submitted GPU bundle | [bundle manifest](../results/version1/cohort/submitted_bundle_manifest.json), owner’s `runs/kaggle/cohort-kernel-v1/` | Private kernel `ionrey/ace-pruningrag-prospective-selectors`, version 1; last live status QUEUED, no failure message |
 | Legacy verification | [generation verification](../results/version1/legacy_generation_verification.json), [human validation](../results/version1/legacy_human_validation.json) | All 150 accepted development outputs and 150 original human records revalidated; two question-level human judgments remain uncertain |
 | PR audit progress | [review progress](../results/version1/legacy_review_progress.json), [AI audit validation](../results/version1/legacy_ai_audit_validation.json) | Nine AI review batches cover all 50 distinct questions / 150 responses; historical and regeneration audits are also complete |
-| PR code/test | `src/ace_pruningrag/response_audit.py`, `tests/test_response_audit.py` | Added rejection of an abstention verdict that contradicts actual answer text; covered by the 132-test workspace check |
+| PR code/test | `src/ace_pruningrag/response_audit.py`, `tests/test_response_audit.py` | Added rejection of an abstention verdict that contradicts actual answer text; covered by the 135-test workspace check |
 | Private audit records | owner’s `runs/version1/legacy-ai-audit-batch1.json` through `legacy-ai-audit-batch9.json` | Must be transferred with the exact original predictions trace to reproduce audit validation; these are ignored and absent from Git |
 
 The audit progress and validation changes have been preserved in this PR update. Do not discard other local changes when continuing. A branch push does not include ignored run artifacts. Transfer the full relevant directories through an owner-approved private channel, without credentials. Preserve hashes and original human exports; do not silently replace judgments with AI assessments.
@@ -316,8 +316,8 @@ After forking/cloning as in section 6, fetch the owner’s PR branch into your o
 git remote add upstream https://github.com/ManoharPaturi/ace-pruningrag.git
 git fetch upstream
 git switch -c codex/continue-version1 upstream/feat/prospective-selector-evaluation
-uv sync --locked --no-editable --python 3.12
-uv run --locked --no-editable pytest -q
+uv sync --locked --no-editable --extra demo --python 3.12
+uv run --locked --no-editable --extra demo pytest -q
 uv run --locked --no-editable ruff check src tests scripts
 uv run --locked --no-editable ruff format --check src tests scripts
 ```
@@ -376,3 +376,8 @@ If the existing job cannot be accessed, agree on ownership of a replacement run 
 The historical and regeneration verification and AI inspection are complete: [44-record audit](../results/version1/historical_regeneration_ai_audit.json), [historical verification](../results/version1/historical_reverification.json), [regeneration verification](../results/version1/regeneration_reverification.json). Total inspected accepted response records are 194, across 50 legacy questions and six historical questions with repeated controls/retries. This is not an independent 194-case benchmark.
 
 Transfer `runs/version1/historical-ai-audit-v1.json`, `regeneration_initial-ai-audit-v1.json` and `regeneration_retry-ai-audit-v1.json` with the exact original traces. All eight retries matched direct all-source controls; dollar-denominated answers remain uncertain where currency metadata is absent. BLACW remains an abstention with an available numeric field. The queued 250-response run, scientific gates and demo are still unfinished.
+
+
+### Local demo handoff
+
+The [FastAPI/Next.js explorer](DEMO.md) now builds and its browser flow is verified for recorded answers, exact source provenance and fresh BM25 retrieval. Live local URLs are API `http://127.0.0.1:8060` and UI `http://127.0.0.1:3060` while the owner’s processes are running. These addresses do not provide remote access. Clone and start both services using the documented commands. Required CI now includes the web production build; backend tests require `--extra demo`. The full demo gate still needs live generation and the remaining research requirements.

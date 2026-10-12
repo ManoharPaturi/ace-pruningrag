@@ -15,7 +15,7 @@ Audit opened 12 October 2026. The user requested completion of the current versi
 | Check every response | Per-answer audit records bound to exact prediction/prompt/evidence | Legacy 50-question / 150-response AI source audit complete; new cohort outputs not yet available; historical/regeneration response audits now complete as recorded below | AI-assisted review of each output; do not label it independent human review |
 | Independent human annotation and semantic evaluation | Attested reviewer exports matched to frozen traces | First-50 development review exists; prospective evidence and newer answer review unresolved | Preserve missing/uncertain status; AI review cannot satisfy the independent-human gate |
 | Final paired metrics, costs and report | Completed experiment outputs, scoring definitions, uncertainty calculations | Partially implemented; full evaluated comparison incomplete | Separate literal agreement, AI judgments, human labels, coverage and costs |
-| FastAPI/Next.js cited demo | Running app, API/data flow and evidence-linked answers | Not implemented | Build and verify after research flow stabilizes |
+| FastAPI/Next.js cited demo | Running app, API/data flow and evidence-linked answers | Explorer backend and Next.js UI added; HTTP replay/retrieval verified; browser and production build verified; live inference pending | Complete demo flow and record limits |
 | Next-version plan | Prioritized milestones, contracts, promotion criteria | Draft below/linked; subject to final failure analysis | Finalize around actual results, not expected improvements |
 | Owner-only main merges | Protected branch and feature PR workflow | Preserved | Leave concrete checked PRs for owner merge |
 
@@ -84,3 +84,8 @@ All **44 actual response records** have separate hash-bound AI assessments: 18 h
 The two web-only substantive answers use wrong-period quotes: UBSI from July 2024 and WNW from October 2023 for a February 2024 query. API-based UBSI/WNW responses agree numerically with the dated rows but add dollars without established currency metadata, so full monetary claims remain uncertain. BLACW abstains even when the dated close is available. Correct entries refer to the exact pinned price-field contract; this review does not independently establish real-market currency, adjustment basis or snapshot accuracy.
 
 The accepted current-run audit coverage is now **194 response records** (150 legacy plus 44 historical/regeneration), not 194 independent questions. The pending cohort's 250 responses are not included. Failed/superseded runs remain retained and excluded from accepted outcome claims; no blanket all-version review is asserted.
+
+
+### Demo implementation checkpoint
+
+A read-only FastAPI/Next.js evidence explorer is now implemented; see [demo setup](DEMO.md). Backend HTTP checks compared all 194 admitted responses to their trace records and checked fresh BM25 excerpt spans against pinned source text. Three additional tests exercise tampering, unavailable artifacts, field exclusion and API errors. Recorded answers are explicitly replays; live inference and the complete roadmap demo gate remain pending. The production build and browser→proxy→API→data→answer/retrieval flow now pass. Live generation remains pending.

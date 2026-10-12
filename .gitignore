@@ -16,3 +16,5 @@ runs/
 *.pt
 *.pth
 *.bin
+node_modules/
+.next/
