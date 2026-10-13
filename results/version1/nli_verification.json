@@ -1,0 +1,23 @@
+{
+  "comparisons": 1105,
+  "scored_pairs": 1089,
+  "unscored_pairs": 16,
+  "classifier_forward_calls": 69,
+  "actual_llm_generation_calls": 0,
+  "input_pair_tokens": 208761,
+  "trace_sha256": "ca7bdb3ade4729142f90bdf5705108c2ab47fb48571cf96fd5f3883c1cc8cf30",
+  "pairs_sha256": "935a23efd0ea7d5130a55d5eecca666c2826d02e89e3bf579b06e3d88bdfe6d2",
+  "model_labels": {
+    "neutral": 808,
+    "contradiction": 203,
+    "entailment": 78,
+    "unscored": 16
+  },
+  "status": "nli_bindings_tokens_and_labels_reconstructed",
+  "padded_classifier_input_tokens": 329035,
+  "model_revision": "6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
+  "calibrated": false,
+  "factual_accuracy": null,
+  "answer_completeness": null,
+  "scope": "Post-hoc unframed text diagnostics; logits were not independently recomputed"
+}

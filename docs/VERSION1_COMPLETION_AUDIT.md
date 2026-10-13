@@ -127,3 +127,8 @@ All 444 admitted records now have source-bound AI assessments, including all 250
 ### Browser-to-GPU path verified
 
 [Live demo flow](LIVE_DEMO_FLOW.md) now submits, tracks, reconstructs and renders an actual GPU answer. API restart during RUNNING and browser refresh recovered the same request. The journal contains one job; one actual model call produced the supported actor answer. Tests now total 156. This closes the asynchronous fixed-web live-flow task, while adaptive multi-source generation, general claim verification and the open scientific/reporting requirements remain incomplete.
+
+
+### Independent NLI component investigated
+
+[Bounded textual-support diagnostic](NLI_SUPPORT_DIAGNOSTIC.md) executed and reconstructed all 1,105 cohort source/answer comparisons, with 69 classifier forwards and zero new answer-generation calls. Sixteen long pairs were unscored. Raw entailment appears on 27 AI-incorrect answer variants across seven questions, confirming that query requirements and support are separate gates. Acceptance remains disabled; general entity/date/unit/claim verification is not yet complete. Local tests now total 159.

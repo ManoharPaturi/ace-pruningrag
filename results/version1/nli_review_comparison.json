@@ -1,0 +1,264 @@
+{
+  "scope": "Development AI-answer judgments versus raw text entailment; targets differ, not classifier accuracy",
+  "response_count": 250,
+  "independent_human_review": false,
+  "counts": [
+    {
+      "ai_semantic_verdict": "abstained",
+      "any_raw_entailment": false,
+      "responses": 88
+    },
+    {
+      "ai_semantic_verdict": "uncertain",
+      "any_raw_entailment": false,
+      "responses": 44
+    },
+    {
+      "ai_semantic_verdict": "incorrect",
+      "any_raw_entailment": true,
+      "responses": 27
+    },
+    {
+      "ai_semantic_verdict": "correct",
+      "any_raw_entailment": true,
+      "responses": 21
+    },
+    {
+      "ai_semantic_verdict": "correct",
+      "any_raw_entailment": false,
+      "responses": 20
+    },
+    {
+      "ai_semantic_verdict": "incorrect",
+      "any_raw_entailment": false,
+      "responses": 41
+    },
+    {
+      "ai_semantic_verdict": "uncertain",
+      "any_raw_entailment": true,
+      "responses": 9
+    }
+  ],
+  "incorrect_answer_entailment_examples": [
+    {
+      "interaction_id": "0531f5e7-d6ac-4c45-be32-5e530f83835b",
+      "policy": "joint",
+      "grounding_assessment": "wrong_entity_and_nonanswer",
+      "entailed_evidence_ids": [
+        "f7bc53e5d6e8986aba9d232d662d75e1a17245f84e5e98f90a92133aa8c1fbcb"
+      ]
+    },
+    {
+      "interaction_id": "0531f5e7-d6ac-4c45-be32-5e530f83835b",
+      "policy": "exact",
+      "grounding_assessment": "wrong_entity_and_nonanswer",
+      "entailed_evidence_ids": [
+        "f7bc53e5d6e8986aba9d232d662d75e1a17245f84e5e98f90a92133aa8c1fbcb"
+      ]
+    },
+    {
+      "interaction_id": "0531f5e7-d6ac-4c45-be32-5e530f83835b",
+      "policy": "top_k",
+      "grounding_assessment": "wrong_entity_and_nonanswer",
+      "entailed_evidence_ids": [
+        "f7bc53e5d6e8986aba9d232d662d75e1a17245f84e5e98f90a92133aa8c1fbcb"
+      ]
+    },
+    {
+      "interaction_id": "0531f5e7-d6ac-4c45-be32-5e530f83835b",
+      "policy": "mmr",
+      "grounding_assessment": "wrong_entity_and_nonanswer",
+      "entailed_evidence_ids": [
+        "f7bc53e5d6e8986aba9d232d662d75e1a17245f84e5e98f90a92133aa8c1fbcb"
+      ]
+    },
+    {
+      "interaction_id": "4ff833a8-e361-4e00-a997-91028856f236",
+      "policy": "joint",
+      "grounding_assessment": "artist_vs_song_and_wrong_chart_period",
+      "entailed_evidence_ids": [
+        "1aeacae29f6c31f5b9babf069363d6b5d42fe51f47d5f14568201f282de04f1e",
+        "f14cde1911e9fa0798c14c26bfdde287afd4e26f96d88f175a9387ff99de1843"
+      ]
+    },
+    {
+      "interaction_id": "4ff833a8-e361-4e00-a997-91028856f236",
+      "policy": "exact",
+      "grounding_assessment": "artist_vs_song_and_wrong_chart_period",
+      "entailed_evidence_ids": [
+        "1aeacae29f6c31f5b9babf069363d6b5d42fe51f47d5f14568201f282de04f1e",
+        "f14cde1911e9fa0798c14c26bfdde287afd4e26f96d88f175a9387ff99de1843"
+      ]
+    },
+    {
+      "interaction_id": "576253ad-254b-4ad4-b944-95e5520da3c5",
+      "policy": "exact",
+      "grounding_assessment": "historical_format_vs_current_team_list",
+      "entailed_evidence_ids": [
+        "507f3a4815eee5d7e74cf7070aab651cef209e9360d62c7469b41d35898d003c"
+      ]
+    },
+    {
+      "interaction_id": "576253ad-254b-4ad4-b944-95e5520da3c5",
+      "policy": "mmr",
+      "grounding_assessment": "historical_format_vs_current_team_list",
+      "entailed_evidence_ids": [
+        "507f3a4815eee5d7e74cf7070aab651cef209e9360d62c7469b41d35898d003c"
+      ]
+    },
+    {
+      "interaction_id": "576253ad-254b-4ad4-b944-95e5520da3c5",
+      "policy": "coverage",
+      "grounding_assessment": "supported_fragment_but_wrong_period_and_answer_type",
+      "entailed_evidence_ids": [
+        "507f3a4815eee5d7e74cf7070aab651cef209e9360d62c7469b41d35898d003c"
+      ]
+    },
+    {
+      "interaction_id": "576253ad-254b-4ad4-b944-95e5520da3c5",
+      "policy": "joint",
+      "grounding_assessment": "historical_format_vs_current_team_list",
+      "entailed_evidence_ids": [
+        "507f3a4815eee5d7e74cf7070aab651cef209e9360d62c7469b41d35898d003c"
+      ]
+    },
+    {
+      "interaction_id": "5a16e99b-4072-4559-bd72-d9e4ddff828f",
+      "policy": "exact",
+      "grounding_assessment": "incomplete_requested_set_and_unestablished_date",
+      "entailed_evidence_ids": [
+        "f3659f5634b0ba5d9fa744bf462a7c0d109a168a31c56718e45bdd1dfb8a4beb"
+      ]
+    },
+    {
+      "interaction_id": "5a16e99b-4072-4559-bd72-d9e4ddff828f",
+      "policy": "top_k",
+      "grounding_assessment": "sectors_vs_holdings_future_date_and_truncation",
+      "entailed_evidence_ids": [
+        "0fe55e2a8e16023b3a4c5e46b3029aa301460851c50ec85f1dc466240dd79a8c",
+        "92e93357f2211d8eb0db6162f9a7d0773f7b2e5cee78948baf48453ccdc2ab90"
+      ]
+    },
+    {
+      "interaction_id": "5a16e99b-4072-4559-bd72-d9e4ddff828f",
+      "policy": "mmr",
+      "grounding_assessment": "incomplete_requested_set_and_unestablished_date",
+      "entailed_evidence_ids": [
+        "f3659f5634b0ba5d9fa744bf462a7c0d109a168a31c56718e45bdd1dfb8a4beb"
+      ]
+    },
+    {
+      "interaction_id": "5a16e99b-4072-4559-bd72-d9e4ddff828f",
+      "policy": "joint",
+      "grounding_assessment": "incomplete_requested_set_and_unestablished_date",
+      "entailed_evidence_ids": [
+        "f3659f5634b0ba5d9fa744bf462a7c0d109a168a31c56718e45bdd1dfb8a4beb"
+      ]
+    },
+    {
+      "interaction_id": "69f7993d-4618-4edf-ba61-6e199b1acf26",
+      "policy": "joint",
+      "grounding_assessment": "current_quote_vs_opening_field_and_future_date",
+      "entailed_evidence_ids": [
+        "6e682e6f2303c1dbde438ab61a8f62ade70abffab935b10cdb89e3cb3105917b"
+      ]
+    },
+    {
+      "interaction_id": "69f7993d-4618-4edf-ba61-6e199b1acf26",
+      "policy": "exact",
+      "grounding_assessment": "current_quote_vs_opening_field_and_future_date",
+      "entailed_evidence_ids": [
+        "6e682e6f2303c1dbde438ab61a8f62ade70abffab935b10cdb89e3cb3105917b"
+      ]
+    },
+    {
+      "interaction_id": "69f7993d-4618-4edf-ba61-6e199b1acf26",
+      "policy": "top_k",
+      "grounding_assessment": "current_quote_vs_opening_field_and_future_date",
+      "entailed_evidence_ids": [
+        "6e682e6f2303c1dbde438ab61a8f62ade70abffab935b10cdb89e3cb3105917b"
+      ]
+    },
+    {
+      "interaction_id": "69f7993d-4618-4edf-ba61-6e199b1acf26",
+      "policy": "mmr",
+      "grounding_assessment": "current_quote_vs_opening_field_and_future_date",
+      "entailed_evidence_ids": [
+        "6e682e6f2303c1dbde438ab61a8f62ade70abffab935b10cdb89e3cb3105917b"
+      ]
+    },
+    {
+      "interaction_id": "69f7993d-4618-4edf-ba61-6e199b1acf26",
+      "policy": "coverage",
+      "grounding_assessment": "current_quote_vs_opening_field_and_future_date",
+      "entailed_evidence_ids": [
+        "6e682e6f2303c1dbde438ab61a8f62ade70abffab935b10cdb89e3cb3105917b"
+      ]
+    },
+    {
+      "interaction_id": "9fcd0bdb-5088-42c5-913b-5964e9ee3d95",
+      "policy": "joint",
+      "grounding_assessment": "all_time_total_vs_decade_count",
+      "entailed_evidence_ids": [
+        "2121a23e5898e36bebc94d0eb0c64632ceec7628ef7ea3b0d2b37d84ef80c3bc"
+      ]
+    },
+    {
+      "interaction_id": "9fcd0bdb-5088-42c5-913b-5964e9ee3d95",
+      "policy": "exact",
+      "grounding_assessment": "all_time_total_vs_decade_count",
+      "entailed_evidence_ids": [
+        "2121a23e5898e36bebc94d0eb0c64632ceec7628ef7ea3b0d2b37d84ef80c3bc"
+      ]
+    },
+    {
+      "interaction_id": "9fcd0bdb-5088-42c5-913b-5964e9ee3d95",
+      "policy": "mmr",
+      "grounding_assessment": "all_time_total_vs_decade_count",
+      "entailed_evidence_ids": [
+        "2121a23e5898e36bebc94d0eb0c64632ceec7628ef7ea3b0d2b37d84ef80c3bc"
+      ]
+    },
+    {
+      "interaction_id": "9fcd0bdb-5088-42c5-913b-5964e9ee3d95",
+      "policy": "coverage",
+      "grounding_assessment": "all_time_total_vs_decade_count",
+      "entailed_evidence_ids": [
+        "2121a23e5898e36bebc94d0eb0c64632ceec7628ef7ea3b0d2b37d84ef80c3bc"
+      ]
+    },
+    {
+      "interaction_id": "0f528b34-ce6a-438c-9a74-56e761f97f21",
+      "policy": "exact",
+      "grounding_assessment": "answer_outside_requested_pair",
+      "entailed_evidence_ids": [
+        "bf744251a612d56757c7ccc1897662dcc547fbe38cbf828a9a1b66f8b599c2a0"
+      ]
+    },
+    {
+      "interaction_id": "0f528b34-ce6a-438c-9a74-56e761f97f21",
+      "policy": "top_k",
+      "grounding_assessment": "answer_outside_requested_pair",
+      "entailed_evidence_ids": [
+        "bf744251a612d56757c7ccc1897662dcc547fbe38cbf828a9a1b66f8b599c2a0"
+      ]
+    },
+    {
+      "interaction_id": "0f528b34-ce6a-438c-9a74-56e761f97f21",
+      "policy": "mmr",
+      "grounding_assessment": "answer_outside_requested_pair",
+      "entailed_evidence_ids": [
+        "bf744251a612d56757c7ccc1897662dcc547fbe38cbf828a9a1b66f8b599c2a0"
+      ]
+    },
+    {
+      "interaction_id": "0f528b34-ce6a-438c-9a74-56e761f97f21",
+      "policy": "joint",
+      "grounding_assessment": "answer_outside_requested_pair",
+      "entailed_evidence_ids": [
+        "bf744251a612d56757c7ccc1897662dcc547fbe38cbf828a9a1b66f8b599c2a0"
+      ]
+    }
+  ],
+  "answer_acceptance_enabled": false
+}

@@ -105,3 +105,8 @@ A [private one-question GPU worker](LIVE_GPU_WORKER.md) executed and reconstruct
 ### Durable browser job bridge verified
 
 The [asynchronous GPU demo](LIVE_DEMO_FLOW.md) now survives API restart and page refresh without resubmission. Next implement entity/date/unit and claim-support contracts, then evaluate adaptive multi-source execution and genuine cross-source controls. Retain the old fixed-web worker and all frozen results as controls. This one development case is not a method-quality improvement claim.
+
+
+### Evidence-driven verification decision
+
+The [completed NLI diagnostic](NLI_SUPPORT_DIAGNOSTIC.md) does not justify raw-entailment acceptance. Prioritize explicit query contracts and faithful claim framing: requested entity/role, metric, date window, units, comparison operands and list completeness. Keep missing or ambiguous fields unresolved. Use the independent classifier only as a separately costed source-text diagnostic until the combined path is measured on fresh reviewed cases. Preserve all model/AI disagreements; do not label this experiment classifier accuracy.
