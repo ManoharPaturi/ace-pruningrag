@@ -20,6 +20,7 @@ SOURCES = {
     "constrained_alignment": "results/version1/constrained_alignment_replay.json",
     "constrained_progress": "results/version1/constrained_review_progress.json",
     "constrained_comparison": "results/version1/constrained_control_comparison.json",
+    "unicode_replay": "results/version1/unicode_policy_replay.json",
 }
 
 
@@ -264,6 +265,12 @@ errors remain visible. These qualitative AI categories do not establish calibrat
 accuracy or external truth. Structural success is not general support or complete
 claim coverage; automatic acceptance remains disabled. See
 [constrained reconstruction and review](CONSTRAINED_EXTRACTION.md).
+
+The [versioned Unicode correction](UNICODE_SPAN_POLICY.md) preserves combining marks
+in lexical words without normalizing source text. Full replay of 386 unchanged old
+outputs rejects one truncated-name proposal that v1 permitted. This is a policy
+revalidation, not corrected neural generation or semantic-role improvement. The
+submitted v1 source, all outputs and all previous outcome counts remain intact.
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible

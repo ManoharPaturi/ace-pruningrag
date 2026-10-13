@@ -155,3 +155,11 @@ confirms local rejection of altered source-category counts, a promoted human-rev
 flag and a replacement verification file not bound to these outputs. The checks use
 temporary copies/symlinks for reading; original experiment and audit artifacts are
 not modified. They protect bookkeeping, not the correctness of AI judgments.
+
+
+The [versioned combining-mark correction](UNICODE_SPAN_POLICY.md) is now implemented
+and replayed against all old outputs. The submitted v1 control remains intact; do not
+reinterpret its 385 valid proposals as corrected-policy generation results. The v2
+policy rejects the observed truncated name. Corrected neural execution and the full
+source-role audit are still pending. Earlier instructions to fix that boundary are
+superseded by this implementation checkpoint.

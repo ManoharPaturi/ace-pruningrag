@@ -164,3 +164,13 @@ in evidence analyses. The observed combining-mark boundary defect is a required
 current-version correction with a frozen-source control, not evidence that schema
 validity establishes entity completeness. The remaining 235 source proposals must
 still be reviewed before final diagnostic conclusions.
+
+
+### Unicode correction implementation checkpoint
+
+The [combining-mark-aware v2 policy](UNICODE_SPAN_POLICY.md) and full old-output replay
+are implemented. Integrate that explicitly versioned policy into a subsequent
+controlled decoder before claiming new neural results. Preserve the v1 source and
+outputs; do not normalize stored text or discard truncated-name failures. This
+lexical correction does not satisfy multiword entity identity, complete atomic
+requirements or semantic-support validation.

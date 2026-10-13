@@ -6,7 +6,7 @@ Audit opened 12 October 2026. The user requested completion of the current versi
 
 | Requirement | Authoritative evidence | Audit result | Next action |
 | --- | --- | --- | --- |
-| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 180 local tests pass; required CI runs on every pushed PR head | Run required checks on final branch |
+| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 184 local tests pass; required CI runs on every pushed PR head | Run required checks on final branch |
 | Faithful original PruningRAG baseline | Original router/checkpoints, full API backing data and paper model/evaluator contract | Not achieved; upstream releases empty and `models/router` lookup returned 404 during fresh audit | Obtain original artifacts or keep adapted-only claims explicit; do not invent a reproduced baseline |
 | Shared-budget five-selector implementation | Selection code, smoke traces and budget verifiers | Implemented; prior contexts were engineering smoke | Execute the separately scoped explicit-cohort comparison |
 | Main complementary-evidence scientific hypothesis | Reviewed atomic support labels, genuine cross-source cases, source-only controls | Not achieved; current real candidate pools are web-only and groups/conflicts are disabled | Retain this limitation; build genuine cross-source evaluation |
@@ -214,3 +214,14 @@ combining accent splitting a name inside a lexical word. Fix that candidate poli
 while preserving the frozen submitted implementation and outcomes. Full source
 role audit, Unicode correction, general verification and scientific gates remain
 required.
+
+
+### Combining-mark policy correction implemented
+
+[Versioned Unicode policy](UNICODE_SPAN_POLICY.md) fixes the observed within-word
+combining-mark boundary while keeping the submitted v1 control unchanged. All 386
+old proposals were replayed; exactly the truncated-name proposal changes status,
+without changing any output. Four regression tests include the real token enforcer
+with a synthetic tokenizer. Local tests now total 184. This closes the lexical
+correction implementation and replay task, not corrected neural generation, full
+entity completeness, the remaining 235 source reviews or general claim verification.
