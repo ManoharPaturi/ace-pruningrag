@@ -24,11 +24,11 @@ most 97 `generate` invocations, 61,760 output tokens and 790,528 cumulative rese
 request tokens. Padding and actual output counts are reported separately.
 
 The private kernel `ionrey/ace-extraction-ac6191501df7406c88b41a8707d4c8c2`, version 1,
-was submitted and observed RUNNING. [Submission record](../results/version1/extraction_submission.json)
-binds its payload, source trace, limits and preflight. **Completion, downloaded outputs,
-span verification, costs and substantive AI audit are pending.** A submitted/running
-job does not establish success. Observe this same kernel; do not resubmit after an
-observation timeout. Its output is separate from admitted answer results.
+completed and its downloaded outputs passed full structural reconstruction. [Submission record](../results/version1/extraction_submission.json)
+binds its payload, source trace, limits and preflight. [Reconstruction](../results/version1/extraction_verification.json)
+checks every sequence; [complete audit](../results/version1/extraction_audit.json) records
+structural failures and AI source review of all six span-valid proposals. These are
+separate from admitted answer results and independent human evaluation.
 
 ## Proposal and validation
 
@@ -57,21 +57,21 @@ hashes, rebuilds complete tokenizer inputs, decodes outputs, revalidates spans a
 reconciles calls, padded/unpadded tokens, terminators, caps and dependency isolation.
 It does not independently rerun GPU neural generation or prove extraction accuracy.
 
-After the same remote kernel is COMPLETE, download to a fresh directory and run:
+The completed outputs are preserved in the paths below. To reconstruct to new output paths, run:
 
 ```sh
 uv run --locked --no-editable --extra generation python scripts/verify_claim_extraction.py \
   --bundle runs/version1/extraction-kernel-v1 \
   --run runs/version1/extraction-output-v1/extraction-pilot \
   --source-trace runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl \
-  --output results/version1/extraction_verification.json
+  --output runs/extraction-reconstruction/verification.json
 
 uv run --locked --no-editable python scripts/claim_alignment_replay.py \
   --bundle runs/version1/extraction-kernel-v1 \
   --run runs/version1/extraction-output-v1/extraction-pilot \
   --source-trace runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl \
-  --verification results/version1/extraction_verification.json \
-  --output results/version1/claim_alignment_replay.json
+  --verification runs/extraction-reconstruction/verification.json \
+  --output runs/extraction-reconstruction/alignment.json
 ```
 
 Output paths must be new. If submitted source hashes later differ, reconstruct and
@@ -81,3 +81,57 @@ support features. Full claim lists, comparison operands, relative-date resolutio
 semantic framing, measured extraction quality and independent fresh review remain
 required. The [unframed NLI diagnostic](NLI_SUPPORT_DIAGNOSTIC.md) supplies evidence
 against promoting raw entailment directly to answer acceptance.
+
+
+## Completed results and retained failure decision
+
+Actual execution generated 386 extraction sequences in 97 batched invocations,
+using 124,383 unpadded / 148,610 padded input tokens and 17,991 output tokens. Model
+loading took 7.09 seconds and generation 438.29 seconds; queue, download, setup and
+local reconstruction are excluded. No new baseline answers were generated. Three
+sequences reached the output cap without an EOS terminator; they remain retained.
+
+| Input kind | Span-bound proposals | Invalid schema | Invalid proposal | Invalid JSON |
+| --- | ---: | ---: | ---: | ---: |
+| 50 questions | 0 | 6 | 44 | 0 |
+| 336 excerpts | 6 | 1 | 264 | 65 |
+
+These are contract-validation outcomes, not semantic extraction accuracy. Common
+failures include invented dates, non-verbatim relations, nested period objects,
+string `"null"` instead of JSON null and answering the query. All
+[1,105 selected question/source comparisons](../results/version1/claim_alignment_replay.json)
+are unresolved because no query proposal passes the contract.
+
+All six span-valid proposals were AI-reviewed against their complete input excerpts.
+Five still have role/scope problems: lost threshold inequality in the music list;
+team/time fields used as units/values for Panthers elimination; games used as a
+percentage unit; Amgen CEO, company description and index-membership period mixed;
+and a playoff stage used as a measurement unit. The Lake Powell tuple follows a
+historical 3,531-foot sentence dated September 3, 2022, but does not prove a current
+level or external truth. Repeated spans remain visible. This six-case AI audit is
+not independent human evaluation or a calibrated accuracy measurement.
+
+**Do not promote this unconstrained extractor.** JSON instructions and substring
+validation correctly expose failure but do not make a small generator obey the
+contract or bind field roles. Next enforce schema/span choices during extraction,
+then separately evaluate semantic relations, period attachment, negative predicates
+and complete claim coverage. Keep this failed protocol and every raw proposal as
+controls. Automatic acceptance remains disabled.
+
+Full audit bindings can be checked with:
+
+```sh
+uv run --locked --no-editable python scripts/verify_extraction_audit.py \
+  --source-trace runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl \
+  --extractions runs/version1/extraction-output-v1/extraction-pilot/extractions.jsonl \
+  --audit runs/version1/extraction-ai-audit-v1.json \
+  --verification results/version1/extraction_verification.json \
+  --report results/version1/extraction_audit.json
+```
+
+The private full-text audit binds 386 records. Structural validation covers all 380
+invalid proposals; the remaining six have explicit AI rationales. No invalid tuple is
+silently salvaged or reclassified as correct. Seven additional synthetic tamper tests
+check the reconstruction boundaries using a fake tokenizer; they do not claim GPU
+execution. A cached vocabulary size avoids repeatedly allocating the full token map
+while checking output IDs. Local validation now totals 175 passing tests.

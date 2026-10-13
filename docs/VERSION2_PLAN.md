@@ -130,3 +130,14 @@ of the existing job, reconstruct actual outputs/costs and audit tuple roles befo
 using its proposals. Literal aligned fields are not semantic support. Prioritize full
 claim coverage, comparisons, relative-date handling and independently reviewed fresh
 cases; none is closed by submission or substring validation.
+
+
+### Decision after complete structured extraction audit
+
+The [completed unconstrained run](STRUCTURED_CLAIM_EXTRACTION.md) yields zero contract-valid
+query proposals and six source proposals; five of those have field-role/scope problems
+in AI source review. Retain the failed protocol. Before further support experiments,
+enforce schema and permitted span choices rather than trusting JSON instructions. Then
+audit entity/relation/period attachment and complete claim coverage independently of
+syntax. No validation pass alone permits automatic acceptance; independently reviewed
+fresh cases and the full roadmap research gates remain required.

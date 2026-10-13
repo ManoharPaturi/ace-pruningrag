@@ -10,8 +10,6 @@ import zlib
 from collections import Counter
 from pathlib import Path
 
-from transformers import AutoTokenizer
-
 from ace_pruningrag.artifacts import read_json, sha256_file, write_json
 from ace_pruningrag.claim_extraction import (
     digest,
@@ -22,6 +20,8 @@ from ace_pruningrag.claim_extraction import (
 
 
 def verify(root, bundle_dir, run, trace):
+    from transformers import AutoTokenizer
+
     tree = ast.parse((bundle_dir / "bootstrap.py").read_text())
     assignment = next(
         n
@@ -53,6 +53,7 @@ def verify(root, bundle_dir, run, trace):
     tokenizer = AutoTokenizer.from_pretrained(
         root / base["generator"]["directory"], local_files_only=True, trust_remote_code=False
     )
+    vocabulary_size = len(tokenizer)
     eos = read_json(root / base["generator"]["directory"] / "generation_config.json")[
         "eos_token_id"
     ]
@@ -77,7 +78,7 @@ def verify(root, bundle_dir, run, trace):
                 not isinstance(ids, list)
                 or not ids
                 or len(ids) > config["max_output_tokens"]
-                or any(type(i) is not int or i < 0 or i >= len(tokenizer) for i in ids)
+                or any(type(i) is not int or i < 0 or i >= vocabulary_size for i in ids)
                 or any(i in eos for i in ids[:-1])
             ):
                 raise ValueError("extraction token IDs/caps/termination differ")

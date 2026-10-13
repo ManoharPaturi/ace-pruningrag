@@ -6,7 +6,7 @@ Audit opened 12 October 2026. The user requested completion of the current versi
 
 | Requirement | Authoritative evidence | Audit result | Next action |
 | --- | --- | --- | --- |
-| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 168 local tests pass; required CI runs on every pushed PR head | Run required checks on final branch |
+| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 175 local tests pass; required CI runs on every pushed PR head | Run required checks on final branch |
 | Faithful original PruningRAG baseline | Original router/checkpoints, full API backing data and paper model/evaluator contract | Not achieved; upstream releases empty and `models/router` lookup returned 404 during fresh audit | Obtain original artifacts or keep adapted-only claims explicit; do not invent a reproduced baseline |
 | Shared-budget five-selector implementation | Selection code, smoke traces and budget verifiers | Implemented; prior contexts were engineering smoke | Execute the separately scoped explicit-cohort comparison |
 | Main complementary-evidence scientific hypothesis | Reviewed atomic support labels, genuine cross-source cases, source-only controls | Not achieved; current real candidate pools are web-only and groups/conflicts are disabled | Retain this limitation; build genuine cross-source evaluation |
@@ -157,3 +157,15 @@ Independent source/token/span/cost reconstruction and literal field comparison t
 are implemented. Actual completion, output verification and tuple audit remain pending.
 All results keep automatic acceptance disabled; one proposed claim per source does not
 establish complete evidence. Local tests now total 168.
+
+
+### Structured extraction completed — retained negative result
+
+The same GPU job completed 386 extraction sequences / 97 batch invocations. Every
+input/output/span/cost binding reconstructed; [complete extraction audit](STRUCTURED_CLAIM_EXTRACTION.md)
+retains 380 contract-invalid outputs and source-review rationales for all six valid
+ones. No query proposal passes the contract; all 1,105 comparisons remain unresolved.
+This closes execution and audit of this diagnostic, not general semantic verification.
+Do not enable this extractor for acceptance. Enforced schema/span choices and measured
+field-role binding remain next requirements. Local tests total 175; the submitted-code
+commit passed all three required CI jobs. Earlier RUNNING status is historical.

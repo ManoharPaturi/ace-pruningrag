@@ -1,0 +1,42 @@
+{
+  "status": "extraction_spans_decode_and_costs_reconstructed",
+  "tasks": 386,
+  "extraction_sequences": 386,
+  "generate_invocations": 97,
+  "unextracted": 0,
+  "input_tokens": 124383,
+  "padded_input_tokens": 148610,
+  "output_tokens": 17991,
+  "maximum_reserved_request_tokens": 890,
+  "trace_sha256": "66b75e941c882a8b8a4e8a41fa3ed535cd61f77320dcf8885ff4eb9d00afd01c",
+  "tasks_sha256": "f26f3fb5895f3f7d4ba0877fb6b41b4f406936f8acb5325ceb7c9dbaaffc424a",
+  "validation_counts": {
+    "invalid_schema": 7,
+    "invalid_proposal": 308,
+    "invalid_json": 65,
+    "span_bound_proposal": 6
+  },
+  "actual_new_answer_generation_calls": 0,
+  "answer_acceptance_enabled": false,
+  "semantic_tuple_verification": false,
+  "eos_token_ids": [
+    151643,
+    151645
+  ],
+  "scope": "Blinded span-bound query/source extraction diagnostic; no answer acceptance",
+  "generator_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "semantic_tuple_accuracy": null,
+  "complete_claim_coverage": null,
+  "neural_generation_independently_recomputed": false,
+  "timing": {
+    "generation_seconds": 438.28598077800007,
+    "model_loading_seconds": 7.094218383999987
+  },
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "dtype": "float32"
+  }
+}
