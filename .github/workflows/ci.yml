@@ -17,6 +17,8 @@ jobs:
       - run: uv run --no-editable ruff check src tests scripts
       - run: uv run --no-editable ruff format --check src tests scripts
       - run: uv run --no-editable --extra demo --extra constraints pytest -q
+      - run: uv run --locked --no-editable python scripts/build_research_report.py --output runs/ci/research-status.md --manifest runs/ci/report-manifest.json
+      - run: cmp docs/RESEARCH_STATUS_REPORT.md runs/ci/research-status.md
       - uses: actions/setup-node@v4
         with:
           node-version: "22"

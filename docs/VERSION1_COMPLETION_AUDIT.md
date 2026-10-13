@@ -180,3 +180,14 @@ completed outputs from inventing fields; cap failures and semantic role errors r
 unresolved. Quote/Unicode tests use the actual enforcement parser rather than dropping
 valid source text. Local validation passes 180 tests; remote completion and audit remain
 pending. This does not close general verification or scientific evaluation.
+
+
+### Consolidated research-status draft
+
+The [reproducible research report](RESEARCH_STATUS_REPORT.md) now consolidates selector
+protocol, literal/AI outcomes, retained failures, NLI/extraction costs, historical retry
+control and actual live-flow evidence. Its renderer binds ten committed input artifacts
+and refuses overwriting. Required CI reconstructs and compares the checked-in report.
+This closes a report-draft packaging task, not the full baseline/ablation, independent
+evaluation or final-paper requirements. README entry points and test setup now match
+the current branch; earlier phase counts are explicitly historical.

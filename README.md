@@ -4,11 +4,22 @@ Adaptive cross-source evidence selection for multi-source retrieval-augmented ge
 
 The research hypothesis is that selecting complementary web/API evidence jointly can improve complete evidence coverage and grounded answers under a fixed token budget. This repository begins with a pinned PruningRAG setup audit and real RM3QA data validation. No research improvement or full baseline reproduction is claimed yet.
 
-For a new contributor, start with the [phase tracker and project handoff](docs/PROJECT_HANDOFF.md).
+Start with the [executed research-status report](docs/RESEARCH_STATUS_REPORT.md),
+[current completion audit](docs/VERSION1_COMPLETION_AUDIT.md), and
+[phase tracker and project handoff](docs/PROJECT_HANDOFF.md).
 
 The revised roadmap was approved on 9 October 2026. See [the review](ROADMAP_REVIEW.md), [original roadmap](ACE_PruningRAG_5_Phase_Research_Roadmap.pdf), [evaluation protocol](docs/EVALUATION_PROTOCOL.md), and [reproduction report](docs/REPRODUCTION_REPORT.md).
 
-Current engineering checks: 121 tests pass; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test`, `data-smoke`, and `finance-smoke` checks.
+Current engineering checks: 180 tests pass with the `demo` and `constraints` extras; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test`, `data-smoke`, and `finance-smoke` checks.
+
+The current branch includes 250 verified five-selector cohort answers, source-bound AI
+assessments of all 444 admitted answer records, bounded asynchronous live GPU generation,
+and independently reconstructed NLI/extraction diagnostics. These establish engineering
+execution and retained failure evidence; independent semantic evaluation, genuine
+cross-source controls and general claim verification remain incomplete.
+
+The phase checkpoints below retain their historical counts; use the current reports
+above for reconciled status.
 
 Continuation: a separate compatibility copy resolves the startup constructor mismatch for `noise=0`, and two finance endpoints pass real HTTP tests on original CRAG snapshots. See [the continuation report](docs/PHASE1_CONTINUATION.md) for scope, source hashes, and the bounded learned-retrieval pilot.
 
@@ -36,9 +47,10 @@ Use a non-editable package install on this Mac: Python skips `.pth` files carryi
 ## Checks
 
 ```bash
-uv run --no-editable ruff check src tests scripts
-uv run --no-editable ruff format --check src tests scripts
-uv run --no-editable pytest -q
+uv sync --locked --no-editable --extra demo --extra constraints
+uv run --locked --no-editable ruff check src tests scripts
+uv run --locked --no-editable ruff format --check src tests scripts
+uv run --locked --no-editable --extra demo --extra constraints pytest -q
 ```
 
 ## Implementation

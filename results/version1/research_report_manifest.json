@@ -1,0 +1,19 @@
+{
+  "scope": "Executed development report provenance, not independent truth",
+  "sources_sha256": {
+    "results/version1/cohort/gpu_summary.json": "e1553df24f1d83e403f5d19a0c553db0e6db09d7f23358cf337acc27a1f341dd",
+    "results/version1/cohort/paired_metrics.json": "2c1f02db95a0fd7d2c9545f21ab35f70d5cbe53e5705ba2c38864d299f13e595",
+    "results/version1/cohort/ai_method_summary.json": "ddb80e3c30f1f6cb8442dbd5e22335bea964d636fa58487da3c948635aefd4bd",
+    "results/version1/retained_trace_audit.json": "a21fb7497442b4644add427d39262cb254e6384e5cd60ba3a9293ae9376102ad",
+    "results/version1/nli_verification.json": "1895ad9366af2512a39dd244f88f28c3f9897fc576fe0ec28bb3c66d15b1cd07",
+    "results/version1/nli_review_comparison.json": "74117d31481e5d461daa33f269cd7caefe03457a389f68ae921a1b56925b50a4",
+    "results/version1/extraction_verification.json": "6c1f308c47c4eaabb9937fea1c7bd4f1a4d86168756c342af19fe186b56fe5d3",
+    "results/version1/extraction_audit.json": "1c6e8b6b64da702cfcbecd9264121232e1cb571b5662b922b15c5372680a5e2f",
+    "results/version1/live_demo_verification.json": "fb3febe49094c2fe5d9fdb51b7ac555aea06141090c8b008440d24404ed7a7f1",
+    "results/phase4/regeneration/control_comparison.json": "792d90654d1fb3810e714dcf481634fcf26a46dedbebf3058c932d7652dce92d"
+  },
+  "renderer_sha256": "b1bf346b27dcf3a09334634e51ed8c7931ddf4ca34e1d684df3b9dafd38cc9e2",
+  "report_sha256": "2f1306a3fd0f96d45fca92ba08d730b52c89e009f7b678ba49082fe7a3f01140",
+  "publication_ready": false,
+  "five_phase_goal_complete": false
+}
