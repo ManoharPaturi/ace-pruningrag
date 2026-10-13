@@ -117,3 +117,8 @@ All 444 admitted records now have source-bound AI assessments, including all 250
 ### Declared retained-output audit complete
 
 [Retained response audit](RETAINED_RESPONSE_AUDIT.md) now covers all ten declared local prediction-file paths: 646 stored records, 620 across eight unique file hashes. Failed float16 outputs are punctuation-only nonanswers; superseded regeneration assessments require full input equivalence before reuse. The accepted 444-record results are unchanged. There are 147 passing local tests. This closes the declared local AI audit, not remote-artifact completeness or independent scientific evaluation.
+
+
+### Single-question GPU worker executed
+
+[Live GPU worker](LIVE_GPU_WORKER.md) completed one actual pinned-model generation, separately from frozen experiments, and passed independent output/source/prompt reconstruction. It produced a supported director answer on an inspected development case with 1,302 reserved tokens. The browser submission/polling bridge, full latency accounting and general claim-level verification remain unfinished. Local tests now total 152.

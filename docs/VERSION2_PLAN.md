@@ -95,3 +95,8 @@ Observed AI-correct counts are nine per method for top-K/MMR/joint/exact and fiv
 ### Initial reliability implementation checkpoint
 
 [Answer-form checks](ANSWER_CHECKS.md) now identify source-ID answers and unresolved/incomplete numbered lists, with a strict explicit-rectangle calculator. They are displayed in the replay demo and preserve all controls. This begins milestones 1–2 above; full semantic answer contracts, general claims and live generation are still unfinished. All 444 admitted outputs were checked through HTTP; 12 form warnings are diagnostics, not semantic improvement scores.
+
+
+### Live-worker implementation checkpoint
+
+A [private one-question GPU worker](LIVE_GPU_WORKER.md) executed and reconstructed one actual generation with the existing pinned model and budget. Next integrate durable asynchronous submission/polling into the existing FastAPI/Next.js app, with explicit states and no retry-by-resubmission after observation failure. Keep this development demonstration separate from research controls and finish claim-level support and cumulative latency/cost reporting.

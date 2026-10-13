@@ -1,0 +1,11 @@
+{
+  "status": "live_request_prepared_not_submitted",
+  "request_id": "2ec3b27e0524413680a7b5171e570d13",
+  "kernel_id": "ionrey/ace-live-2ec3b27e0524413680a7b5171e570d13",
+  "interaction_id": "2776a8f2-8b20-41bd-87fa-9e932f24c184",
+  "reserved_tokens": 1302,
+  "selected_excerpts": 5,
+  "actual_llm_calls": 0,
+  "remote_generation_verified": false,
+  "prepared_bundle": "live-request-v2"
+}

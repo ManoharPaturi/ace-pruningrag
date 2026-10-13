@@ -1,0 +1,43 @@
+{
+  "status": "one_live_gpu_job_complete_and_reconstructed",
+  "kernel_id": "ionrey/ace-live-2ec3b27e0524413680a7b5171e570d13",
+  "kernel_version": 1,
+  "request_id": "2ec3b27e0524413680a7b5171e570d13",
+  "interaction_id": "2776a8f2-8b20-41bd-87fa-9e932f24c184",
+  "prediction": "Damon Russell",
+  "actual_llm_calls": 1,
+  "actual_source_calls": {
+    "web": 1,
+    "finance": 0
+  },
+  "input_tokens": 1206,
+  "output_tokens": 4,
+  "maximum_reserved_tokens": 1302,
+  "generation_seconds": 1.6687642910000022,
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "dtype": "float32",
+    "per_step_scores_guarded": true
+  },
+  "result_sha256": "67e6092550eea950b63718c2b1c3612ca11d4fae64116705e161de281be499fd",
+  "ai_assessment": "correct_under_selected_director_binding",
+  "ai_grounding": "Selected excerpts explicitly bind Damon Russell as film director.",
+  "independent_human_review": false,
+  "browser_to_gpu_flow_verified": false,
+  "claim_level_verifier_implemented": false,
+  "ai_review_binding": {
+    "reviewer_type": "AI",
+    "human_validated": false,
+    "prediction": "Damon Russell",
+    "prompt_sha256": "7b51a71efa36bad8af30e909164feb8d641e8f0285681e59b8d7ead21f3874cc",
+    "selected_evidence_ids": [
+      "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+      "94f1a30d18ad9d03cf6c6742c5adea89a99520dd7427714c471462a29380926d",
+      "ca90cec46837229611fa68da603e0490f17a3bf339e1a44114ca7b72f0ba9124",
+      "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+      "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62"
+    ]
+  }
+}

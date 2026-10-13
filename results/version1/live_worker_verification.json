@@ -1,0 +1,12 @@
+{
+  "status": "one_live_gpu_result_reconstructed",
+  "request_id": "2ec3b27e0524413680a7b5171e570d13",
+  "result_sha256": "67e6092550eea950b63718c2b1c3612ca11d4fae64116705e161de281be499fd",
+  "actual_llm_calls": 1,
+  "input_tokens": 1206,
+  "output_tokens": 4,
+  "maximum_reserved_tokens": 1302,
+  "human_validated": false,
+  "claim_support_verified": false,
+  "scope": "Live worker execution/provenance, not full demo or scientific completion"
+}
