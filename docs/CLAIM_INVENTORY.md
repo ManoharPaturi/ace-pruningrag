@@ -177,11 +177,11 @@ Preserve this failed control and measure each representation/model change separa
 ## Extended rejected-output assessment
 
 The [combined assessment progress](../results/version1/inventory_role_review_progress.json)
-now binds 71 of 386 tasks: all fifty query inventories and 21 source inventories,
-including fifty rejected outputs beyond the original 21 valid-output reviews. The
-71 records contain 69 distinct input/proposal pairs and 142 parsed frames. Two source
+now binds 81 of 386 tasks: all fifty query inventories and 31 source inventories,
+including sixty rejected outputs beyond the original 21 valid-output reviews. The
+81 records contain 79 distinct input/proposal pairs and 174 parsed frames. Two source
 assessments are reused only for exact identical input/proposal pairs. Three hundred
-fifteen rejected source tasks, including the remaining capped failures, still need
+five rejected source tasks, including the remaining capped failures, still need
 assessment. No full all-output semantic review is claimed yet.
 
 Observed source problems include navigation labels as facts, photo dates attached
@@ -195,6 +195,7 @@ independent human labels. Original execution/structural/valid-only proofs are un
 uv run --locked --no-editable --extra generation --extra constraints \
   python scripts/verify_inventory_role_reviews.py \
   --batch runs/version1/inventory-rejected-ai-review-01.json \
+  --batch runs/version1/inventory-rejected-ai-review-02.json \
   --output runs/inventory-role-progress.json
 ```
 
@@ -202,3 +203,10 @@ The checker freshly reconstructs the original execution and valid-output reviews
 then validates rejected input/output identities, frame counts, scope and exact reuse.
 Two regression tests reject changed source text, proposal hashes, incomplete frame
 assessment, duplicate identities, forged human/acceptance scope and unequal reuse.
+
+The second rejected-output batch covers ten additional source tasks, including
+one capped unparseable JSON output. Its visible repeated depth-claim prefix was
+qualitatively assessed; it contributes zero fully parsed frames. Nine complete
+outputs contribute 32 frames, including procedural examples, formula/navigation
+mixing and Titanic role/date/attribution errors. No partial prefix is admitted
+as a complete inventory. Three capped outputs still await assessment.

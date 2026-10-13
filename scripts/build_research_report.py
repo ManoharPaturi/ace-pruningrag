@@ -89,8 +89,8 @@ def render(root):
         or model_comparison["semantic_requirement_improvement_established"] is not False
         or inventory_roles["valid_review_progress_sha256"]
         != sha256_file(root / SOURCES["inventory_valid_reviews"])
-        or inventory_roles["AI_assessed_tasks"] != 71
-        or inventory_roles["rejected_inventories_pending_assessment"] != 315
+        or inventory_roles["AI_assessed_tasks"] != 81
+        or inventory_roles["rejected_inventories_pending_assessment"] != 305
         or inventory_roles["all_inventory_tasks_assessed"] is not False
         or contract["policy_sha256"] != model_run["span_policy_sha256"]
         or contract["prompt_says_nullable_operation_fields"] is not True
@@ -491,10 +491,10 @@ Parsed frames total 66 query
 and 1,551 source frames; only 21 frames are structurally admitted. Neither grammar
 nor a proposed_complete status establishes exhaustive requirements or role quality.
 
-The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 71 tasks:
-all fifty query inventories and 21 source inventories, including fifty rejected
-outputs. The 71 task records contain 69 distinct input/proposal pairs and 142
-parsed frames; 315 rejected source tasks remain unassessed. Source observations
+The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 81 tasks:
+all fifty query inventories and 31 source inventories, including sixty rejected
+outputs. The 81 task records contain 79 distinct input/proposal pairs and 174
+parsed frames; 305 rejected source tasks remain unassessed. Source observations
 include navigation-as-facts, caption dates borrowed for unrelated events, missing
 row/actor associations and procedural examples promoted into assertions. Coherent
 partial facts are retained without establishing full coverage or external truth.

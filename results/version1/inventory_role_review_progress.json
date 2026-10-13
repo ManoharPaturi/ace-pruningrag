@@ -1,23 +1,25 @@
 {
   "scope": "AI role/omission review across valid/rejected inventories; pending tasks retained",
   "total_tasks": 386,
-  "AI_assessed_tasks": 71,
+  "AI_assessed_tasks": 81,
   "valid_inventories_assessed": 21,
-  "rejected_inventories_assessed": 50,
-  "rejected_inventories_pending_assessment": 315,
+  "rejected_inventories_assessed": 60,
+  "rejected_inventories_pending_assessment": 305,
   "all_inventory_tasks_assessed": false,
   "assessment_counts_by_kind": {
     "query": 50,
-    "source": 21
+    "source": 31
   },
-  "distinct_input_proposal_pairs": 69,
-  "parsed_frames_assessed": 142,
+  "distinct_input_proposal_pairs": 79,
+  "parsed_frames_assessed": 174,
   "AI_semantic_categories": {
     "partial_or_misbound_requirements": 50,
-    "conditional_example_with_role_errors": 2,
-    "table_or_navigation_misbound": 3,
-    "role_or_scope_errors": 15,
-    "metadata_role_errors": 1
+    "conditional_example_with_role_errors": 6,
+    "table_or_navigation_misbound": 4,
+    "role_or_scope_errors": 18,
+    "metadata_role_errors": 1,
+    "mixed_claims_with_role_errors": 1,
+    "unparseable_capped_output": 1
   },
   "independent_human_review": false,
   "semantic_requirement_accuracy": null,
@@ -1005,6 +1007,90 @@
       "independent_human_review": false
     },
     {
+      "index": 70,
+      "task_sha256": "2c57bb02cf923517ed40db48cc18747627d0af26f689a5b6180fb98e19538d33",
+      "kind": "source",
+      "raw_proposal_sha256": "8de315daedb021dfd462cba33b5ec3544cbbb8af1ad9fc016bd0ec4a7cc4188b",
+      "input_proposal_pair_sha256": "932fe85d80696f34655af5985163a78f01fb04233f93ac82af9b957900715908",
+      "structural_status": "invalid_inventory_proposal",
+      "parsed_frames_assessed": 2,
+      "semantic_status": "conditional_example_with_role_errors",
+      "rationale": "Trapezoid dimensions and conditional area totals are partially retained, but the actor lies outside the first statement, height 2.66 feet is observation time, and a multi-fact qualification conflates areas and dimensions. Diameter guidance is a procedure, not a measured room fact.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 71,
+      "task_sha256": "5eb4d20bf2a55b53e561469f7ca73724da20d7ed6621346abc4e6a6d4d6c8f4a",
+      "kind": "source",
+      "raw_proposal_sha256": "437589ac31a0dc66a46bf6efe2f6835f9716ee094193bf36666a0949af2f2e13",
+      "input_proposal_pair_sha256": "e3d05bb63f7039e142451d9d804cc6642f7edfc8d50748604cb94d9b0020a00e",
+      "structural_status": "invalid_inventory_proposal",
+      "parsed_frames_assessed": 3,
+      "semantic_status": "conditional_example_with_role_errors",
+      "rationale": "All three frames treat instructions or conditional rectangle examples as facts. The verb break is actor, shape/unit slots are mixed, and area 20 becomes both dates. Escaped formula text and the missing final total leave calculation operands and result incompletely bound.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 72,
+      "task_sha256": "1621fbe179295d48b4727fe5a28c5cfa09c1e4b9ce473201bf7439fbf1e89fcd",
+      "kind": "source",
+      "raw_proposal_sha256": "3e276e636eb9870a7acb84a6f510617a504884131f98ccde54655352dd939122",
+      "input_proposal_pair_sha256": "9b72d9007b404eef3c137eaf36ed1ea01fed2fc36bad0422d115e82bbc35dce5",
+      "structural_status": "invalid_inventory_proposal",
+      "parsed_frames_assessed": 8,
+      "semantic_status": "table_or_navigation_misbound",
+      "rationale": "All eight frames attach unrelated Related Articles titles to the clipped 30-square-meter result. Exponent 2 becomes both dates, linear meters are mixed with square area, and link headings are attribution. This does not establish eight actual measurement facts.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 73,
+      "task_sha256": "99fa19d07456a156664528efe7a481d5e3c81538ae07dee441a99bbc024a01ba",
+      "kind": "source",
+      "raw_proposal_sha256": "59d2f5371384a6f00bdb2db01a9214b6e13e9f15617ed5d981094432382aa39c",
+      "input_proposal_pair_sha256": "80486867049222700bc4b349a7c6a12d4b4842ce93b233eb1bc00451c14d3f48",
+      "structural_status": "invalid_inventory_proposal",
+      "parsed_frames_assessed": 3,
+      "semantic_status": "conditional_example_with_role_errors",
+      "rationale": "The first frame chooses the clipped earlier 12-area example while including a distinct conditional 6-by-5 equals 30 example. Linear meters are used for square area, exponent 2 and area 12 become dates, and sometimes becomes a value. The three frames lose conditional/measurement associations.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 74,
+      "task_sha256": "748acb7dbe7373c1e68088572a9f091f96698a883bf5ba3def2b4c6d77a8ec66",
+      "kind": "source",
+      "raw_proposal_sha256": "92d1dc8aa405bc1ab7397328e92e2b88d94bdffab3432d27226d103fd6c693a9",
+      "input_proposal_pair_sha256": "c711180c8bf0354078997e3a77f2af88559a6b10156019a57322fe6315cfbebc",
+      "structural_status": "invalid_inventory_proposal",
+      "parsed_frames_assessed": 5,
+      "semantic_status": "role_or_scope_errors",
+      "rationale": "All five frames are procedural instructions with copied action phrases as subjects and generic to as relation. Measurements and length/width become dates, you becomes attribution, and qualifications cross the narrow statements. No measured room or concrete dimension operands are established.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 75,
+      "task_sha256": "fca6e3ce9c26b416e2b33dd3830483cdb7387c3dedd094133b2cdab1e5df93b8",
+      "kind": "source",
+      "raw_proposal_sha256": "c7809a9cf06728d074cff400ab66ab8bff73c5185d048acd7496b04200ddc972",
+      "input_proposal_pair_sha256": "55fdf9bbe625a7c921ab584a52e6259cbe6c252aa0261f5b13e24c0a4817a493",
+      "structural_status": "invalid_inventory_proposal",
+      "parsed_frames_assessed": 4,
+      "semantic_status": "conditional_example_with_role_errors",
+      "rationale": "Four frames combine measuring advice, a feet-to-meters conversion and a different 4-by-3 conditional room example. Measurement or room occupies value, conversion time spills into unrelated statements, and if you forget is reused as their qualification. The numeric conversion operands and resulting area are not preserved coherently.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
       "index": 76,
       "task_sha256": "758b345488aaf95c65dc84094b47508eb809f636456d41de0264574a92dc3067",
       "kind": "source",
@@ -1017,6 +1103,62 @@
       "assessment_reused_from_index": null,
       "reviewer_type": "AI",
       "independent_human_review": false
+    },
+    {
+      "index": 77,
+      "task_sha256": "18e98d3394b750d0926af0bb8b731df9eadd6805a9e9e6e9cc9e3c7f45101aa4",
+      "kind": "source",
+      "raw_proposal_sha256": "ab7af3d7ab3503d17d3d79cfe838bbbeda9b1fcb7113d93366d6b65f87cabc57",
+      "input_proposal_pair_sha256": "d19c364944c5261ab809487e235db1c3f862c76b64279f7e0f591079bb822dfa",
+      "structural_status": "invalid_inventory_proposal",
+      "parsed_frames_assessed": 2,
+      "semantic_status": "mixed_claims_with_role_errors",
+      "rationale": "Protection eligibility and approximately 140 visits by April 2012 are partly captured, but Titanic and wreck/visits roles are displaced. The clipped proposed-plan fragment qualifies both earlier claims and on the Titanic is attribution. Full eligibility date and bacteria-discovery claim are omitted; no complete inventory is established.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 78,
+      "task_sha256": "9e10b5bc7de5b2a40afd2df8e62942b6f92950ffe2e5c046f2466c7b937d293c",
+      "kind": "source",
+      "raw_proposal_sha256": "319769edf88b2514d1052bfa8709e57d254377b353d9a28c0ee803b3babffe73",
+      "input_proposal_pair_sha256": "79c27ff2edc17cf46246f3826a69885f560fc1d198fffb2251665d425b89fe3d",
+      "structural_status": "invalid_inventory_proposal",
+      "parsed_frames_assessed": 3,
+      "semantic_status": "role_or_scope_errors",
+      "rationale": "Three frames mix Ballard proposal, historical paint observation and Mann quotation. Ballard announced a documentary is a changed relation; 1986 is copied onto the documentary, and Mann attributes Ballard claims. The quote fragment reverses film preserving the wreck into it preserving history with for as value.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 79,
+      "task_sha256": "890b8c7bb71d00e1143d2bad846aef7041ab81be1d8521f388ff60c044494a66",
+      "kind": "source",
+      "raw_proposal_sha256": "e1d6bfef9208a1d5fc278d2c4be4bb441552adb34205e1a30cef0e773c74637c",
+      "input_proposal_pair_sha256": "ab3b355fd3239ccc13d37b5260f4cc00b5d890992e8b2806ba7f2d539e69447a",
+      "structural_status": "invalid_inventory_proposal",
+      "parsed_frames_assessed": 2,
+      "semantic_status": "role_or_scope_errors",
+      "rationale": "Two partly coherent descriptive Titanic claims retain rests-on and ghost-town wording, but the impending-centenary phrase is imported into both statements as event time and byline becomes claim attribution. Metaphorical description does not establish a discovery date or a complete factual inventory.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 80,
+      "task_sha256": "6f98af5260716c452dc834f3a3c3d9d64e4aebf4d0c3df9ccbf29f0072607663",
+      "kind": "source",
+      "raw_proposal_sha256": "f7c254d8d275eb02a322ca7a9bdeb7fbdf2f369768a5a97ef4c6dc74a5442e68",
+      "input_proposal_pair_sha256": "582efc4a4f705820bdd5d528888fa7c9c9ae45c759536de0e409767b8609cc74",
+      "structural_status": "invalid_json",
+      "parsed_frames_assessed": 0,
+      "semantic_status": "unparseable_capped_output",
+      "rationale": "The 2048-token output ends inside a repeated depth object and is not parseable JSON. Its visible prefix repeatedly emits the same depth claim, applies discovery year 1985 to depth and a citation fragment as qualification, and mixes feet/metres/fathoms. Zero complete parsed frames are counted; the prefix is qualitative evidence only.",
+      "assessment_reused_from_index": null,
+      "reviewer_type": "AI",
+      "independent_human_review": false
     }
   ],
   "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
@@ -1024,6 +1166,7 @@
   "valid_review_progress_sha256": "e6f6114852da7ea643904292fecc84d3dc2d47660fe03789982b2c83ccda74d1",
   "valid_review_batch_sha256": "46a6ea266a3687927a28533284242119c74e0e3347c90466de3dc9d27a84077b",
   "rejected_review_batches_sha256": {
-    "runs/version1/inventory-rejected-ai-review-01.json": "fd6f1a807a4bac123375af382cdebb20bad5249157d1a6608d3878bd4d450266"
+    "runs/version1/inventory-rejected-ai-review-01.json": "fd6f1a807a4bac123375af382cdebb20bad5249157d1a6608d3878bd4d450266",
+    "runs/version1/inventory-rejected-ai-review-02.json": "aee4d9417a01463cc933bfb5d0c3635188829d522b90681f24b4d0ee5ac0e745"
   }
 }
