@@ -177,11 +177,10 @@ Preserve this failed control and measure each representation/model change separa
 ## Extended rejected-output assessment
 
 The [combined assessment progress](../results/version1/inventory_role_review_progress.json)
-now binds 111 of 386 tasks: all fifty query inventories and 61 source inventories,
-including ninety rejected outputs beyond the original 21 valid-output reviews. The
-111 records contain 107 distinct input/proposal pairs and 353 parsed frames. Four source
-assessments are reused only for exact identical input/proposal pairs. Two hundred
-seventy-five rejected source tasks, including the remaining capped failures, still need
+now binds 171 of 386 tasks: all fifty query inventories and 121 source inventories,
+including 150 rejected outputs beyond the original 21 valid-output reviews. The
+171 records contain 161 distinct input/proposal pairs and 614 parsed frames. Ten source
+assessments are reused only for exact identical input/proposal pairs. 215 rejected source tasks, including the remaining capped failures, still need
 assessment. No full all-output semantic review is claimed yet.
 
 Observed source problems include navigation labels as facts, photo dates attached
@@ -198,6 +197,8 @@ uv run --locked --no-editable --extra generation --extra constraints \
   --batch runs/version1/inventory-rejected-ai-review-02.json \
   --batch runs/version1/inventory-rejected-ai-review-03.json \
   --batch runs/version1/inventory-rejected-ai-review-04.json \
+  --batch runs/version1/inventory-rejected-ai-review-05.json \
+  --batch runs/version1/inventory-rejected-ai-review-06.json \
   --output runs/inventory-role-progress.json
 ```
 
@@ -219,3 +220,16 @@ include changed fictional/reporting scope, Marino/Rivers actor contamination,
 relative-year leakage, sales/certified-unit confusion, dog advice/navigation and
 sports/federation table cells treated as dated measurements. No factual accuracy
 or full-support improvement is inferred from this qualitative review.
+
+The fifth and sixth batches add sixty source-task assessments (261 parsed frames).
+Six assessments reuse only exact input/proposal pairs, including repeated
+sports-table, biography, photo-caption and franchise excerpts. Preserved partial
+cores include Elle/179/LSAT, Olivia/Best-New-Artist/2022, Streep/narration and
+Nexters/game-development wording. They remain accompanied by scope/date/unit/actor
+errors and do not establish complete support or independent factual truth.
+
+The new findings include bibliography retrieval dates used as award dates,
+image indices used as film years, a date from one film attached to another,
+actor-versus-character confusion and generic fund education treated as specific
+financial events. Missing or paywalled values stay missing; N/A and Upgrade
+are not numeric measurements. No new neural calls were needed for this review.
