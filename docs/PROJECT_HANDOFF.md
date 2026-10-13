@@ -4,7 +4,7 @@
 **Repository:** https://github.com/ManoharPaturi/ace-pruningrag
 **Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
-**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `7c7bff9` before this update; all three required checks passed on that head. Recheck CI for each new head.
+**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `5fae7d2` before this update; all three required checks passed on that head. Recheck CI for each new head.
 **Local continuation state:** all 444 admitted responses and all 386 constrained extraction tasks have bound AI assessments. A live browser→API→GPU→evidence flow has been executed and verified on one development question. The separately versioned Unicode GPU correction completed and reconstructs; its one changed proposal has a fresh bound review. Independent review and the full scientific gates remain open. See the [current completion audit](VERSION1_COMPLETION_AUDIT.md) and [research report](RESEARCH_STATUS_REPORT.md).
 
 ## Owner-led continuation — current checkpoint
@@ -19,7 +19,7 @@
 | Cohort AI source review | 250/250 responses, 50/50 questions | Read the completed audit; preserve AI/human separation and implement the prioritized fixes |
 | Independent prospective evidence review | Pending | Import attested human requirements and support sets through the existing review workflow |
 | Demo | 444 admitted replays, fresh BM25 retrieval and a verified live one-question GPU flow with restart recovery | Generalize claim-level support and adaptive source integration; one inspected case is not general accuracy |
-| Required CI | All three required jobs passed at `7c7bff9` before this update | Require all three again on each new head |
+| Required CI | All three required jobs passed at `5fae7d2` before this update | Require all three again on each new head |
 | Constrained extraction review | All 386 tasks assessed; 335 valid source proposals / 300 distinct pairs, with no source proposals pending | Preserve exact outputs and qualitative AI scope; full requirements and external truth remain unverified |
 | Unicode decoder correction | All386 GPU sequences reconstruct; one full-name change reviewed, with semantic row mixing unchanged | Preserve controls and costs; do not claim general semantic improvement |
 | Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel complete and reconstructed; 21 valid inventories reviewed | Collect/reconstruct the same job, audit real roles/completeness and then compose support |
@@ -534,3 +534,14 @@ reference/HTTP probes have matching scores, with five rank-ID differences among
 equal scores under the explicit tie policy. See [name retrieval](MOVIE_SNAPSHOT.md).
 All 208 local tests pass. Neither result establishes generic support, identity
 calibration, independent evaluation or cross-source benefit.
+
+
+### Unknown-answer requirement checkpoint
+
+The assistant continues the implementation under owner-led PR review. The new
+[query requirement representation](QUERY_REQUIREMENTS.md) separates copied known
+constraints from unknown answers, links shared entities and intermediate values,
+and provides bounded canonical decoding plus independent clause/role/operation
+validation. Neural quality is not measured yet; the next execution is a separately
+versioned fifty-question development diagnostic. Source composition, independent
+evaluation and final scientific completion remain open.

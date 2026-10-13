@@ -364,3 +364,14 @@ checks. Returned score sequences agree in seven probes; five ranked-ID sequences
 differ at equal scores under the explicit tie policy. Full original ranking and
 semantic identity remain unverified. All 208 local tests pass. Required data-smoke
 CI now repeats name index construction and reference/HTTP checks.
+
+
+### Query-only logical requirement implementation
+
+The [unknown-answer schema](QUERY_REQUIREMENTS.md) now preserves explicit known
+conditions independently of unknown answer/intermediate variables. The bounded
+closed grammar forbids invented copied facts and undeclared references; independent
+validation checks local spans, variable roles, operation arity and self-dependencies.
+This is implemented infrastructure, not a measured extraction improvement. A separate
+query-only GPU protocol and full role/omission audit are next; source requirements,
+semantic support and independent evaluation remain open.

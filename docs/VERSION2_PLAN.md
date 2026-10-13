@@ -251,3 +251,14 @@ full semantic assessment. Do not turn these counts into calibrated accuracy.
 
 Independent labels, fresh entity/event-audited cases, full ablations and final
 evidence-backed reporting remain required.
+
+
+### Query-only logical requirement implementation
+
+The [unknown-answer schema](QUERY_REQUIREMENTS.md) now preserves explicit known
+conditions independently of unknown answer/intermediate variables. The bounded
+closed grammar forbids invented copied facts and undeclared references; independent
+validation checks local spans, variable roles, operation arity and self-dependencies.
+This is implemented infrastructure, not a measured extraction improvement. A separate
+query-only GPU protocol and full role/omission audit are next; source requirements,
+semantic support and independent evaluation remain open.
