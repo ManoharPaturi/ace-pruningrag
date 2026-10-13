@@ -110,3 +110,13 @@ The [asynchronous GPU demo](LIVE_DEMO_FLOW.md) now survives API restart and page
 ### Evidence-driven verification decision
 
 The [completed NLI diagnostic](NLI_SUPPORT_DIAGNOSTIC.md) does not justify raw-entailment acceptance. Prioritize explicit query contracts and faithful claim framing: requested entity/role, metric, date window, units, comparison operands and list completeness. Keep missing or ambiguous fields unresolved. Use the independent classifier only as a separately costed source-text diagnostic until the combined path is measured on fresh reviewed cases. Preserve all model/AI disagreements; do not label this experiment classifier accuracy.
+
+
+### Partial query-contract findings
+
+[The executed contract replay](QUERY_CONTRACTS.md) shows why explicit wording checks
+alone are insufficient: no additional scope/date flags appear among all 444 admitted
+answers. Implement span-bound structured source claims and query relations next; bare
+numbers must remain unresolved until entity, metric and period are grounded. The
+assistant continues implementation; the proposed friend handoff is no longer an
+execution dependency. Owner-only PR merge and independent review gates still apply.

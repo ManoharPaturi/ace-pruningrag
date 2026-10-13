@@ -132,3 +132,14 @@ All 444 admitted records now have source-bound AI assessments, including all 250
 ### Independent NLI component investigated
 
 [Bounded textual-support diagnostic](NLI_SUPPORT_DIAGNOSTIC.md) executed and reconstructed all 1,105 cohort source/answer comparisons, with 69 classifier forwards and zero new answer-generation calls. Sixteen long pairs were unscored. Raw entailment appears on 27 AI-incorrect answer variants across seven questions, confirming that query requirements and support are separate gates. Acceptance remains disabled; general entity/date/unit/claim verification is not yet complete. Local tests now total 159.
+
+
+### Partial query-contract checkpoint — 13 October
+
+[Query contracts](QUERY_CONTRACTS.md) now retain explicit query requirements and flag
+narrow asserted scope/date/price-field conflicts. Fresh adversarial synthetic tests
+pass; all 444 admitted records were replayed with hashes and unchanged raw outputs.
+The new scope checks add zero findings beyond 12 prior form warnings; 295 responses
+remain unresolved and 137 match exact generator abstention. No automatic acceptance
+is enabled. General entity/unit/claim verification and independent evaluation remain
+open. Local validation now passes 163 tests.
