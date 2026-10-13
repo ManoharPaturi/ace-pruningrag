@@ -3,9 +3,9 @@
   "total_tasks": 386,
   "structurally_valid_proposals": 385,
   "AI_reviewed_query_proposals": 50,
-  "AI_reviewed_source_proposals": 100,
+  "AI_reviewed_source_proposals": 150,
   "structural_failure_assessments": 1,
-  "unreviewed_source_proposals": 235,
+  "unreviewed_source_proposals": 185,
   "independent_human_review": false,
   "full_semantic_review_complete": false,
   "full_requirement_coverage_verified": false,
@@ -28,6 +28,11 @@
       "name": "constrained-ai-audit-batch3.json",
       "sha256": "5cfd6f15e2836fca01f21df6b40bee49806c28beda633f40a7d14e090c58295e",
       "records": 50
+    },
+    {
+      "name": "constrained-ai-audit-batch4.json",
+      "sha256": "d90251dfbfb5925e33d99077a9de0111e66507d14bc9719f3f04afba97fea8f0",
+      "records": 50
     }
   ],
   "query_review_counts": {
@@ -41,13 +46,13 @@
     "285 span-valid source proposals still require role review."
   ],
   "source_review_counts": {
-    "metadata_or_nonclaim": 8,
-    "mixed_facts": 45,
-    "missing_subject_or_antecedent": 4,
-    "role_or_scope_error": 20,
-    "coherent_claim_in_excerpt": 3,
-    "partial_binding_with_role_error": 20
+    "metadata_or_nonclaim": 17,
+    "mixed_facts": 61,
+    "missing_subject_or_antecedent": 7,
+    "role_or_scope_error": 24,
+    "coherent_claim_in_excerpt": 7,
+    "partial_binding_with_role_error": 34
   },
-  "distinct_reviewed_source_pairs": 90,
-  "distinct_coherent_source_pairs": 2
+  "distinct_reviewed_source_pairs": 136,
+  "distinct_coherent_source_pairs": 5
 }

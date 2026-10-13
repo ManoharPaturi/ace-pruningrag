@@ -163,3 +163,14 @@ reinterpret its 385 valid proposals as corrected-policy generation results. The 
 policy rejects the observed truncated name. Corrected neural execution and the full
 source-role audit are still pending. Earlier instructions to fix that boundary are
 superseded by this implementation checkpoint.
+
+
+### Source-role audit at 150/335
+
+Current review coverage is 150 source records / 136 distinct text-proposal pairs,
+plus all 50 query proposals and the cap-failure assessment. Seven coherent-claim
+records represent five distinct pairs. They include reported historical/relative
+claims and metadata such as playlist update frequency; none is automatically an
+answer to its associated question or external factual confirmation. There are
+185 source proposals remaining. Source-category counts and pair deduplication are
+recomputed from every bound private batch. Earlier 100-record counts are historical.

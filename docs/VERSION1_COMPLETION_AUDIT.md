@@ -225,3 +225,13 @@ without changing any output. Four regression tests include the real token enforc
 with a synthetic tokenizer. Local tests now total 184. This closes the lexical
 correction implementation and replay task, not corrected neural generation, full
 entity completeness, the remaining 235 source reviews or general claim verification.
+
+
+### Source-role review progressed to 150/335
+
+The fourth bound audit batch adds 50 complete source-proposal assessments. Coverage
+is now 201 records: 50 questions, 150 sources and the cap failure. There are 185
+sources pending. The latest source sample demonstrates film-installment date
+confusion, row/count/percentage mixing and loss of event attribution; seven coherent
+records represent five distinct pairs, not independent confirmations. Keep these
+qualitative AI findings distinct from calibrated accuracy and human review.
