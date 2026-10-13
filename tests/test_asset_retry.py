@@ -54,7 +54,9 @@ def test_integrity_and_partial_failures_stop_without_retry(monkeypatch, tmp_path
     assert sleeps == []
 
 
-@pytest.mark.parametrize("code,attempts", [(429, 4), (503, 4), (404, 1)])
+@pytest.mark.parametrize(
+    "code,attempts", [(429, 4), (500, 4), (502, 4), (503, 4), (504, 4), (404, 1)]
+)
 def test_retry_exhaustion_and_permanent_http_failure(monkeypatch, tmp_path, code, attempts):
     calls, sleeps = [], []
 

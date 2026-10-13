@@ -613,7 +613,7 @@ linked in the graph document.
 
 The data smoke job at head `03019a7` failed on HTTP 429 while downloading pinned
 tokenizer assets in `generated_preflight.py`. The preflight now retries only
-pre-body HTTP 429/503 responses, at most three times, without changing asset
+pre-body HTTP 429/500/502/503/504 responses, at most three times, without changing asset
 size/hash checks or deleting partial files. A server cooldown above thirty
 seconds stops instead of retrying early. Checksum, partial-file and permanent
 HTTP failures remain terminal. The local cached-asset preflight completed all
@@ -625,3 +625,10 @@ The separate finance job at `954b4a8` also encountered HTTP 429 in
 Its cached-asset execution prepared 18 frozen requests and eight retry requests
 (1,657 maximum reserved tokens, ten local finance calls, zero model calls).
 Remote smoke checks still must pass at the final PR head.
+
+A subsequent finance preflight at `c699bac` failed on upstream HTTP 500. The
+helper now includes temporary server/gateway errors in the same bounded retry
+budget. CI concurrency cancels obsolete/duplicate branch runs, and both smoke
+jobs cache tokenizer assets by the pinned generator config. Cached files still
+pass the existing byte-count/SHA-256 verification; no check is skipped. The cache
+action is pinned to verified upstream v4 commit `0057852bfaa89a56745cba8c7296529d2fc39830`.

@@ -11,7 +11,7 @@ def fetch_assets_with_retry(config, root):
         try:
             return fetch_assets(config, root)
         except HTTPError as error:
-            if error.code not in (429, 503) or delay is None:
+            if error.code not in (429, 500, 502, 503, 504) or delay is None:
                 raise
             # HTTPError precedes opening the destination. Existing partial files,
             # size/hash errors and interruptions are not caught or discarded here.

@@ -2,6 +2,10 @@ name: Checks
 
 on: [push, pull_request]
 
+concurrency:
+  group: checks-${{ github.event.pull_request.head.ref || github.ref_name }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -38,6 +42,10 @@ jobs:
         with:
           version: "0.12.10"
       - run: uv sync --locked --no-editable --python 3.12
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: data/models/generator
+          key: pinned-tokenizer-${{ runner.os }}-${{ hashFiles('configs/generated_pilot.json') }}
       - run: uv run --no-editable ace-rag fetch-data
       - run: uv run --locked --no-editable python scripts/prospective_evaluation.py freeze --output runs/ci/prospective
       - run: uv run --locked --no-editable python scripts/prospective_evaluation.py verify --packet runs/ci/prospective/packet.json --output runs/ci/prospective-verified
@@ -72,6 +80,10 @@ jobs:
         with:
           version: "0.12.10"
       - run: uv sync --locked --no-editable --python 3.12
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: data/models/generator
+          key: pinned-tokenizer-${{ runner.os }}-${{ hashFiles('configs/generated_pilot.json') }}
       - run: uv run --no-editable ace-rag fetch-finance
       - run: uv run --no-editable ace-rag finance-smoke --output runs/ci/finance_smoke.json
       - run: uv run --locked --no-editable python scripts/prices_smoke.py --output runs/ci/prices_smoke.json
