@@ -120,3 +120,13 @@ answers. Implement span-bound structured source claims and query relations next;
 numbers must remain unresolved until entity, metric and period are grounded. The
 assistant continues implementation; the proposed friend handoff is no longer an
 execution dependency. Owner-only PR merge and independent review gates still apply.
+
+
+### Structured extraction execution checkpoint
+
+[The bounded blinded extractor](STRUCTURED_CLAIM_EXTRACTION.md) is submitted for all
+50 development questions and 336 distinct selected source excerpts. Wait for completion
+of the existing job, reconstruct actual outputs/costs and audit tuple roles before
+using its proposals. Literal aligned fields are not semantic support. Prioritize full
+claim coverage, comparisons, relative-date handling and independently reviewed fresh
+cases; none is closed by submission or substring validation.

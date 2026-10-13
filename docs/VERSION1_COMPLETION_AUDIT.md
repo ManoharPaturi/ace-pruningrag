@@ -6,7 +6,7 @@ Audit opened 12 October 2026. The user requested completion of the current versi
 
 | Requirement | Authoritative evidence | Audit result | Next action |
 | --- | --- | --- | --- |
-| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 163 local tests pass; required CI runs on every pushed PR head | Run required checks on final branch |
+| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 168 local tests pass; required CI runs on every pushed PR head | Run required checks on final branch |
 | Faithful original PruningRAG baseline | Original router/checkpoints, full API backing data and paper model/evaluator contract | Not achieved; upstream releases empty and `models/router` lookup returned 404 during fresh audit | Obtain original artifacts or keep adapted-only claims explicit; do not invent a reproduced baseline |
 | Shared-budget five-selector implementation | Selection code, smoke traces and budget verifiers | Implemented; prior contexts were engineering smoke | Execute the separately scoped explicit-cohort comparison |
 | Main complementary-evidence scientific hypothesis | Reviewed atomic support labels, genuine cross-source cases, source-only controls | Not achieved; current real candidate pools are web-only and groups/conflicts are disabled | Retain this limitation; build genuine cross-source evaluation |
@@ -146,3 +146,14 @@ The new scope checks add zero findings beyond 12 prior form warnings; 295 respon
 remain unresolved and 137 match exact generator abstention. No automatic acceptance
 is enabled. General entity/unit/claim verification and independent evaluation remain
 open. Local validation now passes 163 tests.
+
+
+### Blinded structured extraction submitted
+
+[Structured query/source extraction](STRUCTURED_CLAIM_EXTRACTION.md) is implemented
+and the private GPU job was observed RUNNING. It covers 50 question tasks and 336
+deduplicated selected excerpt tasks without answers/reference labels in prompts.
+Independent source/token/span/cost reconstruction and literal field comparison tools
+are implemented. Actual completion, output verification and tuple audit remain pending.
+All results keep automatic acceptance disabled; one proposed claim per source does not
+establish complete evidence. Local tests now total 168.

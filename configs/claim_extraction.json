@@ -1,0 +1,11 @@
+{
+  "scope": "Blinded span-bound query/source extraction diagnostic; no answer acceptance",
+  "max_tasks": 386,
+  "max_input_and_output_tokens": 2048,
+  "max_output_tokens": 160,
+  "batch_size": 4,
+  "seed": 42,
+  "dtype": "float32",
+  "generator_config": "configs/generated_pilot.json",
+  "allow_answer_acceptance": false
+}
