@@ -1,0 +1,63 @@
+{
+  "status": "movie_id_year_snapshot_HTTP_verified",
+  "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+  "record_counts": {
+    "movie": 64283,
+    "person": 373608,
+    "year": 35
+  },
+  "repeated_id_records": {
+    "movie": 0,
+    "person": 11,
+    "year": 0
+  },
+  "index_sha256": "d0d957ec35388e5cdc599ac330894a6f5f071f53966b94d5138950bd29da69a6",
+  "index_manifest_sha256": "603af49623f7e2fcbabbc813238f5284924888216b5e2ed83df1d392e276ca73",
+  "successful_probes": [
+    {
+      "endpoint": "/movie/get_movie_info_by_id",
+      "query": 769,
+      "result_sha256": "a9232f44ff6b6749ca7c4bea4c3c8a3a166440d9d29f4c4981dba34a3a1ca8ac",
+      "matches_original_snapshot": true
+    },
+    {
+      "endpoint": "/movie/get_person_info_by_id",
+      "query": 19384,
+      "result_sha256": "45107b7e03ea93af17615f338bc8cf36b6da1a43fb455a189f7e09b4d6041717",
+      "matches_original_snapshot": true
+    },
+    {
+      "endpoint": "/movie/get_year_info",
+      "query": "1990",
+      "result_sha256": "ce0417ade588fd64c825a2cc74b51bcf938b3f235ae8e2e52738c39c1ae54fd6",
+      "matches_original_snapshot": true
+    },
+    {
+      "endpoint": "/movie/get_movie_info_by_id",
+      "query": -999999999,
+      "result_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "matches_original_snapshot": true
+    }
+  ],
+  "rejected_query_probes": [
+    {
+      "endpoint": "/movie/get_year_info",
+      "query": "2024",
+      "status": 400
+    },
+    {
+      "endpoint": "/movie/get_movie_info",
+      "query": "GoodFellas",
+      "status": 404
+    },
+    {
+      "endpoint": "/movie/get_person_info_by_id",
+      "query": true,
+      "status": 400
+    }
+  ],
+  "name_search_implemented": false,
+  "web_API_integration_verified": false,
+  "cross_source_benefit_established": false,
+  "external_truth_verified": false
+}

@@ -21,10 +21,13 @@
     "results/version1/unicode_control_comparison.json": "4a3d085c6ce7f774750869dbd891fa9f2e9cf85300ad3ee1ddd18031eea0f43c",
     "results/version1/unicode_review_progress.json": "5106a9b038c78959e9f1dcc7ee2dc3686416309baf3dff6251c519df6cf0f0d6",
     "results/version1/inventory_preflight.json": "b884a4c694931b46a61bca5d44fd94d10f06869471baa2d4ddceef84ff2582a5",
-    "results/version1/inventory_submission.json": "f51a33ec4347d2177a9f41ddb016b9db8059490ccddc2ccb7d77226bcc695e2c"
+    "results/version1/inventory_submission.json": "f51a33ec4347d2177a9f41ddb016b9db8059490ccddc2ccb7d77226bcc695e2c",
+    "results/phase1/movie_asset_verification.json": "121bed5a1db50d420aa9911a34b6b026bd3b6f7550ebc73de919d940ee1dfc53",
+    "results/phase1/movie_index.json": "603af49623f7e2fcbabbc813238f5284924888216b5e2ed83df1d392e276ca73",
+    "results/phase1/movie_snapshot_smoke.json": "d38b91fd01b5508c8a8f3063a64e1fccbf77f5988ffe38261910057704ddb1eb"
   },
-  "renderer_sha256": "0711c3048b68c9af2a705cd6fa60585e7fe08c09f60cd94f77a9fed112790363",
-  "report_sha256": "68353152cc292a3cba6a2c9e2319d1f43deae66b657088273dafa077de03761a",
+  "renderer_sha256": "7272a412c407edd63c0b4631c8e4326435303f17d2bb97b9cadd6c6b70090989",
+  "report_sha256": "6e8af7f707703c753450b441f6a21c3f0806991ad9787f5e4bd11358149e3ed0",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

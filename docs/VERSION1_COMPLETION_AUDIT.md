@@ -330,3 +330,21 @@ inventories and never promotes proposed_complete to verified completeness. Three
 regression tests reject changed identities and forged validation, and preserve
 pending review counts. All 200 local tests pass. The existing private kernel still
 reports QUEUED; no output audit or role/completeness result is claimed yet.
+
+
+### Original movie/person/year records restored and exact HTTP lookups verified
+
+The [movie snapshot restoration](MOVIE_SNAPSHOT.md) adds three pinned, size/hash
+verified original files, totaling 235,448,639 bytes. A streaming disk-backed index
+covers 64,283 movies, 373,608 people and 35 year records. Eleven repeated person-ID
+records retain original last-record-wins behavior; they are not independent evidence.
+The original 1990–2021 year endpoint restriction remains, even though stored years
+extend through 2024. ID and year lookups pass real source/HTTP probes; fuzzy/name
+search is not implemented. All 204 local tests pass. Required data-smoke CI now
+repeats restoration, indexing and HTTP checks.
+
+This advances available structured backing data beyond the finance slice. Web/API
+evidence integration, genuine source-only controls, calibrated routing and semantic
+quality remain unverified; no answer-generation outcome is added. The same inventory
+GPU kernel is still RUNNING and must be collected/reconstructed before its role
+and completeness results are assessed.

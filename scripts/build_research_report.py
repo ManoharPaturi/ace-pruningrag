@@ -27,6 +27,9 @@ SOURCES = {
     "unicode_reviews": "results/version1/unicode_review_progress.json",
     "inventory_preflight": "results/version1/inventory_preflight.json",
     "inventory_submission": "results/version1/inventory_submission.json",
+    "movie_assets": "results/phase1/movie_asset_verification.json",
+    "movie_index": "results/phase1/movie_index.json",
+    "movie_http": "results/phase1/movie_snapshot_smoke.json",
 }
 
 
@@ -74,6 +77,16 @@ def render(root):
         raise ValueError("NLI disagreement count differs")
     constrained = data["constrained"]
     progress = data["constrained_progress"]
+    movie_index, movie_http = data["movie_index"], data["movie_http"]
+    if (
+        data["movie_assets"]["status"] != "assets_verified"
+        or movie_http["status"] != "movie_id_year_snapshot_HTTP_verified"
+        or movie_http["index_manifest_sha256"] != sha256_file(root / SOURCES["movie_index"])
+        or movie_http["index_sha256"] != movie_index["index_sha256"]
+        or movie_http["record_counts"] != movie_index["record_counts"]
+        or movie_http["cross_source_benefit_established"] is not False
+    ):
+        raise ValueError("movie asset/index/HTTP bindings differ")
     inventory = data["inventory_preflight"]
     if (
         inventory["tasks"] != 386
@@ -344,6 +357,18 @@ Private kernel `{data["inventory_submission"]["kernel_id"]}`, version 1, was sub
 and observed {data["inventory_submission"]["provider_status_last_observed"]}. Its final
 outputs, costs and semantic role/completeness assessments remain unverified. Neither
 closed grammar nor a proposed_complete status establishes exhaustive requirements.
+
+The original [movie/person/year snapshot](MOVIE_SNAPSHOT.md) is now restored separately:
+three checksum-verified files totaling {data["movie_assets"]["bytes"]:,} bytes. A disk-backed
+index covers {movie_index["record_counts"]["movie"]:,} movie,
+{movie_index["record_counts"]["person"]:,} person and {movie_index["record_counts"]["year"]}
+year records. It retains {movie_index["repeated_id_records"]["person"]} repeated person-ID
+records with the original last-record-wins lookup behavior. Actual movie/person ID,
+year and missing-ID loopback responses match original snapshot records. Name search
+is not implemented. The original endpoint's 1990–2021 year gate is retained although
+the stored snapshot includes years through 2024. This validates three structured
+lookup paths; web/API selection, source-only controls and cross-source benefit remain
+unverified. No generator or judge runs as part of this restoration.
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible

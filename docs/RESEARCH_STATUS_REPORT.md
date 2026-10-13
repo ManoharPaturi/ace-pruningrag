@@ -178,6 +178,18 @@ and observed QUEUED. Its final
 outputs, costs and semantic role/completeness assessments remain unverified. Neither
 closed grammar nor a proposed_complete status establishes exhaustive requirements.
 
+The original [movie/person/year snapshot](MOVIE_SNAPSHOT.md) is now restored separately:
+three checksum-verified files totaling 235,448,639 bytes. A disk-backed
+index covers 64,283 movie,
+373,608 person and 35
+year records. It retains 11 repeated person-ID
+records with the original last-record-wins lookup behavior. Actual movie/person ID,
+year and missing-ID loopback responses match original snapshot records. Name search
+is not implemented. The original endpoint's 1990–2021 year gate is retained although
+the stored snapshot includes years through 2024. This validates three structured
+lookup paths; web/API selection, source-only controls and cross-source benefit remain
+unverified. No generator or judge runs as part of this restoration.
+
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible
 units; it is not silently applied to arbitrary room questions. Across all 444 admitted

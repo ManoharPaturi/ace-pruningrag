@@ -22,7 +22,7 @@
 | Required CI | All three required jobs passed at `7c7bff9` before this update | Require all three again on each new head |
 | Constrained extraction review | All 386 tasks assessed; 335 valid source proposals / 300 distinct pairs, with no source proposals pending | Preserve exact outputs and qualitative AI scope; full requirements and external truth remain unverified |
 | Unicode decoder correction | All386 GPU sequences reconstruct; one full-name change reviewed, with semantic row mixing unchanged | Preserve controls and costs; do not claim general semantic improvement |
-| Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel submitted and observed QUEUED | Collect/reconstruct the same job, audit real roles/completeness and then compose support |
+| Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel submitted and now observed RUNNING | Collect/reconstruct the same job, audit real roles/completeness and then compose support |
 | Research conclusion | Cross-source benefit and faithful reproduction are unproved | Keep these gates open; complete controls, labels and ablations |
 
 **Current work session:** continue in the owner workspace on the PR branch, retain the existing private artifacts and collect and reconstruct the submitted inventory job after the completed Unicode control. Then follow [the next-version plan](VERSION2_PLAN.md) while retaining the current version’s open gates. Do not tune on this inspected cohort and later call it unseen evaluation data.
@@ -214,7 +214,7 @@ uv run --locked --no-editable ruff format --check src tests scripts
 uv run --locked --no-editable --extra demo --extra constraints pytest -q
 ```
 
-The current owner workspace has **200 passing tests with the demo and constraints extras**. This is the PR branch, not the merged-main test count. All three required CI jobs passed at `7c7bff9` before this update. CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
+The current owner workspace has **204 passing tests with the demo and constraints extras**. This is the PR branch, not the merged-main test count. All three required CI jobs passed at `7c7bff9` before this update. CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
 
 Download data and run a small retrieval check, using a new output directory:
 
@@ -510,3 +510,15 @@ The current private inventory kernel is still queued, not completed. Follow the
 [post-completion audit command](CLAIM_INVENTORY.md) after output verification.
 All three required CI jobs passed at implementation head `761920b` before this update;
 require them again on the new head.
+
+
+### Structured movie backing restored
+
+The [original movie snapshots](MOVIE_SNAPSHOT.md) are restored and indexed without
+changing source files: 64,283 movies, 373,608 person records and 35 years. Exact
+movie/person IDs and original-range year queries pass real loopback/source probes.
+Name search and web/API pipeline integration remain pending. The required data-smoke
+job now repeats the real asset/index/HTTP checks; all 204 local tests pass. This
+closes this bounded backing-data restoration, not full CRAG service or faithful
+PruningRAG reproduction. The existing inventory kernel is now RUNNING; earlier
+QUEUED observations are historical. Preserve its identity and await terminal output.
