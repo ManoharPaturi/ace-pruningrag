@@ -188,10 +188,10 @@ Parsed frames total 66 query
 and 1,551 source frames; only 21 frames are structurally admitted. Neither grammar
 nor a proposed_complete status establishes exhaustive requirements or role quality.
 
-The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 81 tasks:
-all fifty query inventories and 31 source inventories, including sixty rejected
-outputs. The 81 task records contain 79 distinct input/proposal pairs and 174
-parsed frames; 305 rejected source tasks remain unassessed. Source observations
+The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 111 tasks:
+all fifty query inventories and 61 source inventories, including ninety rejected
+outputs. The 111 task records contain 107 distinct input/proposal pairs and 353
+parsed frames; 275 rejected source tasks remain unassessed. Source observations
 include navigation-as-facts, caption dates borrowed for unrelated events, missing
 row/actor associations and procedural examples promoted into assertions. Coherent
 partial facts are retained without establishing full coverage or external truth.

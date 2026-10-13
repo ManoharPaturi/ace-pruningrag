@@ -177,11 +177,11 @@ Preserve this failed control and measure each representation/model change separa
 ## Extended rejected-output assessment
 
 The [combined assessment progress](../results/version1/inventory_role_review_progress.json)
-now binds 81 of 386 tasks: all fifty query inventories and 31 source inventories,
-including sixty rejected outputs beyond the original 21 valid-output reviews. The
-81 records contain 79 distinct input/proposal pairs and 174 parsed frames. Two source
-assessments are reused only for exact identical input/proposal pairs. Three hundred
-five rejected source tasks, including the remaining capped failures, still need
+now binds 111 of 386 tasks: all fifty query inventories and 61 source inventories,
+including ninety rejected outputs beyond the original 21 valid-output reviews. The
+111 records contain 107 distinct input/proposal pairs and 353 parsed frames. Four source
+assessments are reused only for exact identical input/proposal pairs. Two hundred
+seventy-five rejected source tasks, including the remaining capped failures, still need
 assessment. No full all-output semantic review is claimed yet.
 
 Observed source problems include navigation labels as facts, photo dates attached
@@ -196,6 +196,8 @@ uv run --locked --no-editable --extra generation --extra constraints \
   python scripts/verify_inventory_role_reviews.py \
   --batch runs/version1/inventory-rejected-ai-review-01.json \
   --batch runs/version1/inventory-rejected-ai-review-02.json \
+  --batch runs/version1/inventory-rejected-ai-review-03.json \
+  --batch runs/version1/inventory-rejected-ai-review-04.json \
   --output runs/inventory-role-progress.json
 ```
 
@@ -210,3 +212,10 @@ qualitatively assessed; it contributes zero fully parsed frames. Nine complete
 outputs contribute 32 frames, including procedural examples, formula/navigation
 mixing and Titanic role/date/attribution errors. No partial prefix is admitted
 as a complete inventory. Three capped outputs still await assessment.
+
+The third and fourth batches add thirty source assessments (179 parsed frames).
+Exact input/proposal pairs 83/86 and 103/104 reuse identical judgments. Observations
+include changed fictional/reporting scope, Marino/Rivers actor contamination,
+relative-year leakage, sales/certified-unit confusion, dog advice/navigation and
+sports/federation table cells treated as dated measurements. No factual accuracy
+or full-support improvement is inferred from this qualitative review.

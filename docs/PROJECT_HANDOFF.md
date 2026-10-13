@@ -591,8 +591,8 @@ The [contract diagnosis](REQUIREMENTS_MODEL_VARIANT.md) identifies nullable-oper
 misalignment, fixed global roles and empty-clause admission; correct these in a
 separate protocol before another capacity change. Do not rescore frozen outputs.
 
-[Inventory assessment](CLAIM_INVENTORY.md) now covers 81/386 tasks (all fifty queries
-and 31 sources), including sixty rejected inventories; 305 source tasks remain.
+[Inventory assessment](CLAIM_INVENTORY.md) now covers 111/386 tasks (all fifty queries
+and 61 sources), including ninety rejected inventories; 275 source tasks remain.
 All 229 local tests pass. Independent semantic labels, general source support and
 full roadmap completion remain open.
 
@@ -605,3 +605,15 @@ requests pass pinned-tokenizer preflight (3,405 maximum reserved tokens; zero mo
 The worker and reconstruction tests pass; v2 kernel version 1 is submitted and observed
 RUNNING. Completion verification and all-output assessment are next; scientific
 acceptance stays disabled. See the submission receipt linked in the graph document.
+
+
+## CI download reliability checkpoint
+
+The data smoke job at head `03019a7` failed on HTTP 429 while downloading pinned
+tokenizer assets in `generated_preflight.py`. The preflight now retries only
+pre-body HTTP 429/503 responses, at most three times, without changing asset
+size/hash checks or deleting partial files. A server cooldown above thirty
+seconds stops instead of retrying early. Checksum, partial-file and permanent
+HTTP failures remain terminal. The local cached-asset preflight completed all
+150 requests at a maximum reserve of 2,028 tokens with zero model calls; it
+does not prove an uncached remote download. Require fresh CI on this change.
