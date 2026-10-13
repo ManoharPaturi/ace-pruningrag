@@ -6,17 +6,17 @@ Audit opened 12 October 2026. The user requested completion of the current versi
 
 | Requirement | Authoritative evidence | Audit result | Next action |
 | --- | --- | --- | --- |
-| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 132 local tests pass; all required CI passed on ca6a090; rerun required on latest head | Run required checks on final branch |
+| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 138 local tests pass; required CI passed on cc1d7c6; rerun required on latest head | Run required checks on final branch |
 | Faithful original PruningRAG baseline | Original router/checkpoints, full API backing data and paper model/evaluator contract | Not achieved; upstream releases empty and `models/router` lookup returned 404 during fresh audit | Obtain original artifacts or keep adapted-only claims explicit; do not invent a reproduced baseline |
 | Shared-budget five-selector implementation | Selection code, smoke traces and budget verifiers | Implemented; prior contexts were engineering smoke | Execute the separately scoped explicit-cohort comparison |
 | Main complementary-evidence scientific hypothesis | Reviewed atomic support labels, genuine cross-source cases, source-only controls | Not achieved; current real candidate pools are web-only and groups/conflicts are disabled | Retain this limitation; build genuine cross-source evaluation |
-| Explicit prospective-cohort generation | Frozen packet/config/IDs, 250 requests, GPU traces | Runner, tokenizer preflight and 250 real generations complete; all outputs reconstructed | Complete source review of remaining 155 outputs; independent review still required |
+| Explicit prospective-cohort generation | Frozen packet/config/IDs, 250 requests, GPU traces | Runner, tokenizer preflight and 250 real generations complete; all outputs reconstructed | AI source review complete; independent review still required |
 | Source routing and bounded reliability | Historical runs, independent verifiers, source/time/price-field checks | Narrow six-case implementation verified; general source/claim verification absent | Audit old and new responses; preserve scope and negative outcomes |
-| Check every response | Per-answer audit records bound to exact prediction/prompt/evidence | 194 prior accepted records source-audited; all 250 cohort outputs verified; 95 cohort responses source-reviewed, 155 pending | AI-assisted review of each output; do not label it independent human review |
+| Check every response | Per-answer audit records bound to exact prediction/prompt/evidence | All 444 admitted accepted records AI source-audited; cohort 250/250 complete; failed/superseded outputs excluded | Keep the completed AI audit distinct from independent human review |
 | Independent human annotation and semantic evaluation | Attested reviewer exports matched to frozen traces | First-50 development review exists; prospective evidence and newer answer review unresolved | Preserve missing/uncertain status; AI review cannot satisfy the independent-human gate |
 | Final paired metrics, costs and report | Completed experiment outputs, scoring definitions, uncertainty calculations | Partially implemented; full evaluated comparison incomplete | Separate literal agreement, AI judgments, human labels, coverage and costs |
 | FastAPI/Next.js cited demo | Running app, API/data flow and evidence-linked answers | Explorer backend and Next.js UI added; HTTP replay/retrieval verified; browser and production build verified; live inference pending | Complete demo flow and record limits |
-| Next-version plan | Prioritized milestones, contracts, promotion criteria | Draft below/linked; subject to final failure analysis | Finalize around actual results, not expected improvements |
+| Next-version plan | Prioritized milestones, contracts, promotion criteria | Priorities updated from complete accepted-output audit; scientific promotion gates retained | Finalize around actual results, not expected improvements |
 | Owner-only main merges | Protected branch and feature PR workflow | Preserved | Leave concrete checked PRs for owner merge |
 
 ## Current experiment contract
@@ -102,3 +102,8 @@ The latest source-review checkpoint covers **289 accepted response records** (19
 ### Reconciled handoff checkpoint — 13 October
 
 The sixth saved cohort AI review batch also validates against the exact trace. Current coverage is **115/250 responses across 23/50 questions**, with **135 responses pending**. Verdict counts are 25 correct, 26 incorrect, 37 uncertain and 27 abstained. These are AI-assisted assessments, not independent human semantic labels. See `results/version1/cohort/ai_review_progress.json` and [the contributor handoff](PROJECT_HANDOFF.md) for the current continuation instructions. Earlier partial checkpoints remain historical.
+
+
+### Accepted-output AI audit complete — current checkpoint
+
+All 444 admitted records now have source-bound AI assessments, including all 250 cohort answers. [Completed cohort report](COHORT_RESPONSE_AUDIT.md) gives per-method counts and reproducible aggregation. The code/test checkpoint is 138 passing tests with the demo extra. This closes the accepted-output AI review task only. The overall roadmap remains incomplete; the open independent-human, cross-source, faithful-baseline, general reliability, final reporting and live-inference gates above remain required. Earlier incremental counts are historical.

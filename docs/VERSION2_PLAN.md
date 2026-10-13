@@ -1,4 +1,4 @@
-# Next-version plan — draft pending current-version response audit
+# Next-version plan — priorities from completed accepted-output AI audit
 
 The next version should address observed failure mechanisms rather than add features without evidence. The current system has reliable plumbing, but proxy support, limited source availability, conservative price-only verification and development-only evaluation constrain its research claims.
 
@@ -32,7 +32,7 @@ The next version should address observed failure mechanisms rather than add feat
 4. Where is all-source retrieval already cheaper than adaptive retry for equivalent outputs?
 5. Which original reproduction assets are obtainable, and which remain unavailable?
 
-This is a plan, not a completed experiment or a promised improvement. Finalize priorities and acceptance metrics after all current outputs are available and reviewed.
+This is a plan, not a completed experiment or a promised improvement. The accepted-output AI audit now supplies the priorities below. Scientific outcome targets still require independently reviewed evaluation before promotion.
 
 ## Observed failure requirements from the current audit
 
@@ -49,7 +49,7 @@ These findings are AI-assisted development observations, not completed independe
 
 ## Priorities after the completed legacy source audit
 
-The first-50 AI-assisted review is complete; prospective-selector analysis still remains; historical and regeneration audits are now complete. The observed failures support this implementation order:
+The first-50 AI-assisted review is complete; prospective-selector AI source analysis is now complete; historical and regeneration audits are now complete. The observed failures support this implementation order:
 
 1. **Define the requested answer shape.** Query-only requirements must represent one example versus the complete qualifying set, quarterly series versus annual aggregate, both operands of a comparison, and the population behind a count/superlative. Leave ambiguous intent unresolved rather than inventing a singleton answer.
 2. **Bind every measurement to its entity, relation and period.** Record instrument versus company, assists versus attempts, per-game versus per-48-minutes, career total versus one-opponent total, and franchise installment or award year. Negative eligibility such as never won is a required fact, not optional context.
@@ -69,7 +69,7 @@ Separate three failure states in the next verifier: wrong-date evidence, correct
 
 ### Cohort execution findings — 13 October
 
-The 250-response selector run is complete and structurally verified; full source review remains pending. Prioritize entity/role binding, time-window completeness and semantic abstention measurement. Coverage uses less context and abstains more often; compare complete support, substantive answer quality and total cost before promoting this behavior. The observed +1 literal match for several methods is not a demonstrated semantic improvement. Preserve the original metric and report reviewed prose abstentions separately.
+The 250-response selector run is complete and structurally verified; full AI source review is now complete; independent review remains pending. Prioritize entity/role binding, time-window completeness and semantic abstention measurement. Coverage uses less context and abstains more often; compare complete support, substantive answer quality and total cost before promoting this behavior. The observed +1 literal match for several methods is not a demonstrated semantic improvement. Preserve the original metric and report reviewed prose abstentions separately.
 
 
 ### Requirements from the 19-question cohort source audit
@@ -79,3 +79,14 @@ Add a deterministic arithmetic check for explicit rectangular dimensions and oth
 Treat negative predicates and answer type as required constraints: eliminated differs from qualified, artist differs from song, individual height differs from height difference, and Olympic medals differ from Grand Slam titles. Preserve complete entity names and antecedents when selecting short excerpts. Validate matched comparison operands and definitions before issuing a ranking.
 
 Do not promote coverage-only on cost reduction alone. Its inspected Grammy and Murray answers degrade despite directly relevant smaller evidence pools. Separate insufficient selected evidence, wrong computation, lost context and generator disregard of supplied facts in the final category analysis. The final method choice remains pending the complete source audit and independent evidence labels.
+
+
+## Implementation order after all 444 accepted records were AI-audited
+
+1. Implement query-only answer contracts and a conservative post-generation acceptance gate. Reject evidence identifiers as answers, detect required list cardinality and bind numeric claims to entity/field/unit/period. Keep raw generator outputs and controls immutable. Missing support yields an explicit unresolved result, not an invented correction.
+2. Add deterministic arithmetic only for explicitly supported operations and units; keep it as a separate ablation. Count tool calls, retain model answers and test fresh cases.
+3. Improve retrieval relevance and excerpt integrity while preserving exact source spans. Keep unfiltered retrieval as a control; avoid discarding evidence simply because it disagrees.
+4. Add live generator inference to the existing replay/retrieval explorer, with fixed limits, truthful unavailable-model states, claim-level evidence checks and cumulative costs. Validate browser→API→model→evidence display. A replay endpoint does not satisfy this gate.
+5. Complete the original open research deliverables: reviewed requirements/support sets, fresh entity/event-audited cases, true cross-source/source-only controls, full baseline/ablation matrix, paired reporting and evidence-backed paper. Resolve upstream assets or retain adapted-only scope.
+
+Observed AI-correct counts are nine per method for top-K/MMR/joint/exact and five for coverage; this does not justify selecting a winning method. Treat the reviewed cohort as development data. Preserve 53 unresolved cohort judgments and separate factual correctness from selected support. [Completed failure analysis](COHORT_RESPONSE_AUDIT.md) supplies the current evidence; this plan is not a claim that the listed improvements have been implemented.

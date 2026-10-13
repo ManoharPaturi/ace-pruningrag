@@ -1,6 +1,6 @@
 # Explicit-cohort selector run: verified exploratory results
 
-Updated 13 October 2026. The private Kaggle kernel `ionrey/ace-pruningrag-prospective-selectors`, version 1, completed 50 frozen questions × five selectors = **250 actual generations**. All outputs passed independent reconstruction; AI-assisted source review is in progress. This is an adapted web-only development experiment, not independently human-validated research accuracy.
+Updated 13 October 2026. The private Kaggle kernel `ionrey/ace-pruningrag-prospective-selectors`, version 1, completed 50 frozen questions × five selectors = **250 actual generations**. All outputs passed independent reconstruction; AI-assisted source review is complete for all 250 answers. This is an adapted web-only development experiment, not independently human-validated research accuracy.
 
 ## Verified execution
 
@@ -24,7 +24,7 @@ All methods use the same upper budget and shared candidates; they need not consu
 
 ## Source review and scoring boundary
 
-Five batches now cover **19 questions / 95 method responses; 155 responses remain**. See [review progress](../results/version1/cohort/ai_review_progress.json). Every assessment is bound to its actual prediction, prompt hash and selected evidence IDs; AI review remains separate from independent human review.
+Eleven batches cover **50 questions / 250 method responses; zero responses remain unreviewed**. Read [the completed audit](COHORT_RESPONSE_AUDIT.md) for per-method judgments and failure analysis. See [review progress](../results/version1/cohort/ai_review_progress.json). Every assessment is bound to its actual prediction, prompt hash and selected evidence IDs; AI review remains separate from independent human review.
 
 - Real Sociedad answers explicitly abstain because dated weekly evidence is missing. Four methods add an explanation around “I don't know,” which the frozen exact-string abstention metric does not recognize. AI review records an exact abstention span separately; the frozen experimental metric is preserved.
 - Lille's four substantive answers give a weekly total without dated fixture support. Season aggregates and undated examples are insufficient; actual truth remains unresolved rather than being inferred from the reference.
@@ -34,7 +34,7 @@ The audit validator checks binding and coverage, not independent semantic truth.
 
 ## Remaining gates
 
-Complete source review of all 250 actual responses, obtain independent review, assess genuine complete-support sets, audit entity/event overlap, and run cross-source/source-only controls. Groups/conflicts are disabled; query-term proxy coverage and exact optimization are not annotated support oracles. Keep these inspected questions out of a fresh version-2 held-out cohort.
+Obtain independent review, assess genuine complete-support sets, audit entity/event overlap, and run cross-source/source-only controls. Groups/conflicts are disabled; query-term proxy coverage and exact optimization are not annotated support oracles. Keep these inspected questions out of a fresh version-2 held-out cohort.
 
 
 ### Review expansion: 19-question checkpoint
@@ -52,9 +52,14 @@ The expanded inspection identifies concrete failures:
 
 The election question conflates winning the popular vote with winning the presidency. Several methods give an electoral total or an unsupported margin; top-K/joint reproduce an older selected popular-vote report. Final FEC totals imply a different margin (65,853,514 − 62,984,828 = 2,868,686). This is a reference/source conflict, not a reason to silently rewrite the frozen reference or supply external information to inference. [FEC 2016 results](https://www.fec.gov/documents/1889/federalelections2016.pdf).
 
-Full source review is still incomplete. External audit checks are recorded separately, and the original generation trace and independent-human gates remain unchanged.
+This 19-question checkpoint was partial; the full audit is now complete as recorded below. External audit checks are recorded separately, and the original generation trace and independent-human gates remain unchanged.
 
 
 ### Reconciled handoff checkpoint — 13 October
 
 The sixth saved cohort AI review batch also validates against the exact trace. Current coverage is **115/250 responses across 23/50 questions**, with **135 responses pending**. Verdict counts are 25 correct, 26 incorrect, 37 uncertain and 27 abstained. These are AI-assisted assessments, not independent human semantic labels. See `results/version1/cohort/ai_review_progress.json` and [the contributor handoff](PROJECT_HANDOFF.md) for the current continuation instructions. Earlier partial checkpoints remain historical.
+
+
+### Completed AI source audit — current checkpoint
+
+All 250 answers across all 50 questions are AI-assessed and structurally validated, with no pending responses. Counts are 41 correct, 68 incorrect, 53 uncertain and 88 abstained. See [completed audit and reproducible method summary](COHORT_RESPONSE_AUDIT.md). Independent human labels, complete support sets and genuine cross-source evaluation remain pending.

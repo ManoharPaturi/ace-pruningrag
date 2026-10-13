@@ -91,3 +91,49 @@ def validate_ai_audits(paths, trace):
             "AI assessments cannot replace independent human labels or resolve them silently.",
         ],
     }
+
+
+def summarize_ai_audits(paths, trace):
+    """Aggregate bound AI judgments without converting uncertainty to errors or human labels."""
+    paths = list(paths)
+    validation = validate_ai_audits(paths, trace)
+    rows = [json.loads(line) for line in trace.read_text().splitlines()]
+    reviews = [review for path in paths for review in read_json(path)["reviews"]]
+    methods = sorted({row["policy"] for row in rows})
+    per_method = {}
+    for method in methods:
+        expected = [row for row in rows if row["policy"] == method]
+        assessed = [review for review in reviews if review["policy"] == method]
+        counts = Counter(review["semantic_assessment"] for review in assessed)
+        per_method[method] = {
+            "responses": len(expected),
+            "reviewed": len(assessed),
+            "pending": len(expected) - len(assessed),
+            "ai_verdicts": {
+                verdict: counts[verdict]
+                for verdict in ("correct", "incorrect", "uncertain", "abstained")
+            },
+            "ai_grounding_verdicts": dict(
+                Counter(review["grounding_assessment"] for review in assessed)
+            ),
+        }
+    grouped = {}
+    for row in rows:
+        grouped.setdefault(row["interaction_id"], []).append(row)
+    return {
+        "scope": "AI-assisted development diagnostics; not independent semantic accuracy",
+        "validation": validation,
+        "audit_files": [{"name": path.name, "sha256": sha256_file(path)} for path in paths],
+        "distinct_questions": len(grouped),
+        "questions_with_identical_predictions": sum(
+            len({row["prediction"] for row in group}) == 1 for group in grouped.values()
+        ),
+        "per_method": per_method,
+        "independent_human_review": False,
+        "limitations": [
+            "Uncertain, abstained and pending responses retain separate counts.",
+            "Repeated methods share questions; response records are not independent cases.",
+            "Different grounding categories do not constitute calibrated support scores.",
+            "AI verdict counts alone cannot promote a selector or establish cross-source benefit.",
+        ],
+    }
