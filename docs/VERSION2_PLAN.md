@@ -213,3 +213,14 @@ These implementation priorities do not close the original artifact, independent
 review, cross-source/source-only control, router calibration, full ablation and
 evidence-backed paper gates. The source-role audit is complete; the scientific
 objective remains in progress.
+
+
+### Implementation checkpoint: corrected decoder and plural frames
+
+The versioned Unicode GPU control is complete, reconstructed and fully review-bound.
+It corrects the observed name boundary in one output; semantic row mixing remains.
+The plural-frame prompts and exact statement-local validator are now implemented
+with six regression tests. Inventory GPU generation, role/completeness measurement
+and support composition remain next. Preserve the completed single-frame controls
+and measure changed prompts/budgets as explicit experimental factors. Do not infer
+complete extraction from a proposed_complete output or acceptance from exact spans.

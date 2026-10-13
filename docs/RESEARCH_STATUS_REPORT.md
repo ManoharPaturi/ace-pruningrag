@@ -148,13 +148,24 @@ outputs rejects one truncated-name proposal that v1 permitted. This is a policy
 revalidation, not corrected neural generation or semantic-role improvement. The
 submitted v1 source, all outputs and all previous outcome counts remain intact.
 
-A separate corrected-policy GPU worker was submitted as private kernel
+A separate corrected-policy GPU worker completed as private kernel
 `ionrey/ace-unicode-64945d4d23544527a191211fce4741e3`, version
-1. Its submission record reports
-RUNNING at the recorded observation,
-with a cap of 386 extraction sequences / 97 generate invocations. Completed execution,
-decoded outputs and measured costs remain unverified; submission and local protocol
-tests do not establish corrected neural results or semantic improvement.
+1. The initial submission record's RUNNING
+status is historical. Full reconstruction verifies 386
+extraction sequences / 97 generate invocations, 124,383
+unpadded input tokens, 16,200 output tokens and 890 maximum
+reserved tokens. Generation took 442.81 seconds;
+constraint preparation and other setup are excluded from this timing.
+
+Task identities, messages and input token counts match the v1 control; runtime snapshots
+also match. There are 1 changed
+raw proposals and 385 unchanged
+ones. The changed output preserves the combining-mark name, but its award category,
+song and period still mix different rows. Its fresh AI assessment remains mixed facts.
+All 386 tasks have bound assessments: 385 exact-input/proposal reviews reused and one
+fresh changed-proposal review. Structural outcomes remain 385 valid and one capped
+invalid JSON. This executes and verifies the lexical correction; it does not establish
+semantic role improvement, independent accuracy or automatic acceptance.
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible

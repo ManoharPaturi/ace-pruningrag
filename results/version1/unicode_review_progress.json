@@ -1,0 +1,28 @@
+{
+  "scope": "Complete task-bound qualitative AI role review; not independent factual evaluation",
+  "records_bound": 386,
+  "exact_input_and_proposal_reviews_reused": 385,
+  "fresh_changed_proposal_reviews": 1,
+  "AI_reviewed_query_proposals": 50,
+  "AI_reviewed_source_proposals": 335,
+  "source_review_counts": {
+    "metadata_or_nonclaim": 39,
+    "mixed_facts": 120,
+    "missing_subject_or_antecedent": 23,
+    "role_or_scope_error": 56,
+    "coherent_claim_in_excerpt": 15,
+    "partial_binding_with_role_error": 82
+  },
+  "unreviewed_tasks": 0,
+  "changed_proposal_reviews_complete": true,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "extraction_trace_sha256": "0acfdb530b72234eb4232ce7d6b9ccaac8f9e78013485daf6515baf166f2de85",
+  "execution_verification_sha256": "4eabe8d6c040c063ccfb47a2f1060b03bea64096227b53121129d4094cba7813",
+  "control_comparison_sha256": "4a3d085c6ce7f774750869dbd891fa9f2e9cf85300ad3ee1ddd18031eea0f43c",
+  "original_review_progress_sha256": "1fc05bdce87202adc9fdcb9d664e617f4e845e08ace441d50f9b7cf99ee0cc86",
+  "fresh_review_batch_sha256": "5bab84bc8b6a355b929bbd230665eb360d56c47150bc824a28228b607a29fa98",
+  "independent_human_review": false,
+  "semantic_role_improvement_established": false,
+  "full_requirement_coverage_verified": false,
+  "answer_acceptance_enabled": false
+}

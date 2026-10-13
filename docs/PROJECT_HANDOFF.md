@@ -4,8 +4,8 @@
 **Repository:** https://github.com/ManoharPaturi/ace-pruningrag
 **Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
-**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `4c0d0c6` before this tracker update; all three required checks passed on the earlier `f1f13ac` head. Recheck CI for each new head.
-**Local continuation state:** all 444 admitted responses and all 386 constrained extraction tasks have bound AI assessments. A live browser→API→GPU→evidence flow has been executed and verified on one development question. The separately versioned Unicode GPU correction is running; final outputs and costs remain unverified. Independent review and the full scientific gates remain open. See the [current completion audit](VERSION1_COMPLETION_AUDIT.md) and [research report](RESEARCH_STATUS_REPORT.md).
+**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `7c7bff9` before this update; all three required checks passed on that head. Recheck CI for each new head.
+**Local continuation state:** all 444 admitted responses and all 386 constrained extraction tasks have bound AI assessments. A live browser→API→GPU→evidence flow has been executed and verified on one development question. The separately versioned Unicode GPU correction completed and reconstructs; its one changed proposal has a fresh bound review. Independent review and the full scientific gates remain open. See the [current completion audit](VERSION1_COMPLETION_AUDIT.md) and [research report](RESEARCH_STATUS_REPORT.md).
 
 ## Owner-led continuation — current checkpoint
 
@@ -19,12 +19,13 @@
 | Cohort AI source review | 250/250 responses, 50/50 questions | Read the completed audit; preserve AI/human separation and implement the prioritized fixes |
 | Independent prospective evidence review | Pending | Import attested human requirements and support sets through the existing review workflow |
 | Demo | 444 admitted replays, fresh BM25 retrieval and a verified live one-question GPU flow with restart recovery | Generalize claim-level support and adaptive source integration; one inspected case is not general accuracy |
-| Required CI | All three passed at `f1f13ac`; `test` and `finance-smoke` passed at `4c0d0c6`, with `data-smoke` still running at observation | Require all three again on each new head |
+| Required CI | All three required jobs passed at `7c7bff9` before this update | Require all three again on each new head |
 | Constrained extraction review | All 386 tasks assessed; 335 valid source proposals / 300 distinct pairs, with no source proposals pending | Preserve exact outputs and qualitative AI scope; full requirements and external truth remain unverified |
-| Unicode decoder correction | Versioned code, protocol drift checks and 186 local tests pass; private GPU job is running | Poll the same kernel, collect fresh output, reconstruct IDs/spans/costs and review changed proposals |
+| Unicode decoder correction | All386 GPU sequences reconstruct; one full-name change reviewed, with semantic row mixing unchanged | Preserve controls and costs; do not claim general semantic improvement |
+| Plural claim inventory | Role-separated prompt/validator with exact statement-local spans; six tests pass | Execute a versioned inventory decoder, audit real roles/completeness and then compose support |
 | Research conclusion | Cross-source benefit and faithful reproduction are unproved | Keep these gates open; complete controls, labels and ablations |
 
-**Current work session:** continue in the owner workspace on the PR branch, retain the existing private artifacts, collect the same running Unicode kernel and reconstruct its results. Then follow [the next-version plan](VERSION2_PLAN.md) while retaining the current version’s open gates. Do not tune on this inspected cohort and later call it unseen evaluation data.
+**Current work session:** continue in the owner workspace on the PR branch, retain the existing private artifacts and implement counted GPU inventory extraction after the completed Unicode control. Then follow [the next-version plan](VERSION2_PLAN.md) while retaining the current version’s open gates. Do not tune on this inspected cohort and later call it unseen evaluation data.
 
 **For a future contributor, artifact transfer is required:** a Git clone contains code and compact results, not raw predictions or private review records. Ask the owner for the five trace directories in `configs/demo.json`, `runs/version1/cohort-ai-audit-batch1.json` through `cohort-ai-audit-batch11.json`, and original review exports. Preserve relative paths and verify hashes. Share no API tokens or account credentials.
 
@@ -36,7 +37,7 @@ The repository has working research infrastructure and several completed develop
 
 The current adapted generator is Qwen2.5-1.5B-Instruct, rather than the original paper's model contract. The router uses keyword rules; selection support features are lexical proxies; reliability verification currently handles a narrow historical closing-price contract. No general cross-source benefit, held-out semantic accuracy improvement, or publication readiness has been established.
 
-**The accepted-output and constrained proposal-role AI audits are complete. Query-only form checks, conservative date contracts, the live GPU demo path and the versioned Unicode correction are implemented. The next execution gate is reconstruction of the running corrected-policy job; general atomic requirements, semantic role/support checks and adaptive multi-source integration remain unfinished.** Independent human evidence review remains an open scientific gate. AI-assisted assessments and successful provenance checks do not satisfy that gate.
+**The accepted-output and constrained proposal-role AI audits are complete. Query-only form checks, conservative date contracts, the live GPU demo path and the versioned Unicode correction are implemented. The corrected-policy job is reconstructed and changed-output review is complete. Plural atomic-frame prompts and structural binding are implemented; GPU inventory extraction, semantic role/support checks and adaptive multi-source integration remain unfinished.** Independent human evidence review remains an open scientific gate. AI-assisted assessments and successful provenance checks do not satisfy that gate.
 
 Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evaluation protocol](EVALUATION_PROTOCOL.md), and [prospective review protocol](PROSPECTIVE_EVALUATION.md). Older reports describe historical snapshots; use later reports for the work that supersedes them.
 
@@ -72,7 +73,9 @@ Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evalua
 - [ ] Complete general claim-level support verification and adaptive multi-source live integration.
 - [x] Complete qualitative AI role review of all 386 constrained extraction tasks.
 - [x] Implement a separately versioned Unicode decoder correction and submit its bounded GPU control.
-- [ ] Collect/reconstruct the corrected-policy GPU outputs and review changed proposals.
+- [x] Collect/reconstruct the corrected-policy GPU outputs and review the one changed proposal.
+- [x] Implement plural claim/requirement proposal prompts and statement-local binding validation.
+- [ ] Execute inventory extraction and verify semantic roles, complete requirements and support composition.
 - [x] Finish the separate AI-assisted legacy audit: complete for all 50 questions / 150 responses; historical/regeneration audits also complete; cohort source review is now complete.
 - [ ] Establish genuine cross-source necessity and compare source-only controls.
 - [ ] Extend reliability beyond the narrow historical-price contract.
@@ -210,7 +213,7 @@ uv run --locked --no-editable ruff format --check src tests scripts
 uv run --locked --no-editable --extra demo --extra constraints pytest -q
 ```
 
-The current owner workspace has **186 passing tests with the demo and constraints extras**. This is the PR branch, not the merged-main test count. All three required CI jobs passed at `f1f13ac`; `test` and `finance-smoke` passed at `4c0d0c6`, while `data-smoke` was still running at observation. CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
+The current owner workspace has **192 passing tests with the demo and constraints extras**. This is the PR branch, not the merged-main test count. All three required CI jobs passed at `7c7bff9` before this update. CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
 
 Download data and run a small retrieval check, using a new output directory:
 
@@ -462,12 +465,23 @@ All 444 admitted responses have source-bound AI assessments. All 386 constrained
 extraction tasks are assessed, including 335 valid sources (300 distinct pairs),
 50 queries and one cap failure. Fifteen coherent excerpt-claim records represent
 13 distinct pairs; no automatic acceptance, independent truth or calibrated accuracy
-is established. The versioned decoder job is still running, not verified complete.
+is established. The versioned decoder job completed and reconstructs; 385 exact outputs are unchanged and one corrected-name proposal has fresh review.
 See [the explicit worker identity and collection commands](UNICODE_SPAN_POLICY.md).
 
-The next actions are to collect/reconstruct that same kernel, review changed outputs,
-then implement multi-claim requirements with directed roles, separate event/observation
-times, units, polarity and attribution. Full cross-source controls, legitimate router
+The next actions are to execute the new plural inventory representation, audit actual
+roles/completeness and compose source support with directed roles, separate
+event/observation times, units, polarity and attribution. Full cross-source controls, legitimate router
 labels, fresh entity/event-audited evaluation, independent annotations, full ablations
 and final evidence-backed paper remain required. A friend handoff, CI success or a
 completed bounded diagnostic does not substitute for these deliverables.
+
+
+### Current corrected-policy and inventory checkpoint
+
+The Unicode GPU control is complete and all 386 tasks reconstruct; one raw proposal
+and its IDs changed. The full combining-mark name is preserved, but the proposal
+still mixes different award rows. All tasks have bound qualitative assessments,
+with 385 exact-input/proposal reviews reused and one fresh review. The plural-frame
+validator and query/source prompts now pass six regression tests; all 192 local tests
+pass. This representation is not yet a GPU inventory extractor or semantic verifier.
+See [inventory implementation and limits](CLAIM_INVENTORY.md).

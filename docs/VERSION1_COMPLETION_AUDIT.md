@@ -290,3 +290,21 @@ outputs remain intact. All 186 local tests pass, including drift and blinded-bun
 checks. Collect and reconstruct this same kernel, then review changed proposals
 before assessing the correction. General role/support and scientific gates remain
 open.
+
+
+### Corrected-policy execution reconstructed and changed output reviewed
+
+The same private Unicode kernel completed. Full reconstruction verifies all 386
+sequences / 97 invocations, decoded outputs, spans, protocol identity, isolation and
+costs. One proposal changes to preserve a combining-mark name; all 385 other outputs
+and IDs agree with the frozen control. The changed proposal still mixes award rows
+and is freshly AI-assessed as mixed facts. Final review binding covers every task,
+reusing 385 exact input/proposal assessments and adding one new assessment.
+
+This closes corrected Unicode neural execution and its changed-output inspection.
+It does not close semantic extraction/support, exhaustive claim coverage, independent
+review or any scientific gate. The plural claim-inventory prompt and validator are
+now implemented with statement-local exact bindings, multiple frames, separate role
+and date fields, query-answer exclusion and explicit qualification/attribution.
+Six regression tests pass; the local suite totals 192. GPU inventory extraction and
+role/support evaluation remain next.

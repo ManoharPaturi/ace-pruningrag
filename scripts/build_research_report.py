@@ -22,6 +22,9 @@ SOURCES = {
     "constrained_comparison": "results/version1/constrained_control_comparison.json",
     "unicode_replay": "results/version1/unicode_policy_replay.json",
     "unicode_submission": "results/version1/unicode_submission.json",
+    "unicode_execution": "results/version1/unicode_verification.json",
+    "unicode_comparison": "results/version1/unicode_control_comparison.json",
+    "unicode_reviews": "results/version1/unicode_review_progress.json",
 }
 
 
@@ -69,6 +72,25 @@ def render(root):
         raise ValueError("NLI disagreement count differs")
     constrained = data["constrained"]
     progress = data["constrained_progress"]
+    unicode_run, unicode_compare, unicode_reviews = (
+        data[k] for k in ("unicode_execution", "unicode_comparison", "unicode_reviews")
+    )
+    if (
+        unicode_run["status"] != "unicode_spans_decode_and_costs_reconstructed"
+        or unicode_run["trace_sha256"] != unicode_compare["revised_trace_sha256"]
+        or unicode_run["trace_sha256"] != unicode_reviews["extraction_trace_sha256"]
+        or unicode_reviews["execution_verification_sha256"]
+        != sha256_file(root / SOURCES["unicode_execution"])
+        or unicode_reviews["control_comparison_sha256"]
+        != sha256_file(root / SOURCES["unicode_comparison"])
+        or unicode_reviews["original_review_progress_sha256"]
+        != sha256_file(root / SOURCES["constrained_progress"])
+        or unicode_reviews["records_bound"] != 386
+        or unicode_reviews["unreviewed_tasks"] != 0
+        or unicode_reviews["independent_human_review"] is not False
+        or unicode_reviews["answer_acceptance_enabled"] is not False
+    ):
+        raise ValueError("Unicode execution/control/review bindings differ")
     source_review_state = (
         f"{progress['unreviewed_source_proposals']} valid source proposals still require "
         "role review. The partial source review covers"
@@ -279,13 +301,24 @@ outputs rejects one truncated-name proposal that v1 permitted. This is a policy
 revalidation, not corrected neural generation or semantic-role improvement. The
 submitted v1 source, all outputs and all previous outcome counts remain intact.
 
-A separate corrected-policy GPU worker was submitted as private kernel
+A separate corrected-policy GPU worker completed as private kernel
 `{data["unicode_submission"]["kernel_id"]}`, version
-{data["unicode_submission"]["submitted_version"]}. Its submission record reports
-{data["unicode_submission"]["provider_status_last_observed"]} at the recorded observation,
-with a cap of 386 extraction sequences / 97 generate invocations. Completed execution,
-decoded outputs and measured costs remain unverified; submission and local protocol
-tests do not establish corrected neural results or semantic improvement.
+{data["unicode_submission"]["submitted_version"]}. The initial submission record's RUNNING
+status is historical. Full reconstruction verifies {unicode_run["extraction_sequences"]}
+extraction sequences / {unicode_run["generate_invocations"]} generate invocations, 124,383
+unpadded input tokens, {unicode_run["output_tokens"]:,} output tokens and 890 maximum
+reserved tokens. Generation took {unicode_run["timing"]["generation_seconds"]:.2f} seconds;
+constraint preparation and other setup are excluded from this timing.
+
+Task identities, messages and input token counts match the v1 control; runtime snapshots
+also match. There are {unicode_compare["output_comparison"]["changed_raw_proposals"]} changed
+raw proposals and {unicode_compare["output_comparison"]["unchanged_raw_proposals"]} unchanged
+ones. The changed output preserves the combining-mark name, but its award category,
+song and period still mix different rows. Its fresh AI assessment remains mixed facts.
+All 386 tasks have bound assessments: 385 exact-input/proposal reviews reused and one
+fresh changed-proposal review. Structural outcomes remain 385 valid and one capped
+invalid JSON. This executes and verifies the lexical correction; it does not establish
+semantic role improvement, independent accuracy or automatic acceptance.
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible

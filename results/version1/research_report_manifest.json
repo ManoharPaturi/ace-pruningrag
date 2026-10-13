@@ -16,10 +16,13 @@
     "results/version1/constrained_review_progress.json": "1fc05bdce87202adc9fdcb9d664e617f4e845e08ace441d50f9b7cf99ee0cc86",
     "results/version1/constrained_control_comparison.json": "874f6d96fb97ced58b342b471534cffafe6b8cd156c405e49dea2abd4606d36d",
     "results/version1/unicode_policy_replay.json": "fbfc749283bf2c98fed405f91492e704ade860964114abf5807cbda0f253ca0a",
-    "results/version1/unicode_submission.json": "b5afbd6618e868752e8119f6df37a4e3c5ed981b1f6ed32755e94d04505c87d5"
+    "results/version1/unicode_submission.json": "b5afbd6618e868752e8119f6df37a4e3c5ed981b1f6ed32755e94d04505c87d5",
+    "results/version1/unicode_verification.json": "4eabe8d6c040c063ccfb47a2f1060b03bea64096227b53121129d4094cba7813",
+    "results/version1/unicode_control_comparison.json": "4a3d085c6ce7f774750869dbd891fa9f2e9cf85300ad3ee1ddd18031eea0f43c",
+    "results/version1/unicode_review_progress.json": "5106a9b038c78959e9f1dcc7ee2dc3686416309baf3dff6251c519df6cf0f0d6"
   },
-  "renderer_sha256": "c0319874bf5b36f6ffd6009cf1066d1b8ce857dc2e93178b2546b923f3bc9782",
-  "report_sha256": "5331a982d1a5d1cb74b90db0a43c0703615931cf476c3ecda709a34bfd2d73de",
+  "renderer_sha256": "963deb0067054b7ccb83b367e98f46b52f3497fb4058aba27c64f8efcb438dc0",
+  "report_sha256": "c2eafcd8df39c1ddba80cb4ec277c00a241a40f2fc8329d9e71d23f0069b33c6",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }
