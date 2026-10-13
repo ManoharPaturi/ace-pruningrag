@@ -9,7 +9,7 @@
 
 ## Owner-led continuation — current checkpoint
 
-**Start here:** the owner has asked the assistant to perform the continuation; work does not depend on a friend starting. PR #16 contains the latest implementation; main is verified at `ba30586` and stops at PR #15. The owner alone merges main. Contributor fork instructions remain available for optional future collaboration.
+**Start here:** the owner has explicitly assigned all continuation work to the assistant; work does not depend on a friend starting. PR #16 contains the latest implementation; main is verified at `ba30586` and stops at PR #15. The owner alone merges main. Contributor fork instructions remain available for optional future collaboration.
 
 | Item | Current state | Next action |
 | --- | --- | --- |
@@ -595,3 +595,12 @@ separate protocol before another capacity change. Do not rescore frozen outputs.
 and 21 sources), including fifty rejected inventories; 315 source tasks remain.
 All 229 local tests pass. Independent semantic labels, general source support and
 full roadmap completion remain open.
+
+
+## Typed graph continuation checkpoint
+
+[Query graph v2](QUERY_GRAPH_V2.md) implements typed clause roles, dependent operations,
+immutable token constraints and complete synthetic prompt examples. All fifty query-only
+requests pass pinned-tokenizer preflight (3,405 maximum reserved tokens; zero model calls).
+This checkpoint has not executed a v2 neural run. Worker reconstruction, bounded GPU
+execution and all-output assessment are next; scientific acceptance stays disabled.

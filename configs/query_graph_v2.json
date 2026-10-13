@@ -1,0 +1,36 @@
+{
+  "scope": "Blinded typed query graph v2; changed prompt/schema/grammar with pinned 3B and control decoding",
+  "max_tasks": 50,
+  "max_input_and_output_tokens": 4096,
+  "max_output_tokens": 2048,
+  "batch_size": 4,
+  "seed": 42,
+  "dtype": "float32",
+  "generator_config": "configs/requirements_extractor_3b.json",
+  "allow_answer_acceptance": false,
+  "max_span_words": 160,
+  "max_span_atoms": 640,
+  "constraints_dependencies": {
+    "lm-format-enforcer": "0.11.3",
+    "interegular": "0.3.3",
+    "pydantic": "2.14.1",
+    "pydantic-core": "2.50.1",
+    "annotated-types": "0.8.0",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.4",
+    "packaging": "26.3",
+    "pyyaml": "6.0.3"
+  },
+  "protocol_id": "query_graph_v2",
+  "max_variables": 8,
+  "max_clauses": 12,
+  "generator_config_sha256": "d207e19a961f70cdc28e1aae6de49239057daf56c0537ff07f37c61625c1792e",
+  "decoding_config": "configs/requirements_control_decoding.json",
+  "decoding_config_sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+  "max_operations": 8,
+  "contract_sha256": {
+    "src/ace_pruningrag/query_graph.py": "11832c67081f3e7cd83ee1f17c8489d30778abd14c8111d5914638467d5500b3",
+    "src/ace_pruningrag/query_graph_decoder.py": "82484b485ea294598d7e8d0ba28113b0037008c5a9459c0ddf26dafa94e14997",
+    "src/ace_pruningrag/query_graph_prompt.py": "157d079d1a43eeece773de6f5f3b44a34b9dd002b26117b673f9d17e819ee15b"
+  }
+}

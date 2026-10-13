@@ -318,3 +318,11 @@ queries and 21 sources assessed; 315 source tasks remain. Retain coherent partia
 facts and metadata context without promoting navigation/examples into assertions.
 All 229 local tests pass. These steps do not close independent labels, full source
 composition, fresh evaluation, faithful-artifact and evidence-backed final-paper gates.
+
+
+### Typed query graph v2 implementation
+
+[The new graph contract](QUERY_GRAPH_V2.md) now separates variable types from clause
+argument positions and supports dependent typed operations. Fifty development requests
+fit the pinned tokenizer budget. GPU extraction and semantic assessment remain pending;
+structural linking does not certify completeness or enable answer acceptance.
