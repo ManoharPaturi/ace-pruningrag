@@ -1,13 +1,13 @@
 {
-  "scope": "Bound source-free question-role AI review and structural cap failure; source-tuple review incomplete",
+  "scope": "Complete task-bound post-hoc AI proposal-role review and structural cap-failure assessment; not independent truth or full requirement verification",
   "total_tasks": 386,
   "structurally_valid_proposals": 385,
   "AI_reviewed_query_proposals": 50,
-  "AI_reviewed_source_proposals": 250,
+  "AI_reviewed_source_proposals": 335,
   "structural_failure_assessments": 1,
-  "unreviewed_source_proposals": 85,
+  "unreviewed_source_proposals": 0,
   "independent_human_review": false,
-  "full_semantic_review_complete": false,
+  "full_semantic_review_complete": true,
   "full_requirement_coverage_verified": false,
   "answer_acceptance_enabled": false,
   "extraction_trace_sha256": "eeb3304a11e59799a0df6bd5ab6e51b6e4c65a3b98cc659cc1585dec99855fc8",
@@ -43,6 +43,11 @@
       "name": "constrained-ai-audit-batch6.json",
       "sha256": "4ce49faa47cf62f474ff615e8472bace781fd540b1c5713de473e3f4d8561529",
       "records": 50
+    },
+    {
+      "name": "constrained-ai-audit-batch7.json",
+      "sha256": "09144a405099fc82352ad5ea9d4bfe04cdfa408f7d313b730879f0faab6a412c",
+      "records": 85
     }
   ],
   "query_review_counts": {
@@ -53,16 +58,16 @@
   "limitations": [
     "These post-hoc AI judgments are qualitative and not calibrated extraction accuracy.",
     "Schema/span validity is not complete requirement or factual verification.",
-    "85 span-valid source proposals still require role review."
+    "All 335 span-valid source proposals have qualitative AI role assessments; factual truth and complete requirement coverage remain unverified."
   ],
   "source_review_counts": {
-    "metadata_or_nonclaim": 27,
-    "mixed_facts": 93,
-    "missing_subject_or_antecedent": 15,
-    "role_or_scope_error": 40,
-    "coherent_claim_in_excerpt": 12,
-    "partial_binding_with_role_error": 63
+    "metadata_or_nonclaim": 39,
+    "mixed_facts": 120,
+    "missing_subject_or_antecedent": 23,
+    "role_or_scope_error": 56,
+    "coherent_claim_in_excerpt": 15,
+    "partial_binding_with_role_error": 82
   },
-  "distinct_reviewed_source_pairs": 225,
-  "distinct_coherent_source_pairs": 10
+  "distinct_reviewed_source_pairs": 300,
+  "distinct_coherent_source_pairs": 13
 }

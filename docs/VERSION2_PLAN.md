@@ -174,3 +174,42 @@ controlled decoder before claiming new neural results. Preserve the v1 source an
 outputs; do not normalize stored text or discard truncated-name failures. This
 lexical correction does not satisfy multiword entity identity, complete atomic
 requirements or semantic-support validation.
+
+
+## Priorities from complete constrained proposal-role review
+
+The complete post-hoc review binds 50 query proposals, 335 valid source proposals
+and one capped failure. Its categories are qualitative AI judgments, not calibrated
+accuracy: source validity does not establish role correctness or exhaustive claims.
+Preserve the frozen v1 outputs, candidate policy and prompts as the control.
+
+1. **Execute the versioned boundary correction.** Use the combining-mark-aware
+   module in a separate explicit protocol and GPU bundle, with the same blinded
+   386 tasks, generator pin, prompts, FP32, seed and token limits. Reconstruct
+   decoded IDs, candidate spans, protocol identity and costs. Retain capped errors
+   and record changed outputs; do not call CPU replay corrected neural generation.
+2. **Represent atomic facts with typed roles.** A frame needs subject, relation,
+   object/value, measurement unit, event time and observation time, plus exact
+   supporting spans and attribution. Distinguish acquired magazine from purchaser,
+   investor sales from an executive biography, IPO offer from first-day close,
+   nomination from award win, film from character and lake area from visit season.
+   Preserve negation, estimates, rumors, plans, upper/lower bounds and comparators.
+3. **Handle multi-claim requirements explicitly.** A single six-field tuple cannot
+   express both sides of a comparison, complete lists or all required time windows.
+   Extract query requirements from the query alone and source claims from evidence
+   alone; count every extraction call. Validate direction and typed bindings before
+   calculating support. Missing or ambiguous relations remain unresolved.
+4. **Reject assertion promotion from page structure.** Related questions, navigation,
+   author credentials and publication timestamps are not answers or event dates.
+   Keep them distinguishable from source assertions without discarding legitimate
+   factual image captions. Preserve unfiltered retrieval as an ablation.
+5. **Measure improvement on fresh cases.** This inspected cohort is development
+   data. Keep all prior exposures excluded from fresh entity/event-audited evaluation.
+   Separate source fidelity, external correctness and complete answer support;
+   compare fixed model/candidate controls and charge added calls. Independent human
+   labels remain a distinct promotion gate rather than relabeled AI judgments.
+
+These implementation priorities do not close the original artifact, independent
+review, cross-source/source-only control, router calibration, full ablation and
+evidence-backed paper gates. The source-role audit is complete; the scientific
+objective remains in progress.

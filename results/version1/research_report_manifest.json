@@ -13,12 +13,12 @@
     "results/phase4/regeneration/control_comparison.json": "792d90654d1fb3810e714dcf481634fcf26a46dedbebf3058c932d7652dce92d",
     "results/version1/constrained_verification.json": "4192bfbaf3ee1f18c58419f16c2dcc16eab0383090f4597b4e16bcc06ff1913c",
     "results/version1/constrained_alignment_replay.json": "87dc2ae68811c6e5022b3f2d0d94ce3213d7a6d4f9dd864ed6f751fcea140485",
-    "results/version1/constrained_review_progress.json": "0e286457c108a22bfde34bece45cbd2e871a20e0f47a5faa22335cc21885a216",
+    "results/version1/constrained_review_progress.json": "1fc05bdce87202adc9fdcb9d664e617f4e845e08ace441d50f9b7cf99ee0cc86",
     "results/version1/constrained_control_comparison.json": "874f6d96fb97ced58b342b471534cffafe6b8cd156c405e49dea2abd4606d36d",
     "results/version1/unicode_policy_replay.json": "fbfc749283bf2c98fed405f91492e704ade860964114abf5807cbda0f253ca0a"
   },
-  "renderer_sha256": "b90413e077bf703bbad0aa004705ae7c300c69c7d54357836b82b011f156dbbc",
-  "report_sha256": "471f9f81fd183eaf25cb493a630f08068613da1da8268cfbd1859728458b570a",
+  "renderer_sha256": "82caddb4577fbe2704be77ae8ca599deff34b61d274a2b485189f5ced06ed23c",
+  "report_sha256": "b57851de9733d3efcf37c6f1b77f9806240c38fa024fecada9d155930c50cd46",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

@@ -203,3 +203,31 @@ currency amounts, and reported plans or rumors losing their attribution. Competi
 names, stages and publication outlets also appear as measurement units. Complete
 requirements, calibrated accuracy and independent human review remain unverified.
 Earlier checkpoints are historical; the progress artifact holds current counts.
+
+
+### Complete proposal-role audit: 335/335 valid sources
+
+All 386 tasks now have a bound assessment: 50 query proposals, 335 valid source
+proposals and the capped invalid source. The final 85-record batch leaves no
+unreviewed valid proposals. Source categories are 120 mixed facts, 82 partial
+bindings with role errors, 56 role/scope errors, 39 metadata/nonclaims, 23 missing
+subjects/antecedents and 15 coherent excerpt claims. The 335 source records contain
+300 distinct text/proposal pairs; the 15 coherent records contain 13 distinct pairs.
+
+These are post-hoc qualitative AI categories, not a calibrated extraction score.
+Full semantic review complete means task-level role assessment coverage only; it
+does not establish external truth, independent human review, complete atomic
+requirements, all claims in each excerpt or accepted answers. Those flags remain
+false, and the original model outputs and validation counts remain unchanged.
+
+The final batch exposes ownership-direction reversal, institutional investor sales
+assigned to an individual, offer/closing-price distinctions, award nominations
+turned into wins, commentator biographies mixed with actor facts, and questions
+converted into assertions. Lake visit seasons and organism geological eras are
+also incorrectly used as measurement dates. The source-only coherent claims include
+reported historical IPO pricing, a relative brand count and a dated reservoir
+elevation; none is proof of present values or a complete answer to its query.
+
+Next, run the separately versioned Unicode policy with the fixed GPU controls, then
+implement atomic claim/requirement representation and conservative role/support
+checks. JSON grammar and exact substrings cannot resolve the observed errors.

@@ -260,3 +260,21 @@ The progress limitations now match the current pending count rather than retaini
 a stale 285-source message. The report and manifest are regenerated from this
 checkpoint. General support verification, corrected neural execution, independent
 review and the five-phase scientific gates remain open.
+
+
+### Complete constrained proposal-role assessment
+
+[The completed constrained audit](CONSTRAINED_EXTRACTION.md) binds all 386 tasks:
+50 query role assessments, 335 valid source assessments and one structural failure.
+No valid source review remains pending. Of the source records, 300 are distinct
+text/proposal pairs; 15 coherent judgments represent 13 distinct pairs. The full
+review flag denotes qualitative AI coverage, not factual verification, all-claim
+coverage or independent evidence labels. The original extraction outcomes and
+answers remain unchanged; answer acceptance stays disabled.
+
+Next-version priorities now include typed event/measurement roles, directed
+relations, attribution/polarity, linked comparison operands and distinct document,
+event and measurement times. Corrected-policy neural execution and general support
+verification are next implementation steps. Original research assets, genuine
+cross-source controls, independent evaluation and full ablations remain required
+for the complete five-phase objective.

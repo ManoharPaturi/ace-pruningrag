@@ -68,6 +68,13 @@ def render(root):
         raise ValueError("NLI disagreement count differs")
     constrained = data["constrained"]
     progress = data["constrained_progress"]
+    source_review_state = (
+        f"{progress['unreviewed_source_proposals']} valid source proposals still require "
+        "role review. The partial source review covers"
+        if progress["unreviewed_source_proposals"]
+        else "All valid source proposals have qualitative AI role assessments. "
+        "The completed source review covers"
+    )
     comparison = data["constrained_comparison"]
     if (
         constrained["trace_sha256"] != progress["extraction_trace_sha256"]
@@ -254,8 +261,7 @@ None of 1,105 constrained literal comparisons has complete unambiguous alignment
 950 are unresolved and 155 have different explicit fields. All 50 question proposals
 have AI role rationales; 48 are partial/misbound, one is a coherent minimal count core,
 and one has underspecified query scope. These post-hoc categories are qualitative,
-not calibrated accuracy. All {progress["unreviewed_source_proposals"]} valid source proposals
-still require role review. The partial source review covers
+not calibrated accuracy. {source_review_state}
 {progress["AI_reviewed_source_proposals"]} records / {progress["distinct_reviewed_source_pairs"]}
 distinct text/proposal pairs. Its coherent-claim judgments cover
 {progress["source_review_counts"]["coherent_claim_in_excerpt"]} records but only
