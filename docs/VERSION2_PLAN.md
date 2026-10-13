@@ -100,3 +100,8 @@ Observed AI-correct counts are nine per method for top-K/MMR/joint/exact and fiv
 ### Live-worker implementation checkpoint
 
 A [private one-question GPU worker](LIVE_GPU_WORKER.md) executed and reconstructed one actual generation with the existing pinned model and budget. Next integrate durable asynchronous submission/polling into the existing FastAPI/Next.js app, with explicit states and no retry-by-resubmission after observation failure. Keep this development demonstration separate from research controls and finish claim-level support and cumulative latency/cost reporting.
+
+
+### Durable browser job bridge verified
+
+The [asynchronous GPU demo](LIVE_DEMO_FLOW.md) now survives API restart and page refresh without resubmission. Next implement entity/date/unit and claim-support contracts, then evaluate adaptive multi-source execution and genuine cross-source controls. Retain the old fixed-web worker and all frozen results as controls. This one development case is not a method-quality improvement claim.

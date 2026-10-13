@@ -1,6 +1,6 @@
-# Evidence explorer: verified local replay/retrieval demo
+# Evidence explorer: replay, retrieval and asynchronous GPU generation
 
-This app lets a reader choose a real recorded question, compare actual policy answers and inspect exact selected evidence. It also performs fresh BM25 retrieval against that question's pinned web snapshots. It is a read-only research explorer; recorded answers are explicitly labeled replays. Live generator inference, end-to-end adaptive retrieval and a production deployment remain unfinished roadmap work.
+This app lets a reader choose a real recorded question, compare actual policy answers and inspect exact selected evidence. It also performs fresh BM25 retrieval against that question's pinned web snapshots. Recorded answers are explicitly labeled replays. The separately enabled asynchronous GPU path now generates and verifies new answers; see [live flow](LIVE_DEMO_FLOW.md). End-to-end adaptive multi-source retrieval, general claim verification and production deployment remain unfinished.
 
 ## Setup
 
@@ -46,3 +46,8 @@ The completed five-selector cohort is admitted after full trace reconstruction. 
 ## Answer-form diagnostics
 
 The recorded-answer response includes `answer_form_checks`. The UI displays detected issues beside the original answer. HTTP replay verified all 444 outputs remain unchanged; the browser displayed a source-identifier warning with exact original provenance. [Implementation and verification report](ANSWER_CHECKS.md) documents the 12 flags, conservative list parser, explicit rectangle contract and remaining general verification/live-generation gates.
+
+
+## Asynchronous live GPU generation
+
+[The complete browser/API/GPU flow](LIVE_DEMO_FLOW.md) is now verified, including API restart and browser refresh recovery of the same job. Enable it explicitly with `ACE_ENABLE_LIVE=1` and install both demo and generation extras for local reconstruction. The persistent service cap is three requests, one active at a time. It uses fixed-web retrieval; the recorded policy selector does not configure the live worker. General claim-level support remains unverified.

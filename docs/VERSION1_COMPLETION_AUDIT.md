@@ -122,3 +122,8 @@ All 444 admitted records now have source-bound AI assessments, including all 250
 ### Single-question GPU worker executed
 
 [Live GPU worker](LIVE_GPU_WORKER.md) completed one actual pinned-model generation, separately from frozen experiments, and passed independent output/source/prompt reconstruction. It produced a supported director answer on an inspected development case with 1,302 reserved tokens. The browser submission/polling bridge, full latency accounting and general claim-level verification remain unfinished. Local tests now total 152.
+
+
+### Browser-to-GPU path verified
+
+[Live demo flow](LIVE_DEMO_FLOW.md) now submits, tracks, reconstructs and renders an actual GPU answer. API restart during RUNNING and browser refresh recovered the same request. The journal contains one job; one actual model call produced the supported actor answer. Tests now total 156. This closes the asynchronous fixed-web live-flow task, while adaptive multi-source generation, general claim verification and the open scientific/reporting requirements remain incomplete.

@@ -122,17 +122,33 @@ class DemoStore:
         }
 
 
-def create_app(root=None):
+def create_app(root=None, live_provider=None, live_enabled=None):
+    import os
     from contextlib import asynccontextmanager
 
-    from fastapi import FastAPI, HTTPException
+    from fastapi import FastAPI, Header, HTTPException
+
+    from .live_jobs import KaggleProvider, LiveJobs
 
     root = Path(root) if root else Path.cwd()
 
     @asynccontextmanager
     async def lifespan(app):
         app.state.store = DemoStore(root)
+        enabled = os.getenv("ACE_ENABLE_LIVE") == "1" if live_enabled is None else live_enabled
+        app.state.jobs = None
+        if enabled:
+            settings = read_json(root / "configs/live_service.json")
+            app.state.jobs = LiveJobs(
+                root / "runs/live-service",
+                app.state.store.queries,
+                live_provider or KaggleProvider(root, settings["owner"]),
+                max_jobs=settings["max_jobs"],
+            )
+            app.state.jobs.resume()
         yield
+        if app.state.jobs:
+            app.state.jobs.close()
 
     app = FastAPI(title="ACE-PruningRAG evidence explorer", lifespan=lifespan)
 
@@ -157,5 +173,35 @@ def create_app(root=None):
             return app.state.store.retrieve(qid)
         except KeyError as exc:
             raise HTTPException(404, "Unknown pinned question") from exc
+
+    @app.get("/live")
+    def live():
+        return {
+            "enabled": app.state.jobs is not None,
+            "scope": "One pinned question per GPU job; generation may wait in the queue.",
+        }
+
+    @app.post("/live/generate/{qid}")
+    def generate(qid: str, idempotency_key: str = Header()):
+        if app.state.jobs is None:
+            raise HTTPException(503, "Live GPU generation is not enabled on this service")
+        try:
+            return app.state.jobs.create(qid, idempotency_key)
+        except KeyError as exc:
+            raise HTTPException(404, "Unknown pinned question") from exc
+        except ValueError as exc:
+            raise HTTPException(400, str(exc)) from exc
+        except RuntimeError as exc:
+            raise HTTPException(409, str(exc)) from exc
+
+    @app.get("/live/jobs/{job_id}")
+    def job(job_id: str):
+        if app.state.jobs is None:
+            raise HTTPException(503, "Live GPU generation is not enabled on this service")
+        try:
+            app.state.jobs.resume()
+            return app.state.jobs.get(job_id)
+        except KeyError as exc:
+            raise HTTPException(404, "Unknown GPU request") from exc
 
     return app

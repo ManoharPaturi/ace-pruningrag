@@ -86,3 +86,41 @@ def test_api_replay_and_retrieval_do_not_leak_gold(tmp_path, row):
         assert retrieval["mode"] == "fresh_retrieval"
         assert client.get("/answers/fixture/unknown/fixed_web").status_code == 404
         assert client.get("/retrieve/unknown").status_code == 404
+        assert client.get("/live").json()["enabled"] is False
+        assert (
+            client.post(
+                f"/live/generate/{row['interaction_id']}", headers={"Idempotency-Key": "a" * 32}
+            ).status_code
+            == 503
+        )
+
+
+def test_live_http_recovery_identity_and_unknown_question(tmp_path, row):
+    from fastapi.testclient import TestClient
+
+    fixture_root(tmp_path, row)
+    write_json(tmp_path / "configs/live_service.json", {"owner": "fixture", "max_jobs": 1})
+
+    class Provider:
+        def build(self, job, directory):
+            directory.mkdir()
+            return "fixture/" + job["id"]
+
+        def submit(self, directory):
+            pass
+
+        def status(self, kernel):
+            return "complete"
+
+        def collect(self, kernel, bundle, directory):
+            return {"prediction": "Fixture only"}
+
+    with TestClient(create_app(tmp_path, live_provider=Provider(), live_enabled=True)) as client:
+        headers = {"Idempotency-Key": "a" * 32}
+        assert client.get("/live").json()["enabled"] is True
+        assert client.post("/live/generate/unknown", headers=headers).status_code == 404
+        job = client.post(f"/live/generate/{row['interaction_id']}", headers=headers).json()
+        repeated = client.post(f"/live/generate/{row['interaction_id']}", headers=headers).json()
+        assert repeated["id"] == job["id"]
+        assert client.get(f"/live/jobs/{job['id']}").status_code == 200
+        assert client.get("/live/jobs/unknown").status_code == 404

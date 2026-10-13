@@ -1,0 +1,38 @@
+{
+  "status": "browser_api_gpu_evidence_flow_verified",
+  "request_id": "9047acf90406454ba56f8e7f5edfa958",
+  "kernel_id": "ionrey/ace-live-9047acf90406454ba56f8e7f5edfa958",
+  "interaction_id": "5a222059-4832-463e-97fb-c3585bb0f41d",
+  "actual_llm_calls": 1,
+  "input_tokens": 1355,
+  "output_tokens": 5,
+  "maximum_reserved_tokens": 1451,
+  "generation_seconds": 1.8352555550000034,
+  "request_creation_to_verified_completion_seconds": 160.2135980129242,
+  "prediction": "Gabriel Macht",
+  "prompt_sha256": "422cdd11fdd75602251222151f3cb76e2f2a6355108abca639da56daae043082",
+  "result_sha256": "f85d6c4f7007fa374733b74f5c11f0ba556cd45ce3ba6685950a7982f7bf6729",
+  "api_restart_recovered_same_job": true,
+  "browser_refresh_recovered_same_job": true,
+  "journal_request_count": 1,
+  "independent_human_review": false,
+  "claim_level_support_verified": false,
+  "ai_review": {
+    "reviewer_type": "AI",
+    "human_validated": false,
+    "semantic_assessment": "correct_under_selected_actor_role_binding",
+    "grounding_assessment": "Selected excerpts explicitly identify Gabriel Macht as Harvey Specter actor.",
+    "selected_evidence_ids": [
+      "37580eddbd3c4987d924030b64766f2168d4973dcca3c81906c95f5e1acff62e",
+      "8fd6a9446570552737f0a0f4981ea1eeaf8dd4faff753da6a033a5a99086c5b8",
+      "a867d5b5ec3cf0c6142a9839c9385552d09e6429cbc7a0d521500d7d2acd3942",
+      "ba76e9846a2360e5f289f2cd7dc55b513c191b19cf844cc16bdf80e830815f59",
+      "bf12808f77e64c1dc81a7e220dead978bd277763ab6efa4d94bc47a6f6f81505"
+    ]
+  },
+  "limitations": [
+    "This is an inspected development question, not a held-out accuracy result.",
+    "The wall-time interval includes queue/download/setup/recovery/verification; components are not separately timed.",
+    "A verified live demo flow does not complete general claim verification or the scientific roadmap."
+  ]
+}
