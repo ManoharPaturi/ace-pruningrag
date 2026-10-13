@@ -43,10 +43,13 @@
     "results/version1/requirements_3b_review_progress.json": "9624f552a31c6e770a91c1dbd40d8dbcfd84e26aca66620ed69ee600d78d29bc",
     "results/version1/requirements_model_comparison.json": "1cd06e24c2eb021ba9ff1147be33d6bc3fb9be0abe117f67c40129fbb4903921",
     "results/version1/inventory_role_review_progress.json": "873e7f49728cd67e3300c72bc28d08c34b6383bfded34cf1dc3da8b108e4f4f7",
-    "results/version1/requirements_contract_diagnostic.json": "43a411abbc5f8d7cfb68d11807185a9fa40b8f5ce2ea8f99b731e303ef943f5f"
+    "results/version1/requirements_contract_diagnostic.json": "43a411abbc5f8d7cfb68d11807185a9fa40b8f5ce2ea8f99b731e303ef943f5f",
+    "results/version1/query_graph_verification.json": "83751b237c3195b652d4dea4407f39df09b044dce5abfe21c1243dc34e34230b",
+    "results/version1/query_graph_preflight.json": "5d6731b04523cb2d2f84fbf431f32d9d511f050049b3381a3c5f06f753781c94",
+    "results/version1/query_graph_submission.json": "26aaa9bf9c825611c239854f714ecb04449e65fc5c1a46f61e9c7335663d8fe1"
   },
-  "renderer_sha256": "dbfbe5d055514e9c67bbacd10c001c307ae370134693127c43aa5654cb668a50",
-  "report_sha256": "f7e7cbfe6a6b58ace2ba5519b79106cfd3c17f9388a65ee39f9b76a385437ac3",
+  "renderer_sha256": "2de4896a4f0d800462881df5bef8882985597045eab698d77b8047593105624d",
+  "report_sha256": "3366055b44d9f4a2abcbadd1e28b053c6c21348fc1bc66128d37b80ab7daea69",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

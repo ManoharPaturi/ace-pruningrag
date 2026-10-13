@@ -54,17 +54,26 @@ The source trace is private local development data; it is not committed. Task
 construction strips reference answers, predictions and selected evidence before
 creating model messages. The public receipt contains hashes and counts only.
 
-## Pending execution and promotion
+## Completed execution; semantic review pending
 
 The isolated GPU worker, bundle isolation test and synthetic output reconstruction
-test are implemented. The full local suite passes 242 tests. The frozen bundle
-was submitted as private Kaggle kernel
-`ionrey/ace-qg2-a22c852d067f4ab8ad7b43804c946d2c`, version 1. The
-[submission receipt](../results/version1/query_graph_submission.json) records an
-authoritative RUNNING observation; it does not prove completion. Next, reconstruct
-all outputs, costs and spans, then bind an AI assessment to every exact output.
-Preserve capped, invalid and unresolved cases. Do not resubmit a live job because
-of an observation timeout.
+test are implemented. Private Kaggle kernel
+`ionrey/ace-qg2-a22c852d067f4ab8ad7b43804c946d2c`, version 1, completed.
+The [execution proof](../results/version1/query_graph_verification.json) reconstructs
+all fifty sequences and thirteen invocations: 65,978 input tokens, 66,326 padded
+inputs, 11,600 output tokens, 3,405 maximum reserve, 562.72 seconds generation and
+11.00 seconds model loading. No requests were skipped or capped. The submitted
+bundle, canonical grammar, decoded tokens, spans, progress and costs match.
+The [submission receipt](../results/version1/query_graph_submission.json) preserves
+its original RUNNING observation; completion is proved separately.
+
+Forty-eight graphs remain unresolved; two are structurally linked (indices 21 and
+35). Initial inspection shows that the first drops top-ten cardinality and ranks
+a query-time anchor with SPY as candidate. The second treats the unresolved latest
+president description as a context constant and misbinds the spouse relation.
+These are examples of semantic errors despite structural linking, not evidence
+of improved answer quality. Exact-output AI assessment of all fifty is next;
+zero completed bound v2 review records are claimed at this checkpoint.
 
 Neither the grammar nor its validator verifies complete question interpretation,
 source support, units compatible for computation, factual truth or answer quality.

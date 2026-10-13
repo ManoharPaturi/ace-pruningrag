@@ -49,11 +49,36 @@ SOURCES = {
     "requirements_models": "results/version1/requirements_model_comparison.json",
     "inventory_roles": "results/version1/inventory_role_review_progress.json",
     "requirements_contract": "results/version1/requirements_contract_diagnostic.json",
+    "query_graph_execution": "results/version1/query_graph_verification.json",
+    "query_graph_preflight": "results/version1/query_graph_preflight.json",
+    "query_graph_submission": "results/version1/query_graph_submission.json",
 }
 
 
 def render(root):
     data = {key: read_json(root / name) for key, name in SOURCES.items()}
+    graph_run, graph_preflight, graph_submission = (
+        data[k]
+        for k in ("query_graph_execution", "query_graph_preflight", "query_graph_submission")
+    )
+    if (
+        graph_run["status"] != "query_graph_spans_decode_and_costs_reconstructed"
+        or graph_run["tasks"] != 50
+        or graph_run["extraction_sequences"] != 50
+        or graph_run["generate_invocations"] != 13
+        or graph_run["validation_counts"]
+        != {"unresolved_requirement_graph": 48, "linked_requirement_graph": 2}
+        or graph_run["tasks_sha256"] != graph_submission["tasks_sha256"]
+        or graph_run["source_trace_sha256"] != graph_preflight["source_trace_sha256"]
+        or graph_run["input_tokens"] != graph_preflight["input_tokens"]
+        or graph_run["contract_sha256"] != graph_preflight["contract_sha256"]
+        or graph_run["answer_acceptance_enabled"] is not False
+        or any(
+            sha256_file(root / name) != digest
+            for name, digest in graph_run["contract_sha256"].items()
+        )
+    ):
+        raise ValueError("typed graph execution/preflight/contract bindings differ")
     requirements_run, requirements_reviews, movie_evidence = (
         data[k] for k in ("requirements_execution", "requirements_reviews", "movie_evidence")
     )
@@ -490,6 +515,19 @@ rejected inventories lacked assessment at the initial valid-only checkpoint.
 Parsed frames total 66 query
 and 1,551 source frames; only 21 frames are structurally admitted. Neither grammar
 nor a proposed_complete status establishes exhaustive requirements or role quality.
+
+The [typed graph v2 diagnostic](QUERY_GRAPH_V2.md) completed and reconstructs all
+fifty sequences in thirteen invocations: {graph_run["input_tokens"]:,} input tokens,
+{graph_run["padded_input_tokens"]:,} padded inputs, {graph_run["output_tokens"]:,}
+outputs and {graph_run["maximum_reserved_request_tokens"]:,} maximum reserved tokens.
+Generation took {graph_run["timing"]["generation_seconds"]:.2f} seconds; model loading
+took {graph_run["timing"]["model_loading_seconds"]:.2f} seconds. Prompt, schema and
+grammar changed together, while the 3B model and decoding defaults remain pinned.
+Forty-eight graphs are unresolved and two are structurally linked. All fifty
+exact-output semantic assessments remain to be bound. Initial inspection of both
+linked graphs finds query-time ranking and unresolved-president-as-constant errors;
+linking is not semantic completeness. No semantic improvement or answer acceptance
+is established. The seen development cohort cannot supply fresh accuracy.
 
 The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 111 tasks:
 all fifty query inventories and 61 source inventories, including ninety rejected

@@ -188,6 +188,19 @@ Parsed frames total 66 query
 and 1,551 source frames; only 21 frames are structurally admitted. Neither grammar
 nor a proposed_complete status establishes exhaustive requirements or role quality.
 
+The [typed graph v2 diagnostic](QUERY_GRAPH_V2.md) completed and reconstructs all
+fifty sequences in thirteen invocations: 65,978 input tokens,
+66,326 padded inputs, 11,600
+outputs and 3,405 maximum reserved tokens.
+Generation took 562.72 seconds; model loading
+took 11.00 seconds. Prompt, schema and
+grammar changed together, while the 3B model and decoding defaults remain pinned.
+Forty-eight graphs are unresolved and two are structurally linked. All fifty
+exact-output semantic assessments remain to be bound. Initial inspection of both
+linked graphs finds query-time ranking and unresolved-president-as-constant errors;
+linking is not semantic completeness. No semantic improvement or answer acceptance
+is established. The seen development cohort cannot supply fresh accuracy.
+
 The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 111 tasks:
 all fifty query inventories and 61 source inventories, including ninety rejected
 outputs. The 111 task records contain 107 distinct input/proposal pairs and 353

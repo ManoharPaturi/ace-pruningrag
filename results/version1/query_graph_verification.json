@@ -1,0 +1,61 @@
+{
+  "status": "query_graph_spans_decode_and_costs_reconstructed",
+  "protocol_id": "query_graph_v2",
+  "extractor_repository": "Qwen/Qwen2.5-3B-Instruct",
+  "extractor_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "decoding_defaults_sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+  "contract_sha256": {
+    "src/ace_pruningrag/query_graph.py": "11832c67081f3e7cd83ee1f17c8489d30778abd14c8111d5914638467d5500b3",
+    "src/ace_pruningrag/query_graph_decoder.py": "82484b485ea294598d7e8d0ba28113b0037008c5a9459c0ddf26dafa94e14997",
+    "src/ace_pruningrag/query_graph_prompt.py": "157d079d1a43eeece773de6f5f3b44a34b9dd002b26117b673f9d17e819ee15b"
+  },
+  "tasks": 50,
+  "extraction_sequences": 50,
+  "generate_invocations": 13,
+  "unextracted": 0,
+  "input_tokens": 65978,
+  "padded_input_tokens": 66326,
+  "output_tokens": 11600,
+  "maximum_reserved_request_tokens": 3405,
+  "trace_sha256": "f341c1bc721e7a3124f528c2a00511314f984fd33f848cd0b804452fbd47b3b7",
+  "tasks_sha256": "c2541e01762cf3c735b88329a3282cfccbb2c201ba50bd481597295f32569165",
+  "validation_counts": {
+    "unresolved_requirement_graph": 48,
+    "linked_requirement_graph": 2
+  },
+  "actual_new_answer_generation_calls": 0,
+  "answer_acceptance_enabled": false,
+  "semantic_requirements_verification": false,
+  "eos_token_ids": [
+    151643,
+    151645
+  ],
+  "scope": "Blinded typed query graph v2; changed prompt/schema/grammar with pinned 3B and control decoding",
+  "constraint_dependency_versions": {
+    "lm-format-enforcer": "0.11.3",
+    "interegular": "0.3.3",
+    "pydantic": "2.14.1",
+    "pydantic-core": "2.50.1",
+    "annotated-types": "0.8.0",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.4",
+    "packaging": "26.3",
+    "pyyaml": "6.0.3"
+  },
+  "format_enforcement": "ordered_JSON_typed_query_graph_trie",
+  "generator_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "semantic_requirement_accuracy": null,
+  "complete_requirement_coverage": null,
+  "neural_generation_independently_recomputed": false,
+  "timing": {
+    "generation_seconds": 562.722496269,
+    "model_loading_seconds": 11.003819066000005
+  },
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "dtype": "float32"
+  }
+}
