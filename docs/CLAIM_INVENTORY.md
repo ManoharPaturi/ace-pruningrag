@@ -3,8 +3,8 @@
 The completed six-field extraction audit shows that one tuple per excerpt loses
 comparison operands and mixes actors, events, dates and units. The new
 `src/ace_pruningrag/claim_inventory.py` provides a plural proposal representation
-and separate query/source prompts. A separately versioned GPU inventory decoder is now submitted; its final outputs
-and costs remain unverified. The completed six-field controls remain unchanged.
+and separate query/source prompts. The separately versioned GPU inventory decoder has completed; all outputs and
+costs reconstruct. Its poor binding/role results below are retained. The completed six-field controls remain unchanged.
 
 Each inventory contains at most 12 frames. Every frame has a supporting statement,
 subject, relation, object, value, unit, event time, observation time, qualification
@@ -34,15 +34,15 @@ Units remain proposed spans; it does not yet prove that a span is a measurement 
 Six regression tests cover multi-event date isolation, directed role representation,
 comparison operands, query answer exclusion and label blinding, qualifications,
 observation dates, duplicates/caps, hallucinations, combining-mark truncation,
-repeated text and question warnings. All 200 local tests pass with demo/constraints.
+repeated text and question warnings. All 208 local tests pass with demo/constraints.
 
 ```sh
 uv run --locked --no-editable --extra demo --extra constraints \
   pytest -q tests/test_claim_inventory.py
 ```
 
-The versioned inventory decoder is now submitted with counted-call limits and full
-prompt budgets. Its completion, output reconstruction and real role review are next. Keep the completed six-field runs as controls. Audit the real extracted
+The versioned inventory decoder completed with counted calls and full prompt
+budgets. Reconstruction and valid-output role review are recorded below. Keep the completed six-field runs as controls. Audit the real extracted
 roles and completeness before composing support sets or integrating an acceptance
 gate. The inspected cohort is development data; fresh evaluation and independent
 labels remain separate requirements.
@@ -134,6 +134,41 @@ uv run --locked --no-editable --extra generation --extra constraints \
   --output results/version1/inventory_structural_audit.json
 ```
 
-The job is still queued at this checkpoint. No real inventory-audit result has
-been fabricated or substituted for the pending output collection. Source excerpts
-and proposed frames must be inspected together before any semantic conclusion.
+That tooling checkpoint preceded completion. The actual audit and valid-output
+review below now supersede the pending status. Rejected inventories still lack
+full semantic assessment.
+
+
+## Completed v1 inventory result
+
+[Execution proof](../results/version1/inventory_verification.json) reconstructs 386
+sequences / 97 invocations, 174,027 input tokens (198,260 padded), 176,078 output
+tokens and 2,907 maximum reserved tokens. Generation took 7,848.47 seconds and loading
+6.69 seconds. Token filtering during generation is included; constraint preparation
+and other setup are excluded. Changed prompts/output limits prevent a same-budget
+improvement claim against the earlier single-frame controls. No new baseline answers.
+
+[All-task structural audit](../results/version1/inventory_structural_audit.json)
+records 21 valid inventories, 361 binding/duplicate rejections and four capped JSON
+failures. Queries contain 66 parsed frames and sources 1,551; only 20 query frames and
+one source frame are structurally admitted. Partial prefixes of capped outputs are
+not parsed/admitted, which does not mean no attempted frames were generated.
+Source inventories include 82 proposed_complete labels; none establishes completeness.
+
+[Bound AI review](../results/version1/inventory_valid_review_progress.json) covers
+all 21 valid inventories. All 20 valid query inventories retain misbound roles, dates,
+attribution or incomplete requirements. The single valid source is a conditional
+L-shaped-room example with different operands from the question and full text in
+time/attribution fields. These are qualitative judgments, not calibrated accuracy.
+The 365 rejected inventories remain outside full semantic review, though their
+structural issues, decoded IDs, inputs and costs are reconstructed. All acceptance
+and independent-review flags remain false.
+
+The global span grammar does not constrain roles to the chosen statement, so the
+local validator reveals widespread violations. A separately versioned next grammar
+should bind role choices to their statement and retain legitimately explicit source
+context for attribution/observation metadata. This cannot itself establish semantic
+roles. Query known constants must also be distinct from unknown answer variables: a
+blanket query value-null rule cannot naturally represent a known 14-award constraint.
+Do not relax validation or reuse invalid inventories merely to increase pass counts.
+Preserve this failed control and measure each representation/model change separately.

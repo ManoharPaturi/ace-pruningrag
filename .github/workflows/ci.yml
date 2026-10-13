@@ -54,6 +54,8 @@ jobs:
       - run: uv run --locked --no-editable python scripts/fetch_movie_assets.py --output runs/ci/movie-assets.json
       - run: uv run --locked --no-editable python scripts/build_movie_index.py --output data/crag/movie/snapshot.sqlite --manifest runs/ci/movie-index.json
       - run: uv run --locked --no-editable python scripts/movie_snapshot_smoke.py --index data/crag/movie/snapshot.sqlite --manifest runs/ci/movie-index.json --output runs/ci/movie-http.json
+      - run: uv run --locked --no-editable python scripts/build_movie_search.py --records data/crag/movie/snapshot.sqlite --records-manifest runs/ci/movie-index.json --output data/crag/movie/names.sqlite --manifest runs/ci/movie-names.json
+      - run: uv run --locked --no-editable python scripts/movie_name_smoke.py --records data/crag/movie/snapshot.sqlite --records-manifest runs/ci/movie-index.json --names data/crag/movie/names.sqlite --names-manifest runs/ci/movie-names.json --output runs/ci/movie-name-http.json
       - uses: actions/upload-artifact@v7.0.2
         with:
           name: phase1-real-data-smoke

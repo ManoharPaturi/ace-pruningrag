@@ -173,10 +173,19 @@ fits all 386 real tasks, totaling 174,027 input tokens with
 2,907 maximum reserved request tokens.
 The changed prompt and expanded 2,048-output / 4,096-request caps are separate
 experimental factors, not a matched-budget comparison to the six-field decoder.
-Private kernel `ionrey/ace-inventory-11f01825608146b2b9e913690b24bb45`, version 1, was submitted
-and observed QUEUED. Its final
-outputs, costs and semantic role/completeness assessments remain unverified. Neither
-closed grammar nor a proposed_complete status establishes exhaustive requirements.
+Private kernel `ionrey/ace-inventory-11f01825608146b2b9e913690b24bb45`, version 1, completed;
+its initial QUEUED observation is historical. Reconstruction verifies 386 sequences /
+97 generate invocations, 174,027 input tokens (198,260 padded),
+176,078 output tokens and 2,907 maximum reserved tokens.
+The generation interval was 7848.47 seconds,
+including token filtering during generation and excluding constraint preparation.
+Structural outcomes are 21 valid inventories, 361 rejected inventories and four
+retained capped JSON failures. Twenty valid queries remain partial/misbound under
+qualitative AI review; the one valid source is an unrelated conditional geometry
+example with role errors. All 21 valid inventories are review-bound, while 365
+rejected inventories lack full semantic assessment. Parsed frames total 66 query
+and 1,551 source frames; only 21 frames are structurally admitted. Neither grammar
+nor a proposed_complete status establishes exhaustive requirements or role quality.
 
 The original [movie/person/year snapshot](MOVIE_SNAPSHOT.md) is now restored separately:
 three checksum-verified files totaling 235,448,639 bytes. A disk-backed
@@ -184,11 +193,18 @@ index covers 64,283 movie,
 373,608 person and 35
 year records. It retains 11 repeated person-ID
 records with the original last-record-wins lookup behavior. Actual movie/person ID,
-year and missing-ID loopback responses match original snapshot records. Name search
-is not implemented. The original endpoint's 1990–2021 year gate is retained although
+year and missing-ID loopback responses match original snapshot records. The original
+endpoint's 1990–2021 year gate is retained although
 the stored snapshot includes years through 2024. This validates three structured
 lookup paths; web/API selection, source-only controls and cross-source benefit remain
 unverified. No generator or judge runs as part of this restoration.
+
+A separate disk-backed BM25 name index now implements movie/person name requests.
+Returned scores and ranked score sequences match the pinned reference in seven real
+probes, and HTTP records match source rows. Ranked IDs differ in five probes because
+the explicit source-row tie policy differs from NumPy ordering at equal scores.
+This restores name retrieval with a disclosed ordering adaptation; exact original
+ranking, semantic entity identity and cross-source benefit remain unverified.
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible

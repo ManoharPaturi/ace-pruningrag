@@ -23,7 +23,7 @@ demo = [
 ace-rag = "ace_pruningrag.cli:main"
 
 [dependency-groups]
-dev = ["pytest>=8.3,<10", "ruff>=0.9,<1"]
+dev = ["pytest>=8.3,<10", "ruff>=0.9,<1", "rank-bm25==0.2.2"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/ace_pruningrag"]

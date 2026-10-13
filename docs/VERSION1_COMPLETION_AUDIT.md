@@ -348,3 +348,19 @@ evidence integration, genuine source-only controls, calibrated routing and seman
 quality remain unverified; no answer-generation outcome is added. The same inventory
 GPU kernel is still RUNNING and must be collected/reconstructed before its role
 and completeness results are assessed.
+
+
+### Inventory execution complete with a retained negative result
+
+All 386 inventory sequences reconstruct with actual costs. The result is 21 valid
+inventories, 361 rejected inventories and four capped failures. All 21 valid outputs
+have bound qualitative AI reviews: 20 partial/misbound queries and one unrelated
+conditional geometry example with role errors. The 365 rejected outputs remain
+outside full semantic review. This does not establish general extraction/support
+or close independent evaluation. All raw outputs and failed cases remain intact.
+
+Movie/person BM25 name search now has a separate disk index and actual reference/HTTP
+checks. Returned score sequences agree in seven probes; five ranked-ID sequences
+differ at equal scores under the explicit tie policy. Full original ranking and
+semantic identity remain unverified. All 208 local tests pass. Required data-smoke
+CI now repeats name index construction and reference/HTTP checks.

@@ -24,10 +24,16 @@
     "results/version1/inventory_submission.json": "f51a33ec4347d2177a9f41ddb016b9db8059490ccddc2ccb7d77226bcc695e2c",
     "results/phase1/movie_asset_verification.json": "121bed5a1db50d420aa9911a34b6b026bd3b6f7550ebc73de919d940ee1dfc53",
     "results/phase1/movie_index.json": "603af49623f7e2fcbabbc813238f5284924888216b5e2ed83df1d392e276ca73",
-    "results/phase1/movie_snapshot_smoke.json": "d38b91fd01b5508c8a8f3063a64e1fccbf77f5988ffe38261910057704ddb1eb"
+    "results/phase1/movie_snapshot_smoke.json": "d38b91fd01b5508c8a8f3063a64e1fccbf77f5988ffe38261910057704ddb1eb",
+    "results/phase1/movie_name_index.json": "acc4ffa45725faabcfdea3903dbb1a9c5a5406109bd7ccf187a64ee6e0f8e010",
+    "results/phase1/movie_name_smoke.json": "99cc3db31a5e29a3777b810d8204b8107a4f1558acad7f590087f4d7f54fa448",
+    "results/phase1/movie_name_score_sequences.json": "37453e8014036b39e35d0d1d18608d0289cd4d7f1215c5f8e1f35eade86a4329",
+    "results/version1/inventory_verification.json": "d7d38609aaadc4bb5cba2cee11f11f3c0cf4a2d12420a2ba85953c63cddde96a",
+    "results/version1/inventory_structural_audit.json": "f1cdc89a444b4d10a6c229139c240ac3d96e1130142db01688468dfb3dc5bcff",
+    "results/version1/inventory_valid_review_progress.json": "e6f6114852da7ea643904292fecc84d3dc2d47660fe03789982b2c83ccda74d1"
   },
-  "renderer_sha256": "7272a412c407edd63c0b4631c8e4326435303f17d2bb97b9cadd6c6b70090989",
-  "report_sha256": "6e8af7f707703c753450b441f6a21c3f0806991ad9787f5e4bd11358149e3ed0",
+  "renderer_sha256": "91ff19e19621c00b355aef6e3bfdd24e2a25b84fe87dec03941fc1b01c8a5f3f",
+  "report_sha256": "1472b82f546fe7f19d6d4ee32c7c272b7a69d3792a01f0131a2e7c986d0a65f2",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

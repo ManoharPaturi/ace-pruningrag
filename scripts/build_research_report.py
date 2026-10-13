@@ -30,6 +30,12 @@ SOURCES = {
     "movie_assets": "results/phase1/movie_asset_verification.json",
     "movie_index": "results/phase1/movie_index.json",
     "movie_http": "results/phase1/movie_snapshot_smoke.json",
+    "movie_names": "results/phase1/movie_name_index.json",
+    "movie_name_http": "results/phase1/movie_name_smoke.json",
+    "movie_name_sequences": "results/phase1/movie_name_score_sequences.json",
+    "inventory_execution": "results/version1/inventory_verification.json",
+    "inventory_audit": "results/version1/inventory_structural_audit.json",
+    "inventory_valid_reviews": "results/version1/inventory_valid_review_progress.json",
 }
 
 
@@ -88,6 +94,30 @@ def render(root):
     ):
         raise ValueError("movie asset/index/HTTP bindings differ")
     inventory = data["inventory_preflight"]
+    inventory_run, inventory_audit, inventory_reviews = (
+        data[k] for k in ("inventory_execution", "inventory_audit", "inventory_valid_reviews")
+    )
+    if (
+        inventory_run["status"] != "inventory_spans_decode_and_costs_reconstructed"
+        or inventory_run["trace_sha256"] != inventory_audit["extraction_trace_sha256"]
+        or inventory_run["trace_sha256"] != inventory_reviews["extraction_trace_sha256"]
+        or inventory_reviews["structural_audit_sha256"]
+        != sha256_file(root / SOURCES["inventory_audit"])
+        or inventory_reviews["execution_verification_sha256"]
+        != sha256_file(root / SOURCES["inventory_execution"])
+        or inventory_reviews["AI_reviewed_valid_inventories"] != 21
+        or inventory_reviews["full_semantic_review_complete"] is not False
+        or inventory_reviews["answer_acceptance_enabled"] is not False
+    ):
+        raise ValueError("inventory completed-execution/review bindings differ")
+    name_sequences = data["movie_name_sequences"]
+    if (
+        name_sequences["name_manifest_sha256"] != sha256_file(root / SOURCES["movie_names"])
+        or name_sequences["source_index_sha256"] != movie_index["index_sha256"]
+        or not all(p["ranked_score_sequence_matches_reference"] for p in name_sequences["probes"])
+        or name_sequences["semantic_identity_verified"] is not False
+    ):
+        raise ValueError("movie-name score/record bindings differ")
     if (
         inventory["tasks"] != 386
         or inventory["all_tasks_fit"] is not True
@@ -353,10 +383,19 @@ fits all 386 real tasks, totaling {inventory["input_tokens"]:,} input tokens wit
 {inventory["maximum_reserved_request_tokens"]:,} maximum reserved request tokens.
 The changed prompt and expanded 2,048-output / 4,096-request caps are separate
 experimental factors, not a matched-budget comparison to the six-field decoder.
-Private kernel `{data["inventory_submission"]["kernel_id"]}`, version 1, was submitted
-and observed {data["inventory_submission"]["provider_status_last_observed"]}. Its final
-outputs, costs and semantic role/completeness assessments remain unverified. Neither
-closed grammar nor a proposed_complete status establishes exhaustive requirements.
+Private kernel `{data["inventory_submission"]["kernel_id"]}`, version 1, completed;
+its initial QUEUED observation is historical. Reconstruction verifies 386 sequences /
+97 generate invocations, 174,027 input tokens (198,260 padded),
+{inventory_run["output_tokens"]:,} output tokens and 2,907 maximum reserved tokens.
+The generation interval was {inventory_run["timing"]["generation_seconds"]:.2f} seconds,
+including token filtering during generation and excluding constraint preparation.
+Structural outcomes are 21 valid inventories, 361 rejected inventories and four
+retained capped JSON failures. Twenty valid queries remain partial/misbound under
+qualitative AI review; the one valid source is an unrelated conditional geometry
+example with role errors. All 21 valid inventories are review-bound, while 365
+rejected inventories lack full semantic assessment. Parsed frames total 66 query
+and 1,551 source frames; only 21 frames are structurally admitted. Neither grammar
+nor a proposed_complete status establishes exhaustive requirements or role quality.
 
 The original [movie/person/year snapshot](MOVIE_SNAPSHOT.md) is now restored separately:
 three checksum-verified files totaling {data["movie_assets"]["bytes"]:,} bytes. A disk-backed
@@ -364,11 +403,18 @@ index covers {movie_index["record_counts"]["movie"]:,} movie,
 {movie_index["record_counts"]["person"]:,} person and {movie_index["record_counts"]["year"]}
 year records. It retains {movie_index["repeated_id_records"]["person"]} repeated person-ID
 records with the original last-record-wins lookup behavior. Actual movie/person ID,
-year and missing-ID loopback responses match original snapshot records. Name search
-is not implemented. The original endpoint's 1990–2021 year gate is retained although
+year and missing-ID loopback responses match original snapshot records. The original
+endpoint's 1990–2021 year gate is retained although
 the stored snapshot includes years through 2024. This validates three structured
 lookup paths; web/API selection, source-only controls and cross-source benefit remain
 unverified. No generator or judge runs as part of this restoration.
+
+A separate disk-backed BM25 name index now implements movie/person name requests.
+Returned scores and ranked score sequences match the pinned reference in seven real
+probes, and HTTP records match source rows. Ranked IDs differ in five probes because
+the explicit source-row tie policy differs from NumPy ordering at equal scores.
+This restores name retrieval with a disclosed ordering adaptation; exact original
+ranking, semantic entity identity and cross-source benefit remain unverified.
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible

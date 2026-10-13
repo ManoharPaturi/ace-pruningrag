@@ -224,3 +224,30 @@ with six regression tests. Inventory GPU generation, role/completeness measureme
 and support composition remain next. Preserve the completed single-frame controls
 and measure changed prompts/budgets as explicit experimental factors. Do not infer
 complete extraction from a proposed_complete output or acceptance from exact spans.
+
+
+### Priorities from the completed plural-inventory control
+
+The v1 inventory run is a retained negative result: 386 sequences, 176,078 output
+tokens and 21 structurally valid inventories. All 21 valid outputs show role or
+requirement problems in qualitative AI review; 365 rejected outputs have not had
+full semantic assessment. Do not turn these counts into calibrated accuracy.
+
+1. Separate known query constraints from unknown answer variables. Explicit numbers,
+   comparison operands, cardinality and eligibility may be copied query facts without
+   being guessed answers. Represent their logical relationships rather than forcing
+   every query value to null or burying them in relation prose.
+2. Version statement-aware generation separately, with provenance-bound context
+   metadata where attribution/observation dates legitimately lie outside a clause.
+   Preserve strict binding and handle duplicate frames without blocking valid
+   multiple operands in one statement. Typed/date-looking syntax is not role truth.
+3. Evaluate an extractor/prompt change only with fixed answer-generator controls and
+   explicit extraction costs. Gate query requirements before spending on all source
+   frames; keep the full source/evaluation objective intact. Stronger models must be
+   separate measured factors, with no assumed semantic improvement.
+4. Integrate the restored ID/year and BM25 name paths into bounded API evidence.
+   Retain the changed tie policy, unknown identities, snapshot time restrictions and
+   source-only controls. Actual lookup success is not a cross-source benefit result.
+
+Independent labels, fresh entity/event-audited cases, full ablations and final
+evidence-backed reporting remain required.
