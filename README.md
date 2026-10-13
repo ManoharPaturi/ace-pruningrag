@@ -10,7 +10,7 @@ Start with the [executed research-status report](docs/RESEARCH_STATUS_REPORT.md)
 
 The revised roadmap was approved on 9 October 2026. See [the review](ROADMAP_REVIEW.md), [original roadmap](ACE_PruningRAG_5_Phase_Research_Roadmap.pdf), [evaluation protocol](docs/EVALUATION_PROTOCOL.md), and [reproduction report](docs/REPRODUCTION_REPORT.md).
 
-Current engineering checks: 192 tests pass with the `demo` and `constraints` extras; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test`, `data-smoke`, and `finance-smoke` checks.
+Current engineering checks: 197 tests pass with the `demo` and `constraints` extras; the pinned 2,706-record dataset validates; the 25-query retrieval smoke passes locally and on dual T4 Kaggle GPUs. Full PruningRAG reproduction remains blocked. Implementation changes go through PRs with required `test`, `data-smoke`, and `finance-smoke` checks.
 
 The current branch includes 250 verified five-selector cohort answers, source-bound AI
 assessments of all 444 admitted answer records, bounded asynchronous live GPU generation,

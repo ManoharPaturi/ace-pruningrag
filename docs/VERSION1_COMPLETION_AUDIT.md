@@ -308,3 +308,14 @@ now implemented with statement-local exact bindings, multiple frames, separate r
 and date fields, query-answer exclusion and explicit qualification/attribution.
 Six regression tests pass; the local suite totals 192. GPU inventory extraction and
 role/support evaluation remain next.
+
+
+### Plural inventory decoder submitted after real tokenizer preflight
+
+The [inventory protocol](CLAIM_INVENTORY.md) now has a closed exact-span/list
+grammar, bounded worker and independent reconstruction path. All 386 real tasks
+fit the pinned-tokenizer preflight. A single private version 1 kernel was submitted
+and observed QUEUED; final execution and role/completeness review remain pending.
+The changed prompt and expanded 2,048-output/4,096-request limits are explicit
+experimental factors, not a same-budget control. The local suite totals 197 tests.
+No answer generation or semantic acceptance is enabled by this diagnostic.

@@ -137,3 +137,72 @@ def validate(task, raw):
         "issues": issues,
         "warnings": warnings,
     }
+
+
+def character_parser(task):
+    """Closed JSON/list grammar with exact source strings, not semantic role inference."""
+    from lmformatenforcer import CharacterLevelParser, SequenceParser, StringParser, UnionParser
+
+    terminal = object()
+
+    def trie(values):
+        root = {}
+        for value in values:
+            node = root
+            for char in value:
+                node = node.setdefault(char, {})
+            node[terminal] = True
+        return root
+
+    class Choices(CharacterLevelParser):
+        def __init__(self, node):
+            super().__init__()
+            self.node = node
+
+        def get_allowed_characters(self):
+            return "".join(c for c in self.node if c is not terminal)
+
+        def add_character(self, char):
+            if char not in self.node:
+                raise ValueError("outside inventory grammar")
+            return Choices(self.node[char])
+
+        def can_end(self):
+            return terminal in self.node
+
+        def cache_key(self):
+            return ("inventory_choice", id(self.node))
+
+    spans = [json.dumps(s, ensure_ascii=False) for s in permitted_spans(task["text"])]
+    statement = Choices(trie(spans))
+    fields = Choices(trie(["null", *spans]))
+    frame_parts = []
+    for index, key in enumerate(FIELDS):
+        frame_parts.append(StringParser(("{" if index == 0 else ",") + json.dumps(key) + ":"))
+        frame_parts.append(
+            statement
+            if key == "statement"
+            else StringParser("null")
+            if task["kind"] == "query" and key == "value"
+            else fields
+        )
+    frame_parts.append(StringParser("}"))
+    frame = SequenceParser(frame_parts)
+    arrays = [StringParser("[]")]
+    if spans:
+        for count in range(1, MAX_FRAMES + 1):
+            parts = [StringParser("[")]
+            for index in range(count):
+                if index:
+                    parts.append(StringParser(","))
+                parts.append(frame)
+            arrays.append(SequenceParser([*parts, StringParser("]")]))
+    return SequenceParser(
+        [
+            StringParser('{"inventory_status":'),
+            Choices(trie([json.dumps(s) for s in INVENTORY_STATES])),
+            StringParser(',"frames":'),
+            UnionParser(arrays),
+            StringParser("}"),
+        ]
+    )

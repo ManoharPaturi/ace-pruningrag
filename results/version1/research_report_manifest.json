@@ -19,10 +19,12 @@
     "results/version1/unicode_submission.json": "b5afbd6618e868752e8119f6df37a4e3c5ed981b1f6ed32755e94d04505c87d5",
     "results/version1/unicode_verification.json": "4eabe8d6c040c063ccfb47a2f1060b03bea64096227b53121129d4094cba7813",
     "results/version1/unicode_control_comparison.json": "4a3d085c6ce7f774750869dbd891fa9f2e9cf85300ad3ee1ddd18031eea0f43c",
-    "results/version1/unicode_review_progress.json": "5106a9b038c78959e9f1dcc7ee2dc3686416309baf3dff6251c519df6cf0f0d6"
+    "results/version1/unicode_review_progress.json": "5106a9b038c78959e9f1dcc7ee2dc3686416309baf3dff6251c519df6cf0f0d6",
+    "results/version1/inventory_preflight.json": "b884a4c694931b46a61bca5d44fd94d10f06869471baa2d4ddceef84ff2582a5",
+    "results/version1/inventory_submission.json": "f51a33ec4347d2177a9f41ddb016b9db8059490ccddc2ccb7d77226bcc695e2c"
   },
-  "renderer_sha256": "963deb0067054b7ccb83b367e98f46b52f3497fb4058aba27c64f8efcb438dc0",
-  "report_sha256": "c2eafcd8df39c1ddba80cb4ec277c00a241a40f2fc8329d9e71d23f0069b33c6",
+  "renderer_sha256": "0711c3048b68c9af2a705cd6fa60585e7fe08c09f60cd94f77a9fed112790363",
+  "report_sha256": "68353152cc292a3cba6a2c9e2319d1f43deae66b657088273dafa077de03761a",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

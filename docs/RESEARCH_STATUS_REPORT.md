@@ -167,6 +167,17 @@ fresh changed-proposal review. Structural outcomes remain 385 valid and one capp
 invalid JSON. This executes and verifies the lexical correction; it does not establish
 semantic role improvement, independent accuracy or automatic acceptance.
 
+The plural [claim-inventory decoder](CLAIM_INVENTORY.md) now has a closed JSON/list
+grammar, private worker and independent reconstruction path. Pinned-tokenizer preflight
+fits all 386 real tasks, totaling 174,027 input tokens with
+2,907 maximum reserved request tokens.
+The changed prompt and expanded 2,048-output / 4,096-request caps are separate
+experimental factors, not a matched-budget comparison to the six-field decoder.
+Private kernel `ionrey/ace-inventory-11f01825608146b2b9e913690b24bb45`, version 1, was submitted
+and observed QUEUED. Its final
+outputs, costs and semantic role/completeness assessments remain unverified. Neither
+closed grammar nor a proposed_complete status establishes exhaustive requirements.
+
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible
 units; it is not silently applied to arbitrary room questions. Across all 444 admitted

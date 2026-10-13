@@ -1,0 +1,17 @@
+{
+  "scope": "Real blinded-task tokenizer preflight; no model execution",
+  "tasks": 386,
+  "query_tasks": 50,
+  "source_tasks": 336,
+  "input_tokens": 174027,
+  "maximum_input_tokens": 859,
+  "maximum_reserved_request_tokens": 2907,
+  "output_token_cap": 2048,
+  "max_total_reserved_tokens": 1581056,
+  "max_generate_invocations": 97,
+  "actual_model_calls": 0,
+  "all_tasks_fit": true,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "prompt_policy_sha256": "0c9627fb44754c9bb41ab9ab191ae25e02455a4a43742c3e6c8016d23e0c5e9a",
+  "generator_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+}

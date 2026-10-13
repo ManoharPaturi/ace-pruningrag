@@ -25,6 +25,8 @@ SOURCES = {
     "unicode_execution": "results/version1/unicode_verification.json",
     "unicode_comparison": "results/version1/unicode_control_comparison.json",
     "unicode_reviews": "results/version1/unicode_review_progress.json",
+    "inventory_preflight": "results/version1/inventory_preflight.json",
+    "inventory_submission": "results/version1/inventory_submission.json",
 }
 
 
@@ -72,6 +74,18 @@ def render(root):
         raise ValueError("NLI disagreement count differs")
     constrained = data["constrained"]
     progress = data["constrained_progress"]
+    inventory = data["inventory_preflight"]
+    if (
+        inventory["tasks"] != 386
+        or inventory["all_tasks_fit"] is not True
+        or inventory["actual_model_calls"] != 0
+        or inventory["source_trace_sha256"] != progress["source_trace_sha256"]
+        or inventory["prompt_policy_sha256"]
+        != sha256_file(root / "src/ace_pruningrag/claim_inventory.py")
+        or data["inventory_submission"]["preflight_sha256"]
+        != sha256_file(root / SOURCES["inventory_preflight"])
+    ):
+        raise ValueError("inventory prompt/preflight/submission bindings differ")
     unicode_run, unicode_compare, unicode_reviews = (
         data[k] for k in ("unicode_execution", "unicode_comparison", "unicode_reviews")
     )
@@ -319,6 +333,17 @@ All 386 tasks have bound assessments: 385 exact-input/proposal reviews reused an
 fresh changed-proposal review. Structural outcomes remain 385 valid and one capped
 invalid JSON. This executes and verifies the lexical correction; it does not establish
 semantic role improvement, independent accuracy or automatic acceptance.
+
+The plural [claim-inventory decoder](CLAIM_INVENTORY.md) now has a closed JSON/list
+grammar, private worker and independent reconstruction path. Pinned-tokenizer preflight
+fits all 386 real tasks, totaling {inventory["input_tokens"]:,} input tokens with
+{inventory["maximum_reserved_request_tokens"]:,} maximum reserved request tokens.
+The changed prompt and expanded 2,048-output / 4,096-request caps are separate
+experimental factors, not a matched-budget comparison to the six-field decoder.
+Private kernel `{data["inventory_submission"]["kernel_id"]}`, version 1, was submitted
+and observed {data["inventory_submission"]["provider_status_last_observed"]}. Its final
+outputs, costs and semantic role/completeness assessments remain unverified. Neither
+closed grammar nor a proposed_complete status establishes exhaustive requirements.
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible
