@@ -24,7 +24,7 @@ All methods use the same upper budget and shared candidates; they need not consu
 
 ## Source review and scoring boundary
 
-The first batch covers three questions / 15 method responses; **235 responses remain**. See [review progress](../results/version1/cohort/ai_review_progress.json). Every assessment is bound to its actual prediction, prompt hash and selected evidence IDs; AI review remains separate from independent human review.
+Five batches now cover **19 questions / 95 method responses; 155 responses remain**. See [review progress](../results/version1/cohort/ai_review_progress.json). Every assessment is bound to its actual prediction, prompt hash and selected evidence IDs; AI review remains separate from independent human review.
 
 - Real Sociedad answers explicitly abstain because dated weekly evidence is missing. Four methods add an explanation around “I don't know,” which the frozen exact-string abstention metric does not recognize. AI review records an exact abstention span separately; the frozen experimental metric is preserved.
 - Lille's four substantive answers give a weekly total without dated fixture support. Season aggregates and undated examples are insufficient; actual truth remains unresolved rather than being inferred from the reference.
@@ -35,3 +35,21 @@ The audit validator checks binding and coverage, not independent semantic truth.
 ## Remaining gates
 
 Complete source review of all 250 actual responses, obtain independent review, assess genuine complete-support sets, audit entity/event overlap, and run cross-source/source-only controls. Groups/conflicts are disabled; query-term proxy coverage and exact optimization are not annotated support oracles. Keep these inspected questions out of a fresh version-2 held-out cohort.
+
+
+### Review expansion: 19-question checkpoint
+
+The current AI assessments comprise 21 correct under the recorded interpretation, 24 incorrect, 33 uncertain and 17 abstaining responses. These are method-level judgments across 19 shared questions, not 95 independent observations or validated accuracy. Binding validation covers all 95 exactly once.
+
+The expanded inspection identifies concrete failures:
+
+- All five selectors miss the rectangular room calculation: 17 × 66 = 1,122 m². Coverage prints an invalid equality; other methods give unrelated numbers.
+- Coverage answers five Murray Grand Slams despite its selected text stating three Slams and two Olympic golds; it also substitutes 2024 for Rodrigo's explicitly reported 2022 award. These are observed degradations, not discarded cases.
+- Top-K reverses Carolina's elimination into playoff qualification. Other methods return the old six-per-conference format instead of the requested current team identities.
+- Apple Music answers give an artist rather than a song and mix a 2023 global annual list with a dated US daily-chart question.
+- INDB's quoted capitalization lacks the question-date binding. Dam heights, production durations, sequel counts and actor film-role counts often lack a comparable second operand or an aligned counting definition.
+- A coverage lake excerpt loses its explicit name antecedent; the crocodile answer requires living-reptile scope, while top-K wrongly classifies a blue whale as a reptile. The publishing question retrieves Us Weekly ownership for In Touch Weekly, leaving requested historical ownership and its premise unresolved.
+
+The election question conflates winning the popular vote with winning the presidency. Several methods give an electoral total or an unsupported margin; top-K/joint reproduce an older selected popular-vote report. Final FEC totals imply a different margin (65,853,514 − 62,984,828 = 2,868,686). This is a reference/source conflict, not a reason to silently rewrite the frozen reference or supply external information to inference. [FEC 2016 results](https://www.fec.gov/documents/1889/federalelections2016.pdf).
+
+Full source review is still incomplete. External audit checks are recorded separately, and the original generation trace and independent-human gates remain unchanged.

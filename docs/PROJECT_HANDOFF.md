@@ -45,7 +45,7 @@ Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evalua
 - [ ] Audit entity/event overlap beyond URL/text checks.
 - [x] Add an explicit-ID five-selector runner and complete 250-request tokenizer preflight (PR #16, pending merge).
 - [ ] Complete GPU generation and verify all 250 outputs; review semantic outcomes separately.
-- [x] Finish the separate AI-assisted legacy audit: complete for all 50 questions / 150 responses; historical/regeneration audits also complete; queued cohort remains.
+- [x] Finish the separate AI-assisted legacy audit: complete for all 50 questions / 150 responses; historical/regeneration audits also complete; cohort source review remains.
 - [ ] Establish genuine cross-source necessity and compare source-only controls.
 - [ ] Extend reliability beyond the narrow historical-price contract.
 - [ ] Complete full baselines, ablations, cost/coverage reporting and statistical analysis.
@@ -385,4 +385,4 @@ The [FastAPI/Next.js explorer](DEMO.md) now builds and its browser flow is verif
 
 ### Completed cohort execution checkpoint — 13 October
 
-All 250 outputs from the existing version-1 kernel are downloaded and verified. Read [selector results](COHORT_SELECTOR_RESULTS.md) and `results/version1/cohort/verification.json`, `paired_metrics.json`, `gpu_summary.json`, and `ai_review_progress.json`. Fifteen responses are AI source-reviewed; 235 remain. The explorer now admits all 444 verified accepted response records, while semantic review coverage is 209 records (194 prior plus 15 cohort). Do not confuse trace verification with complete semantic review. Raw new artifacts are in `runs/kaggle/cohort-output-v1/cohort-pilot/generated/` and the first private review batch is `runs/version1/cohort-ai-audit-batch1.json`.
+All 250 outputs from the existing version-1 kernel are downloaded and verified. Read [selector results](COHORT_SELECTOR_RESULTS.md) and `results/version1/cohort/verification.json`, `paired_metrics.json`, `gpu_summary.json`, and `ai_review_progress.json`. Ninety-five responses across 19 questions are AI source-reviewed; 155 remain. The explorer now admits all 444 verified accepted response records, while AI semantic review coverage is 289 records (194 prior plus 95 cohort). Do not confuse trace verification with complete semantic review. Raw new artifacts are in `runs/kaggle/cohort-output-v1/cohort-pilot/generated/` and five private review batches are `runs/version1/cohort-ai-audit-batch1.json` through `cohort-ai-audit-batch5.json`.

@@ -70,3 +70,12 @@ Separate three failure states in the next verifier: wrong-date evidence, correct
 ### Cohort execution findings — 13 October
 
 The 250-response selector run is complete and structurally verified; full source review remains pending. Prioritize entity/role binding, time-window completeness and semantic abstention measurement. Coverage uses less context and abstains more often; compare complete support, substantive answer quality and total cost before promoting this behavior. The observed +1 literal match for several methods is not a demonstrated semantic improvement. Preserve the original metric and report reviewed prose abstentions separately.
+
+
+### Requirements from the 19-question cohort source audit
+
+Add a deterministic arithmetic check for explicit rectangular dimensions and other deliberately supported operations. Use operands from the query/evidence, record units and the calculation, and retain the unchanged generator answer as a control. A correct arithmetic tool must not be claimed as improved model reasoning or tested only on the already inspected room question.
+
+Treat negative predicates and answer type as required constraints: eliminated differs from qualified, artist differs from song, individual height differs from height difference, and Olympic medals differ from Grand Slam titles. Preserve complete entity names and antecedents when selecting short excerpts. Validate matched comparison operands and definitions before issuing a ranking.
+
+Do not promote coverage-only on cost reduction alone. Its inspected Grammy and Murray answers degrade despite directly relevant smaller evidence pools. Separate insufficient selected evidence, wrong computation, lost context and generator disregard of supplied facts in the final category analysis. The final method choice remains pending the complete source audit and independent evidence labels.
