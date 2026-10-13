@@ -24,7 +24,7 @@
 | Required CI | All three passed at `27b3f41` before this additional source-assessment update | Require all three again on each new head |
 | Constrained extraction review | All 386 tasks assessed; 335 valid source proposals / 300 distinct pairs, with no source proposals pending | Preserve exact outputs and qualitative AI scope; full requirements and external truth remain unverified |
 | Unicode decoder correction | All386 GPU sequences reconstruct; one full-name change reviewed, with semantic row mixing unchanged | Preserve controls and costs; do not claim general semantic improvement |
-| Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel complete and reconstructed; all 50 queries and 191 sources assessed | Assess the remaining 145 source outputs, including one capped failure; keep semantic support unverified |
+| Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel complete and reconstructed; all 50 queries and 336 sources assessed, including all four capped prefixes | Implement atomic requirements and separate source binding; keep semantic support unverified |
 | Research conclusion | Cross-source benefit and faithful reproduction are unproved | Keep these gates open; complete controls, labels and ablations |
 
 **Current work session:** continue in the owner workspace on the PR branch, retain the existing private artifacts and retain the completed negative inventory control and implement the schema/grammar fixes in the next-version plan. Then follow [the next-version plan](VERSION2_PLAN.md) while retaining the current version’s open gates. Do not tune on this inspected cohort and later call it unseen evaluation data.
@@ -592,8 +592,9 @@ The [contract diagnosis](REQUIREMENTS_MODEL_VARIANT.md) identifies nullable-oper
 misalignment, fixed global roles and empty-clause admission; correct these in a
 separate protocol before another capacity change. Do not rescore frozen outputs.
 
-[Inventory assessment](CLAIM_INVENTORY.md) now covers 241/386 tasks (all fifty queries
-and 191 sources), including 220 rejected inventories; 145 source tasks remain.
+[Inventory assessment](CLAIM_INVENTORY.md) now covers all 386 tasks (fifty queries
+and 336 sources), including all 365 rejected inventories and four capped failures.
+All 1,617 fully parsed frames are assessed; no inventory tasks remain pending.
 All 229 local tests pass. Independent semantic labels, general source support and
 full roadmap completion remain open.
 
@@ -635,3 +636,14 @@ budget. CI concurrency cancels obsolete/duplicate branch runs, and both smoke
 jobs cache tokenizer assets by the pinned generator config. Cached files still
 pass the existing byte-count/SHA-256 verification; no check is skipped. The cache
 action is pinned to verified upstream v4 commit `0057852bfaa89a56745cba8c7296529d2fc39830`.
+
+
+## Assistant-led continuation
+
+The owner has assigned ongoing implementation to the assistant rather than a
+friend. Work continues on feature branches through PRs and required test,
+data-smoke and finance-smoke checks. Only the owner merges main.
+The plural-inventory AI audit is complete; this does not close the five-phase
+research objective. Next work is the separately versioned atomic-requirements
+protocol and source-only controls, followed by fresh support labels, calibrated
+routing, complete baseline/ablation comparisons and upstream artifact resolution.

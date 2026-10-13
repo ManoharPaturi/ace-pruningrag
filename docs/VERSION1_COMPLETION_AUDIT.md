@@ -431,3 +431,19 @@ queries and 21 sources assessed; 315 source tasks remain. Retain coherent partia
 facts and metadata context without promoting navigation/examples into assertions.
 All 229 local tests pass. These steps do not close independent labels, full source
 composition, fresh evaluation, faithful-artifact and evidence-backed final-paper gates.
+## Completed plural-inventory qualitative audit
+
+The combined inventory proof now reconstructs and binds all 386 tasks: fifty
+query inventories and 336 source inventories, including all 365 rejected outputs.
+All 1,617 fully parsed frames have qualitative AI assessments. All four capped
+prefixes were inspected and remain unparseable failures with zero parsed frames.
+There are 351 distinct input/proposal pairs and 35 exact-pair assessment reuses.
+No inventory tasks remain pending assessment. Original GPU outputs, decoder and
+costs are unchanged. This closes the AI audit, while independent human review,
+external truth, complete support and answer acceptance remain unverified.
+
+The assistant now owns ongoing implementation at the owner's request. The next
+engineering step is atomic query requirements followed by typed graph compilation
+and separate source-claim binding; source-only controls remain required. Changes
+continue through PRs and required CI, with owner-only main merging. The full
+five-phase objective remains open.

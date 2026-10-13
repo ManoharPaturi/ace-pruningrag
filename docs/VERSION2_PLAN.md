@@ -351,8 +351,9 @@ Preserve partial successes such as the copied 17-by-66 product; extra unused dat
 must remain observable. Keep extracted requirements out of answer acceptance until
 complete source support is separately verified.
 
-Finish the remaining 145 plural-inventory source assessments and source-only
-control work in parallel with engineering preparation. The seen fifty-question
+The plural-inventory AI assessment is complete: all 386 tasks and 1,617 fully
+parsed frames, with all four capped prefixes retained as failures. Continue
+source-only control work alongside the atomic-requirements protocol. The seen fifty-question
 cohort is development data. Fresh entity/event-audited cases, independent support
 labels, calibrated routing, complete baselines/ablations and original upstream
 artifact resolution remain the scientific promotion gates. AI-assisted review

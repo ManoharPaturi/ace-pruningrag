@@ -42,15 +42,15 @@
     "results/version1/requirements_3b_verification.json": "016c98933813440dae196a7764ec920a15bc4bef236f900945eee1d739ef6128",
     "results/version1/requirements_3b_review_progress.json": "9624f552a31c6e770a91c1dbd40d8dbcfd84e26aca66620ed69ee600d78d29bc",
     "results/version1/requirements_model_comparison.json": "1cd06e24c2eb021ba9ff1147be33d6bc3fb9be0abe117f67c40129fbb4903921",
-    "results/version1/inventory_role_review_progress.json": "45ff4bd9326b897b6c9b2015f2831a6b92ede90ecd0a82ffbd564dcabb46b8d0",
+    "results/version1/inventory_role_review_progress.json": "7f7623c1c6bb4139b8d65167d09d6e98408dfb3b30743b33a7de7254c1748fd1",
     "results/version1/requirements_contract_diagnostic.json": "43a411abbc5f8d7cfb68d11807185a9fa40b8f5ce2ea8f99b731e303ef943f5f",
     "results/version1/query_graph_verification.json": "83751b237c3195b652d4dea4407f39df09b044dce5abfe21c1243dc34e34230b",
     "results/version1/query_graph_preflight.json": "5d6731b04523cb2d2f84fbf431f32d9d511f050049b3381a3c5f06f753781c94",
     "results/version1/query_graph_submission.json": "26aaa9bf9c825611c239854f714ecb04449e65fc5c1a46f61e9c7335663d8fe1",
     "results/version1/query_graph_review_progress.json": "19241be01827e98a1e000ca209bdbc20a3e99165b0e6bea07e6c3e17d7cb3749"
   },
-  "renderer_sha256": "a25a4222ce196b7b1249de262455152f5a008ac34a0c056fd3c49132eea26311",
-  "report_sha256": "ab11847211ee88aa076b828f197adcfefe90560925acb9c504ad6f5e1d041bf9",
+  "renderer_sha256": "6ee2297a51a38fcd1b0aaa5f45fc7d4a69deca2832c2386b5c27b62ff76200a0",
+  "report_sha256": "9b074edfd74c314c0f208bb21694f4441f13a67079e4fca633ca217e53f6b35f",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

@@ -177,11 +177,14 @@ Preserve this failed control and measure each representation/model change separa
 ## Extended rejected-output assessment
 
 The [combined assessment progress](../results/version1/inventory_role_review_progress.json)
-now binds 241 of 386 tasks: all fifty query inventories and 191 source inventories,
-including 220 rejected outputs beyond the original 21 valid-output reviews. The
-241 records contain 224 distinct input/proposal pairs and 926 parsed frames. Seventeen source
-assessments are reused only for exact identical input/proposal pairs. 145 rejected source tasks, including the remaining capped failures, still need
-assessment. No full all-output semantic review is claimed yet.
+now binds all 386 tasks: fifty query inventories and 336 source inventories,
+including all 365 rejected outputs beyond the original 21 valid-output reviews.
+The 386 records contain 351 distinct input/proposal pairs and 1,617 fully parsed
+frames. Thirty-five assessments reuse only exact identical input/proposal pairs.
+No tasks remain unassessed. All four capped prefixes were inspected but contribute
+zero fully parsed frames; partial JSON is never admitted as a complete inventory.
+This completes the qualitative AI assessment, not independent accuracy, external
+truth, exhaustive requirement coverage or answer acceptance.
 
 Observed source problems include navigation labels as facts, photo dates attached
 to vote/album events, year 2000 copied across unrelated election claims, missing
@@ -201,6 +204,8 @@ uv run --locked --no-editable --extra generation --extra constraints \
   --batch runs/version1/inventory-rejected-ai-review-06.json \
   --batch runs/version1/inventory-rejected-ai-review-07.json \
   --batch runs/version1/inventory-rejected-ai-review-08.json \
+  --batch runs/version1/inventory-rejected-ai-review-09.json \
+  --batch runs/version1/inventory-rejected-ai-review-10.json \
   --output runs/inventory-role-progress.json
 ```
 
@@ -215,7 +220,8 @@ qualitatively assessed; it contributes zero fully parsed frames. Nine complete
 outputs contribute 32 frames, including procedural examples, formula/navigation
 mixing and Titanic role/date/attribution errors. No partial prefix is admitted
 as a complete inventory. Three capped outputs still awaited assessment at that checkpoint. The seventh
-batch subsequently assessed two of them; one capped output remains pending.
+batch subsequently assessed two of them; the final batch assessed the fourth. All
+four capped failures now have exact-prefix assessments and zero parsed frames.
 
 The third and fourth batches add thirty source assessments (179 parsed frames).
 Exact input/proposal pairs 83/86 and 103/104 reuse identical judgments. Observations
@@ -249,3 +255,21 @@ holdings, actor/character reversals, match/season statistic confusion, forecast
 horizon versus observation time and medal/title/player contamination. Useful
 numeric cores remain visible without establishing complete source support or
 external truth. No extra experimental model calls were made.
+
+
+## Completed inventory assessment and next implementation
+
+The last two batches assess the remaining 145 tasks and 691 parsed frames.
+Failures include nomination-to-win substitutions, publication/reporting dates
+used as event dates, IPO offering/closing-price confusion, paired-height collapse,
+unanswered related questions asserted as facts and measurement/threshold swaps.
+One reported album-status core is classified as coherent partial claims; this
+does not establish current truth or complete support. Categories are qualitative
+task judgments rather than calibrated accuracy labels.
+
+The next protocol should extract atomic query requirements before compiling a
+typed graph, then bind source claims separately. Preserve negation, reported and
+hypothetical scope, actor pairs, quantity units, time windows and provenance.
+Reject unanswered navigation questions and keep capped prefixes unresolved.
+Use these inspected cases as development regressions; use fresh audited evidence
+for scientific promotion. The original frozen decoder and outputs remain controls.

@@ -124,9 +124,9 @@ def render(root):
         or model_comparison["semantic_requirement_improvement_established"] is not False
         or inventory_roles["valid_review_progress_sha256"]
         != sha256_file(root / SOURCES["inventory_valid_reviews"])
-        or inventory_roles["AI_assessed_tasks"] != 241
-        or inventory_roles["rejected_inventories_pending_assessment"] != 145
-        or inventory_roles["all_inventory_tasks_assessed"] is not False
+        or inventory_roles["AI_assessed_tasks"] != 386
+        or inventory_roles["rejected_inventories_pending_assessment"] != 0
+        or inventory_roles["all_inventory_tasks_assessed"] is not True
         or contract["policy_sha256"] != model_run["span_policy_sha256"]
         or contract["prompt_says_nullable_operation_fields"] is not True
         or contract["actual_model_calls"] != 0
@@ -542,10 +542,11 @@ lookup, with missing unit, answer or season links retained. Linking is not seman
 completeness. No semantic improvement or answer acceptance is established.
 The seen development cohort cannot supply fresh accuracy.
 
-The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 241 tasks:
-all fifty query inventories and 191 source inventories, including 220 rejected
-outputs. The 241 task records contain 224 distinct input/proposal pairs and 926
-parsed frames; 145 rejected source tasks remain unassessed. Source observations
+The [extended inventory assessment](CLAIM_INVENTORY.md) now covers all 386 tasks:
+all fifty query inventories and 336 source inventories, including all 365 rejected
+outputs. The 386 task records contain 351 distinct input/proposal pairs and 1,617
+fully parsed frames; no tasks remain unassessed. All four capped prefixes are
+assessed but contribute zero fully parsed frames. Source observations
 include navigation-as-facts, caption dates borrowed for unrelated events, missing
 row/actor associations and procedural examples promoted into assertions. Coherent
 partial facts are retained without establishing full coverage or external truth.
