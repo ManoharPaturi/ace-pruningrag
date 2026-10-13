@@ -1,0 +1,212 @@
+{
+  "scope": "Post-hoc synthetic engineering diagnosis; not a new neural result or altered control score",
+  "policy_sha256": "6d01a430d522e227fec2476d3dd6c53f33208a3783fbb85935d5187734a3be0b",
+  "prompt_says_nullable_operation_fields": true,
+  "fixed_variable_role_rejects_two_edge_entity_chain": [
+    "inconsistent_variable_role_clause_1_object"
+  ],
+  "same_chain_with_unknown_role_status": "bound_requirement_proposal",
+  "grammar_accepts_known_operation_with_null_cue_result": true,
+  "validator_rejects_known_operation_null_fields": [
+    "operation_missing_cue",
+    "operation_missing_result"
+  ],
+  "unlinked_variables_and_all_null_clause_pass_structural_status": "bound_requirement_proposal",
+  "demonstrations": {
+    "task": {
+      "kind": "query",
+      "text": "Who owns the company that publishes a journal?",
+      "query_time": "2024"
+    },
+    "entity_chain": {
+      "status": "proposed_complete",
+      "composition": "all",
+      "cardinality": null,
+      "variables": [
+        {
+          "id": "v0",
+          "kind": "answer",
+          "role": "subject",
+          "value_type": "entity",
+          "cue": "Who",
+          "constant": null
+        },
+        {
+          "id": "v1",
+          "kind": "latent",
+          "role": "subject",
+          "value_type": "entity",
+          "cue": "company",
+          "constant": null
+        },
+        {
+          "id": "v2",
+          "kind": "context",
+          "role": "object",
+          "value_type": "entity",
+          "cue": "journal",
+          "constant": "journal"
+        }
+      ],
+      "clauses": [
+        {
+          "text": "company that publishes a journal",
+          "subject": {
+            "variable": "v1"
+          },
+          "relation": "publishes",
+          "object": {
+            "variable": "v2"
+          },
+          "value": null,
+          "unit": null,
+          "period": null,
+          "qualification": null
+        },
+        {
+          "text": "Who owns the company",
+          "subject": {
+            "variable": "v0"
+          },
+          "relation": "owns",
+          "object": {
+            "variable": "v1"
+          },
+          "value": null,
+          "unit": null,
+          "period": null,
+          "qualification": null
+        }
+      ],
+      "operation": {
+        "kind": "select",
+        "cue": "Who",
+        "operands": [
+          "v1"
+        ],
+        "result": "v0"
+      }
+    },
+    "nullable_operation": {
+      "status": "proposed_complete",
+      "composition": "all",
+      "cardinality": null,
+      "variables": [
+        {
+          "id": "v0",
+          "kind": "answer",
+          "role": "subject",
+          "value_type": "entity",
+          "cue": "Who",
+          "constant": null
+        },
+        {
+          "id": "v1",
+          "kind": "latent",
+          "role": "unknown",
+          "value_type": "entity",
+          "cue": "company",
+          "constant": null
+        },
+        {
+          "id": "v2",
+          "kind": "context",
+          "role": "object",
+          "value_type": "entity",
+          "cue": "journal",
+          "constant": "journal"
+        }
+      ],
+      "clauses": [
+        {
+          "text": "company that publishes a journal",
+          "subject": {
+            "variable": "v1"
+          },
+          "relation": "publishes",
+          "object": {
+            "variable": "v2"
+          },
+          "value": null,
+          "unit": null,
+          "period": null,
+          "qualification": null
+        },
+        {
+          "text": "Who owns the company",
+          "subject": {
+            "variable": "v0"
+          },
+          "relation": "owns",
+          "object": {
+            "variable": "v1"
+          },
+          "value": null,
+          "unit": null,
+          "period": null,
+          "qualification": null
+        }
+      ],
+      "operation": {
+        "kind": "select",
+        "cue": null,
+        "operands": [
+          "v1"
+        ],
+        "result": null
+      }
+    },
+    "empty_clause": {
+      "status": "proposed_complete",
+      "composition": "all",
+      "cardinality": null,
+      "variables": [
+        {
+          "id": "v0",
+          "kind": "answer",
+          "role": "subject",
+          "value_type": "entity",
+          "cue": "Who",
+          "constant": null
+        },
+        {
+          "id": "v1",
+          "kind": "latent",
+          "role": "unknown",
+          "value_type": "entity",
+          "cue": "company",
+          "constant": null
+        },
+        {
+          "id": "v2",
+          "kind": "context",
+          "role": "object",
+          "value_type": "entity",
+          "cue": "journal",
+          "constant": "journal"
+        }
+      ],
+      "clauses": [
+        {
+          "text": "Who owns the company that publishes a journal?",
+          "subject": null,
+          "relation": null,
+          "object": null,
+          "value": null,
+          "unit": null,
+          "period": null,
+          "qualification": null
+        }
+      ],
+      "operation": {
+        "kind": "unknown",
+        "cue": null,
+        "operands": [],
+        "result": null
+      }
+    }
+  },
+  "actual_model_calls": 0,
+  "semantic_requirements_verified": false,
+  "answer_acceptance_enabled": false
+}

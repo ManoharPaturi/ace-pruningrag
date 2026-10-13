@@ -1,0 +1,53 @@
+{
+  "status": "requirements_spans_decode_and_costs_reconstructed",
+  "protocol_id": "query_requirements_v1",
+  "span_policy_sha256": "6d01a430d522e227fec2476d3dd6c53f33208a3783fbb85935d5187734a3be0b",
+  "tasks": 50,
+  "extraction_sequences": 50,
+  "generate_invocations": 13,
+  "unextracted": 0,
+  "input_tokens": 31078,
+  "padded_input_tokens": 31426,
+  "output_tokens": 12184,
+  "maximum_reserved_request_tokens": 2707,
+  "trace_sha256": "5b0544de7999e62c4baf1883ff760000c2f34a39eae8a3c7779eaed2e1fe7ee7",
+  "tasks_sha256": "c2541e01762cf3c735b88329a3282cfccbb2c201ba50bd481597295f32569165",
+  "validation_counts": {
+    "invalid_requirement_proposal": 50
+  },
+  "actual_new_answer_generation_calls": 0,
+  "answer_acceptance_enabled": false,
+  "semantic_requirements_verification": false,
+  "eos_token_ids": [
+    151643,
+    151645
+  ],
+  "scope": "Blinded query-only unknown-answer requirement diagnostic; no semantic acceptance",
+  "constraint_dependency_versions": {
+    "lm-format-enforcer": "0.11.3",
+    "interegular": "0.3.3",
+    "pydantic": "2.14.1",
+    "pydantic-core": "2.50.1",
+    "annotated-types": "0.8.0",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.4",
+    "packaging": "26.3",
+    "pyyaml": "6.0.3"
+  },
+  "format_enforcement": "ordered_JSON_bounded_requirement_reference_trie",
+  "generator_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "semantic_requirement_accuracy": null,
+  "complete_requirement_coverage": null,
+  "neural_generation_independently_recomputed": false,
+  "timing": {
+    "generation_seconds": 494.74403672799986,
+    "model_loading_seconds": 6.716577208000018
+  },
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "dtype": "float32"
+  }
+}

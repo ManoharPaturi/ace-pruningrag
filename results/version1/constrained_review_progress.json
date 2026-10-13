@@ -1,0 +1,73 @@
+{
+  "scope": "Complete task-bound post-hoc AI proposal-role review and structural cap-failure assessment; not independent truth or full requirement verification",
+  "total_tasks": 386,
+  "structurally_valid_proposals": 385,
+  "AI_reviewed_query_proposals": 50,
+  "AI_reviewed_source_proposals": 335,
+  "structural_failure_assessments": 1,
+  "unreviewed_source_proposals": 0,
+  "independent_human_review": false,
+  "full_semantic_review_complete": true,
+  "full_requirement_coverage_verified": false,
+  "answer_acceptance_enabled": false,
+  "extraction_trace_sha256": "eeb3304a11e59799a0df6bd5ab6e51b6e4c65a3b98cc659cc1585dec99855fc8",
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "verification_sha256": "4192bfbaf3ee1f18c58419f16c2dcc16eab0383090f4597b4e16bcc06ff1913c",
+  "audit_batches": [
+    {
+      "name": "constrained-ai-audit-batch1.json",
+      "sha256": "a03fa12eef620005e8805bfa28cde984302237eb10d51d1b3dabe285dbbf9cc5",
+      "records": 51
+    },
+    {
+      "name": "constrained-ai-audit-batch2.json",
+      "sha256": "7f7a7d7ba455fe4a5d8f767b35bf2edb973786af28c6965cfbfb08459e6ae727",
+      "records": 50
+    },
+    {
+      "name": "constrained-ai-audit-batch3.json",
+      "sha256": "5cfd6f15e2836fca01f21df6b40bee49806c28beda633f40a7d14e090c58295e",
+      "records": 50
+    },
+    {
+      "name": "constrained-ai-audit-batch4.json",
+      "sha256": "d90251dfbfb5925e33d99077a9de0111e66507d14bc9719f3f04afba97fea8f0",
+      "records": 50
+    },
+    {
+      "name": "constrained-ai-audit-batch5.json",
+      "sha256": "8490c4a3b3ca86f76f4f988b47057ea8fd0121aa7051f64d678d65859b5df733",
+      "records": 50
+    },
+    {
+      "name": "constrained-ai-audit-batch6.json",
+      "sha256": "4ce49faa47cf62f474ff615e8472bace781fd540b1c5713de473e3f4d8561529",
+      "records": 50
+    },
+    {
+      "name": "constrained-ai-audit-batch7.json",
+      "sha256": "09144a405099fc82352ad5ea9d4bfe04cdfa408f7d313b730879f0faab6a412c",
+      "records": 85
+    }
+  ],
+  "query_review_counts": {
+    "coherent_minimal_core": 1,
+    "underspecified_query_scope": 1,
+    "partial_or_misbound_requirements": 48
+  },
+  "limitations": [
+    "These post-hoc AI judgments are qualitative and not calibrated extraction accuracy.",
+    "Schema/span validity is not complete requirement or factual verification.",
+    "All 335 span-valid source proposals have qualitative AI role assessments; factual truth and complete requirement coverage remain unverified."
+  ],
+  "source_review_counts": {
+    "metadata_or_nonclaim": 39,
+    "mixed_facts": 120,
+    "missing_subject_or_antecedent": 23,
+    "role_or_scope_error": 56,
+    "coherent_claim_in_excerpt": 15,
+    "partial_binding_with_role_error": 82
+  },
+  "distinct_reviewed_source_pairs": 300,
+  "distinct_coherent_source_pairs": 13
+}

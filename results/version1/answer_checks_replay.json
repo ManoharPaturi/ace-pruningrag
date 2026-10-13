@@ -1,0 +1,61 @@
+{
+  "scope": "Post-hoc form diagnostics; not semantic improvement or claim verification",
+  "admission_sha256": "b2409d068730eacc9ade6ab2a83a027eb02e32b381f9cd4c037e6e8454472985",
+  "runs": {
+    "legacy": {
+      "status": "available",
+      "trace_sha256": "6858c1e0a46cbe7acc4d7306ee0a29706aa2afa52cc89892bd5f54f9c6ef4827",
+      "responses": 150,
+      "issue_counts": {
+        "requested_list_unparsed": 3
+      },
+      "flagged_responses": 3,
+      "explicit_rectangle_calculations": 0
+    },
+    "historical": {
+      "status": "available",
+      "trace_sha256": "d9222b675cd4504d7502b8a1b70c5893e4455a086e6a54def2c58f7dd4389d60",
+      "responses": 18,
+      "issue_counts": {},
+      "flagged_responses": 0,
+      "explicit_rectangle_calculations": 0
+    },
+    "regeneration_initial": {
+      "status": "available",
+      "trace_sha256": "4bacd65c561ad26acb07a2a78de70e04191ef1f9669867e59bfa6caf08ee6bc6",
+      "responses": 18,
+      "issue_counts": {},
+      "flagged_responses": 0,
+      "explicit_rectangle_calculations": 0
+    },
+    "regeneration_retry": {
+      "status": "available",
+      "trace_sha256": "13835929b5148ab9a7f7747d5fc37f52ff6b8f5c6ac30144be0a649fbfc274af",
+      "responses": 8,
+      "issue_counts": {},
+      "flagged_responses": 0,
+      "explicit_rectangle_calculations": 0
+    },
+    "cohort": {
+      "status": "available",
+      "trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+      "responses": 250,
+      "issue_counts": {
+        "provenance_identifier_as_answer": 4,
+        "requested_list_unparsed": 4,
+        "requested_list_cardinality_or_numbering_mismatch": 1
+      },
+      "flagged_responses": 9,
+      "explicit_rectangle_calculations": 0
+    }
+  },
+  "actual_new_llm_calls": 0,
+  "generator_outputs_changed": false,
+  "gold_or_human_labels_used": false,
+  "limitations": [
+    "List checks parse numbered lines only; unparsed lists remain unresolved.",
+    "Geometry and compatible units must be explicit before calculating.",
+    "No form issue detected does not prove correctness or source support.",
+    "This inspected development replay is not a held-out ablation."
+  ]
+}

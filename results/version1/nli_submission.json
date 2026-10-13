@@ -1,0 +1,13 @@
+{
+  "requested_kernel_id": "ionrey/ace-nli-fe0b5ffafdc84224b57b6170664a7903",
+  "actual_kernel_id": "ionrey/ace-bounded-nli-source-diagnostics",
+  "version": 1,
+  "status": "submitted",
+  "pairs": 1105,
+  "model_revision": "6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
+  "maximum_classifier_forward_calls": 79,
+  "maximum_tokens_per_pair": 512,
+  "new_generator_calls": 0,
+  "maximum_model_asset_bytes": 760000000,
+  "semantic_acceptance_enabled": false
+}

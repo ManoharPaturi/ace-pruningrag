@@ -1,0 +1,537 @@
+{
+  "scope": "Retained local Kaggle prediction traces as of 13 October 2026",
+  "config_sha256": "fce66ce4e6471c90c2f729ccfd9dca37793babb3e2c564eda3f415fa0c5b5009",
+  "trace_paths": 10,
+  "unique_trace_files": 8,
+  "stored_response_records": 646,
+  "response_records_in_unique_trace_files": 620,
+  "admitted_response_records": 444,
+  "all_declared_retained_responses_ai_audited": true,
+  "independent_human_review": false,
+  "excluded_runs_promoted": false,
+  "traces": [
+    {
+      "name": "legacy",
+      "acceptance": "admitted",
+      "trace_sha256": "6858c1e0a46cbe7acc4d7306ee0a29706aa2afa52cc89892bd5f54f9c6ef4827",
+      "audit_sha256": {
+        "legacy-ai-audit-batch1.json": "b9c71c2151a077833308be09f33ef25c306d41709399d64f0f9e199686e0fd4f",
+        "legacy-ai-audit-batch2.json": "7c80d983c10cc3de80280c80a3e524ad8d4dc5510ad2649c219cdddf027871ff",
+        "legacy-ai-audit-batch3.json": "3061bb031a7b3410dac961487263048c7d7edae3b70aca212c625a482d51feae",
+        "legacy-ai-audit-batch4.json": "94c6c3f55d8ea9f3c7027dc98ca13d2ffea28b8efd57848879d57ba3d60c7de4",
+        "legacy-ai-audit-batch5.json": "ae91ceac3858183fffdbc091334fad43760ec9695e88a30c5e9893a780b9e574",
+        "legacy-ai-audit-batch6.json": "00fd3a20056baa1c2f2ec913757b4a67577e9fbf25d608d2d46db419c61d9d33",
+        "legacy-ai-audit-batch7.json": "f47d77bf66b8899ce5ae2769bda7960dd11c69ba7468e6b2a8a2f2384141d7fd",
+        "legacy-ai-audit-batch8.json": "bdba0c9b57c4f6059760e0aebba779aed347104734cd4e009eae3d0bc0cdeab9",
+        "legacy-ai-audit-batch9.json": "f49b1950aa64116ef3ce7950f7a0526e57b4d75dfb11176ee92483f6c7ef5162"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "6858c1e0a46cbe7acc4d7306ee0a29706aa2afa52cc89892bd5f54f9c6ef4827",
+        "response_count": 150,
+        "ai_reviewed_responses": 150,
+        "ai_reviewed_questions": 50,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "uncertain": 33,
+          "incorrect": 45,
+          "correct": 36,
+          "abstained": 36
+        },
+        "ai_grounding_verdicts": {
+          "conditionally_supported": 6,
+          "unsupported_full_claim": 36,
+          "contradicted_by_selected_relation": 3,
+          "supported": 24,
+          "supported_text_but_external_chronology_conflict": 3,
+          "not_applicable": 36,
+          "partially_supported": 3,
+          "contradicted_by_requested_time_scope": 3,
+          "contradicted_by_selected_constraint": 3,
+          "partially_supported_but_album_role_contradicted": 3,
+          "supported_text_but_year_axis_wrong": 3,
+          "supported_under_source_indicated_award": 3,
+          "unsupported_entity_measurement_binding": 3,
+          "supported_under_top_flight_interpretation": 3,
+          "unsupported_eligibility_and_total": 3,
+          "supported_example_but_incomplete_set": 3,
+          "partially_supported_but_period_wrong": 3,
+          "contradicted_by_requested_installment": 3,
+          "supported_with_source_time_caveat": 3,
+          "unsupported_in_selected_evidence_but_externally_verified": 3
+        },
+        "explicit_prose_abstentions": 0,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      }
+    },
+    {
+      "name": "historical",
+      "acceptance": "admitted",
+      "trace_sha256": "d9222b675cd4504d7502b8a1b70c5893e4455a086e6a54def2c58f7dd4389d60",
+      "audit_sha256": {
+        "historical-ai-audit-v1.json": "9a6a546d66819cf676350f5e2677ef009320ee9322c90991f6f2572623310e01"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "d9222b675cd4504d7502b8a1b70c5893e4455a086e6a54def2c58f7dd4389d60",
+        "response_count": 18,
+        "ai_reviewed_responses": 18,
+        "ai_reviewed_questions": 6,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "incorrect": 2,
+          "uncertain": 4,
+          "correct": 4,
+          "abstained": 8
+        },
+        "ai_grounding_verdicts": {
+          "wrong_requested_date": 2,
+          "numeric_field_supported_currency_unestablished": 4,
+          "supported_price_field_only": 4,
+          "not_applicable": 8
+        },
+        "explicit_prose_abstentions": 0,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      }
+    },
+    {
+      "name": "regeneration_initial",
+      "acceptance": "admitted",
+      "trace_sha256": "4bacd65c561ad26acb07a2a78de70e04191ef1f9669867e59bfa6caf08ee6bc6",
+      "audit_sha256": {
+        "regeneration_initial-ai-audit-v1.json": "0122a4e312cfe3eead32d8ccf8febea184d283337ae1095fe7f7370ad7d1debf"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "4bacd65c561ad26acb07a2a78de70e04191ef1f9669867e59bfa6caf08ee6bc6",
+        "response_count": 18,
+        "ai_reviewed_responses": 18,
+        "ai_reviewed_questions": 6,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "incorrect": 2,
+          "uncertain": 4,
+          "correct": 4,
+          "abstained": 8
+        },
+        "ai_grounding_verdicts": {
+          "wrong_requested_date": 2,
+          "numeric_field_supported_currency_unestablished": 4,
+          "supported_price_field_only": 4,
+          "not_applicable": 8
+        },
+        "explicit_prose_abstentions": 0,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      }
+    },
+    {
+      "name": "regeneration_retry",
+      "acceptance": "admitted",
+      "trace_sha256": "13835929b5148ab9a7f7747d5fc37f52ff6b8f5c6ac30144be0a649fbfc274af",
+      "audit_sha256": {
+        "regeneration_retry-ai-audit-v1.json": "a21f81575176f0ea2141d26154335eddc9a2711d78c8df4df42f86e4d0bd8bdd"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "13835929b5148ab9a7f7747d5fc37f52ff6b8f5c6ac30144be0a649fbfc274af",
+        "response_count": 8,
+        "ai_reviewed_responses": 8,
+        "ai_reviewed_questions": 6,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "uncertain": 2,
+          "correct": 5,
+          "abstained": 1
+        },
+        "ai_grounding_verdicts": {
+          "numeric_field_supported_currency_unestablished": 2,
+          "supported_price_field_only": 5,
+          "not_applicable": 1
+        },
+        "explicit_prose_abstentions": 0,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      }
+    },
+    {
+      "name": "cohort",
+      "acceptance": "admitted",
+      "trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+      "audit_sha256": {
+        "cohort-ai-audit-batch1.json": "84a0c285b56e8a3637a2c9d7376f07c5f71c6a826b0e0ad316e59853728767c5",
+        "cohort-ai-audit-batch2.json": "79a7f2a2fb378884436c41db45aebad9d67e6e5899458dac1e281a6023aad9bf",
+        "cohort-ai-audit-batch3.json": "756892ce2d8c9deca13f0e7c1dd4027eef385fcc55ec69b5c33312d012dac080",
+        "cohort-ai-audit-batch4.json": "29404ada077282b3637e51d40c572f674add94c49c1a4784ae733d8ea996f828",
+        "cohort-ai-audit-batch5.json": "2eeafcd2d88eb9945b7f328c916ac8b41f37cc891ba7d5bb7bc739b1bbecce62",
+        "cohort-ai-audit-batch6.json": "571d751f964bf2c2159b32a91eb4e20118654b390f48e9382100e54755bd0db2",
+        "cohort-ai-audit-batch7.json": "e9af475e9d3c1f815d72c6569eac4e05999671592a0f1719919f871b3fa1f8d2",
+        "cohort-ai-audit-batch8.json": "66fc0859062f0afad52efae3b4205f14be41b7aa63a60543805deb8323d7ca7a",
+        "cohort-ai-audit-batch9.json": "1112521693e1b6dbe82e394bdf711973391d02378749d95ecb164c0971fb4e25",
+        "cohort-ai-audit-batch10.json": "6ee49c4c0560522e8ffc694b731a22d9413cb73466e91445ee44f223ef981caa",
+        "cohort-ai-audit-batch11.json": "dcbbe8d2abfe63de5860ad451c847f2ab48129d1ad0760662076761d469cb339"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+        "response_count": 250,
+        "ai_reviewed_responses": 250,
+        "ai_reviewed_questions": 50,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "abstained": 88,
+          "uncertain": 53,
+          "incorrect": 68,
+          "correct": 41
+        },
+        "ai_grounding_verdicts": {
+          "not_applicable": 88,
+          "unsupported_full_claim": 4,
+          "wrong_entity_and_nonanswer": 4,
+          "numeric_value_supported_date_unestablished": 5,
+          "missing_comparison_operand": 5,
+          "supported_under_surface_area_boundary_interpretation": 4,
+          "partial_support_missing_name_antecedent": 1,
+          "supported": 22,
+          "wrong_award_year": 1,
+          "missing_comparison_count_and_definition": 5,
+          "total_vs_margin_and_losing_election": 2,
+          "supported_reported_margin_but_false_premise_and_source_conflict": 2,
+          "unsupported_margin_and_false_premise": 1,
+          "missing_comparison_operand_and_role_universe": 5,
+          "artist_vs_song_and_wrong_chart_period": 4,
+          "contradicted_by_selected_competition_total": 1,
+          "single_height_vs_difference": 1,
+          "historical_format_vs_current_team_list": 3,
+          "negated_membership_reversed": 1,
+          "supported_fragment_but_wrong_period_and_answer_type": 1,
+          "arithmetic_contradiction": 5,
+          "supported_under_living_reptile_interpretation": 3,
+          "unsupported_selected_fragment_and_extant_scope": 1,
+          "taxonomic_category_error": 1,
+          "wrong_publication_binding_and_unverified_premise": 5,
+          "supported_under_lsat_typo_interpretation": 4,
+          "provenance_identifier_as_answer": 4,
+          "supported_eligibility_value_but_incomplete_filtered_ranking": 4,
+          "contradicted_negative_eligibility": 1,
+          "incomplete_requested_set_and_unestablished_date": 3,
+          "sectors_vs_holdings_future_date_and_truncation": 1,
+          "unsupported_complete_list_and_query_date": 1,
+          "qualified_origin_claim_vs_absolute_first": 4,
+          "character_first_film_vs_genre_first": 1,
+          "identity_instead_of_requested_age": 1,
+          "age_attached_to_wrong_entity_and_date": 1,
+          "career_vs_year_and_played_vs_won_and_wrong_person": 4,
+          "unsupported_annual_leader": 1,
+          "missing_selected_comparison_operand": 2,
+          "vacation_list_order_vs_area_ranking": 3,
+          "incomplete_ranked_universe_and_boundary_scope": 2,
+          "artist_total_vs_single_album": 1,
+          "missing_album_antecedent_market_and_best_seller_ranking": 1,
+          "missing_comparable_membership_counts": 4,
+          "same_entity_alias_and_tournament_teams_vs_members": 1,
+          "naming_date_vs_mlb_membership": 1,
+          "game_date_vs_mlb_membership": 1,
+          "current_quote_vs_opening_field_and_future_date": 5,
+          "unsupported_blanket_negation_and_nonartwork": 1,
+          "all_time_total_vs_decade_count": 4,
+          "multi_decade_total_vs_decade_count": 1,
+          "answer_outside_requested_pair": 4,
+          "unresolved_song_entities_and_missing_dates": 1,
+          "missing_height_measurements": 1,
+          "conflicting_informal_measurements": 1,
+          "tokyo_vs_beijing_and_medal_revision": 4,
+          "original_results_vs_query_date_revision_and_missing_operands": 1,
+          "identity_supported_award_total_not_fully_selected": 5,
+          "first_day_close_vs_ipo_offering_price": 1
+        },
+        "explicit_prose_abstentions": 4,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      }
+    },
+    {
+      "name": "excluded_float16",
+      "acceptance": "excluded",
+      "trace_sha256": "49e5f2264eb91ef4674b412791e0d2295b950c4647f41b81887421a1107b82a1",
+      "audit_sha256": {
+        "excluded_float16-ai-audit-v1.json": "10c3fa3d12171e044d0a36afa930e4c29ea986df09d79065b551c8c7222c2cf9"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "49e5f2264eb91ef4674b412791e0d2295b950c4647f41b81887421a1107b82a1",
+        "response_count": 150,
+        "ai_reviewed_responses": 150,
+        "ai_reviewed_questions": 50,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "incorrect": 150
+        },
+        "ai_grounding_verdicts": {
+          "degenerate_punctuation_nonanswer": 150
+        },
+        "explicit_prose_abstentions": 0,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      }
+    },
+    {
+      "name": "regeneration-output-v1_initial",
+      "acceptance": "superseded_excluded",
+      "trace_sha256": "0887e03b5212946908360f2954166a74b12f21e56222116fd0dc93b05408a68b",
+      "audit_sha256": {
+        "superseded_regeneration_initial-ai-audit-v1.json": "42f24305b0d7a6afb54b10a06186f8e2d342c93506f0dce0957358ba3f0211b6"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "0887e03b5212946908360f2954166a74b12f21e56222116fd0dc93b05408a68b",
+        "response_count": 18,
+        "ai_reviewed_responses": 18,
+        "ai_reviewed_questions": 6,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "incorrect": 2,
+          "uncertain": 4,
+          "correct": 4,
+          "abstained": 8
+        },
+        "ai_grounding_verdicts": {
+          "wrong_requested_date": 2,
+          "numeric_field_supported_currency_unestablished": 4,
+          "supported_price_field_only": 4,
+          "not_applicable": 8
+        },
+        "explicit_prose_abstentions": 0,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      },
+      "reuse": {
+        "status": "full_review_input_equivalence_verified",
+        "source_trace_sha256": "4bacd65c561ad26acb07a2a78de70e04191ef1f9669867e59bfa6caf08ee6bc6",
+        "target_trace_sha256": "0887e03b5212946908360f2954166a74b12f21e56222116fd0dc93b05408a68b",
+        "response_count": 18,
+        "comparison_fields": [
+          "interaction_id",
+          "policy",
+          "query",
+          "query_time",
+          "prediction",
+          "prompt_sha256",
+          "selected",
+          "input_tokens",
+          "output_tokens",
+          "output_ids"
+        ],
+        "independent_new_observations": 0,
+        "independent_human_review": false
+      }
+    },
+    {
+      "name": "regeneration-progress-v1_initial",
+      "acceptance": "superseded_excluded",
+      "trace_sha256": "0887e03b5212946908360f2954166a74b12f21e56222116fd0dc93b05408a68b",
+      "audit_sha256": {
+        "superseded_regeneration_initial-ai-audit-v1.json": "42f24305b0d7a6afb54b10a06186f8e2d342c93506f0dce0957358ba3f0211b6"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "0887e03b5212946908360f2954166a74b12f21e56222116fd0dc93b05408a68b",
+        "response_count": 18,
+        "ai_reviewed_responses": 18,
+        "ai_reviewed_questions": 6,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "incorrect": 2,
+          "uncertain": 4,
+          "correct": 4,
+          "abstained": 8
+        },
+        "ai_grounding_verdicts": {
+          "wrong_requested_date": 2,
+          "numeric_field_supported_currency_unestablished": 4,
+          "supported_price_field_only": 4,
+          "not_applicable": 8
+        },
+        "explicit_prose_abstentions": 0,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      },
+      "reuse": {
+        "status": "full_review_input_equivalence_verified",
+        "source_trace_sha256": "4bacd65c561ad26acb07a2a78de70e04191ef1f9669867e59bfa6caf08ee6bc6",
+        "target_trace_sha256": "0887e03b5212946908360f2954166a74b12f21e56222116fd0dc93b05408a68b",
+        "response_count": 18,
+        "comparison_fields": [
+          "interaction_id",
+          "policy",
+          "query",
+          "query_time",
+          "prediction",
+          "prompt_sha256",
+          "selected",
+          "input_tokens",
+          "output_tokens",
+          "output_ids"
+        ],
+        "independent_new_observations": 0,
+        "independent_human_review": false
+      }
+    },
+    {
+      "name": "regeneration-output-v1_retry",
+      "acceptance": "superseded_excluded",
+      "trace_sha256": "9de4f6ed738bb6102681e2ab7af9203f948363e1092145f1b181a8f9ca4537f6",
+      "audit_sha256": {
+        "superseded_regeneration_retry-ai-audit-v1.json": "a2d20283847f908f35d427a629c580a7a005ce2fda0a61b77365cab9f8ae2b67"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "9de4f6ed738bb6102681e2ab7af9203f948363e1092145f1b181a8f9ca4537f6",
+        "response_count": 8,
+        "ai_reviewed_responses": 8,
+        "ai_reviewed_questions": 6,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "uncertain": 2,
+          "correct": 5,
+          "abstained": 1
+        },
+        "ai_grounding_verdicts": {
+          "numeric_field_supported_currency_unestablished": 2,
+          "supported_price_field_only": 5,
+          "not_applicable": 1
+        },
+        "explicit_prose_abstentions": 0,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      },
+      "reuse": {
+        "status": "full_review_input_equivalence_verified",
+        "source_trace_sha256": "13835929b5148ab9a7f7747d5fc37f52ff6b8f5c6ac30144be0a649fbfc274af",
+        "target_trace_sha256": "9de4f6ed738bb6102681e2ab7af9203f948363e1092145f1b181a8f9ca4537f6",
+        "response_count": 8,
+        "comparison_fields": [
+          "interaction_id",
+          "policy",
+          "query",
+          "query_time",
+          "prediction",
+          "prompt_sha256",
+          "selected",
+          "input_tokens",
+          "output_tokens",
+          "output_ids"
+        ],
+        "independent_new_observations": 0,
+        "independent_human_review": false
+      }
+    },
+    {
+      "name": "regeneration-progress-v1_retry",
+      "acceptance": "superseded_excluded",
+      "trace_sha256": "9de4f6ed738bb6102681e2ab7af9203f948363e1092145f1b181a8f9ca4537f6",
+      "audit_sha256": {
+        "superseded_regeneration_retry-ai-audit-v1.json": "a2d20283847f908f35d427a629c580a7a005ce2fda0a61b77365cab9f8ae2b67"
+      },
+      "validation": {
+        "status": "ai_assessments_structurally_validated",
+        "trace_sha256": "9de4f6ed738bb6102681e2ab7af9203f948363e1092145f1b181a8f9ca4537f6",
+        "response_count": 8,
+        "ai_reviewed_responses": 8,
+        "ai_reviewed_questions": 6,
+        "unreviewed_responses": 0,
+        "full_ai_response_audit_complete": true,
+        "ai_semantic_verdicts": {
+          "uncertain": 2,
+          "correct": 5,
+          "abstained": 1
+        },
+        "ai_grounding_verdicts": {
+          "numeric_field_supported_currency_unestablished": 2,
+          "supported_price_field_only": 5,
+          "not_applicable": 1
+        },
+        "explicit_prose_abstentions": 0,
+        "independent_human_review": false,
+        "semantic_truth_verified_by_validator": false,
+        "limitations": [
+          "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+          "AI assessments cannot replace independent human labels or resolve them silently."
+        ]
+      },
+      "reuse": {
+        "status": "full_review_input_equivalence_verified",
+        "source_trace_sha256": "13835929b5148ab9a7f7747d5fc37f52ff6b8f5c6ac30144be0a649fbfc274af",
+        "target_trace_sha256": "9de4f6ed738bb6102681e2ab7af9203f948363e1092145f1b181a8f9ca4537f6",
+        "response_count": 8,
+        "comparison_fields": [
+          "interaction_id",
+          "policy",
+          "query",
+          "query_time",
+          "prediction",
+          "prompt_sha256",
+          "selected",
+          "input_tokens",
+          "output_tokens",
+          "output_ids"
+        ],
+        "independent_new_observations": 0,
+        "independent_human_review": false
+      }
+    }
+  ],
+  "limitations": [
+    "Byte-identical downloads and repeated methods are not independent observations.",
+    "Review equivalence does not verify runtime, timing or model numerical stability.",
+    "Coverage is limited to declared local predictions, not every remote job or log.",
+    "Structural validation does not establish AI semantic truth or human review."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "source_index_sha256": "d0d957ec35388e5cdc599ac330894a6f5f071f53966b94d5138950bd29da69a6",
+  "parameters": {
+    "k1": 1.5,
+    "b": 0.75,
+    "epsilon": 0.25,
+    "tie_break": "source_rowid_desc"
+  },
+  "document_counts": {
+    "movie": 64283,
+    "person": 373608
+  },
+  "vocabulary_sizes": {
+    "movie": 30066,
+    "person": 155363
+  },
+  "ranking_reproduction_verified": false,
+  "semantic_identity_verified": false,
+  "search_index_sha256": "7b11ba75642724a83f9c1ba9ad91c1eab645c664d31ce509a4508787beacef8b",
+  "search_index_bytes": 79896576
+}

@@ -1,0 +1,61 @@
+{
+  "scope": "Unframed source/answer textual-support diagnostic; no acceptance or factual scoring",
+  "revision": "6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
+  "model_repository": "cross-encoder/nli-deberta-v3-base",
+  "max_total_bytes": 760000000,
+  "assets": [
+    {
+      "local_path": "data/models/nli/config.json",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/config.json",
+      "bytes": 1052,
+      "sha256": "897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47"
+    },
+    {
+      "local_path": "data/models/nli/tokenizer.json",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/tokenizer.json",
+      "bytes": 8656624,
+      "sha256": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964"
+    },
+    {
+      "local_path": "data/models/nli/tokenizer_config.json",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/tokenizer_config.json",
+      "bytes": 1346,
+      "sha256": "f3eecd07c370ef0bf7dd3780d3cd68cf9c8b00c267e21a208ddcd8f82bfec1a6"
+    },
+    {
+      "local_path": "data/models/nli/special_tokens_map.json",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/special_tokens_map.json",
+      "bytes": 301,
+      "sha256": "ed7c099c988dbb414b18a6980d20cb57b91b7cd119f6f6941eb364b0e892e712"
+    },
+    {
+      "local_path": "data/models/nli/spm.model",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/spm.model",
+      "bytes": 2464616,
+      "sha256": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd"
+    },
+    {
+      "local_path": "data/models/nli/model.safetensors",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/model.safetensors",
+      "bytes": 737726552,
+      "sha256": "d8148c6d49e0a7925134294c56326c71fe0ab1dc390e37355e00c7efbb488afa"
+    },
+    {
+      "local_path": "data/models/nli/README.md",
+      "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-base/resolve/6c749ce3425cd33b46d187e45b92bbf96ee12ec7/README.md",
+      "bytes": 2856,
+      "sha256": "b6a6dd82d5fee7036e3b815ce1d28458df294d8525fc234fb7e7277b6b79d878"
+    }
+  ],
+  "labels": [
+    "contradiction",
+    "entailment",
+    "neutral"
+  ],
+  "max_pair_tokens": 512,
+  "max_pairs": 1250,
+  "batch_size": 16,
+  "dtype": "float32",
+  "calibrated": false,
+  "seed": 42
+}

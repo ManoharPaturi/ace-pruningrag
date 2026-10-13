@@ -8,7 +8,7 @@ from pathlib import Path
 from transformers import AutoTokenizer
 
 from ace_pruningrag.artifacts import read_json, sha256_file, write_json
-from ace_pruningrag.assets import fetch_assets
+from ace_pruningrag.asset_retry import fetch_assets_with_retry
 from ace_pruningrag.dataset import iter_records, verify_dataset
 from ace_pruningrag.generation import prepare_context
 from ace_pruningrag.routing import Capability
@@ -25,7 +25,7 @@ def main():
         assets=[a for a in config["assets"] if not a["local_path"].endswith(".safetensors")],
         max_total_bytes=20000000,
     )
-    fetch_assets(small, root)
+    fetch_assets_with_retry(small, root)
     tokenizer = AutoTokenizer.from_pretrained(
         root / config["generator"]["directory"], local_files_only=True, trust_remote_code=False
     )

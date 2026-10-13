@@ -1,0 +1,778 @@
+{
+  "scope": "All decoded query proposals AI role/omission reviewed; not independent accuracy",
+  "tasks": 50,
+  "AI_reviewed_proposals": 50,
+  "query_check_items_assessed": 151,
+  "query_proposal_role_review_complete": true,
+  "structurally_linked_proposals": 2,
+  "structural_status_counts": {
+    "unresolved_requirement_graph": 48,
+    "linked_requirement_graph": 2
+  },
+  "AI_semantic_categories": {
+    "misbound_or_incomplete_requirements": 47,
+    "coherent_partial_requirements": 3
+  },
+  "semantic_requirement_accuracy": null,
+  "full_requirement_coverage_verified": false,
+  "independent_human_review": false,
+  "answer_acceptance_enabled": false,
+  "records": [
+    {
+      "index": 0,
+      "task_sha256": "c3c6e492a291be6e2b712146a8d8003bce835c1d953e6d504a61ba906d293d88",
+      "raw_proposal_sha256": "b353edf6066772850e211cef82aca737735ca68ba551ba5cff58144c31d5f246",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Founder and label are disconnected from the answer branch. Argmax ranks query time with an album candidate rather than album release dates. The answer-from-album clause reverses the intended album-from-founder link; separate albums and eligibility before query time are missing.",
+      "required_checks_assessed": [
+        "Identify the founder of ysl records as an intermediate unknown",
+        "Identify that person’s albums and release dates",
+        "Select most recent album at query time"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 1,
+      "task_sha256": "3de9457e09e5aa1ecd1c394d46a74e3ec7cadd6b4586fdfaba1176ca847a9301",
+      "raw_proposal_sha256": "ce23b8786a3daacd8767bd9b4f898d2b047efd0eda2d0e4e3ec9c977bac40c04",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Clinton is both actor and election object, the election is a set value and 2016 is a value rather than coherent event scope. Difference uses the same unconstrained vote variable twice. Vote measure, opposing tally and premise support remain unresolved; no margin can be derived.",
+      "required_checks_assessed": [
+        "Identify the 2016 election and Hillary Clinton",
+        "Resolve which vote measure the question means",
+        "Retain the premise that she won for evidence checking",
+        "Return a vote margin only with a supported measure"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 2,
+      "task_sha256": "767d832b70d2f5ba4f35e0dc7a678655c7909028b9b0ee63afa58c354926b53a",
+      "raw_proposal_sha256": "d8b17df4307fd7d617da6ff2f72a1eebcf7b277e2c60599911b17eaee9c5e6d0",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Both song-title cues survive, but they are unknown text instead of known candidates with distinct release dates. The answer is date although a song is requested; reciprocal recent-release clauses do not perform comparison. Answer and query-time anchor are disconnected.",
+      "required_checks_assessed": [
+        "Identify all alone and one more time as separate songs",
+        "Obtain release dates for both",
+        "Compare release dates and return the more recent song"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 3,
+      "task_sha256": "762e1459a64f4e06501f7097b253c332fd4eae1b4cbfc46f3e8852ffe3bef9d1",
+      "raw_proposal_sha256": "c0b18a499eec5cf5248701886fc73d1a9002f13eb7578fa5d643425ae7390619",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "coherent_partial_requirements",
+      "rationale": "The product correctly uses copied 17 and 66 as separate numeric operands, keeping the result unknown. However one dimension loses meters, cue room is not its quantity role, area output unit is absent and an unrelated date variable is disconnected. The room clause calls meters a relation; no complete dimensional contract is established.",
+      "required_checks_assessed": [
+        "Bind 17 and 66 as distinct room dimensions in meters",
+        "Propose area as the product with a square-meter result",
+        "Keep area unknown in extraction"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 4,
+      "task_sha256": "59d061e058e626f40802e1989e01dba41c4fbeacda620ad24c23f9a6e71d3ae4",
+      "raw_proposal_sha256": "2a5f1cc820db725e84f37a6fee23b7c958a6cfd070e5ac0b872624e06d90a182",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "The full Titanic title is retained as known text, but premiere links it to itself rather than the requested unknown date. Answer and a gratuitous query-time anchor are disconnected. Premiere date cannot be obtained from this graph.",
+      "required_checks_assessed": [
+        "Identify titanic: 100 years on",
+        "Find its premiere date",
+        "Keep requested date unknown"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 5,
+      "task_sha256": "33562f02f5d646c2ff1669315905b90cfc538b2fd35e553fa4c7e0e07264c941",
+      "raw_proposal_sha256": "25676ce8a1059cc12ae17f6d4435085ac8fdd42ad14c53906b62979c6e187e13",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Count of a certified-units set is proposed, but that set is made the subject of selling, album is a unit and the artist and best-selling-album selection are missing. The extra anchor is disconnected; certified totals versus sales and album identity are not bound.",
+      "required_checks_assessed": [
+        "Identify Beyoncé albums and the best-selling album under a consistent measure",
+        "Obtain that album’s certified-unit total",
+        "Keep certified units distinct from general sales"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 6,
+      "task_sha256": "dd4f7820a9dcd23216ecf05db6bfd46a5a2138bc2cb848fa19da80f85cdd7cb2",
+      "raw_proposal_sha256": "c32487f55763d503394a7299252983827ba665ba82d6745cd1aa494a06b21f5e",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "coherent_partial_requirements",
+      "rationale": "Movie text and a latent director are linked by the requested director relation, with the answer still unknown. The answer variable is separate from that director, and calculation composition requires an absent operation for this fact lookup. The core lookup is useful but incomplete.",
+      "required_checks_assessed": [
+        "Identify the movie snow on tha bluff",
+        "Bind director relation to that movie",
+        "Keep director unknown"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 7,
+      "task_sha256": "400e1d6e474577304a6f69468dbb173136f4417cbdffac410c2c81a16391fcff",
+      "raw_proposal_sha256": "574337e2c519d574d520901a29471c5a4077c190a3ef71bf3151b74165548703",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "The answer/player links to a set cue containing never won, but all clauses have positive polarity and no explicit negative win predicate. Passing touchdowns are typed entity rather than measured counts, NFL is a unit, and the unused anchor and absent argmax leave eligibility and maximum unresolved.",
+      "required_checks_assessed": [
+        "Define NFL player population",
+        "Obtain career passing touchdown counts",
+        "Require no Super Bowl win for every qualifying player",
+        "Select the maximum count and its player"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 8,
+      "task_sha256": "2f5ac077fa567e1755233c849029203f67477de3939a5a101d2beed6f98dc7db",
+      "raw_proposal_sha256": "0e506c518861fb79db9b087eea1ca646c58e5ce087c18202c56c9856e630c476",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "All three artwork-title cues survive, but words inside those titles become positive relations to the answer set. Louvre/display status and negative eligibility are absent from every predicate; the title text is not a display fact. Ambiguous status does not restore the missing non-displayed-set requirements.",
+      "required_checks_assessed": [
+        "Retain all three named works as distinct candidates",
+        "Check Louvre display status for each",
+        "Return the qualifying non-displayed set with negation preserved"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 9,
+      "task_sha256": "e3835d073ce84858c9b7524f3806808934dc79c6298a4fd5fc3177e0fad8dfd3",
+      "raw_proposal_sha256": "02c6ef2134ef717429e7acacc8359120d74937049ce3b832ca044634ab80b050",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Federations are latent entities rather than known comparison contexts, and their name words become predicates. Fewer is encoded as negative has without membership values. No two membership counts or selecting comparison are represented; the named candidates are disconnected.",
+      "required_checks_assessed": [
+        "Identify both named federations",
+        "Obtain comparable membership counts",
+        "Compare counts and return the smaller federation"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 10,
+      "task_sha256": "bb0dbd0f3e8c81aca6551ad97adc322033fe86091691f4894d08fc27d7509228",
+      "raw_proposal_sha256": "128d9fe5ecca71d8101cafec2491b5bb579b2961b31b90fb907fbe2e2f3f17d8",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Oldest-brother identity and birth date are not linked to Dave Franco; the unknown answer is date rather than age number. Argmax ranks the query-time anchor against itself and returns a date. Age-at-query-time and oldest selection remain unrepresented.",
+      "required_checks_assessed": [
+        "Identify Dave Franco’s brothers",
+        "Determine the oldest brother",
+        "Obtain birth date and derive age at query time"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 11,
+      "task_sha256": "7b6331f0201b5376000b431740b06f0f2b82c2a272c32bcde281ad02d5514f9a",
+      "raw_proposal_sha256": "80c6c5f303eb9c23214c545d7bfcdf67eb92576f5be0eff2ad31612dc443d9a3",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "ASAT and film text are latent roles with test as get actor and film as object; Elle and score relation are missing. Difference subtracts the query-time anchor from itself to produce a score. Ambiguous status preserves no supported score/test/person contract.",
+      "required_checks_assessed": [
+        "Identify Elle and the test in legally blonde",
+        "Obtain the requested score",
+        "Preserve ASAT wording pending evidence resolution"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 12,
+      "task_sha256": "cfdab457cb20120fd98a34e8a25b1a3f9d97d1c54cb1d54a992fe7d3f34842cb",
+      "raw_proposal_sha256": "7591092a59864b2942310705e7193f3a9c879ba12903112315e8bc8c48f7f89a",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Olivia and award contexts retain a coherent win core, but select takes those texts to return a date without a ceremony-year fact. Grammy is not retained as a distinct award qualifier and the result is disconnected from the event date. No requested year can be selected.",
+      "required_checks_assessed": [
+        "Identify Olivia Rodrigo",
+        "Require a Grammy Best New Artist win",
+        "Return the award/ceremony year"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 13,
+      "task_sha256": "866484ce6cf842cb989936a5e6fca68dcd9fc4ce9e9c333f310e8f7356b73474",
+      "raw_proposal_sha256": "81fb2aec4953b0f8557a6aef841206d8ad2d669321f7e9593fa7a2712830eb5c",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "A join core links Savannah Bananas and MLB cues and ambiguous status leaves the premise open. Both known names are latent sets, however, and the date answer has no link to the event. No joining-date fact or explicit premise verification requirement is represented.",
+      "required_checks_assessed": [
+        "Check Savannah Bananas membership/joining premise against MLB",
+        "Return a joining date only if event supported"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 14,
+      "task_sha256": "72fb9ba0d860e3601a229c86b526cb856753dcc6a581a4fc90a9699990753d19",
+      "raw_proposal_sha256": "ca6cd37cc4221c69e0bc9a4e4dc0ab1cf6ae92ab26c35f275e3f08cc92287d1f",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Film names survive as latent text, but reciprocal sequels relations lack separate numeric counts. The set answer is disconnected and there is no count comparison or consistent sequel scope. Naming both franchises does not encode which has more.",
+      "required_checks_assessed": [
+        "Identify the terminator and the fast and the furious",
+        "Count sequels of each under consistent scope",
+        "Compare counts and return the greater franchise"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 15,
+      "task_sha256": "20db6c6b2c8bdf40587ffb165de9e8f1f1b3a1862dd61a30605bd84777d7ee8c",
+      "raw_proposal_sha256": "9cc35cf5284e24d494ae6886a09564844577dbd170ba9b54fa39a4f27f2c575f",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Known actress contexts survive, but movie roles is entity and name-word clauses assign Jolie as subject of both Streep/Jolie relations. Neither numeric role count nor comparison is represented, and the answer is disconnected. The role/film counting definition remains unresolved.",
+      "required_checks_assessed": [
+        "Identify Meryl Streep and Angelina Jolie",
+        "Count movie roles for each",
+        "Compare using a consistent role/film definition"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 16,
+      "task_sha256": "f133cf0aa0c5358c9351688dd9575355260190de3a761b5229f3aa7437ac0ef3",
+      "raw_proposal_sha256": "4f4f7d50d5d3156f98014fd461a8a8dac07f6ed6d38a5a8b1da3118405ac2081",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Charles Jarrott is known context, but self-referential mother and birth clauses conflate mother and child. Mother and birth are date variables; argmin computes an unrelated latent from the same birth variable twice rather than the date answer. Birth-event/date and pronoun scope remain unresolved.",
+      "required_checks_assessed": [
+        "Identify Charles Jarrott and the relevant mother relation",
+        "Find the birth date requested by the birth event"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 17,
+      "task_sha256": "193319fe1225773ee5b4cc2d0d77bd9233c2f505293e8f15969b1d066ea06930",
+      "raw_proposal_sha256": "299c0879eb24884918f0dbfd6af0edf99a7733e1c9477c298721b076d133d140",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "The warrant cue is a latent set and last year is a known entity, used as dividend object instead of period. Select returns a date from the instrument without a distribution-date fact or query-time year anchor. Warrant/company distinction and dividend premise remain incomplete.",
+      "required_checks_assessed": [
+        "Identify GDEV Inc. warrant as the requested instrument",
+        "Resolve last year from query time",
+        "Check dividend distribution premise",
+        "Find distribution day(s) within the year"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 18,
+      "task_sha256": "630188ea12b9851cc8e5edbca16df0b2a82b47178ec1ea77f9c095d52db702a6",
+      "raw_proposal_sha256": "bf3bc4d6a0215e52cadbc0277beed11a9c6052df4bf1915cc930aae3b6a81dbd",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "USA/top-song cue is latent text, with a top-song predicate and local at-the-moment period, but Apple Music chart scope is not an explicit context. Answer and anchor are disconnected; rank and dated chart observations are missing.",
+      "required_checks_assessed": [
+        "Identify Apple Music chart for USA",
+        "Bind at the moment to query time",
+        "Select top-ranked song at that time"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 19,
+      "task_sha256": "5fb2a7fa971d3346ed296886819b63da3357c98935462f8e6657cb9a7cb6c59b",
+      "raw_proposal_sha256": "69c252126f9cd9296dd2fd146ac055b538d48e3fbd5b05144a0884d75d19cadf",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "The title/dialogue and English cues survive as latent text, but clauses make English an object of title-of and generic is/in. There are no distinct dialogue operands or equal/not_equal comparison producing the boolean answer. The unspecified comparison target remains ambiguous.",
+      "required_checks_assessed": [
+        "Identify Star Wars: The Rise of Skywalker",
+        "Identify original dialogue and English comparison target",
+        "Determine whether dialogue differs under that comparison"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 20,
+      "task_sha256": "15ccd8dab6238dcd7c4cecbcfdc15c11640ef12b01256081911b82611ac75592",
+      "raw_proposal_sha256": "05dadc0447be98700169e7340dbefe93832c25369e1bace4b7f87f6c2a619a18",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "coherent_partial_requirements",
+      "rationale": "The answer set is subject of made-the-NFL-playoffs, preserving a useful qualifying-team core. This-year date is disconnected with no query-time anchor or season interval; any composition does not establish complete season enumeration. Temporal scope remains missing.",
+      "required_checks_assessed": [
+        "Identify the NFL playoff season meant by this year",
+        "Enumerate qualifying teams for that season"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 21,
+      "task_sha256": "ccec8826f60006dd1014d42c01db23a02178be4afc5f46962adf5150735cd2bf",
+      "raw_proposal_sha256": "d7e2b1be3edec5d1428ed3dc055cdb62cceedc1749ab776398a25f5b640fd56c",
+      "structural_status": "linked_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "The graph is structurally linked, but drops explicit cardinality 10 and ranks ascending query-time anchor rather than holding weights. SPY itself is the sole ranked candidate instead of its holdings. The holdings clause does not make those operands/candidates correct; no complete top-ten list is represented.",
+      "required_checks_assessed": [
+        "Identify SPY holdings",
+        "Use comparable holding weights at a stated observation time",
+        "Return top ten holdings in ranked order"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 22,
+      "task_sha256": "1d35b62ea466afd70de157cd579b24920fc631c265c2a8b3227486fde593be85",
+      "raw_proposal_sha256": "85f313c50e0c7ad7645ad2d27ba66a4144c4154f5ab5f78212d1388401f8ed6f",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Actor/role/name clauses retain some lookup structure, but Harvey Specter and Suits are not known context values. The show becomes a subject linking to the answer and an unused anchor remains. Comparison composition has no operation; exact person-character-show association is incomplete.",
+      "required_checks_assessed": [
+        "Identify Suits and the Harvey Specter character",
+        "Find actor relation for that role"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 23,
+      "task_sha256": "af043afc6e68c7bc29d7bc977a64b4741d3082511230a5962998a13c19800ae8",
+      "raw_proposal_sha256": "d938a7fd58917de610576559a0982d695d2c157517c719a572c15780570d65ab",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Lille context and last-week period survive, but the score clause uses Lille as its own object and does not bind goals. Difference subtracts the same unknown last date twice; the numeric goal variable is unused. Neither interval goals nor sum is represented.",
+      "required_checks_assessed": [
+        "Identify Lille team",
+        "Resolve last week from query time",
+        "Sum relevant goals during that interval"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 24,
+      "task_sha256": "7e55e46cf36c679aee88e8bc2a1e941799a4914ce3b9097ad760f604a6ef07e2",
+      "raw_proposal_sha256": "b13f24c3dd794e6c8c3255a2b8df903ae0da1ee00410a4a33131cc06834b4ae2",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Meters is an entity subject, the dam cues are latent entities and the phrase how-many-meters is comparison value. Kaam is unused, there are no two numeric heights and no directed Wishka-minus-Kaam operation. Unit text alone cannot establish the taller premise.",
+      "required_checks_assessed": [
+        "Identify Wadi Wishka and Wadi Kaam dams",
+        "Obtain comparable heights in meters",
+        "Subtract Kaam height from Wishka height",
+        "Preserve taller premise and direction"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 25,
+      "task_sha256": "3e1905f5c2c05489b76afb55dd469e8a8a23bddcc0e5c32e59f274487b051c4d",
+      "raw_proposal_sha256": "62538dc8030c9d108ea71e622a0485ee5768f72ee9856680be991d35a1c4bc6d",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "The exact warrant context and current-price predicate are retained, but price is used as unit and the number answer has no value link. Current date is unused and there is no quote currency/observation anchor. Ambiguous status leaves a partial instrument-price core only.",
+      "required_checks_assessed": [
+        "Identify Guardforce AI Co. Limited warrant",
+        "Obtain the current instrument price at query time",
+        "Retain quote currency and observation time"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 26,
+      "task_sha256": "3ec3b2b656353584429b255cbdab0de9e62f1f2bc3c4bb9850bfabbabfa93113",
+      "raw_proposal_sha256": "dc0bf954c1a59ecd1789f3f3c26ef51c1d016f87a31a99ff924d7c2fe3b469b2",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Grand Slam titles is a set that wins itself; Andy Murray is not represented as actor. The number answer and query-time anchor are disconnected, rank composition has no operation and no title-count contract is connected.",
+      "required_checks_assessed": [
+        "Identify Andy Murray",
+        "Count Grand Slam titles won",
+        "Bind career cutoff to query time"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 27,
+      "task_sha256": "71e7e17c597c2b93acc5c0b8a499954e07209c7b0a9def9fc4f49f75ca86944f",
+      "raw_proposal_sha256": "e338792fb236ecd1d42dd3a588b658dc2ccc702ccb946ed3a18f331cd5903cea",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Impinj and opening-price wording survive, but price is a unit, today is a self-relation and the number answer uses age_years on the same unconstrained date twice. No opening quote, currency or resolved trading day is bound.",
+      "required_checks_assessed": [
+        "Identify Impinj stock",
+        "Resolve today as the requested trading day",
+        "Obtain opening price and currency for that day"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 28,
+      "task_sha256": "af5c98b20552d524cf349b27cb35b5beb603b813972211a1594f9334c4eba053",
+      "raw_proposal_sha256": "5e9df7c0f5893e886c881c1fde15b9c8f28c1fc19f3b3482a162af827f06cc38",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "NASDAQ 100 context and today period exist, but the population set is disconnected and biggest is a comparison literal rather than numeric percentage change. There are no comparable company measurements or argmax; answer and latent measurement/date are not correctly linked.",
+      "required_checks_assessed": [
+        "Identify NASDAQ 100 companies/membership for today",
+        "Obtain comparable percentage changes for the same trading interval",
+        "Find biggest percentage change and company"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 29,
+      "task_sha256": "4a8c953d788d073c53956ab232b173af1dc92124937d66d1d91271bf31af867e",
+      "raw_proposal_sha256": "2b2851cef690defe7ce3a512ad2f9c14cfd50f8f138d55f565cd4faa873f1b24",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Film names are typed dates and duplicated as query-time anchors instead of known candidates. The clauses link generic film and answer, with Coraline reduced to or self-relation. Separate production durations, consistent intervals and longer comparison are absent.",
+      "required_checks_assessed": [
+        "Identify Inside Out and Coraline",
+        "Obtain comparable production durations for both",
+        "Select the longer production"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 30,
+      "task_sha256": "56011e23ccf82e2d80cb8713d2e77a11b3ab26411592b680d6c5d19065df7e18",
+      "raw_proposal_sha256": "de06edad36e09a80c03d73b8d383997d61bd1ac6360f34088f50c14565c58a8e",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "USA/China cues survive but are latent entities, gold medals is also entity and the year date variable is unused. Country wins answer set rather than measured medals; no numeric country counts or comparison is represented, though 2022 appears as local period.",
+      "required_checks_assessed": [
+        "Identify USA and China",
+        "Obtain gold medal counts for the 2022 Olympics",
+        "Compare counts and return the higher country"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 31,
+      "task_sha256": "f9fd5788476833b362590bcd5cb51f84fce154378a06c717e752c38a9d4b6da3",
+      "raw_proposal_sha256": "e0768f1464496095bae009e62f4e7b46e2e5b818f7bec381022887aa92e541dd",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Actress and hero cues link through play and ambiguous status retains scope uncertainty. The live-action context is disconnected, the answer has only a who self-description and release dates/earliest selection are missing. No complete qualifying-portrayal graph is established.",
+      "required_checks_assessed": [
+        "Define female action hero and live-action film scope",
+        "Identify actresses/roles and film release dates",
+        "Select earliest qualifying portrayal"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 32,
+      "task_sha256": "caad6fab2d9f16f8a084de19e2f4867c3ff12dfc313808d64ce73da06a12b9fd",
+      "raw_proposal_sha256": "43de6c384784ea01ae9a712e0a3826e2f980e97b899f54fd17c0f45be09cf703",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Player-wins clause and local last-year period survive, but answer, professional-tennis context and duplicated year context are disconnected. No match-win quantity per player, eligibility definition or ranking operation is represented.",
+      "required_checks_assessed": [
+        "Define professional tennis population",
+        "Resolve last year from query time",
+        "Count match wins for eligible players in that interval",
+        "Select the maximum"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 33,
+      "task_sha256": "65d3076fd5082c6b83a89ac27bcfa989314454da803d65d912d43703da951c77",
+      "raw_proposal_sha256": "16c14b8617b094b103c545947f6ef8249f5ddb3d183d7a5db38fde0a787d7f59",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "The explicit requested three is lost as cardinality, New York context is disconnected and biggest lakes is an entity without comparable size measurements. Select consumes only that vague latent rather than a ranked eligible set. Three-largest completeness is absent.",
+      "required_checks_assessed": [
+        "Identify lakes qualifying as in New York",
+        "Obtain comparable size measurements",
+        "Return three largest lakes with explicit cardinality three"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 34,
+      "task_sha256": "1fc2709332d62bb46f971c02aac5642d906c45c5c973bc01ee1dadc128fd498e",
+      "raw_proposal_sha256": "08bf3db87ec00ff91dbfd581a83fc21805251f54292e8f07015d92285167117a",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Known Red Wings and 1990s period plus count of championship set survive, but the win clause makes championships actor and team object. Team text also occupies unknown period; the period context is disconnected. The quantity core cannot establish a coherent team/event/interval count.",
+      "required_checks_assessed": [
+        "Identify Detroit Red Wings",
+        "Count Stanley Cup championships during the 1990s"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 35,
+      "task_sha256": "266cd2cd1cf2e89c9705f2533867a3b27f87e309cc45aff4495beba87f742995",
+      "raw_proposal_sha256": "956bbcf09c4bac2dab3ce072fefb01d7d5a7c01501aa8d710119f0f1d8345090",
+      "structural_status": "linked_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "The structurally linked count treats the unresolved latest-president description as a known entity constant. President-of links that entity to spouses, while did is a second relation. Latest identification at query time, spouse-history relation and consistent person count are missing despite graph connectivity.",
+      "required_checks_assessed": [
+        "Identify latest US president at query time",
+        "Obtain spouse history for that person",
+        "Count spouses under a consistent definition"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 36,
+      "task_sha256": "2e448f0381e49552b85f233a37b7d752d78df3f535b05c41c14d2b883f14b5f8",
+      "raw_proposal_sha256": "0520115380fda92bc54b74ba06fd713fcacca59492cd913d0489ff324079b51b",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Rihanna and upcoming podcast are latent texts rather than actor/context and unknown planned event. Launch clause lacks planning qualification and date value; answer/anchor are disconnected. No launch-plan existence requirement or planned date is represented.",
+      "required_checks_assessed": [
+        "Identify Rihanna and the proposed upcoming podcast",
+        "Check whether a launch plan exists",
+        "Return planned launch date only if supported"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 37,
+      "task_sha256": "f0cdf62cb58afb8a55595943c7e6b5302a0d90de318d412992ab35f044e979c6",
+      "raw_proposal_sha256": "e30b75a4a86ad3e8e7205cd5d4188b8a08a507131e3238b792fb8bbb826375ff",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Chris Brown and release wording survive, but song-or-album and last-time are known texts instead of release population and temporal selection. Last-time becomes actor of when; a question phrase is unknown period. Date answer has no release-date/max-before-query-time link.",
+      "required_checks_assessed": [
+        "Identify Chris Brown songs/albums and release dates",
+        "Find most recent qualifying release before query time",
+        "Return its release date"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 38,
+      "task_sha256": "2c027a83f99c54dd6043c0e95f28f73e145761e124f7a414dfbfaafb05feafc8",
+      "raw_proposal_sha256": "6597102f4594a3c102d1291b248a0a39edfe8be3d8ba0074efd1858558d60566",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Sociedad context, goal set, week period and count core survive, but last/sociedad/goals are relations from isolated phrases rather than team scoring events. The declared period is disconnected; numeric goals versus enumerated scoring events and match/week scope are incomplete.",
+      "required_checks_assessed": [
+        "Identify Real Sociedad team",
+        "Resolve last week from query time",
+        "Sum relevant goals during that interval"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 39,
+      "task_sha256": "6e7e880f4323d557de6d7d74808ec48dfd7652a3de6686f2c940b393f88bec8e",
+      "raw_proposal_sha256": "fc831cdbf18b1adbff73bfa14d75b14f13eb2ebc2d318f6131e34e183e554236",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Known film titles are latent text, the requested film answer is date and clauses make one film release the other. Query-time anchor is unused; distinct release-date facts and earliest selection are absent.",
+      "required_checks_assessed": [
+        "Identify The Wizard of Oz and The Lion King",
+        "Obtain comparable release dates",
+        "Return the earlier film"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 40,
+      "task_sha256": "e7e37d712a30e13e72ebb6425f45ecb6057e65c9d4c2eaf92c65067ad7c938bc",
+      "raw_proposal_sha256": "1d7bc880e96cf1d739a05e3b97dd8e458d84a022f2e076127e2e84c7ac108378",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Microsoft and IPO contexts are known, but when-IPO points to Microsoft without a price fact. Select returns a number from two entities/texts, not a quote with currency. Event identification and requested IPO-price measure are incomplete.",
+      "required_checks_assessed": [
+        "Identify Microsoft IPO",
+        "Obtain requested IPO price and currency"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 41,
+      "task_sha256": "9f6fdff730cc14c1ed4d0ba22721de204875a46a791b11ae52373f442a706d57",
+      "raw_proposal_sha256": "1c831868eaadddb407a6f4f987f24ba5c17f4adc3ccd3005b2a5c2c0b72bb245",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Ownership chain partly links owner/company, but company publishes the unknown owner instead of In Touch Weekly. Title cue is a date context with constant 2000, duplicated year context is unused and company text is unknown period in ownership. Publisher-title and consistent year binding are wrong.",
+      "required_checks_assessed": [
+        "Identify In Touch Weekly publisher in 2000",
+        "Identify the owner of that publishing company in 2000",
+        "Preserve the two-step ownership relationship and temporal constraint"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 42,
+      "task_sha256": "4ed1e2e44261e110024d00883464a335c1fd1db787901bfbc8c220f6cad96036",
+      "raw_proposal_sha256": "4b4854038400eefc98398f634b8d363e7e79420669329c1e14e5e2ffe7775322",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Group name and performance phrase are latent dates, with unused query-time anchor; the clause uses inline text instead of those variables. Answer is disconnected and comparison composition lacks operation. Group identity/start-event date remain unrepresented.",
+      "required_checks_assessed": [
+        "Identify One for All performing group",
+        "Find when they began performing together"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 43,
+      "task_sha256": "99add4f0b886519b3242864e2262df950237ca50206122a0e67479175f7be311",
+      "raw_proposal_sha256": "3d255227605953c7da6cffe57c673f864b70512c71917d4c7f2e61baec687d84",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "A broad singer-songwriter clause links latent actor to answer but does not bind explicit 14 as known quantity or Grammy as award scope. Both song titles and country/pop/rock conditions are only inside broad text/cues, not predicates. Unused comparison/set/anchor variables make conjunctive identity requirements incomplete.",
+      "required_checks_assessed": [
+        "Unknown American singer-songwriter is shared across all conditions",
+        "Require 14 Grammy awards under the relevant scope/time",
+        "Retain country/pop/rock description",
+        "Bind both named hit songs to that singer-songwriter",
+        "Return the person only if conditions jointly supported"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 44,
+      "task_sha256": "c7ca7d4c3741720b8d7e705b874b3fb222185316965a5e2645b4460955b86ab9",
+      "raw_proposal_sha256": "2f8993a24f6b4282516bf498a8808dc5939ed59cfbb16eab0282c088448f4037",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Reptile/largest wording links vague entity and set answer while ambiguous status acknowledges uncertainty. No size metric, eligible population, measurements or maximum selection is represented; the correct requested animal identity remains unresolved.",
+      "required_checks_assessed": [
+        "Define reptile population",
+        "Obtain comparable size metric",
+        "Select largest under that metric"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 45,
+      "task_sha256": "6692a1a89f8d08eca2943ef74a583060ec3233a03bf1374c4ded3bd1d26911f7",
+      "raw_proposal_sha256": "262a85e86fa67f87eed2088d3110f721f5440d059fc4125d66f4c84e7abb71c6",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "INDB context and market-worth wording survive, but market worth is unit and as-of-today is unknown period. Difference subtracts the same unconstrained date from itself as market worth. Actual numeric measure, currency and current observation are missing.",
+      "required_checks_assessed": [
+        "Identify INDB instrument/company",
+        "Resolve as of today from query time",
+        "Obtain total market worth under the requested measure"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 46,
+      "task_sha256": "5466f2336689bb555e5953a4c670c234e037c22ff2648479d285e6241d2437ac",
+      "raw_proposal_sha256": "b8c67370d6f01fc4dc66ceb11afe6bb8df6fa0acfea2edfc61ce98103f908017",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Named people are latent dates, answer is boolean despite who request and two redundant query-time anchors are unused. Clauses self-link Lopez and split Aniston into fragments. Neither relationship partner/interval nor comparable duration/selection is represented.",
+      "required_checks_assessed": [
+        "Identify Jennifer Lopez and Jennifer Aniston",
+        "Identify the relationships being compared",
+        "Obtain comparable durations at query time",
+        "Return the longer relationship/person"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 47,
+      "task_sha256": "82e99ae6a98cc7b5af34dde8c9e7c2e94fa24bdb26126da4c26ab8035f038df1",
+      "raw_proposal_sha256": "0ccfe2cf51012b9705c09055c1b0863b86914db1937d17cbfbafd33b9c3d5c97",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Abacus Life context and local last-week period survive, but maximum is a comparison literal and price is unit. Difference of the same query-time anchor twice supplies the number instead of maximum observed interval prices. Instrument-price/currency/range requirements remain incomplete.",
+      "required_checks_assessed": [
+        "Identify Abacus Life instrument",
+        "Resolve last week from query time",
+        "Obtain maximum price during that interval"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 48,
+      "task_sha256": "cfbbff79574e193b17c4e14957c6f8377c4529b952082b206724e9299f93f958",
+      "raw_proposal_sha256": "817fbf6444e8d17a80e855fc30f9e24dbf8e526918e6cdaf07182e412cddec2f",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Lake/answer connection is generic is; US cue is typed latent date and unused anchor remains. Geographic eligibility, consistent size metric and population maximum are absent. No complete largest qualifying lake requirement is established.",
+      "required_checks_assessed": [
+        "Define lakes qualifying as in the US",
+        "Obtain comparable size metric",
+        "Select largest under that metric"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 49,
+      "task_sha256": "858e2a63f522c323ddd3c4a934cfae940fcae863e06f1fe8e5d43d45ec1c96c2",
+      "raw_proposal_sha256": "d403c101c9d0f21da6341d3ed69693d8fb5463f279bbd988476be993bc7fa0c0",
+      "structural_status": "unresolved_requirement_graph",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Known people survive but their names are relations to the answer, and taller is an entity subject rather than two numeric height facts. No heights, common units or selecting comparison is represented. Entity naming alone cannot satisfy taller-person selection.",
+      "required_checks_assessed": [
+        "Identify Tom Cruise and Robert Downey Jr.",
+        "Obtain comparable heights",
+        "Compare and return the taller person"
+      ],
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    }
+  ],
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "extraction_trace_sha256": "f341c1bc721e7a3124f528c2a00511314f984fd33f848cd0b804452fbd47b3b7",
+  "execution_verification_sha256": "83751b237c3195b652d4dea4407f39df09b044dce5abfe21c1243dc34e34230b",
+  "query_checklist_sha256": "f75689e5f092f7f76031d846ee82ec9ce8b6bb233bb475789d4793fcb27b0a3d",
+  "AI_review_batch_sha256": "13943d38b609c9bc3fbec3b96c9e8e99702775abb4943851d72a2a1ccf8cb9b3"
+}

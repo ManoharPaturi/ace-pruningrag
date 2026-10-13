@@ -1,0 +1,7 @@
+{
+  "status": "independently_verified",
+  "queries": 6,
+  "generated_answers": 18,
+  "actual_llm_calls": 18,
+  "maximum_reserved_tokens": 1657
+}

@@ -1,0 +1,29 @@
+{
+  "repository": "facebookresearch/CRAG",
+  "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+  "scope": "original_movie_person_year_snapshot_assets",
+  "max_total_bytes": 250000000,
+  "assets": [
+    {
+      "path": "mock_api/cragkg/movie/movie_db.json",
+      "local_path": "data/crag/movie/movie_db.json",
+      "bytes": 189194170,
+      "sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+      "url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json"
+    },
+    {
+      "path": "mock_api/cragkg/movie/person_db.json",
+      "local_path": "data/crag/movie/person_db.json",
+      "bytes": 45103919,
+      "sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+      "url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json"
+    },
+    {
+      "path": "mock_api/cragkg/movie/year_db.json",
+      "local_path": "data/crag/movie/year_db.json",
+      "bytes": 1150550,
+      "sha256": "05d32ffc43e749ab6e38484b04ec6c6b0f60830f306f514309812c3cba4ed91b",
+      "url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/year_db.json"
+    }
+  ]
+}

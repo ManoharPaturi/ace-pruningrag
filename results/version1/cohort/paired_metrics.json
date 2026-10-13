@@ -1,0 +1,141 @@
+{
+  "scope": "Exploratory paired literal agreement and abstention, not semantic accuracy",
+  "questions": 50,
+  "responses": 250,
+  "comparison_control": "top_k",
+  "multiple_comparison_adjustment": null,
+  "per_method": {
+    "top_k": {
+      "literal_agreement_fraction": 0.06,
+      "abstention_fraction": 0.24,
+      "input_tokens": 73904,
+      "output_tokens": 690,
+      "generation_seconds": 107.63153185400017,
+      "actual_llm_calls": 50,
+      "semantic_accuracy": null
+    },
+    "mmr": {
+      "literal_agreement_fraction": 0.08,
+      "abstention_fraction": 0.34,
+      "input_tokens": 75587,
+      "output_tokens": 534,
+      "generation_seconds": 102.08777111999973,
+      "actual_llm_calls": 50,
+      "semantic_accuracy": null
+    },
+    "coverage": {
+      "literal_agreement_fraction": 0.06,
+      "abstention_fraction": 0.38,
+      "input_tokens": 33607,
+      "output_tokens": 525,
+      "generation_seconds": 54.14175981499994,
+      "actual_llm_calls": 50,
+      "semantic_accuracy": null
+    },
+    "joint": {
+      "literal_agreement_fraction": 0.08,
+      "abstention_fraction": 0.36,
+      "input_tokens": 75094,
+      "output_tokens": 557,
+      "generation_seconds": 102.5664717809999,
+      "actual_llm_calls": 50,
+      "semantic_accuracy": null
+    },
+    "exact": {
+      "literal_agreement_fraction": 0.08,
+      "abstention_fraction": 0.36,
+      "input_tokens": 74909,
+      "output_tokens": 552,
+      "generation_seconds": 101.81052113499987,
+      "actual_llm_calls": 50,
+      "semantic_accuracy": null
+    }
+  },
+  "paired_differences": {
+    "mmr": {
+      "literal_agreement": {
+        "mean_difference": 0.02,
+        "bootstrap_95_percentile_interval": [
+          0.0,
+          0.06
+        ],
+        "resamples": 10000,
+        "seed": 42
+      },
+      "abstention": {
+        "mean_difference": 0.1,
+        "bootstrap_95_percentile_interval": [
+          0.02,
+          0.18
+        ],
+        "resamples": 10000,
+        "seed": 42
+      }
+    },
+    "coverage": {
+      "literal_agreement": {
+        "mean_difference": 0.0,
+        "bootstrap_95_percentile_interval": [
+          -0.06,
+          0.06
+        ],
+        "resamples": 10000,
+        "seed": 42
+      },
+      "abstention": {
+        "mean_difference": 0.14,
+        "bootstrap_95_percentile_interval": [
+          0.06,
+          0.24
+        ],
+        "resamples": 10000,
+        "seed": 42
+      }
+    },
+    "joint": {
+      "literal_agreement": {
+        "mean_difference": 0.02,
+        "bootstrap_95_percentile_interval": [
+          0.0,
+          0.06
+        ],
+        "resamples": 10000,
+        "seed": 42
+      },
+      "abstention": {
+        "mean_difference": 0.12,
+        "bootstrap_95_percentile_interval": [
+          0.04,
+          0.22
+        ],
+        "resamples": 10000,
+        "seed": 42
+      }
+    },
+    "exact": {
+      "literal_agreement": {
+        "mean_difference": 0.02,
+        "bootstrap_95_percentile_interval": [
+          0.0,
+          0.06
+        ],
+        "resamples": 10000,
+        "seed": 42
+      },
+      "abstention": {
+        "mean_difference": 0.12,
+        "bootstrap_95_percentile_interval": [
+          0.04,
+          0.22
+        ],
+        "resamples": 10000,
+        "seed": 42
+      }
+    }
+  },
+  "limitations": [
+    "Question-level resampling does not establish entity/event independence.",
+    "Unparsed or nonmatching answers are not classified incorrect.",
+    "Intervals are exploratory and not evidence of cross-source efficacy."
+  ]
+}

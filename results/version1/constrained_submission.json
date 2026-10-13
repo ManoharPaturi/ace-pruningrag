@@ -1,0 +1,43 @@
+{
+  "tasks": 386,
+  "query_tasks": 50,
+  "source_tasks": 336,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "tasks_sha256": "f26f3fb5895f3f7d4ba0877fb6b41b4f406936f8acb5325ceb7c9dbaaffc424a",
+  "kernel_id": "ionrey/ace-constrained-2588acf828b5428082b6f66256a1632c",
+  "max_generate_invocations": 97,
+  "max_total_reserved_tokens": 790528,
+  "new_answer_generation_calls": 0,
+  "kernel_version": 1,
+  "status": "submitted",
+  "private": true,
+  "protocol": {
+    "scope": "Closed JSON/span constrained extraction diagnostic; no semantic acceptance",
+    "max_tasks": 386,
+    "max_input_and_output_tokens": 2048,
+    "max_output_tokens": 160,
+    "batch_size": 4,
+    "seed": 42,
+    "dtype": "float32",
+    "generator_config": "configs/generated_pilot.json",
+    "allow_answer_acceptance": false,
+    "max_span_words": 160,
+    "max_span_atoms": 640,
+    "constraints_dependencies": {
+      "lm-format-enforcer": "0.11.3",
+      "interegular": "0.3.3",
+      "pydantic": "2.14.1",
+      "pydantic-core": "2.50.1",
+      "annotated-types": "0.8.0",
+      "typing-extensions": "4.16.0",
+      "typing-inspection": "0.4.4",
+      "packaging": "26.3",
+      "pyyaml": "6.0.3"
+    }
+  },
+  "actual_gpu_outputs_verified": false,
+  "control_extraction_trace_sha256": "66b75e941c882a8b8a4e8a41fa3ed535cd61f77320dcf8885ff4eb9d00afd01c",
+  "prompts_changed": false,
+  "generator_changed": false,
+  "reference_answers_or_reviews_in_prompts": false
+}

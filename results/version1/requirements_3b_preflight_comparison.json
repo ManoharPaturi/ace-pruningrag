@@ -1,0 +1,17 @@
+{
+  "scope": "Matched tokenizer preflight; no neural model calls or semantic improvement",
+  "tasks": 50,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "same_task_ids": true,
+  "same_prompt_hashes": true,
+  "same_encoded_input_ids": true,
+  "same_span_counts": true,
+  "same_token_budgets": true,
+  "extractor_checkpoint_is_changed_factor": true,
+  "decode_defaults_matched_to_control": true,
+  "control_decoding_sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+  "control_preflight_sha256": "088642ce73017722e9255718a2c435c58f84b5b04a0e80a8a855638763a5b0da",
+  "variant_preflight_sha256": "249386bf0f538c0872936a4620bbb895f31e24321fb9a3c669cd33dd3c835a8f",
+  "actual_model_calls": 0,
+  "semantic_requirement_improvement_established": false
+}

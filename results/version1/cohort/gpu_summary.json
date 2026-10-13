@@ -1,0 +1,61 @@
+{
+  "status": "exploratory_cohort_generation_completed",
+  "queries": 50,
+  "actual_llm_calls": 250,
+  "actual_judge_calls": 0,
+  "actual_finance_calls": 0,
+  "shared_candidate_retrievals": 50,
+  "input_tokens": 333101,
+  "output_tokens": 2858,
+  "maximum_reserved_tokens": 2036,
+  "model_loading_seconds": 7.251481979000005,
+  "generation_seconds": 468.2380557049996,
+  "runtime": {
+    "transformers": "4.57.3",
+    "huggingface_hub": "0.36.0",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.6.2",
+    "sentencepiece": "0.2.1",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpus": [
+      "Tesla T4",
+      "Tesla T4"
+    ]
+  },
+  "numerical_checks": {
+    "dtype": "float32",
+    "parameters_finite": true,
+    "per_step_scores_guarded": true
+  },
+  "human_semantic_accuracy": null,
+  "evidence_completeness": null,
+  "publication_results": false,
+  "per_method": {
+    "top_k": {
+      "answers": 50,
+      "literal_matches": 3,
+      "abstentions": 12
+    },
+    "mmr": {
+      "answers": 50,
+      "literal_matches": 4,
+      "abstentions": 17
+    },
+    "coverage": {
+      "answers": 50,
+      "literal_matches": 3,
+      "abstentions": 19
+    },
+    "joint": {
+      "answers": 50,
+      "literal_matches": 4,
+      "abstentions": 18
+    },
+    "exact": {
+      "answers": 50,
+      "literal_matches": 4,
+      "abstentions": 18
+    }
+  }
+}

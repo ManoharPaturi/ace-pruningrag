@@ -1,0 +1,30 @@
+{
+  "scope": "Explicitly admitted accepted runs only; no live generation",
+  "runs": {
+    "legacy": {
+      "path": "runs/kaggle/generated-output-v3/phase3-pilot/generated/predictions.jsonl",
+      "sha256": "6858c1e0a46cbe7acc4d7306ee0a29706aa2afa52cc89892bd5f54f9c6ef4827",
+      "responses": 150
+    },
+    "historical": {
+      "path": "runs/kaggle/historical-output-v1/phase3-pilot/generated/predictions.jsonl",
+      "sha256": "d9222b675cd4504d7502b8a1b70c5893e4455a086e6a54def2c58f7dd4389d60",
+      "responses": 18
+    },
+    "regeneration_initial": {
+      "path": "runs/kaggle/regeneration-output-v2/phase3-pilot/generated/predictions.jsonl",
+      "sha256": "4bacd65c561ad26acb07a2a78de70e04191ef1f9669867e59bfa6caf08ee6bc6",
+      "responses": 18
+    },
+    "regeneration_retry": {
+      "path": "runs/kaggle/regeneration-output-v2/phase3-pilot/regenerated/predictions.jsonl",
+      "sha256": "13835929b5148ab9a7f7747d5fc37f52ff6b8f5c6ac30144be0a649fbfc274af",
+      "responses": 8
+    },
+    "cohort": {
+      "path": "runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl",
+      "sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+      "responses": 250
+    }
+  }
+}

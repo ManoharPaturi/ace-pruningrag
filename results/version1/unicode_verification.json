@@ -1,0 +1,54 @@
+{
+  "status": "unicode_spans_decode_and_costs_reconstructed",
+  "protocol_id": "unicode_combining_marks_v2",
+  "span_policy_sha256": "89b92eef949a919998a2316861d7058a78c7933f89bdce87a7833903a1a1363e",
+  "tasks": 386,
+  "extraction_sequences": 386,
+  "generate_invocations": 97,
+  "unextracted": 0,
+  "input_tokens": 124383,
+  "padded_input_tokens": 148610,
+  "output_tokens": 16200,
+  "maximum_reserved_request_tokens": 890,
+  "trace_sha256": "0acfdb530b72234eb4232ce7d6b9ccaac8f9e78013485daf6515baf166f2de85",
+  "tasks_sha256": "f26f3fb5895f3f7d4ba0877fb6b41b4f406936f8acb5325ceb7c9dbaaffc424a",
+  "validation_counts": {
+    "constrained_span_proposal": 385,
+    "invalid_json": 1
+  },
+  "actual_new_answer_generation_calls": 0,
+  "answer_acceptance_enabled": false,
+  "semantic_tuple_verification": false,
+  "eos_token_ids": [
+    151643,
+    151645
+  ],
+  "scope": "Versioned Unicode boundary correction with frozen blinded tasks and generator controls; no semantic acceptance",
+  "constraint_dependency_versions": {
+    "lm-format-enforcer": "0.11.3",
+    "interegular": "0.3.3",
+    "pydantic": "2.14.1",
+    "pydantic-core": "2.50.1",
+    "annotated-types": "0.8.0",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.4",
+    "packaging": "26.3",
+    "pyyaml": "6.0.3"
+  },
+  "format_enforcement": "ordered_JSON_literal_span_trie",
+  "generator_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "semantic_tuple_accuracy": null,
+  "complete_claim_coverage": null,
+  "neural_generation_independently_recomputed": false,
+  "timing": {
+    "generation_seconds": 442.81259528799984,
+    "model_loading_seconds": 6.433637868999995
+  },
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "dtype": "float32"
+  }
+}

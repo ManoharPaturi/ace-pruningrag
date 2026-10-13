@@ -7,7 +7,7 @@ from pathlib import Path
 from transformers import AutoTokenizer
 
 from ace_pruningrag.artifacts import read_json, write_json
-from ace_pruningrag.assets import fetch_assets
+from ace_pruningrag.asset_retry import fetch_assets_with_retry
 from ace_pruningrag.daily_prices import DailyPrices
 from ace_pruningrag.dataset import iter_records, verify_dataset
 from ace_pruningrag.generation import prepare_context
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     root = Path.cwd()
     config = read_json(root / "configs/historical_routing.json")
-    fetch_assets(
+    fetch_assets_with_retry(
         dict(
             config,
             assets=[a for a in config["assets"] if not a["local_path"].endswith(".safetensors")],

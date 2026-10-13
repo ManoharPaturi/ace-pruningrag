@@ -1,0 +1,31 @@
+{
+  "scope": "Corrected-policy replay of unchanged old outputs; no new generation",
+  "tasks": 386,
+  "revised_validation_counts": {
+    "constrained_span_proposal": 384,
+    "invalid_constrained_proposal": 1,
+    "invalid_json": 1
+  },
+  "changed_records": [
+    {
+      "task_sha256": "94348630b61e19152545647e6bac60a37a9ec0f93aa5a4821463ec1efd79b2a7",
+      "kind": "source",
+      "interaction_id": "46a92f1e-4f99-46da-8547-c89b1f62565a",
+      "evidence_id": "357d0d85c1f09a207a86cbbc666e5d28af46cc029ae7bbd6bb3b585a72a25c68",
+      "original_status": "constrained_span_proposal",
+      "revised_status": "invalid_constrained_proposal",
+      "revised_issues": [
+        "outside_permitted_token_span_entity"
+      ]
+    }
+  ],
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "extraction_trace_sha256": "eeb3304a11e59799a0df6bd5ab6e51b6e4c65a3b98cc659cc1585dec99855fc8",
+  "frozen_policy_sha256": "c25561b157810d539f7512651cb8221b92ecc62b7823e465da69d9c4b7be2d52",
+  "corrected_policy_sha256": "89b92eef949a919998a2316861d7058a78c7933f89bdce87a7833903a1a1363e",
+  "actual_new_model_calls": 0,
+  "old_outputs_modified": false,
+  "neural_regeneration_verified": false,
+  "semantic_role_improvement_established": false,
+  "answer_acceptance_enabled": false
+}

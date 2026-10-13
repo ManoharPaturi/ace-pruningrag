@@ -1,0 +1,9 @@
+{
+  "status": "cohort_outputs_verified",
+  "questions": 50,
+  "answers": 250,
+  "maximum_reserved_tokens": 2036,
+  "human_review_complete": false,
+  "evidence_completeness": null,
+  "semantic_accuracy": null
+}

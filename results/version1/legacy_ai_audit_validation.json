@@ -1,0 +1,43 @@
+{
+  "status": "ai_assessments_structurally_validated",
+  "trace_sha256": "6858c1e0a46cbe7acc4d7306ee0a29706aa2afa52cc89892bd5f54f9c6ef4827",
+  "response_count": 150,
+  "ai_reviewed_responses": 150,
+  "ai_reviewed_questions": 50,
+  "unreviewed_responses": 0,
+  "full_ai_response_audit_complete": true,
+  "ai_semantic_verdicts": {
+    "uncertain": 33,
+    "incorrect": 45,
+    "correct": 36,
+    "abstained": 36
+  },
+  "ai_grounding_verdicts": {
+    "conditionally_supported": 6,
+    "unsupported_full_claim": 36,
+    "contradicted_by_selected_relation": 3,
+    "supported": 24,
+    "supported_text_but_external_chronology_conflict": 3,
+    "not_applicable": 36,
+    "partially_supported": 3,
+    "contradicted_by_requested_time_scope": 3,
+    "contradicted_by_selected_constraint": 3,
+    "partially_supported_but_album_role_contradicted": 3,
+    "supported_text_but_year_axis_wrong": 3,
+    "supported_under_source_indicated_award": 3,
+    "unsupported_entity_measurement_binding": 3,
+    "supported_under_top_flight_interpretation": 3,
+    "unsupported_eligibility_and_total": 3,
+    "supported_example_but_incomplete_set": 3,
+    "partially_supported_but_period_wrong": 3,
+    "contradicted_by_requested_installment": 3,
+    "supported_with_source_time_caveat": 3,
+    "unsupported_in_selected_evidence_but_externally_verified": 3
+  },
+  "independent_human_review": false,
+  "semantic_truth_verified_by_validator": false,
+  "limitations": [
+    "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+    "AI assessments cannot replace independent human labels or resolve them silently."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "Qualitative AI role review of all valid inventories; rejected roles unassessed",
+  "total_tasks": 386,
+  "structurally_valid_inventories": 21,
+  "AI_reviewed_valid_inventories": 21,
+  "valid_inventory_review_complete": true,
+  "query_reviews": 20,
+  "source_reviews": 1,
+  "semantic_categories": {
+    "partial_or_misbound_requirements": 20,
+    "conditional_example_with_role_errors": 1
+  },
+  "rejected_inventories_without_full_semantic_review": 365,
+  "full_semantic_review_complete": false,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "extraction_trace_sha256": "2ea02852efaff265a6b3ad8fa0d35cc670bb4b27c1bbf77b10316eb78f687405",
+  "execution_verification_sha256": "d7d38609aaadc4bb5cba2cee11f11f3c0cf4a2d12420a2ba85953c63cddde96a",
+  "structural_audit_sha256": "f1cdc89a444b4d10a6c229139c240ac3d96e1130142db01688468dfb3dc5bcff",
+  "AI_review_batch_sha256": "46a6ea266a3687927a28533284242119c74e0e3347c90466de3dc9d27a84077b",
+  "independent_human_review": false,
+  "full_requirement_coverage_verified": false,
+  "answer_acceptance_enabled": false,
+  "semantic_role_improvement_established": false
+}

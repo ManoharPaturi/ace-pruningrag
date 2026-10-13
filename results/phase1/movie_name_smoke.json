@@ -1,0 +1,78 @@
+{
+  "status": "movie_name_scores_and_HTTP_records_verified",
+  "source_index_sha256": "d0d957ec35388e5cdc599ac330894a6f5f071f53966b94d5138950bd29da69a6",
+  "name_index_sha256": "7b11ba75642724a83f9c1ba9ad91c1eab645c664d31ce509a4508787beacef8b",
+  "name_manifest_sha256": "acc4ffa45725faabcfdea3903dbb1a9c5a5406109bd7ccf187a64ee6e0f8e010",
+  "reference_version": "0.2.2",
+  "reference_source_sha256": "2f28cc795415c01e9f3db5a8ed019774f9cba747b272c9c304271589b8081ac6",
+  "probes": [
+    {
+      "kind": "movie",
+      "query": "GoodFellas",
+      "results": 2,
+      "maximum_returned_score_error": 0.0,
+      "ranked_source_ids_equal_to_numpy_reference": true,
+      "response_sha256": "2f7baed6e961dc3286de1ccd9c63384e6e618fd0467ce9d10135ce3f6d3f669b",
+      "HTTP_records_match_source": true
+    },
+    {
+      "kind": "movie",
+      "query": "Fifty Dead Men Walking",
+      "results": 10,
+      "maximum_returned_score_error": 0.0,
+      "ranked_source_ids_equal_to_numpy_reference": false,
+      "response_sha256": "e054112f904f3f0cacdc0c83f5641bb6f24214595cb89ced79859e77f66eec52",
+      "HTTP_records_match_source": true
+    },
+    {
+      "kind": "movie",
+      "query": "zzzzunseenwordqqqq",
+      "results": 0,
+      "maximum_returned_score_error": 0.0,
+      "ranked_source_ids_equal_to_numpy_reference": true,
+      "response_sha256": "0157919069c7c67969781dc254ef3bf2ee21aa2e1c818f05ff9afb5cb9715e0a",
+      "HTTP_records_match_source": true
+    },
+    {
+      "kind": "person",
+      "query": "Tony Todd",
+      "results": 10,
+      "maximum_returned_score_error": 0.0,
+      "ranked_source_ids_equal_to_numpy_reference": false,
+      "response_sha256": "9c6d86fba68fb2a912469cca6713a736e7ed5ef941150d9a6bc06c9b4425ec8d",
+      "HTTP_records_match_source": true
+    },
+    {
+      "kind": "person",
+      "query": "Damon Russell",
+      "results": 10,
+      "maximum_returned_score_error": 0.0,
+      "ranked_source_ids_equal_to_numpy_reference": false,
+      "response_sha256": "a3ebe56a2e105e5b1709c6bc1d9e27562804a5381d34e57f82ac0fd88b4852fb",
+      "HTTP_records_match_source": true
+    },
+    {
+      "kind": "person",
+      "query": "Robert Downey Jr.",
+      "results": 10,
+      "maximum_returned_score_error": 0.0,
+      "ranked_source_ids_equal_to_numpy_reference": false,
+      "response_sha256": "877f239f273e9ddc5cfcb1ddf6f992cc1c4da90e6e495e3da6ce2ab317f31a67",
+      "HTTP_records_match_source": true
+    },
+    {
+      "kind": "person",
+      "query": "Tom_Cruise",
+      "results": 10,
+      "maximum_returned_score_error": 0.0,
+      "ranked_source_ids_equal_to_numpy_reference": false,
+      "response_sha256": "cf958abb674fc1a7e9edf8393bd7de43d429065af2f78cff3ae20b8649f29a3c",
+      "HTTP_records_match_source": true
+    }
+  ],
+  "tie_break": "source_rowid_desc",
+  "all_rankings_equal_to_numpy_reference": false,
+  "semantic_identity_verified": false,
+  "cross_source_benefit_established": false,
+  "additional_model_calls": 0
+}

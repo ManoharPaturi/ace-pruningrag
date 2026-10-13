@@ -1,0 +1,32 @@
+{
+  "scope": "Blinded query-only requirement extraction; 3B model variant with frozen v1 prompts/grammar/decoding",
+  "max_tasks": 50,
+  "max_input_and_output_tokens": 4096,
+  "max_output_tokens": 2048,
+  "batch_size": 4,
+  "seed": 42,
+  "dtype": "float32",
+  "generator_config": "configs/requirements_extractor_3b.json",
+  "allow_answer_acceptance": false,
+  "max_span_words": 160,
+  "max_span_atoms": 640,
+  "constraints_dependencies": {
+    "lm-format-enforcer": "0.11.3",
+    "interegular": "0.3.3",
+    "pydantic": "2.14.1",
+    "pydantic-core": "2.50.1",
+    "annotated-types": "0.8.0",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.4",
+    "packaging": "26.3",
+    "pyyaml": "6.0.3"
+  },
+  "protocol_id": "query_requirements_model_3b_v1",
+  "span_policy_module": "ace_pruningrag.query_requirements",
+  "span_policy_sha256": "6d01a430d522e227fec2476d3dd6c53f33208a3783fbb85935d5187734a3be0b",
+  "max_variables": 8,
+  "max_clauses": 12,
+  "generator_config_sha256": "d207e19a961f70cdc28e1aae6de49239057daf56c0537ff07f37c61625c1792e",
+  "decoding_config": "configs/requirements_control_decoding.json",
+  "decoding_config_sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+}

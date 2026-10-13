@@ -1,0 +1,43 @@
+{
+  "scope": "Same-task Unicode policy GPU control; structural change is not semantic improvement",
+  "tasks": 386,
+  "all_task_bindings_equal": true,
+  "all_prompts_equal": true,
+  "all_input_token_counts_equal": true,
+  "protocol_id": "unicode_combining_marks_v2",
+  "span_policy_sha256": "89b92eef949a919998a2316861d7058a78c7933f89bdce87a7833903a1a1363e",
+  "control_trace_sha256": "eeb3304a11e59799a0df6bd5ab6e51b6e4c65a3b98cc659cc1585dec99855fc8",
+  "revised_trace_sha256": "0acfdb530b72234eb4232ce7d6b9ccaac8f9e78013485daf6515baf166f2de85",
+  "control_verification_sha256": "4192bfbaf3ee1f18c58419f16c2dcc16eab0383090f4597b4e16bcc06ff1913c",
+  "revised_verification_sha256": "4eabe8d6c040c063ccfb47a2f1060b03bea64096227b53121129d4094cba7813",
+  "generator_config_sha256": "223dd11154b5681cbba90aa98d0bcde3111f820a2049d950e97a9edaee6371a8",
+  "runtime_snapshots_equal": true,
+  "output_comparison": {
+    "unchanged_raw_proposals": 385,
+    "unchanged_output_ids": 385,
+    "changed_raw_proposals": 1,
+    "changed_output_ids": 1
+  },
+  "changed_records": [
+    {
+      "task_sha256": "94348630b61e19152545647e6bac60a37a9ec0f93aa5a4821463ec1efd79b2a7",
+      "kind": "source",
+      "old_proposal_sha256": "d9c13ac95eee78abb74fd24c7cf6a3150b5be5f295c45b0cc25a19eec341c977",
+      "new_proposal_sha256": "8c7e282a95df93ea2125715ff85ccba870c92f4965fe379810cd81513dc5ff66",
+      "old_validation": "constrained_span_proposal",
+      "new_validation": "constrained_span_proposal",
+      "raw_proposal_changed": true,
+      "output_ids_changed": true
+    }
+  ],
+  "control_output_tokens": 16198,
+  "revised_output_tokens": 16200,
+  "revised_validation_counts": {
+    "constrained_span_proposal": 385,
+    "invalid_json": 1
+  },
+  "changed_proposal_reviews_complete": false,
+  "semantic_role_improvement_established": false,
+  "external_truth_verified": false,
+  "answer_acceptance_enabled": false
+}

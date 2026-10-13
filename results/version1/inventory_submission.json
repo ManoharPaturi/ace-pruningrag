@@ -1,0 +1,22 @@
+{
+  "protocol_id": "inventory_frames_v1",
+  "span_policy_sha256": "0c9627fb44754c9bb41ab9ab191ae25e02455a4a43742c3e6c8016d23e0c5e9a",
+  "tasks": 386,
+  "query_tasks": 50,
+  "source_tasks": 336,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "tasks_sha256": "f26f3fb5895f3f7d4ba0877fb6b41b4f406936f8acb5325ceb7c9dbaaffc424a",
+  "kernel_id": "ionrey/ace-inventory-11f01825608146b2b9e913690b24bb45",
+  "max_generate_invocations": 97,
+  "max_total_reserved_tokens": 1581056,
+  "new_answer_generation_calls": 0,
+  "submitted_version": 1,
+  "provider_status_last_observed": "QUEUED",
+  "observation_time_UTC": "2026-10-13T13:40:13.937691+00:00",
+  "bundle_manifest_sha256": "62041aef4ae789128a9a687dd1af054074ef3aff060abd468a3b6366caf31d80",
+  "kernel_metadata_sha256": "d37fa102873e0ed6d205571091fd6c28fab90ef187e1dddb70d147a4468ca412",
+  "preflight_sha256": "b884a4c694931b46a61bca5d44fd94d10f06869471baa2d4ddceef84ff2582a5",
+  "completed_execution_verified": false,
+  "answer_acceptance_enabled": false,
+  "semantic_role_improvement_established": false
+}

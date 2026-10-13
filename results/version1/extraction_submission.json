@@ -1,0 +1,33 @@
+{
+  "tasks": 386,
+  "query_tasks": 50,
+  "source_tasks": 336,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "tasks_sha256": "f26f3fb5895f3f7d4ba0877fb6b41b4f406936f8acb5325ceb7c9dbaaffc424a",
+  "kernel_id": "ionrey/ace-extraction-ac6191501df7406c88b41a8707d4c8c2",
+  "max_generate_invocations": 97,
+  "max_total_reserved_tokens": 790528,
+  "new_answer_generation_calls": 0,
+  "kernel_version": 1,
+  "status": "submitted",
+  "private": true,
+  "protocol": {
+    "scope": "Blinded span-bound query/source extraction diagnostic; no answer acceptance",
+    "max_tasks": 386,
+    "max_input_and_output_tokens": 2048,
+    "max_output_tokens": 160,
+    "batch_size": 4,
+    "seed": 42,
+    "dtype": "float32",
+    "generator_config": "configs/generated_pilot.json",
+    "allow_answer_acceptance": false
+  },
+  "tokenizer_preflight": {
+    "tasks": 386,
+    "eligible": 386,
+    "input_tokens": 124383,
+    "max_reserved_tokens": 890
+  },
+  "raw_answers_or_review_labels_in_model_inputs": false,
+  "actual_gpu_outputs_verified": false
+}
