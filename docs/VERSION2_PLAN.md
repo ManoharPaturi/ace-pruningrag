@@ -90,3 +90,8 @@ Do not promote coverage-only on cost reduction alone. Its inspected Grammy and M
 5. Complete the original open research deliverables: reviewed requirements/support sets, fresh entity/event-audited cases, true cross-source/source-only controls, full baseline/ablation matrix, paired reporting and evidence-backed paper. Resolve upstream assets or retain adapted-only scope.
 
 Observed AI-correct counts are nine per method for top-K/MMR/joint/exact and five for coverage; this does not justify selecting a winning method. Treat the reviewed cohort as development data. Preserve 53 unresolved cohort judgments and separate factual correctness from selected support. [Completed failure analysis](COHORT_RESPONSE_AUDIT.md) supplies the current evidence; this plan is not a claim that the listed improvements have been implemented.
+
+
+### Initial reliability implementation checkpoint
+
+[Answer-form checks](ANSWER_CHECKS.md) now identify source-ID answers and unresolved/incomplete numbered lists, with a strict explicit-rectangle calculator. They are displayed in the replay demo and preserve all controls. This begins milestones 1–2 above; full semantic answer contracts, general claims and live generation are still unfinished. All 444 admitted outputs were checked through HTTP; 12 form warnings are diagnostics, not semantic improvement scores.

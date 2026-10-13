@@ -107,3 +107,8 @@ The sixth saved cohort AI review batch also validates against the exact trace. C
 ### Accepted-output AI audit complete — current checkpoint
 
 All 444 admitted records now have source-bound AI assessments, including all 250 cohort answers. [Completed cohort report](COHORT_RESPONSE_AUDIT.md) gives per-method counts and reproducible aggregation. The code/test checkpoint is 138 passing tests with the demo extra. This closes the accepted-output AI review task only. The overall roadmap remains incomplete; the open independent-human, cross-source, faithful-baseline, general reliability, final reporting and live-inference gates above remain required. Earlier incremental counts are historical.
+
+
+### Answer-form checks added
+
+[Query-only answer diagnostics](ANSWER_CHECKS.md) now run in the replay API/UI; all 444 original outputs remain unchanged. Twelve responses have observable form flags, including four identifiers returned as answers. Explicit rectangle arithmetic is unit-tested on fresh cases, but no admitted query meets its strict geometry contract. There are 141 passing local tests and the production web build passes. General entity/date/unit/claim verification, live inference and scientific validation remain open; these checks do not close those requirements.

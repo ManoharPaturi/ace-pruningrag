@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 
+from .answer_checks import check_answer_form
 from .artifacts import read_json, sha256_file
 from .dataset import iter_records, verify_dataset
 from .evidence import web_chunks
@@ -73,6 +74,9 @@ class DemoStore:
                     "evidence": evidence,
                     "citation_status": "Input evidence; claim-level support is not implied.",
                     "actual_new_llm_calls": 0,
+                    "answer_form_checks": check_answer_form(
+                        q.query, row["prediction"], [e["evidence_id"] for e in row["selected"]]
+                    ),
                 }
             if len(rows) != entry["responses"]:
                 raise ValueError("admitted response count differs")

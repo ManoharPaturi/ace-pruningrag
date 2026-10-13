@@ -77,6 +77,8 @@ def test_api_replay_and_retrieval_do_not_leak_gold(tmp_path, row):
         assert answer.status_code == 200
         assert answer.json()["mode"] == "recorded_answer"
         assert answer.json()["actual_new_llm_calls"] == 0
+        assert not answer.json()["answer_form_checks"]["factual_correctness_verified"]
+        assert answer.json()["prediction"] == "Recorded output"
         assert "MUST NOT LEAK" not in answer.text
         assert "gold_answer" not in answer.text
         retrieval = client.get(f"/retrieve/{row['interaction_id']}").json()

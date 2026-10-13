@@ -41,3 +41,8 @@ The backend HTTP path was exercised across all 444 admitted records, comparing e
 Implementation follows [FastAPI lifespan documentation](https://fastapi.tiangolo.com/advanced/events/) and [Next.js route handlers](https://nextjs.org/docs/app/getting-started/route-handlers). No Vercel deployment is configured.
 
 The completed five-selector cohort is admitted after full trace reconstruction. Browser verification also displayed the Real Sociedad/top-K prose abstention and its exact selected source excerpts; source review of the complete cohort is still pending.
+
+
+## Answer-form diagnostics
+
+The recorded-answer response includes `answer_form_checks`. The UI displays detected issues beside the original answer. HTTP replay verified all 444 outputs remain unchanged; the browser displayed a source-identifier warning with exact original provenance. [Implementation and verification report](ANSWER_CHECKS.md) documents the 12 flags, conservative list parser, explicit rectangle contract and remaining general verification/live-generation gates.
