@@ -151,3 +151,16 @@ syntax/spans with correct entity/relation/period roles. Reconstruct the existing
 audit every completed proposal and compare structural coverage and semantic failures
 against the retained control before promotion. Keep output-cap failures and unresolved
 comparisons visible; automatic acceptance remains disabled.
+
+
+### Requirements from the first 100 constrained source reviews
+
+Before any support promotion, separate publication metadata, event dates, comparison
+periods and quantities; preserve table-row associations, film/character/person roles,
+negative eligibility and lower-bound qualifiers. Do not repair wrong fields silently
+by discarding units/periods after evaluation. Distinguish coherent excerpt claims
+from external truth and question sufficiency. Deduplicate equal text/proposal pairs
+in evidence analyses. The observed combining-mark boundary defect is a required
+current-version correction with a frozen-source control, not evidence that schema
+validity establishes entity completeness. The remaining 235 source proposals must
+still be reviewed before final diagnostic conclusions.

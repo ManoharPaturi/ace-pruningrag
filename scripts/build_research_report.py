@@ -254,7 +254,14 @@ None of 1,105 constrained literal comparisons has complete unambiguous alignment
 have AI role rationales; 48 are partial/misbound, one is a coherent minimal count core,
 and one has underspecified query scope. These post-hoc categories are qualitative,
 not calibrated accuracy. All {progress["unreviewed_source_proposals"]} valid source proposals
-still require role review. Structural success is not general support or complete
+still require role review. The partial source review covers
+{progress["AI_reviewed_source_proposals"]} records / {progress["distinct_reviewed_source_pairs"]}
+distinct text/proposal pairs. Its coherent-claim judgments cover
+{progress["source_review_counts"]["coherent_claim_in_excerpt"]} records but only
+{progress["distinct_coherent_source_pairs"]} distinct pairs; repeated copies are not
+independent confirmation. Mixed facts, missing subjects, metadata and field-role
+errors remain visible. These qualitative AI categories do not establish calibrated
+accuracy or external truth. Structural success is not general support or complete
 claim coverage; automatic acceptance remains disabled. See
 [constrained reconstruction and review](CONSTRAINED_EXTRACTION.md).
 

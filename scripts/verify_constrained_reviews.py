@@ -20,6 +20,13 @@ def verify(root):
         or progress["verification_sha256"] != sha256_file(verification)
     ):
         raise ValueError("constrained review source hashes differ")
+    verified = read_json(verification)
+    if (
+        verified["status"] != "constrained_spans_decode_and_costs_reconstructed"
+        or verified["trace_sha256"] != sha256_file(outputs_path)
+        or verified["source_trace_sha256"] != sha256_file(trace)
+    ):
+        raise ValueError("complete constrained verification does not bind these review inputs")
     tasks = extraction_tasks([json.loads(line) for line in trace.read_text().splitlines()])
     outputs = [json.loads(line) for line in outputs_path.read_text().splitlines()]
     if len(tasks) != len(outputs):
@@ -63,6 +70,9 @@ def verify(root):
             valid = output["validation"]["status"] == "constrained_span_proposal"
             if r["reviewer_type"] != ("AI" if valid else "deterministic_contract_validation"):
                 raise ValueError("constrained reviewer scope differs")
+            if r["kind"] == "source" and r["reviewer_type"] == "AI":
+                if r.get("external_truth_verified") is not False:
+                    raise ValueError("source role review cannot establish external truth")
             records.append(r)
     query = [r for r in records if r["kind"] == "query"]
     reviewed_sources = [r for r in records if r["kind"] == "source" and r["reviewer_type"] == "AI"]
@@ -73,11 +83,29 @@ def verify(root):
     )
     expected = {
         "total_tasks": len(tasks),
+        "structurally_valid_proposals": sum(
+            o["validation"]["status"] == "constrained_span_proposal" for o in outputs
+        ),
+        "full_requirement_coverage_verified": False,
         "AI_reviewed_query_proposals": len(query),
         "AI_reviewed_source_proposals": len(reviewed_sources),
         "structural_failure_assessments": len(failed),
         "unreviewed_source_proposals": valid_sources - len(reviewed_sources),
         "query_review_counts": dict(Counter(r["semantic_status"] for r in query)),
+        "source_review_counts": dict(Counter(r["semantic_status"] for r in reviewed_sources)),
+        "distinct_reviewed_source_pairs": len(
+            {
+                digest({"input": r["input_text"], "proposal": r["raw_proposal"]})
+                for r in reviewed_sources
+            }
+        ),
+        "distinct_coherent_source_pairs": len(
+            {
+                digest({"input": r["input_text"], "proposal": r["raw_proposal"]})
+                for r in reviewed_sources
+                if r["semantic_status"] == "coherent_claim_in_excerpt"
+            }
+        ),
         "full_semantic_review_complete": len(seen) == len(tasks),
         "independent_human_review": False,
         "answer_acceptance_enabled": False,

@@ -3,9 +3,9 @@
   "total_tasks": 386,
   "structurally_valid_proposals": 385,
   "AI_reviewed_query_proposals": 50,
-  "AI_reviewed_source_proposals": 0,
+  "AI_reviewed_source_proposals": 100,
   "structural_failure_assessments": 1,
-  "unreviewed_source_proposals": 335,
+  "unreviewed_source_proposals": 235,
   "independent_human_review": false,
   "full_semantic_review_complete": false,
   "full_requirement_coverage_verified": false,
@@ -18,6 +18,16 @@
       "name": "constrained-ai-audit-batch1.json",
       "sha256": "a03fa12eef620005e8805bfa28cde984302237eb10d51d1b3dabe285dbbf9cc5",
       "records": 51
+    },
+    {
+      "name": "constrained-ai-audit-batch2.json",
+      "sha256": "7f7a7d7ba455fe4a5d8f767b35bf2edb973786af28c6965cfbfb08459e6ae727",
+      "records": 50
+    },
+    {
+      "name": "constrained-ai-audit-batch3.json",
+      "sha256": "5cfd6f15e2836fca01f21df6b40bee49806c28beda633f40a7d14e090c58295e",
+      "records": 50
     }
   ],
   "query_review_counts": {
@@ -28,6 +38,16 @@
   "limitations": [
     "These post-hoc AI judgments are qualitative and not calibrated extraction accuracy.",
     "Schema/span validity is not complete requirement or factual verification.",
-    "All 335 span-valid source proposals still require role review."
-  ]
+    "285 span-valid source proposals still require role review."
+  ],
+  "source_review_counts": {
+    "metadata_or_nonclaim": 8,
+    "mixed_facts": 45,
+    "missing_subject_or_antecedent": 4,
+    "role_or_scope_error": 20,
+    "coherent_claim_in_excerpt": 3,
+    "partial_binding_with_role_error": 20
+  },
+  "distinct_reviewed_source_pairs": 90,
+  "distinct_coherent_source_pairs": 2
 }

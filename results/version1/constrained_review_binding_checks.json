@@ -1,0 +1,20 @@
+{
+  "scope": "Local adversarial binding checks on real partial review artifacts; not semantic validity",
+  "progress_sha256": "ce23521d1cb8b71c7261d75818e2329f7403b059c60f9b814120273a839100fe",
+  "verifier_sha256": "339166c5d1789317fcb95d2e50582cd7fef823bc8a865e1acbf7319e29685157",
+  "checks": {
+    "source_counts": {
+      "rejected": true,
+      "reason": "constrained review counts or scope differ from bound records"
+    },
+    "human_promotion": {
+      "rejected": true,
+      "reason": "constrained review counts or scope differ from bound records"
+    },
+    "unlinked_verification": {
+      "rejected": true,
+      "reason": "complete constrained verification does not bind these review inputs"
+    }
+  },
+  "original_artifacts_modified": false
+}

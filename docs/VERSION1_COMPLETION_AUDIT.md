@@ -202,3 +202,15 @@ remains. This is structural success only. All 50 question proposals have bound A
 role rationales, while all 335 valid source proposals remain unreviewed. The 1,105
 literal comparisons contain no complete aligned pair. Keep general support and
 automatic acceptance unresolved. Earlier QUEUED/RUNNING entries are historical.
+
+
+### Source-role audit at 100/335 and observed boundary defect
+
+[Constrained review](CONSTRAINED_EXTRACTION.md) now binds 100 valid source proposals,
+all 50 query proposals and the one cap failure (151 records). There are 235 source
+proposals remaining. Three coherent source records represent only two distinct
+text/proposal pairs; copied claims do not vote. A bound counterexample shows a
+combining accent splitting a name inside a lexical word. Fix that candidate policy
+while preserving the frozen submitted implementation and outcomes. Full source
+role audit, Unicode correction, general verification and scientific gates remain
+required.

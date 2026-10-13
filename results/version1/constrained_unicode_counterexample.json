@@ -1,0 +1,19 @@
+{
+  "scope": "Observed combining-mark lexical boundary defect in frozen candidate policy",
+  "task_sha256": "94348630b61e19152545647e6bac60a37a9ec0f93aa5a4821463ec1efd79b2a7",
+  "interaction_id": "46a92f1e-4f99-46da-8547-c89b1f62565a",
+  "evidence_id": "357d0d85c1f09a207a86cbbc666e5d28af46cc029ae7bbd6bb3b585a72a25c68",
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "extraction_trace_sha256": "eeb3304a11e59799a0df6bd5ab6e51b6e4c65a3b98cc659cc1585dec99855fc8",
+  "proposed_entity": "Victoria Mone",
+  "full_name_in_excerpt": "Victoria Monét",
+  "proposed_span": [
+    125,
+    138
+  ],
+  "next_character_unicode_codepoint": "U+0301",
+  "next_character_unicode_category": "Mn",
+  "partial_name_is_permitted_by_frozen_grammar": true,
+  "semantic_entity_completeness_verified": false,
+  "decision": "Preserve original control and fix combining-mark word boundaries in a separately versioned implementation."
+}

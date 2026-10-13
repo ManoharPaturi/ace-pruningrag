@@ -126,3 +126,32 @@ Full private review records are required. The verifier recomputes coverage and r
 changed inputs, proposals, identities, batch hashes, counts or human-review promotion.
 The report remains partial until every source proposal is assessed. Earlier queued
 status is historical; do not resubmit this completed kernel.
+
+
+### Source-role review checkpoint and lexical defect
+
+The first 100 valid source proposals have bound AI rationales: 45 mixed facts,
+20 partial bindings with role errors, 20 role/scope errors, eight metadata/nonclaim
+proposals, four missing subjects/antecedents and three coherent reported claims.
+These are 90 distinct text/proposal pairs; the three coherent records represent
+two distinct pairs. They are not independent confirmations or calibrated accuracy.
+235 valid source proposals remain unreviewed. The current source-review counts
+are recomputed from private batch records by the review verifier.
+
+The [Unicode counterexample](../results/version1/constrained_unicode_counterexample.json)
+shows the frozen lexical policy permitting `Victoria Mone` before the combining
+accent and final `t` in the full source name. The regex splits the combining mark
+as punctuation, exposing an unintended within-word boundary. Structural acceptance
+under that policy does not establish a complete entity name. Preserve the exact
+control outputs and submitted source; fix the lexer with combining-mark-aware
+boundaries in a separately versioned implementation, then revalidate affected
+choices. This correction does not resolve broader entity/role or comparison loss.
+Earlier counts of zero source review are historical; read the current progress JSON
+for the latest coverage. No source proposal is promoted to an accepted answer.
+
+
+The [binding-check record](../results/version1/constrained_review_binding_checks.json)
+confirms local rejection of altered source-category counts, a promoted human-review
+flag and a replacement verification file not bound to these outputs. The checks use
+temporary copies/symlinks for reading; original experiment and audit artifacts are
+not modified. They protect bookkeeping, not the correctness of AI judgments.
