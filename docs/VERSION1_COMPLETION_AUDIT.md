@@ -6,7 +6,7 @@ Audit opened 12 October 2026. The user requested completion of the current versi
 
 | Requirement | Authoritative evidence | Audit result | Next action |
 | --- | --- | --- | --- |
-| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 175 local tests pass; required CI runs on every pushed PR head | Run required checks on final branch |
+| Locked reproducible environment and genuine inputs | `uv.lock`, pinned configs, required CI, dataset/asset verifiers | Existing foundation verified; 180 local tests pass; required CI runs on every pushed PR head | Run required checks on final branch |
 | Faithful original PruningRAG baseline | Original router/checkpoints, full API backing data and paper model/evaluator contract | Not achieved; upstream releases empty and `models/router` lookup returned 404 during fresh audit | Obtain original artifacts or keep adapted-only claims explicit; do not invent a reproduced baseline |
 | Shared-budget five-selector implementation | Selection code, smoke traces and budget verifiers | Implemented; prior contexts were engineering smoke | Execute the separately scoped explicit-cohort comparison |
 | Main complementary-evidence scientific hypothesis | Reviewed atomic support labels, genuine cross-source cases, source-only controls | Not achieved; current real candidate pools are web-only and groups/conflicts are disabled | Retain this limitation; build genuine cross-source evaluation |
@@ -169,3 +169,14 @@ This closes execution and audit of this diagnostic, not general semantic verific
 Do not enable this extractor for acceptance. Enforced schema/span choices and measured
 field-role binding remain next requirements. Local tests total 175; the submitted-code
 commit passed all three required CI jobs. Earlier RUNNING status is historical.
+
+
+### Closed-span extraction submitted
+
+[Constrained extraction](CONSTRAINED_EXTRACTION.md) is implemented as a separate
+experiment on the same blinded tasks and pinned generator. The private job was observed
+QUEUED. A fixed JSON-key sequence and source-specific serialized span trie prevent
+completed outputs from inventing fields; cap failures and semantic role errors remain
+unresolved. Quote/Unicode tests use the actual enforcement parser rather than dropping
+valid source text. Local validation passes 180 tests; remote completion and audit remain
+pending. This does not close general verification or scientific evaluation.

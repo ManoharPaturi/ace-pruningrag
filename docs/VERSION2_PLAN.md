@@ -141,3 +141,13 @@ enforce schema and permitted span choices rather than trusting JSON instructions
 audit entity/relation/period attachment and complete claim coverage independently of
 syntax. No validation pass alone permits automatic acceptance; independently reviewed
 fresh cases and the full roadmap research gates remain required.
+
+
+### Constrained decoder checkpoint
+
+[Closed-span extraction](CONSTRAINED_EXTRACTION.md) is submitted with the same tasks,
+prompts, generator and model budgets as the failed control. Do not confuse enforced
+syntax/spans with correct entity/relation/period roles. Reconstruct the existing job,
+audit every completed proposal and compare structural coverage and semantic failures
+against the retained control before promotion. Keep output-cap failures and unresolved
+comparisons visible; automatic acceptance remains disabled.

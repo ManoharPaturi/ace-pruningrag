@@ -1,0 +1,24 @@
+{
+  "scope": "Closed JSON/span constrained extraction diagnostic; no semantic acceptance",
+  "max_tasks": 386,
+  "max_input_and_output_tokens": 2048,
+  "max_output_tokens": 160,
+  "batch_size": 4,
+  "seed": 42,
+  "dtype": "float32",
+  "generator_config": "configs/generated_pilot.json",
+  "allow_answer_acceptance": false,
+  "max_span_words": 160,
+  "max_span_atoms": 640,
+  "constraints_dependencies": {
+    "lm-format-enforcer": "0.11.3",
+    "interegular": "0.3.3",
+    "pydantic": "2.14.1",
+    "pydantic-core": "2.50.1",
+    "annotated-types": "0.8.0",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.4",
+    "packaging": "26.3",
+    "pyyaml": "6.0.3"
+  }
+}
