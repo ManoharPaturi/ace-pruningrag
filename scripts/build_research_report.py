@@ -36,11 +36,40 @@ SOURCES = {
     "inventory_execution": "results/version1/inventory_verification.json",
     "inventory_audit": "results/version1/inventory_structural_audit.json",
     "inventory_valid_reviews": "results/version1/inventory_valid_review_progress.json",
+    "requirements_preflight": "results/version1/requirements_preflight.json",
+    "requirements_submission": "results/version1/requirements_submission.json",
+    "requirements_execution": "results/version1/requirements_verification.json",
+    "requirements_reviews": "results/version1/requirements_review_progress.json",
+    "movie_evidence": "results/phase1/movie_evidence_smoke.json",
 }
 
 
 def render(root):
     data = {key: read_json(root / name) for key, name in SOURCES.items()}
+    requirements_run, requirements_reviews, movie_evidence = (
+        data[k] for k in ("requirements_execution", "requirements_reviews", "movie_evidence")
+    )
+    if (
+        requirements_run["status"] != "requirements_spans_decode_and_costs_reconstructed"
+        or requirements_run["tasks"] != 50
+        or requirements_run["trace_sha256"] != requirements_reviews["extraction_trace_sha256"]
+        or requirements_reviews["execution_verification_sha256"]
+        != sha256_file(root / SOURCES["requirements_execution"])
+        or requirements_reviews["AI_reviewed_proposals"] != 50
+        or requirements_reviews["structurally_bound_proposals"] != 0
+        or requirements_reviews["independent_human_review"] is not False
+        or requirements_reviews["answer_acceptance_enabled"] is not False
+        or data["requirements_submission"]["preflight_sha256"]
+        != sha256_file(root / SOURCES["requirements_preflight"])
+        or movie_evidence["probe_config_sha256"]
+        != sha256_file(root / "configs/movie_evidence_probe.json")
+        or movie_evidence["generator_config_sha256"]
+        != sha256_file(root / "configs/generated_pilot.json")
+        or movie_evidence["queries"] != 3
+        or movie_evidence["actual_answer_generation_calls"] != 0
+        or movie_evidence["cross_source_benefit_established"] is not False
+    ):
+        raise ValueError("query-requirement or movie candidate proof/review scope differs")
     gpu, paired, review = (data[k] for k in ("cohort", "paired", "reviews"))
     retained, nli, extraction, live = (data[k] for k in ("retained", "nli", "extraction", "live"))
     if gpu["queries"] != 50 or gpu["actual_llm_calls"] != 250:
@@ -397,6 +426,21 @@ rejected inventories lack full semantic assessment. Parsed frames total 66 query
 and 1,551 source frames; only 21 frames are structurally admitted. Neither grammar
 nor a proposed_complete status establishes exhaustive requirements or role quality.
 
+The separately versioned [query-only logical representation](QUERY_REQUIREMENTS.md)
+preserves known conditions independently of unknown answer/intermediate variables.
+The diagnostic completed all 50 extraction sequences in 13 generate invocations:
+{requirements_run["input_tokens"]:,} input tokens,
+{requirements_run["padded_input_tokens"]:,} padded input tokens,
+{requirements_run["output_tokens"]:,} output tokens and
+{requirements_run["maximum_reserved_request_tokens"]:,} maximum reserved tokens.
+The generation interval was {requirements_run["timing"]["generation_seconds"]:.2f}
+seconds; model loading took {requirements_run["timing"]["model_loading_seconds"]:.2f}
+seconds. All 50 outputs are complete JSON but fail requirement validation. All fifty
+have exact-output-bound qualitative AI role/omission reviews, with mixed roles,
+misplaced cardinality, missing measurements and self-dependent operations. This is
+a retained negative result, not independently measured accuracy. The extraction
+gate fails; no source-support or answer-acceptance promotion follows.
+
 The original [movie/person/year snapshot](MOVIE_SNAPSHOT.md) is now restored separately:
 three checksum-verified files totaling {data["movie_assets"]["bytes"]:,} bytes. A disk-backed
 index covers {movie_index["record_counts"]["movie"]:,} movie,
@@ -406,7 +450,7 @@ records with the original last-record-wins lookup behavior. Actual movie/person 
 year and missing-ID loopback responses match original snapshot records. The original
 endpoint's 1990–2021 year gate is retained although
 the stored snapshot includes years through 2024. This validates three structured
-lookup paths; web/API selection, source-only controls and cross-source benefit remain
+lookup paths. Generated source-only comparisons and cross-source benefit remain
 unverified. No generator or judge runs as part of this restoration.
 
 A separate disk-backed BM25 name index now implements movie/person name requests.
@@ -415,6 +459,18 @@ probes, and HTTP records match source rows. Ranked IDs differ in five probes bec
 the explicit source-row tie policy differs from NumPy ordering at equal scores.
 This restores name retrieval with a disclosed ordering adaptation; exact original
 ranking, semantic entity identity and cross-source benefit remain unverified.
+
+[Movie field candidates](MOVIE_EVIDENCE.md) now join the web pool through a separate
+adapter. Exact field-value/record provenance and pinned-tokenizer budgets pass on
+three inspected development queries: five actual local name lookups and eighteen
+prepared web-only/API-only/combined requests across top-K and joint selectors.
+The same twelve-item union-ranked pool is filtered for all three source controls.
+Two queries admit no API fields into that pool; the API-only contexts remain empty
+and the combined contexts remain web-only. The director query admits two API fields.
+This exposes lexical retrieval exclusion rather than proving API irrelevance.
+These are source-fidelity and request-preparation checks with zero answer generations.
+Manual query-copied lookup proposals are not a trained router; entity identity,
+snapshot-time applicability, semantic support and cross-source benefit remain open.
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible

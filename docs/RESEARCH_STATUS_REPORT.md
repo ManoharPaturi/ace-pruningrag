@@ -187,6 +187,21 @@ rejected inventories lack full semantic assessment. Parsed frames total 66 query
 and 1,551 source frames; only 21 frames are structurally admitted. Neither grammar
 nor a proposed_complete status establishes exhaustive requirements or role quality.
 
+The separately versioned [query-only logical representation](QUERY_REQUIREMENTS.md)
+preserves known conditions independently of unknown answer/intermediate variables.
+The diagnostic completed all 50 extraction sequences in 13 generate invocations:
+31,078 input tokens,
+31,426 padded input tokens,
+12,184 output tokens and
+2,707 maximum reserved tokens.
+The generation interval was 494.74
+seconds; model loading took 6.72
+seconds. All 50 outputs are complete JSON but fail requirement validation. All fifty
+have exact-output-bound qualitative AI role/omission reviews, with mixed roles,
+misplaced cardinality, missing measurements and self-dependent operations. This is
+a retained negative result, not independently measured accuracy. The extraction
+gate fails; no source-support or answer-acceptance promotion follows.
+
 The original [movie/person/year snapshot](MOVIE_SNAPSHOT.md) is now restored separately:
 three checksum-verified files totaling 235,448,639 bytes. A disk-backed
 index covers 64,283 movie,
@@ -196,7 +211,7 @@ records with the original last-record-wins lookup behavior. Actual movie/person 
 year and missing-ID loopback responses match original snapshot records. The original
 endpoint's 1990–2021 year gate is retained although
 the stored snapshot includes years through 2024. This validates three structured
-lookup paths; web/API selection, source-only controls and cross-source benefit remain
+lookup paths. Generated source-only comparisons and cross-source benefit remain
 unverified. No generator or judge runs as part of this restoration.
 
 A separate disk-backed BM25 name index now implements movie/person name requests.
@@ -205,6 +220,18 @@ probes, and HTTP records match source rows. Ranked IDs differ in five probes bec
 the explicit source-row tie policy differs from NumPy ordering at equal scores.
 This restores name retrieval with a disclosed ordering adaptation; exact original
 ranking, semantic entity identity and cross-source benefit remain unverified.
+
+[Movie field candidates](MOVIE_EVIDENCE.md) now join the web pool through a separate
+adapter. Exact field-value/record provenance and pinned-tokenizer budgets pass on
+three inspected development queries: five actual local name lookups and eighteen
+prepared web-only/API-only/combined requests across top-K and joint selectors.
+The same twelve-item union-ranked pool is filtered for all three source controls.
+Two queries admit no API fields into that pool; the API-only contexts remain empty
+and the combined contexts remain web-only. The director query admits two API fields.
+This exposes lexical retrieval exclusion rather than proving API irrelevance.
+These are source-fidelity and request-preparation checks with zero answer generations.
+Manual query-copied lookup proposals are not a trained router; entity identity,
+snapshot-time applicability, semantic support and cross-source benefit remain open.
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible

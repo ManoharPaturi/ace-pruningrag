@@ -30,10 +30,15 @@
     "results/phase1/movie_name_score_sequences.json": "37453e8014036b39e35d0d1d18608d0289cd4d7f1215c5f8e1f35eade86a4329",
     "results/version1/inventory_verification.json": "d7d38609aaadc4bb5cba2cee11f11f3c0cf4a2d12420a2ba85953c63cddde96a",
     "results/version1/inventory_structural_audit.json": "f1cdc89a444b4d10a6c229139c240ac3d96e1130142db01688468dfb3dc5bcff",
-    "results/version1/inventory_valid_review_progress.json": "e6f6114852da7ea643904292fecc84d3dc2d47660fe03789982b2c83ccda74d1"
+    "results/version1/inventory_valid_review_progress.json": "e6f6114852da7ea643904292fecc84d3dc2d47660fe03789982b2c83ccda74d1",
+    "results/version1/requirements_preflight.json": "088642ce73017722e9255718a2c435c58f84b5b04a0e80a8a855638763a5b0da",
+    "results/version1/requirements_submission.json": "e490f52d86c26d0efeea0ff5acb6a9ecadebd48e0bde61cad9a280ddde3c25ab",
+    "results/version1/requirements_verification.json": "49c931e599fb4037bb4221a6b10994022976239b8b2fcad79512c6c6da848d1d",
+    "results/version1/requirements_review_progress.json": "5c89239f829c893527452a69da3e397bbd177cef7c1fbd37bc56500b57e6567d",
+    "results/phase1/movie_evidence_smoke.json": "3689099fd229de3cab9cb601435c6fe246b3a9962714e55df9d3c5e0005e4ae4"
   },
-  "renderer_sha256": "91ff19e19621c00b355aef6e3bfdd24e2a25b84fe87dec03941fc1b01c8a5f3f",
-  "report_sha256": "1472b82f546fe7f19d6d4ee32c7c272b7a69d3792a01f0131a2e7c986d0a65f2",
+  "renderer_sha256": "8b5453a312ac50ad8b9dad14aa22d0fb1382a36b7e01c3f654375bd371244695",
+  "report_sha256": "2d6df4fc3ba9f1c7922d534d477419a5815b0e5c17f133bca8f2c16cc63220c2",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

@@ -1,0 +1,2501 @@
+{
+  "scope": "Three inspected development questions; query-copied manual lookup proposals, no generated answers or independent accuracy",
+  "status": "movie_web_candidate_fidelity_and_budget_smoke_complete",
+  "probe_config_sha256": "6a0f54157ca577467c28b7d1eaa27d764e10324ca09e65ffa3432e20a24212e3",
+  "generator_config_sha256": "223dd11154b5681cbba90aa98d0bcde3111f820a2049d950e97a9edaee6371a8",
+  "generator_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "queries": 3,
+  "control_requests_prepared": 18,
+  "actual_movie_source_calls": 5,
+  "shared_retrieval_is_standalone_latency_benchmark": false,
+  "actual_answer_generation_calls": 0,
+  "answer_acceptance_enabled": false,
+  "cross_source_benefit_established": false,
+  "independent_human_review": false,
+  "records": [
+    {
+      "interaction_id": "2776a8f2-8b20-41bd-87fa-9e932f24c184",
+      "query_sha256": "0be952f2942b2687eada3db93f8366ee6d6e69bcf92d298ad80d53a54e1c2204",
+      "lookup": {
+        "scope": "Bounded query-copied movie/person candidates; no identity/support acceptance",
+        "interaction_id": "2776a8f2-8b20-41bd-87fa-9e932f24c184",
+        "source_calls": 1,
+        "calls": [
+          {
+            "endpoint": "/movie/get_movie_info",
+            "query_span": "snow on tha bluff",
+            "lookup_implementation": "local_disk_name_search",
+            "record_limit": 2,
+            "returned_source_rowids": [
+              40037,
+              24690
+            ],
+            "candidate_search_complete": false,
+            "semantic_identity_verified": false
+          }
+        ],
+        "candidate_fields": 24,
+        "excluded_fields": [],
+        "provenance": {
+          "411bbb2749836d2cc75ddcf525cdfdf3513df2f24be9887c2bdad42509f9d168": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "budget",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "canonical_content_sha256": "a5603b0887ce6b7bada1a7994b2bdd2700911e9f7d203fa61140b26129f32f19",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "2b223f2cf4462fec3b9a6ba9834c87bde7d7084e009e4a2bdf72d05e4bd2ff48": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "cast",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "1935f3b4ac80db44def0cd04cdeb099dccea922451ea5cbf5d3f40c875d110c1",
+            "canonical_content_sha256": "04ace32a93514d370f6fe45d333b6c6a9940edbdaa089ec9fecd0a9e23893ef7",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "crew",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "c63bccd7d6b1f38702bac6745d13d76c98b67af1fe6ff329296d0de0c94ca4a2",
+            "canonical_content_sha256": "e4ef0a10cd70b669604a21e873bc48f777347b64c699b5b7c782ba868ceac851",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "5ab347d11e047abedddc766d8033fcc538edfce01f1539f2a61e5ec4a2035c3b": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "genres",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "f7ed2fe925c38f85262f235b6e6544eda1d817d9c5330f6f3ee3e7eb534ed1d8",
+            "canonical_content_sha256": "7cf53120cea0e980921bdc9f4906ad80cb05e207e8c0babf3e29aa3469e5dc5c",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "db94dab3bd30700f8bb852c4ac50bc51567af0d037b6c8955c51bb56b92acb7c": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "id",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "e3fe101d4426fc037381214a86378ed868ad10363df74f2f61750beaee7abf87",
+            "canonical_content_sha256": "e337ad576b65aca9d93afd5364857d6b96e64fb067882b959985a506c2be1267",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "9e15a53f69aa3e521bbd552f0b142689d0dac622bfee522958c89e7972b999fd": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "length",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "98a3ab7c340e8a033e7b37b6ef9428751581760af67bbab2b9e05d4964a8874a",
+            "canonical_content_sha256": "bc7dbcb1f1c5069d05fa1c8f240532796e367cb51455bea8a8a2d7da29f2209d",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "86e7ca8adcd8d130476ae337563719d15eaaed6433f57495ebc87b0fc8ee698b": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "original_language",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
+            "canonical_content_sha256": "995e0eab48a660357d4c8e5df921ef32d2e18f79dc7827f089f819f3403387c6",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "e80943165c192d721211264a849200a47f2ec831eb2818948d06c0d72bcba59d": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "original_title",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "0854afe02ed5c595b4f91215c40dd023a93e01f36507dd9c0dba06901a3f7b69",
+            "canonical_content_sha256": "d399aa967706903ad7b56d1cc958d10b676f323482c830f2096afb581372b3f4",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "6669faf13d032e7977f3c51cd9fe1f664fb552a78e3b7b749a88f2f422c82a6e": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "rating",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "971c487c6389b06ee6d332c39fdd29ad23c0a6cc70dfc29351ca6c2a9c71806c",
+            "canonical_content_sha256": "d62de17e64a75711e16a58c3270c4d15fc43822e17b371e9cda29419a9536de0",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "f85ef1b57d65d63b22b35622ea1b3839bf18b5fc9100d944905056d65a7c615a": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "release_date",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "4ef668b9e32d0ffd53152c7ae99646eb7e378d0e6a737629c1e2bee554a42a2b",
+            "canonical_content_sha256": "34e320c1505a6e3441f378f1beff1a3205fd018a1581b012614ce03afb9b4430",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "96a9a6c41ecc0d2e26b5054016045b82d04cca1d22149ab40305c7e0663c8a96": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "revenue",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "canonical_content_sha256": "dddd786dee22ec8f6036971d8fec356a32f76605a9dc42fdeec2d2e72c9d9c0e",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "9e1c480d83cea0023f5b24938aed2e363d47276c809a7c1d74fd0ca5595c1c0b": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 40037,
+            "source_name": "snow on tha bluff",
+            "entity_kind": "movie",
+            "record_field": "title",
+            "record_sha256": "e8049adc9bda0c7303e42413049f6ba13e1f36b14ffc894e4e3abae1eafd02a5",
+            "field_value_sha256": "0854afe02ed5c595b4f91215c40dd023a93e01f36507dd9c0dba06901a3f7b69",
+            "canonical_content_sha256": "41f3fd5783260f264b13327b54f3bed6d8d5556aaabe8030043acb4d36b9857d",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "cf1a74ed313593e149d6612359b63111244d073e37067320003b580c11b88946": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "budget",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "canonical_content_sha256": "836c99fb1fde4bb41a018e7b3a49b0484e4ab0c813186b9caa36bbf6803d4b50",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "5a1a1b082f9e170e19ff6769bc1f3345e7e7407129acaac29d0ad1f9877cf6c7": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "cast",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "canonical_content_sha256": "e2137d1e830b7ef4275435c379c2b30ccb3ecd112a893412b30da1e624349745",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "ddda78867fdd12b4c6c500ee852d6406859ce36d841c99026ddf251fbd4634e9": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "crew",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "3b637e8a0e8c3f2e2fff5c716cf7a549814c91184c7792f80f7e8cc499a968a8",
+            "canonical_content_sha256": "3a1ee762eb87c4141c29b37813b6dbd8fd77f65845252c30f64ae5db64d4f05f",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "719e1e2fe6ee9e3c60f753e0689613afe76ceb85fe2e7bfc62885fe4e22edd29": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "genres",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "355934c6f5fc4af13248c7ead7e6eeac56ea49a11b252eb224373a1d7604c545",
+            "canonical_content_sha256": "8b95cbbfc0429b49853a3abdb959bf84c095b2e8ec29a3eaa074a8d8892f13c6",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "6e6725291a7bcb85fb21a4c9fdf267e2849116cf06d21496eb3a12049d42a181": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "id",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "c3902c9ff37edc0be847e1cc7ceef5fd84152f3d850b08543d4ec5c79b25f965",
+            "canonical_content_sha256": "cfa12941dc8f5a36e5457b788f34632d7fb01354967825a1989d6ce4e8473cb6",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "75eb5fe45c5be98864e506263603efe271b24ba717fb016c65be954f9b1d0a10": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "length",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "eb624dbe56eb6620ae62080c10a273cab73ae8eca98ab17b731446a31c79393a",
+            "canonical_content_sha256": "f0d5238bf85e84c3bf219fcfd8461aba651c70a87f2da5530db4aad4807cac44",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "a318ebfd1782be1d2ba42854c14c2573011f2f9db00c551f808daab372a7d630": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "original_language",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
+            "canonical_content_sha256": "df2ab7d10206895d7088adeb102f768e7d4053e2b9042f20c05a21b8f2cf580e",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "163410834edbd60e23ec8cfd8d6e2e973589fbdd3372bf0cb10b6ee52789cbf6": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "original_title",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "73a9a002daf5de3a7e16cb9d3845cda05b1d417d3f2fbc9e53a5b038f0968c7b",
+            "canonical_content_sha256": "7d2adffdc040c5adb16b8f44c935115848704119987dbb955b3a65e8daf674ff",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "121e0a8f3973f74876c1aa4eb357b3cc0d22b4e3ed715926499288f44e3dfad2": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "rating",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "8aed642bf5118b9d3c859bd4be35ecac75b6e873cce34e7b6f554b06f75550d7",
+            "canonical_content_sha256": "7112906a3f0e7728ca438da7b5013c837226275037af115dd6a8dcb2242e979b",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "48e1f9978ef5d94b6fc0440a39d36cf440ec25e9da3db94448009d3840bac9b8": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "release_date",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "64ae6e3fcd901bb0464acd4fcaab7882e132dd33de3c7ecea32ba557f1bfff24",
+            "canonical_content_sha256": "49c690b30330c2fc396c6f2686db88a68aa24705956cf8be90ae21f67dcfe299",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "7fe45a57dca21d849f232ab7d918a9e908b37345c9cba81930bf69b7cba6a81a": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "revenue",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "canonical_content_sha256": "e9b514ed856c2061881500038e946f5bdee8329912ecd5f2988b7f40535fb400",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          },
+          "a12a8de243250400b222d16272a863f5683a5b09550d56248b4895136f385492": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 24690,
+            "source_name": "tha westside",
+            "entity_kind": "movie",
+            "record_field": "title",
+            "record_sha256": "cfffd5c4d61f8320ce029dab72d23eca0f8e3107e645a1dd9acfdf735c509932",
+            "field_value_sha256": "73a9a002daf5de3a7e16cb9d3845cda05b1d417d3f2fbc9e53a5b038f0968c7b",
+            "canonical_content_sha256": "4f2371f2e0dbec69fab74f9e0b4ed74f548b35153a7ace5d9407d7175e720852",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "snow on tha bluff"
+            ]
+          }
+        },
+        "source_index_sha256": "d0d957ec35388e5cdc599ac330894a6f5f071f53966b94d5138950bd29da69a6",
+        "tie_policy": "source_rowid_desc",
+        "answer_acceptance_enabled": false
+      },
+      "shared_pool": {
+        "shared_candidate_ids": [
+          "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+          "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62",
+          "88bf106b1b501ee4703eb7f9de4e318b8ba0243254d5909852d4e8374921fd07",
+          "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+          "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448",
+          "6810bd826611ad2ab7e276580ae0b605409d05b7e593dde00dfd8698f42b6e92",
+          "ca90cec46837229611fa68da603e0490f17a3bf339e1a44114ca7b72f0ba9124",
+          "94f1a30d18ad9d03cf6c6742c5adea89a99520dd7427714c471462a29380926d",
+          "826704b584d27d849c07128ee84e210f62e578c9e55d566b5e5fee8c944f5243",
+          "93edbba38e10c69e337a8b36a6322f4168ed6877f1e0aea3210e570d9b9d5348",
+          "c9264d22b6608a12ca7b8d8dfd2adeb421112dbda237240c647593ede562a44d",
+          "ddda78867fdd12b4c6c500ee852d6406859ce36d841c99026ddf251fbd4634e9"
+        ],
+        "shared_candidate_counts": {
+          "web": 10,
+          "api": 2
+        },
+        "retrieval_pool_policy": "rank_union_once_then_filter_for_source_controls",
+        "retrieval_score_is_semantic_support": false,
+        "actual_answer_generation_calls": 0
+      },
+      "controls": {
+        "web_only/top_k": {
+          "mode": "web_only",
+          "method": "top_k",
+          "candidate_ids": [
+            "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+            "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62",
+            "88bf106b1b501ee4703eb7f9de4e318b8ba0243254d5909852d4e8374921fd07",
+            "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+            "6810bd826611ad2ab7e276580ae0b605409d05b7e593dde00dfd8698f42b6e92",
+            "ca90cec46837229611fa68da603e0490f17a3bf339e1a44114ca7b72f0ba9124",
+            "94f1a30d18ad9d03cf6c6742c5adea89a99520dd7427714c471462a29380926d",
+            "826704b584d27d849c07128ee84e210f62e578c9e55d566b5e5fee8c944f5243",
+            "93edbba38e10c69e337a8b36a6322f4168ed6877f1e0aea3210e570d9b9d5348",
+            "c9264d22b6608a12ca7b8d8dfd2adeb421112dbda237240c647593ede562a44d"
+          ],
+          "full_reserved_tokens": 1266,
+          "prompt_sha256": "662bfa0b19289e098b4b00934d5608fec5c7685cc698287b51bdff482cad9d46",
+          "proxy_requirements": [
+            "bluff",
+            "director",
+            "movie",
+            "snow",
+            "tha"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1170,
+          "selected_ids": [
+            "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+            "6810bd826611ad2ab7e276580ae0b605409d05b7e593dde00dfd8698f42b6e92",
+            "88bf106b1b501ee4703eb7f9de4e318b8ba0243254d5909852d4e8374921fd07",
+            "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+            "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        },
+        "web_only/joint": {
+          "mode": "web_only",
+          "method": "joint",
+          "candidate_ids": [
+            "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+            "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62",
+            "88bf106b1b501ee4703eb7f9de4e318b8ba0243254d5909852d4e8374921fd07",
+            "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+            "6810bd826611ad2ab7e276580ae0b605409d05b7e593dde00dfd8698f42b6e92",
+            "ca90cec46837229611fa68da603e0490f17a3bf339e1a44114ca7b72f0ba9124",
+            "94f1a30d18ad9d03cf6c6742c5adea89a99520dd7427714c471462a29380926d",
+            "826704b584d27d849c07128ee84e210f62e578c9e55d566b5e5fee8c944f5243",
+            "93edbba38e10c69e337a8b36a6322f4168ed6877f1e0aea3210e570d9b9d5348",
+            "c9264d22b6608a12ca7b8d8dfd2adeb421112dbda237240c647593ede562a44d"
+          ],
+          "full_reserved_tokens": 1266,
+          "prompt_sha256": "662bfa0b19289e098b4b00934d5608fec5c7685cc698287b51bdff482cad9d46",
+          "proxy_requirements": [
+            "bluff",
+            "director",
+            "movie",
+            "snow",
+            "tha"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1170,
+          "selected_ids": [
+            "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+            "6810bd826611ad2ab7e276580ae0b605409d05b7e593dde00dfd8698f42b6e92",
+            "88bf106b1b501ee4703eb7f9de4e318b8ba0243254d5909852d4e8374921fd07",
+            "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+            "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        },
+        "api_only/top_k": {
+          "mode": "api_only",
+          "method": "top_k",
+          "candidate_ids": [
+            "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448",
+            "ddda78867fdd12b4c6c500ee852d6406859ce36d841c99026ddf251fbd4634e9"
+          ],
+          "full_reserved_tokens": 787,
+          "prompt_sha256": "733c52d49331d40826fab690aa3031a3eba4580d4f2c3f37f2f0b2c9b83fbd12",
+          "proxy_requirements": [
+            "bluff",
+            "director",
+            "movie",
+            "snow",
+            "tha"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 691,
+          "selected_ids": [
+            "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448",
+            "ddda78867fdd12b4c6c500ee852d6406859ce36d841c99026ddf251fbd4634e9"
+          ],
+          "selected_source_kinds": [
+            "api",
+            "api"
+          ]
+        },
+        "api_only/joint": {
+          "mode": "api_only",
+          "method": "joint",
+          "candidate_ids": [
+            "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448",
+            "ddda78867fdd12b4c6c500ee852d6406859ce36d841c99026ddf251fbd4634e9"
+          ],
+          "full_reserved_tokens": 787,
+          "prompt_sha256": "733c52d49331d40826fab690aa3031a3eba4580d4f2c3f37f2f0b2c9b83fbd12",
+          "proxy_requirements": [
+            "bluff",
+            "director",
+            "movie",
+            "snow",
+            "tha"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 691,
+          "selected_ids": [
+            "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448",
+            "ddda78867fdd12b4c6c500ee852d6406859ce36d841c99026ddf251fbd4634e9"
+          ],
+          "selected_source_kinds": [
+            "api",
+            "api"
+          ]
+        },
+        "combined/top_k": {
+          "mode": "combined",
+          "method": "top_k",
+          "candidate_ids": [
+            "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+            "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62",
+            "88bf106b1b501ee4703eb7f9de4e318b8ba0243254d5909852d4e8374921fd07",
+            "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+            "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448",
+            "6810bd826611ad2ab7e276580ae0b605409d05b7e593dde00dfd8698f42b6e92",
+            "ca90cec46837229611fa68da603e0490f17a3bf339e1a44114ca7b72f0ba9124",
+            "94f1a30d18ad9d03cf6c6742c5adea89a99520dd7427714c471462a29380926d",
+            "826704b584d27d849c07128ee84e210f62e578c9e55d566b5e5fee8c944f5243",
+            "93edbba38e10c69e337a8b36a6322f4168ed6877f1e0aea3210e570d9b9d5348",
+            "c9264d22b6608a12ca7b8d8dfd2adeb421112dbda237240c647593ede562a44d",
+            "ddda78867fdd12b4c6c500ee852d6406859ce36d841c99026ddf251fbd4634e9"
+          ],
+          "full_reserved_tokens": 1336,
+          "prompt_sha256": "3e0a6a451b94df5a22c4b9ed82b1c8be7c22acac5dbb15bdbd9e7bdd95e381ae",
+          "proxy_requirements": [
+            "bluff",
+            "director",
+            "movie",
+            "snow",
+            "tha"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1240,
+          "selected_ids": [
+            "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448",
+            "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+            "88bf106b1b501ee4703eb7f9de4e318b8ba0243254d5909852d4e8374921fd07",
+            "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+            "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62"
+          ],
+          "selected_source_kinds": [
+            "api",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        },
+        "combined/joint": {
+          "mode": "combined",
+          "method": "joint",
+          "candidate_ids": [
+            "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+            "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62",
+            "88bf106b1b501ee4703eb7f9de4e318b8ba0243254d5909852d4e8374921fd07",
+            "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+            "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448",
+            "6810bd826611ad2ab7e276580ae0b605409d05b7e593dde00dfd8698f42b6e92",
+            "ca90cec46837229611fa68da603e0490f17a3bf339e1a44114ca7b72f0ba9124",
+            "94f1a30d18ad9d03cf6c6742c5adea89a99520dd7427714c471462a29380926d",
+            "826704b584d27d849c07128ee84e210f62e578c9e55d566b5e5fee8c944f5243",
+            "93edbba38e10c69e337a8b36a6322f4168ed6877f1e0aea3210e570d9b9d5348",
+            "c9264d22b6608a12ca7b8d8dfd2adeb421112dbda237240c647593ede562a44d",
+            "ddda78867fdd12b4c6c500ee852d6406859ce36d841c99026ddf251fbd4634e9"
+          ],
+          "full_reserved_tokens": 1336,
+          "prompt_sha256": "3e0a6a451b94df5a22c4b9ed82b1c8be7c22acac5dbb15bdbd9e7bdd95e381ae",
+          "proxy_requirements": [
+            "bluff",
+            "director",
+            "movie",
+            "snow",
+            "tha"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1240,
+          "selected_ids": [
+            "29aac5eb6890b7e35117ba209ea3ad967f0d0397390a47914553978d85ecb448",
+            "407eedfba86aa7f1ed2e737cb9089abea035276b2e2514bea34ca97654238cb2",
+            "88bf106b1b501ee4703eb7f9de4e318b8ba0243254d5909852d4e8374921fd07",
+            "e0035518527599d31ded5112f1ef3ba454e87b83c73e561394280e161063197d",
+            "f5ec566bab5dd5040ce8011024a93e4ffda3bce8972bb3f45c112826054e0c62"
+          ],
+          "selected_source_kinds": [
+            "api",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        }
+      },
+      "all_api_fields_source_verified": true,
+      "actual_answer_generation_calls": 0,
+      "semantic_identity_verified": false,
+      "semantic_support_verified": false
+    },
+    {
+      "interaction_id": "4767a282-a3a4-4025-81c3-b58c0bc541a0",
+      "query_sha256": "36b357d15792212467776e2bf1257400e383631a8841cf6f338d2d500768693d",
+      "lookup": {
+        "scope": "Bounded query-copied movie/person candidates; no identity/support acceptance",
+        "interaction_id": "4767a282-a3a4-4025-81c3-b58c0bc541a0",
+        "source_calls": 2,
+        "calls": [
+          {
+            "endpoint": "/movie/get_movie_info",
+            "query_span": "the terminator",
+            "lookup_implementation": "local_disk_name_search",
+            "record_limit": 2,
+            "returned_source_rowids": [
+              46805,
+              36088
+            ],
+            "candidate_search_complete": false,
+            "semantic_identity_verified": false
+          },
+          {
+            "endpoint": "/movie/get_movie_info",
+            "query_span": "the fast and the furious",
+            "lookup_implementation": "local_disk_name_search",
+            "record_limit": 2,
+            "returned_source_rowids": [
+              36370,
+              21457
+            ],
+            "candidate_search_complete": false,
+            "semantic_identity_verified": false
+          }
+        ],
+        "candidate_fields": 41,
+        "excluded_fields": [
+          {
+            "source_rowid": 46805,
+            "field": "cast",
+            "reason": "field_character_cap",
+            "canonical_chars": 8120
+          },
+          {
+            "source_rowid": 46805,
+            "field": "crew",
+            "reason": "field_character_cap",
+            "canonical_chars": 16271
+          },
+          {
+            "source_rowid": 36088,
+            "field": "cast",
+            "reason": "field_character_cap",
+            "canonical_chars": 6023
+          },
+          {
+            "source_rowid": 36088,
+            "field": "crew",
+            "reason": "field_character_cap",
+            "canonical_chars": 8165
+          },
+          {
+            "source_rowid": 36370,
+            "field": "cast",
+            "reason": "field_character_cap",
+            "canonical_chars": 6346
+          },
+          {
+            "source_rowid": 36370,
+            "field": "crew",
+            "reason": "field_character_cap",
+            "canonical_chars": 14764
+          },
+          {
+            "source_rowid": 21457,
+            "field": "crew",
+            "reason": "field_character_cap",
+            "canonical_chars": 15184
+          }
+        ],
+        "provenance": {
+          "b965dc231299e8ae6d2e0c5981d563bddf6a8d0c68766d501a400dd64a5de0c2": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "budget",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "004f4e42fa50c6ef79df9c0bbd128b6b05ea2e1b996c8c1528755237814e97a8",
+            "canonical_content_sha256": "289cdd28f7c30f48e86f3c47c8bcc08f475c44f88bcdce3fa28ba0c477dc6d8a",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "888da5ac10c87073291cf680f5a428b35bea14f78ecbf5fa25f81985ef5c42cd": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "genres",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "95ad4850b7e02def7d3d0059b1c0bb6335120fdca604c4a8430e92b20c6e5082",
+            "canonical_content_sha256": "bd1d9452987a2af674586f23b1b78b56930f7bb7001dc9d561e35f92ef97e776",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "ff75f69f8ee5f168c72e88da0a33f8be0af78a9701404b971b1c1cd505dcd35f": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "id",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "21fd6b0f233d0644171f668d2fc32cf4b263e4b8c84c63c62f1bb797321bde67",
+            "canonical_content_sha256": "a45b3397cf36d24bfb515b81df4ae8d19baa2c5e082e6cea116901324e526400",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "90362bcb124824946292ffbc37b1bd22adf5bc759f418de852ed3c1cfb58a382": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "length",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "65a699905c02619370bcf9207f5a477c3d67130ca71ec6f750e07fe8d510b084",
+            "canonical_content_sha256": "3ddd4909ad1a5198f7f8c0d251271f729df29fe737c27f55796bf632fec2ceed",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "ab30db3cd448de0a26db5d6ce2c4ca0b7196b5d0e5d66129fb8092e60baebfed": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "original_language",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
+            "canonical_content_sha256": "155392b08573a8e0224e661a34f5b5a2dd6113bdc5258a352ac9268d5a1988e8",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "fcdeeb032a3fa6c84fa33bb99f8db765ae455e96ca44e7e60a65089f83bf6c30": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "original_title",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "76ee2cf57944bf7174d11bbfd9c836fbebb242a52d5ba29ddd48ba76f48c5ec7",
+            "canonical_content_sha256": "d6e1bb37fcc6f9b8982317f8513efb2383bd33b9ad6a549371ad535bd813ed36",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "5615ef1c7a5d07aa14a75b1e1beedb11730500dd19244e6a4ef25fadd3748d59": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "rating",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "b5ead0a5626eff7a2c96e11f6a47fc4f95ca74ba2a2514f5e7d9d093798b9ce7",
+            "canonical_content_sha256": "4de06869c44b54c9537fbd9b28d4315cc72af55a4abd6d4f518ea7bf4590b803",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "8fca2017454881d8eaa08a893bb03d66e6c732c7184d54df6eb624933b6b174e": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "release_date",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "69434241df785fc41787ff3f59566f63f6837895853442b4e552c8418d56d3b5",
+            "canonical_content_sha256": "ea39da454c6eeab2166ee89ef3616f401e677e02b3656c936699e8fdf916580d",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "c47d6e40f177fc70d92b65b0e85a3b226ae915fcb01c48d656222477bced7a7b": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "revenue",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "e0535264cb953a5550ca68847d99d4ad8e532e5c66beed2a67c6584776c24e08",
+            "canonical_content_sha256": "8d1547ca967ca03d0de5a32eff04e61ada5149a726fd4a4036d1f7b9f95594b1",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "23c4dc9e90b2add908e002b70492f65c8f6ff89ce537ec31b33b9e87f334ca4b": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 46805,
+            "source_name": "terminator genisys",
+            "entity_kind": "movie",
+            "record_field": "title",
+            "record_sha256": "c0658f6bcc6963c93ecb2ddfcad4b3cd86f63c852cf3c9bf8797de0de6b9bbb8",
+            "field_value_sha256": "76ee2cf57944bf7174d11bbfd9c836fbebb242a52d5ba29ddd48ba76f48c5ec7",
+            "canonical_content_sha256": "3e092ffbf2a24817e1ac01d8c8f08f32317258ff83b26bcda85d4107bc8a94c2",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "4bcf9c1ae47f57e25d2060e2a015f125b596e2a1e39979400d5ed80d10da564e": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "budget",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "0d679bc68326dea934ef01c33165fb98423adf7996cae630ad1356f1e4514775",
+            "canonical_content_sha256": "73b27a6903b46875507d0b4090257b22216218cf49dc2a9299195ce8a456c81c",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "94515eb24ede3d2a9ac575f0078b8d32ca4098502837529c25d4c0dfa99538f5": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "genres",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "976be9ce124143597958b2fe893a77b444d1b9249b7557e9efc3ef8bdc45ac92",
+            "canonical_content_sha256": "b28b8c16c8bd1cb3653ea6d17da22b64019764fe87d74497e8b5cb0be0928d44",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "daaccae6f73b037bd24f4e8bf7d4b734c255e922285d307d4792490189235a57": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "id",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "5ef6514ed3304cf62b950982541114ac352c52729dbf80747775a9d1a733af93",
+            "canonical_content_sha256": "7f0cb14d7c23018ff60561ef63b19a1784430f7217cd11a57f296e3959d21fb7",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "ebf48dee338ccfb6c8c220bde316fbf5729027e5091ea290b6a643275c0dbe31": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "length",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "28dae7c8bde2f3ca608f86d0e16a214dee74c74bee011cdfdd46bc04b655bc14",
+            "canonical_content_sha256": "2e69be55fe8ae56cd5a39141ebcec1e3a5c6e159840152a5a8b326711a25bd08",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "8a66f187e234def0b847ffcea6e409524435734f9cc58b48b577bbde5b90dc3c": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "original_language",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
+            "canonical_content_sha256": "3fb03d33582936d7f64f3ad6853fe77cb9faa8eef6d4d8136ed7575b9288e71e",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "3ae8c2548b1dad8645cbc3051f55a10c189dd9f2d0524236d5c5b6c72224fad1": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "original_title",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "364d90dc4cbf835af329ac964185d737ed1c62c0fae61c963fcdd18818d0eeae",
+            "canonical_content_sha256": "5302826ca30babd660a743c68b3dabaab4b5e4a9cf34434668e0a6910b7254e9",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "972a173d2a9cad1558042c1532593b7054b9610bc00936936edf60fcf2e5ddc5": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "rating",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "5798758bbc833df09bceba3fb38dfa95dbe82d1a51b94ea300392654fc2b2665",
+            "canonical_content_sha256": "fd96319b57fdaf5f519f45ee398090963f6ca0f02ab31b2a0aa20be935663b66",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "dedd6e5b3e3c1daffc7bc78b8711e1b8262f9548d0d1828aaf4dd01b83f8aaac": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "release_date",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "9f83a2c73d3f49fe1f7b62d0cefcfe133854d61c47c7b5f9f2968e6767c03bfd",
+            "canonical_content_sha256": "15c7a089047e1d97638612258bcbd82dd1f5c2839b366cb0c456051d706d6a64",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "84d1b381e2f2cd59edfb561a60fb1923d184b824604f068302b0060439c778cb": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "revenue",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "2830e901173cb5ea53202b3f6225c4c6f4187da0d819fd61db81f8b715197b7b",
+            "canonical_content_sha256": "ae0ab26f75a8e04c75885c2fcda246f7f9edb99c81de089549446f9acefc0f26",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "540762bcc646ad0916edf899ccd8f1dab561c11f433ed66bbeee48d495987bbd": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36088,
+            "source_name": "terminator salvation",
+            "entity_kind": "movie",
+            "record_field": "title",
+            "record_sha256": "f3a6db2594d12fe48ec9dc233d916442857967a3425821b4de65435eb2141ad2",
+            "field_value_sha256": "364d90dc4cbf835af329ac964185d737ed1c62c0fae61c963fcdd18818d0eeae",
+            "canonical_content_sha256": "a3fac7c5968b943739cb00a8a4bc882c540b1c5e37e2bb0aff58637aa10e08fc",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the terminator"
+            ]
+          },
+          "b48bd9bcd329b8570eddf573630a1bbea9aeca00857b3734074ff8e50a9c181a": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "budget",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "5d29ace04d3ac91d99383bbc423721e0eccb1af6b8096f00d82dcf25640b54ff",
+            "canonical_content_sha256": "7c3258c468afe3b1fc5483c64988fc11ad79314dafbada775416deca8c4ee012",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "44ac18345147d79c4ff0792045d086bf2cb9b87f4b68c82168b5a79d305f7502": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "genres",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "6d6305ec3242dc5a604b82143432cec499319f6228cfab81fbb959d2a972f3e1",
+            "canonical_content_sha256": "6421d2e6a0ddfc723d53eae654c1a09255774cb98b541ebb9b098e9e86741e41",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "22e86aa3b51944ff25f688e9fe8aeb810960da6b9a593850791baeb52fdeaa18": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "id",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "5a8fc0bcb9b6fcff7803715346b2be1c806ca70b87b690693857c697b1c5cbae",
+            "canonical_content_sha256": "8d4792ca05ef3ae1cbd7bf136f32a376dc9db79e8158161d8a216b69291e8508",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "09f2865db125a668af20049bca6bad6b5ce1c15bb983218163ae632930cdbabe": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "length",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "3346f2bbf6c34bd2dbe28bd1bb657d0e9c37392a1d5ec9929e6a5df4763ddc2d",
+            "canonical_content_sha256": "c4f587f3f40949e61d774daa3278f62062397e066cfd96ced94b30163b1e2302",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "a9c23162eea789b4f240d0b673f69970ebfbf91fb68a1d038e40a4e57fdc055b": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "original_language",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
+            "canonical_content_sha256": "cf65c7891c33db0223b7ebeacd18a3ff0f40b7487db1850ffc701435a6398c70",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "844912dbd20b9bd665f0ba64cffa838c000701c18b2b67d9eda0e088c51b84c4": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "original_title",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "25e06d12f7ae28b7f2f463815710780b5b3a6ea55f46b0d19f0047e6aff6611e",
+            "canonical_content_sha256": "dc22eecc781393e92dc001131573c1e95bc419269841b1fa383d1999688a0fae",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "0def1b63ff819fcbee92c1cfef110da849311f82d780e1e570cd9061ebe729a2": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "rating",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "01a6025a620037fbbf1db59ef84258dc8028e5d50a40444a1801a53bbd6b33bc",
+            "canonical_content_sha256": "ce262fa78e5511d837c862fe193bdb7b8b1a3dcaf0b29a114221789386fce7db",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "c66485261b5db69c6b83fa286c52aa1e7bb1ee3ec11f85cbaef107dc4583f448": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "release_date",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "27ab3f19013f2a71955269cedb70eea4da217426502ba40974ba3891ec654b2f",
+            "canonical_content_sha256": "377d10b344e039dd8500b84726bc04f407eff5722a1d468e3cc56f7a91ee0bfe",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "12da8f3db090d5cbace0c0492235040aee343b0b6888b07083ef8b7941f62a17": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "revenue",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "d19a8f7d3bd51a723660262f59b026a9ae271bd390473ae527fcf63df4fb2bcd",
+            "canonical_content_sha256": "0054c642dea9cf16083c992c6d9c1a4a9d9e43d7a1ba1ad8a980e6566cfef558",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "ef497909be9ce4244c9e8991c4f251291cc0f2752ec3452da3f9e53d40f680ac": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 36370,
+            "source_name": "fast furious",
+            "entity_kind": "movie",
+            "record_field": "title",
+            "record_sha256": "e9596797210b2e4116668776c294842b5666605014a06440cb9b0ec5f4fd8c89",
+            "field_value_sha256": "25e06d12f7ae28b7f2f463815710780b5b3a6ea55f46b0d19f0047e6aff6611e",
+            "canonical_content_sha256": "9b01e655119f83f0101cefe5335814fd63f12878548b8abcb7fb2eaa021f23cf",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "12d3678d4a914d7fa4187f6d7056cfb1f274728db59d2c41171478ae93939227": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "budget",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "fdeab2a3850c7dbbbf6f7de46e819b1752eafb16e8f93012524450198b3adfe4",
+            "canonical_content_sha256": "06bc3dc7c00d162156cba007db0bf18ecd1090023d03ee7f6d2cad8e79a5156d",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "9817d8c17381f9a32dbc1151ede39c29cc16d90a57945d612c62de42a9c82af2": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "cast",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "4951a4fab87c7fa28b33699fee4a051309f5d192d238da85fe716b55187160b3",
+            "canonical_content_sha256": "1818d4c2752b80842944e9abb142faf8e55c831e06ae3f35686468b2e5ee598d",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "6bab207ea2c608561522be7cadc4f7aa78de310acd46c6ac1f172b821cd026c7": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "genres",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "1a70ac9680d9ea0e9437c0f902c9c35aaaeabdf768f74e0abba6a119281dcaba",
+            "canonical_content_sha256": "442a0189df6a6f0f26fea29fd7e8e02cc0a676094858a6b7738a59088db5e221",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "a669b8974093ef4a418e453c8be220a13743142c7e285b831bc0ebb1da1b7441": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "id",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "7a2f77d66990586ab9e7b587f35732acef3c399700976be689dfe354123a2d14",
+            "canonical_content_sha256": "07be7143fab3423c7744a7cab886f6c8091d942131ee64ba5ffb13c401800af8",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "cb390166cb3ab349e4ef200eaf7cf2dae1ed8003f12f89b8278d541ae175805a": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "length",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "482d9673cfee5de391f97fde4d1c84f9f8d6f2cf0784fcffb958b4032de7236c",
+            "canonical_content_sha256": "5cf6f947ba71bb84b6453265a6f435e5fb3726844867484d83c7272da80cfb6d",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "e9c2a6a782880d89dc042c8a0ae65f1177975adf61f1d8ae8d417d01704d4b15": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "original_language",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "50eac10e7966a04e139902940a2a8e129a4597574c709cb8d01939ace56ff9c3",
+            "canonical_content_sha256": "2868a926c452d686f2eb13711757ea18c73878c48425ad4ade3a0e45d3c11dd4",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "53cd4dc21aeb6f8f96528f7c5db69bcb256cd9d8e9feefd8e68ac1f4fd59ed29": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "original_title",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "2e133ee9b9dd24ed9ebb298b13d50ff8deb8680d9bf41549d8a48218b9450087",
+            "canonical_content_sha256": "96fc6ede4fe52d0f84ea46860f93e13ae9c0e5811874fae9958f561fdd32d44a",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "f064601997312d0f33729513b0e978107ded9bb45edfd9343268046f1dbcbfec": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "rating",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "0de7cf39e1e6366122309794e86d197d025a81235881e67ec4f011c9db2df252",
+            "canonical_content_sha256": "1ccc7176638979e68128d3d36e28e38659d69282724594ff2b43a2660efa427f",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "6fdfbdf3ca1c5d24cf46cbcc2c449bef64147592df214d3bf625792a8d9c108f": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "release_date",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "c5e38eca2c4487d169d4c7595914932932b7e29175970b3e4d8e3e1d48f0698c",
+            "canonical_content_sha256": "0074dbf27eeed1578094b24353347e53c3c629207eb7baaaba4c64383895fd8a",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "c04bbc4d1c488dff96e14cc3ffd96cfab703e859b1f110c01d563e951e02f6ad": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "revenue",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "e9b4de8fa55e1680974a8f6f4f0c98b334236eb465f6893f19619d901ae71c91",
+            "canonical_content_sha256": "1fe2cfadd3765b5d2e0eaf06af23787b00f0dfdc484d693ceb1a67f312c2ff0a",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          },
+          "88a95ca190279575bba0ce34ca3b6e3f560fefc645f1eebf8487f2bc3f0f1384": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "673de2da21bd594a8acb8cdb7765346f07ccf4d4a88a74942416d1748c12964b",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/movie_db.json",
+            "source_rowid": 21457,
+            "source_name": "the fast and the furious",
+            "entity_kind": "movie",
+            "record_field": "title",
+            "record_sha256": "5ed4dd37169aa85b0df260e77998338032eedbc34401654bfb6e382a02069bbd",
+            "field_value_sha256": "2e133ee9b9dd24ed9ebb298b13d50ff8deb8680d9bf41549d8a48218b9450087",
+            "canonical_content_sha256": "dcd5b7e34a486063677dac330e1d26f484631f033fcada084e14015d94dbf042",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "the fast and the furious"
+            ]
+          }
+        },
+        "source_index_sha256": "d0d957ec35388e5cdc599ac330894a6f5f071f53966b94d5138950bd29da69a6",
+        "tie_policy": "source_rowid_desc",
+        "answer_acceptance_enabled": false
+      },
+      "shared_pool": {
+        "shared_candidate_ids": [
+          "5da219b8e987c4aa204a85ac4814597df8ca6341baf39d0a0d295ca53ea65421",
+          "5e5b9f50c121a85c243b672d9d191cfaaf0ab092c90c140d61c13b1dc233daaf",
+          "6e11db8559295a9bf84f79a88c43cfad656541cd0a6c1bfc9d1b28f632f7496e",
+          "1e306addfe2657e53a0690cb084af3e38e74cda1b07a9f06f7cd465e892ac268",
+          "61d68b2cd69fed7de00ba352f8b70dd7353d5df851b6ebbcca576bf66d82a1f5",
+          "28462e393525519132a345c490a9c1cb822a044815d5034a6a1d80aa1d37c955",
+          "a571bf7d0c843598d3de84d42d533cbe6f1c7f6678979b325a184784d7401312",
+          "ae58977c064bc52cc5c421112accc19bdf6240df3247bca788483f4e3b327275",
+          "b15ecc1bd290f3d6d294892d7bea8d6a3bbf354687ab4e2f69acc39b66acdfe8",
+          "cbfc709f2f99162daccc5580371781759b92745dd8c9bd831d095d1999d9f2c8",
+          "fd37492f26590f9a8a98bdcbf7655eaf0d2a48e0babae1a4be24d4038e1e44bd",
+          "d79ab8e514da55c0692d5f18c2220ca95aaf4d8426523f964eb2ccd966b8dc84"
+        ],
+        "shared_candidate_counts": {
+          "web": 12,
+          "api": 0
+        },
+        "retrieval_pool_policy": "rank_union_once_then_filter_for_source_controls",
+        "retrieval_score_is_semantic_support": false,
+        "actual_answer_generation_calls": 0
+      },
+      "controls": {
+        "web_only/top_k": {
+          "mode": "web_only",
+          "method": "top_k",
+          "candidate_ids": [
+            "5da219b8e987c4aa204a85ac4814597df8ca6341baf39d0a0d295ca53ea65421",
+            "5e5b9f50c121a85c243b672d9d191cfaaf0ab092c90c140d61c13b1dc233daaf",
+            "6e11db8559295a9bf84f79a88c43cfad656541cd0a6c1bfc9d1b28f632f7496e",
+            "1e306addfe2657e53a0690cb084af3e38e74cda1b07a9f06f7cd465e892ac268",
+            "61d68b2cd69fed7de00ba352f8b70dd7353d5df851b6ebbcca576bf66d82a1f5",
+            "28462e393525519132a345c490a9c1cb822a044815d5034a6a1d80aa1d37c955",
+            "a571bf7d0c843598d3de84d42d533cbe6f1c7f6678979b325a184784d7401312",
+            "ae58977c064bc52cc5c421112accc19bdf6240df3247bca788483f4e3b327275",
+            "b15ecc1bd290f3d6d294892d7bea8d6a3bbf354687ab4e2f69acc39b66acdfe8",
+            "cbfc709f2f99162daccc5580371781759b92745dd8c9bd831d095d1999d9f2c8",
+            "fd37492f26590f9a8a98bdcbf7655eaf0d2a48e0babae1a4be24d4038e1e44bd",
+            "d79ab8e514da55c0692d5f18c2220ca95aaf4d8426523f964eb2ccd966b8dc84"
+          ],
+          "full_reserved_tokens": 1409,
+          "prompt_sha256": "f0041a8f01d62b3cd6433ac2e44195c358e216da927a8ab11301bdade7c2d5cd",
+          "proxy_requirements": [
+            "fast",
+            "furious",
+            "has",
+            "more",
+            "movie",
+            "sequels",
+            "terminator"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1313,
+          "selected_ids": [
+            "1e306addfe2657e53a0690cb084af3e38e74cda1b07a9f06f7cd465e892ac268",
+            "5da219b8e987c4aa204a85ac4814597df8ca6341baf39d0a0d295ca53ea65421",
+            "5e5b9f50c121a85c243b672d9d191cfaaf0ab092c90c140d61c13b1dc233daaf",
+            "61d68b2cd69fed7de00ba352f8b70dd7353d5df851b6ebbcca576bf66d82a1f5",
+            "6e11db8559295a9bf84f79a88c43cfad656541cd0a6c1bfc9d1b28f632f7496e"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        },
+        "web_only/joint": {
+          "mode": "web_only",
+          "method": "joint",
+          "candidate_ids": [
+            "5da219b8e987c4aa204a85ac4814597df8ca6341baf39d0a0d295ca53ea65421",
+            "5e5b9f50c121a85c243b672d9d191cfaaf0ab092c90c140d61c13b1dc233daaf",
+            "6e11db8559295a9bf84f79a88c43cfad656541cd0a6c1bfc9d1b28f632f7496e",
+            "1e306addfe2657e53a0690cb084af3e38e74cda1b07a9f06f7cd465e892ac268",
+            "61d68b2cd69fed7de00ba352f8b70dd7353d5df851b6ebbcca576bf66d82a1f5",
+            "28462e393525519132a345c490a9c1cb822a044815d5034a6a1d80aa1d37c955",
+            "a571bf7d0c843598d3de84d42d533cbe6f1c7f6678979b325a184784d7401312",
+            "ae58977c064bc52cc5c421112accc19bdf6240df3247bca788483f4e3b327275",
+            "b15ecc1bd290f3d6d294892d7bea8d6a3bbf354687ab4e2f69acc39b66acdfe8",
+            "cbfc709f2f99162daccc5580371781759b92745dd8c9bd831d095d1999d9f2c8",
+            "fd37492f26590f9a8a98bdcbf7655eaf0d2a48e0babae1a4be24d4038e1e44bd",
+            "d79ab8e514da55c0692d5f18c2220ca95aaf4d8426523f964eb2ccd966b8dc84"
+          ],
+          "full_reserved_tokens": 1427,
+          "prompt_sha256": "f6d98be8bb6a7834e8c78d37d0bdfb1e8ecf8aea4571b8a29c14cf2d52f6597b",
+          "proxy_requirements": [
+            "fast",
+            "furious",
+            "has",
+            "more",
+            "movie",
+            "sequels",
+            "terminator"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1331,
+          "selected_ids": [
+            "1e306addfe2657e53a0690cb084af3e38e74cda1b07a9f06f7cd465e892ac268",
+            "5da219b8e987c4aa204a85ac4814597df8ca6341baf39d0a0d295ca53ea65421",
+            "5e5b9f50c121a85c243b672d9d191cfaaf0ab092c90c140d61c13b1dc233daaf",
+            "61d68b2cd69fed7de00ba352f8b70dd7353d5df851b6ebbcca576bf66d82a1f5",
+            "b15ecc1bd290f3d6d294892d7bea8d6a3bbf354687ab4e2f69acc39b66acdfe8"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        },
+        "api_only/top_k": {
+          "mode": "api_only",
+          "method": "top_k",
+          "candidate_ids": [],
+          "full_reserved_tokens": 221,
+          "prompt_sha256": "92c749ae7263304c1b9dfc18bd47a4af724499830a3d9faeb6625392245d88c1",
+          "proxy_requirements": [
+            "fast",
+            "furious",
+            "has",
+            "more",
+            "movie",
+            "sequels",
+            "terminator"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 125,
+          "selected_ids": [],
+          "selected_source_kinds": []
+        },
+        "api_only/joint": {
+          "mode": "api_only",
+          "method": "joint",
+          "candidate_ids": [],
+          "full_reserved_tokens": 221,
+          "prompt_sha256": "92c749ae7263304c1b9dfc18bd47a4af724499830a3d9faeb6625392245d88c1",
+          "proxy_requirements": [
+            "fast",
+            "furious",
+            "has",
+            "more",
+            "movie",
+            "sequels",
+            "terminator"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 125,
+          "selected_ids": [],
+          "selected_source_kinds": []
+        },
+        "combined/top_k": {
+          "mode": "combined",
+          "method": "top_k",
+          "candidate_ids": [
+            "5da219b8e987c4aa204a85ac4814597df8ca6341baf39d0a0d295ca53ea65421",
+            "5e5b9f50c121a85c243b672d9d191cfaaf0ab092c90c140d61c13b1dc233daaf",
+            "6e11db8559295a9bf84f79a88c43cfad656541cd0a6c1bfc9d1b28f632f7496e",
+            "1e306addfe2657e53a0690cb084af3e38e74cda1b07a9f06f7cd465e892ac268",
+            "61d68b2cd69fed7de00ba352f8b70dd7353d5df851b6ebbcca576bf66d82a1f5",
+            "28462e393525519132a345c490a9c1cb822a044815d5034a6a1d80aa1d37c955",
+            "a571bf7d0c843598d3de84d42d533cbe6f1c7f6678979b325a184784d7401312",
+            "ae58977c064bc52cc5c421112accc19bdf6240df3247bca788483f4e3b327275",
+            "b15ecc1bd290f3d6d294892d7bea8d6a3bbf354687ab4e2f69acc39b66acdfe8",
+            "cbfc709f2f99162daccc5580371781759b92745dd8c9bd831d095d1999d9f2c8",
+            "fd37492f26590f9a8a98bdcbf7655eaf0d2a48e0babae1a4be24d4038e1e44bd",
+            "d79ab8e514da55c0692d5f18c2220ca95aaf4d8426523f964eb2ccd966b8dc84"
+          ],
+          "full_reserved_tokens": 1409,
+          "prompt_sha256": "f0041a8f01d62b3cd6433ac2e44195c358e216da927a8ab11301bdade7c2d5cd",
+          "proxy_requirements": [
+            "fast",
+            "furious",
+            "has",
+            "more",
+            "movie",
+            "sequels",
+            "terminator"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1313,
+          "selected_ids": [
+            "1e306addfe2657e53a0690cb084af3e38e74cda1b07a9f06f7cd465e892ac268",
+            "5da219b8e987c4aa204a85ac4814597df8ca6341baf39d0a0d295ca53ea65421",
+            "5e5b9f50c121a85c243b672d9d191cfaaf0ab092c90c140d61c13b1dc233daaf",
+            "61d68b2cd69fed7de00ba352f8b70dd7353d5df851b6ebbcca576bf66d82a1f5",
+            "6e11db8559295a9bf84f79a88c43cfad656541cd0a6c1bfc9d1b28f632f7496e"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        },
+        "combined/joint": {
+          "mode": "combined",
+          "method": "joint",
+          "candidate_ids": [
+            "5da219b8e987c4aa204a85ac4814597df8ca6341baf39d0a0d295ca53ea65421",
+            "5e5b9f50c121a85c243b672d9d191cfaaf0ab092c90c140d61c13b1dc233daaf",
+            "6e11db8559295a9bf84f79a88c43cfad656541cd0a6c1bfc9d1b28f632f7496e",
+            "1e306addfe2657e53a0690cb084af3e38e74cda1b07a9f06f7cd465e892ac268",
+            "61d68b2cd69fed7de00ba352f8b70dd7353d5df851b6ebbcca576bf66d82a1f5",
+            "28462e393525519132a345c490a9c1cb822a044815d5034a6a1d80aa1d37c955",
+            "a571bf7d0c843598d3de84d42d533cbe6f1c7f6678979b325a184784d7401312",
+            "ae58977c064bc52cc5c421112accc19bdf6240df3247bca788483f4e3b327275",
+            "b15ecc1bd290f3d6d294892d7bea8d6a3bbf354687ab4e2f69acc39b66acdfe8",
+            "cbfc709f2f99162daccc5580371781759b92745dd8c9bd831d095d1999d9f2c8",
+            "fd37492f26590f9a8a98bdcbf7655eaf0d2a48e0babae1a4be24d4038e1e44bd",
+            "d79ab8e514da55c0692d5f18c2220ca95aaf4d8426523f964eb2ccd966b8dc84"
+          ],
+          "full_reserved_tokens": 1427,
+          "prompt_sha256": "f6d98be8bb6a7834e8c78d37d0bdfb1e8ecf8aea4571b8a29c14cf2d52f6597b",
+          "proxy_requirements": [
+            "fast",
+            "furious",
+            "has",
+            "more",
+            "movie",
+            "sequels",
+            "terminator"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1331,
+          "selected_ids": [
+            "1e306addfe2657e53a0690cb084af3e38e74cda1b07a9f06f7cd465e892ac268",
+            "5da219b8e987c4aa204a85ac4814597df8ca6341baf39d0a0d295ca53ea65421",
+            "5e5b9f50c121a85c243b672d9d191cfaaf0ab092c90c140d61c13b1dc233daaf",
+            "61d68b2cd69fed7de00ba352f8b70dd7353d5df851b6ebbcca576bf66d82a1f5",
+            "b15ecc1bd290f3d6d294892d7bea8d6a3bbf354687ab4e2f69acc39b66acdfe8"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        }
+      },
+      "all_api_fields_source_verified": true,
+      "actual_answer_generation_calls": 0,
+      "semantic_identity_verified": false,
+      "semantic_support_verified": false
+    },
+    {
+      "interaction_id": "47d44ffb-10f8-43df-a7de-d1d296544afc",
+      "query_sha256": "145eb053dcd9ddb9c14149e1dfccfc673dec176ef51b771d440d9d6840ebbf4c",
+      "lookup": {
+        "scope": "Bounded query-copied movie/person candidates; no identity/support acceptance",
+        "interaction_id": "47d44ffb-10f8-43df-a7de-d1d296544afc",
+        "source_calls": 2,
+        "calls": [
+          {
+            "endpoint": "/movie/get_person_info",
+            "query_span": "meryl streep",
+            "lookup_implementation": "local_disk_name_search",
+            "record_limit": 2,
+            "returned_source_rowids": [
+              67415,
+              290607
+            ],
+            "candidate_search_complete": false,
+            "semantic_identity_verified": false
+          },
+          {
+            "endpoint": "/movie/get_person_info",
+            "query_span": "angelina jolie",
+            "lookup_implementation": "local_disk_name_search",
+            "record_limit": 2,
+            "returned_source_rowids": [
+              65180,
+              422925
+            ],
+            "candidate_search_complete": false,
+            "semantic_identity_verified": false
+          }
+        ],
+        "candidate_fields": 19,
+        "excluded_fields": [],
+        "provenance": {
+          "5dd7fc940f15969d2056bc607604e52ec0ef3ae8a27475ecec96a9738c935bd0": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 67415,
+            "source_name": "meryl streep",
+            "entity_kind": "person",
+            "record_field": "acted_movies",
+            "record_sha256": "edb8a738fbb5e15d8ba2e436cb63f3625b0903808f51b9ca39942bcba240a5e7",
+            "field_value_sha256": "70f12973870cbb06f31774e8007d5d925d6f768193b22c10e595c2e86b414ef5",
+            "canonical_content_sha256": "02394f86f9572a449d6396f2be2fc1bfd4c8a8673a8e9b9f87fde86486d79ecb",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "meryl streep"
+            ]
+          },
+          "5d7ce47f18e81525c27ae71100f51e0429e05f788d9e2fe427d6ffdba262d96e": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 67415,
+            "source_name": "meryl streep",
+            "entity_kind": "person",
+            "record_field": "birthday",
+            "record_sha256": "edb8a738fbb5e15d8ba2e436cb63f3625b0903808f51b9ca39942bcba240a5e7",
+            "field_value_sha256": "8aecd8023ac9915cc7b837f178fe64fbc2d54e0744772fc78d20b4986cd665a2",
+            "canonical_content_sha256": "36152fa1584d67a07b9a3f56e327b3358da873ef6867fe0e3df31a9870b57dcc",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "meryl streep"
+            ]
+          },
+          "c7fe83be50e59582840fb8663336402333fc58d86df5106c17420035e0330838": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 67415,
+            "source_name": "meryl streep",
+            "entity_kind": "person",
+            "record_field": "id",
+            "record_sha256": "edb8a738fbb5e15d8ba2e436cb63f3625b0903808f51b9ca39942bcba240a5e7",
+            "field_value_sha256": "b28bb581f28c6301ef37c4f38ca420fccc0ad1870a1d45ab748da876be7784c5",
+            "canonical_content_sha256": "e4d2b85fde38355a912dacd76cb5f2e956a34357573730f484ac78b8bde26057",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "meryl streep"
+            ]
+          },
+          "1acc59d10946b99233288ddc8d7b575e9b421cc980a547e8f57066e48e23f252": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 67415,
+            "source_name": "meryl streep",
+            "entity_kind": "person",
+            "record_field": "name",
+            "record_sha256": "edb8a738fbb5e15d8ba2e436cb63f3625b0903808f51b9ca39942bcba240a5e7",
+            "field_value_sha256": "c284cba18a606eaf5660e3429c23c730aa14a4216edeb80c9a21af70e8ad6418",
+            "canonical_content_sha256": "66ae652e01393223c72898b419ae439692a99dfdb6c15f102f00f491cca3acdc",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "meryl streep"
+            ]
+          },
+          "a90248f6988614a48aeddda49463dbc011cb8d5aac7c47904d52fd047bca7ef0": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 67415,
+            "source_name": "meryl streep",
+            "entity_kind": "person",
+            "record_field": "oscar_awards",
+            "record_sha256": "edb8a738fbb5e15d8ba2e436cb63f3625b0903808f51b9ca39942bcba240a5e7",
+            "field_value_sha256": "54c73917ead905d4344ed3f2fc3f60ea8e30a8bf0bd10ebdd7be701d9290f3d0",
+            "canonical_content_sha256": "3b4d7abd3e652e2838902f5396066b9bd67f49714c92f31d15da9d848cfabd7a",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "meryl streep"
+            ]
+          },
+          "c86d81968898a23bfd073a3021a4f206256616052109f7f87ff2d7d9a617399a": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 290607,
+            "source_name": "meryl hechtman",
+            "entity_kind": "person",
+            "record_field": "acted_movies",
+            "record_sha256": "49dcb85a0ef7eb352ec6d26c22c116f2651b48a0a8264b9801d0402ef8b746ca",
+            "field_value_sha256": "42841709a8432c9e5aab0670fde77f4791555f21920d11104c10eb78f80b69c4",
+            "canonical_content_sha256": "8e32232557fd0f7f750509594e28d1a2648d7c2d601188cc27ee0a2dd6599fe1",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "meryl streep"
+            ]
+          },
+          "8759da2693e52353465ff21d1b90f78792e299f25ae45c315bebcd8f215b5b58": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 290607,
+            "source_name": "meryl hechtman",
+            "entity_kind": "person",
+            "record_field": "birthday",
+            "record_sha256": "49dcb85a0ef7eb352ec6d26c22c116f2651b48a0a8264b9801d0402ef8b746ca",
+            "field_value_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "canonical_content_sha256": "0cad842a232b3ba4f36f88f49e60b11c167d2ad513906b75587860aad5e184c0",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "meryl streep"
+            ]
+          },
+          "38665b07740bec4e71a137add4d6efe793773594fa83fe4a41b0df641f71bb67": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 290607,
+            "source_name": "meryl hechtman",
+            "entity_kind": "person",
+            "record_field": "id",
+            "record_sha256": "49dcb85a0ef7eb352ec6d26c22c116f2651b48a0a8264b9801d0402ef8b746ca",
+            "field_value_sha256": "70ecacf9841e3dc5d0800bce81c166d3f7f784b43a2658118d443bc78c79af9f",
+            "canonical_content_sha256": "658b70af51216c750cc31ad068fca56fa1f689d6d56ed4a7515b9d7e83ce72ea",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "meryl streep"
+            ]
+          },
+          "a10512f83f7fb889f330363e9f9a9a6712dd0d342a8d12655c399ba422089ab8": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 290607,
+            "source_name": "meryl hechtman",
+            "entity_kind": "person",
+            "record_field": "name",
+            "record_sha256": "49dcb85a0ef7eb352ec6d26c22c116f2651b48a0a8264b9801d0402ef8b746ca",
+            "field_value_sha256": "4bb5d9a563f9db97dc33acf30a472b6d69b40201d4a0d133b78f44a587784bce",
+            "canonical_content_sha256": "2cb8d52b1bd903e45b7047cb5ca447497f37d8519fa43008a3068d377f712c3d",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "meryl streep"
+            ]
+          },
+          "56de1d13b8e9094f38246e1c5d138022c22660e629cda52206625afe8dbe14ec": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 65180,
+            "source_name": "angelina jolie",
+            "entity_kind": "person",
+            "record_field": "acted_movies",
+            "record_sha256": "e75f248f1866fb516ca9286c729b800b4ee63ea37aa6f5f799f5c921e159d55f",
+            "field_value_sha256": "784d8f44aff13e2add88bdaef1ae26336aadea75ef100565428cbaac32276925",
+            "canonical_content_sha256": "b32ebd83c5088fa86212eb05009e6110022dcc25682ef90f0b0af7e501b6834e",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          },
+          "ff55a0cd640a40871fa6282553df730496c799ce96188653cc86639a40381521": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 65180,
+            "source_name": "angelina jolie",
+            "entity_kind": "person",
+            "record_field": "birthday",
+            "record_sha256": "e75f248f1866fb516ca9286c729b800b4ee63ea37aa6f5f799f5c921e159d55f",
+            "field_value_sha256": "64c050754b8f7910c9851f7308518ca794bc116856d2ad76667c7f2613a64a59",
+            "canonical_content_sha256": "9edf735461ba53cae807149099402087a156aa9ee2fb2f0c5e87a5258f8f9648",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          },
+          "056a0a95e8206a56acf65fa533e0be396c8dae07ea1934f7563b12f002a16efb": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 65180,
+            "source_name": "angelina jolie",
+            "entity_kind": "person",
+            "record_field": "directed_movies",
+            "record_sha256": "e75f248f1866fb516ca9286c729b800b4ee63ea37aa6f5f799f5c921e159d55f",
+            "field_value_sha256": "9e54daf336b1fa43d08e2974dd9b8e0082d90ea0a36830e6e7d178c2e0838d3c",
+            "canonical_content_sha256": "7aeb6d6c442c9ea3db55eb3737a33c2c7927b1a8cc39ab4e90c6d03c251cccc3",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          },
+          "e87e0add442f17bedf4b48062c01a4b552db52b5cd09c4884638368619046065": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 65180,
+            "source_name": "angelina jolie",
+            "entity_kind": "person",
+            "record_field": "id",
+            "record_sha256": "e75f248f1866fb516ca9286c729b800b4ee63ea37aa6f5f799f5c921e159d55f",
+            "field_value_sha256": "5463a022c7ee778381655fc6828534aacc66577b4c899451665700229d1a37db",
+            "canonical_content_sha256": "e56cbee5b1233a1eedbdc003b3c90eaf3556dd6be563ff4f00e4ebc729cb29d9",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          },
+          "286c6d84cb47b312dc6cc483409456ae5f63ac9ec11ab5f4ecd19cec6b1c56a7": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 65180,
+            "source_name": "angelina jolie",
+            "entity_kind": "person",
+            "record_field": "name",
+            "record_sha256": "e75f248f1866fb516ca9286c729b800b4ee63ea37aa6f5f799f5c921e159d55f",
+            "field_value_sha256": "74f9afda04a2c11d5b5db549e82afdc6b87f7ab30e19d15140f59346d18b11ad",
+            "canonical_content_sha256": "d6bdf531604959e3d8c310aba38aeda17daee86cd04e5973444be8b17ec77923",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          },
+          "3b731e35ceadb01627a98413f4ccd70ededd4cdb65e1af337c3745a845dd93e6": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 65180,
+            "source_name": "angelina jolie",
+            "entity_kind": "person",
+            "record_field": "oscar_awards",
+            "record_sha256": "e75f248f1866fb516ca9286c729b800b4ee63ea37aa6f5f799f5c921e159d55f",
+            "field_value_sha256": "a78abb4a8ca2ba5ae42373a64886cbd06cee856030295d724860304640a07129",
+            "canonical_content_sha256": "66660240edcc23e61f945d8506bd80db57b0611291b48a16cef5833269878edd",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          },
+          "2a4599288c3fd38b9eaa89a0e3c8535752aa1cbfe3cca8353e97f2e6686b0c90": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 422925,
+            "source_name": "jolie hoangrappaport",
+            "entity_kind": "person",
+            "record_field": "acted_movies",
+            "record_sha256": "73436a88f2cb6350ce10af11a470832ce6535a7f9fd429925f7bc38738bb2a0f",
+            "field_value_sha256": "9293c95645f3f2c97e0fb6891de0d950c89e6a9262c37f18bf61f8278094be93",
+            "canonical_content_sha256": "a460306860e6114964ff982e2765c93f653ef6d2bf3cfb0a374d30ef5be24927",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          },
+          "eb3a0659d413872053b84808ce9d1212f5663106484b5149a4a87c8a1eb2be86": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 422925,
+            "source_name": "jolie hoangrappaport",
+            "entity_kind": "person",
+            "record_field": "birthday",
+            "record_sha256": "73436a88f2cb6350ce10af11a470832ce6535a7f9fd429925f7bc38738bb2a0f",
+            "field_value_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "canonical_content_sha256": "bdc34991c7a817844280de19b1e627543c615ba1d15622d60fca641c53f7d612",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          },
+          "b9fc14e7a8f70433d4929a3d6361956bb43c12802ff50127261f7e15a6a5cd42": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 422925,
+            "source_name": "jolie hoangrappaport",
+            "entity_kind": "person",
+            "record_field": "id",
+            "record_sha256": "73436a88f2cb6350ce10af11a470832ce6535a7f9fd429925f7bc38738bb2a0f",
+            "field_value_sha256": "8311f77f712c398dc90adc2c6a477bb4916d3bd65be0cb3471ecba3cd30edf29",
+            "canonical_content_sha256": "0da0493a7aa6a74439fa4f74052bb3e5ff21dfb07348f59ae906d0605ee55993",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          },
+          "d785145b6ff3874b725819bc1ea09b5f99abd953ecb05385591055e95e959dc1": {
+            "revision": "ad1518887dd4d9ebcd7de95388c7a62751e7705c",
+            "asset_sha256": "85992666f528e05193cc3c97bde43e8c24a25ad59bd1a0d359df050799f79c79",
+            "asset_url": "https://media.githubusercontent.com/media/facebookresearch/CRAG/ad1518887dd4d9ebcd7de95388c7a62751e7705c/mock_api/cragkg/movie/person_db.json",
+            "source_rowid": 422925,
+            "source_name": "jolie hoangrappaport",
+            "entity_kind": "person",
+            "record_field": "name",
+            "record_sha256": "73436a88f2cb6350ce10af11a470832ce6535a7f9fd429925f7bc38738bb2a0f",
+            "field_value_sha256": "e4e12f5a1b52bc0640675af3770288589845ed6789b216097c9568ec8758a67d",
+            "canonical_content_sha256": "127e67a77b88197e1bd71754da58ed4ed380f1de41e2b725bf783facf24482eb",
+            "snapshot_observation_time": null,
+            "semantic_identity_verified": false,
+            "semantic_support_verified": false,
+            "request_spans": [
+              "angelina jolie"
+            ]
+          }
+        },
+        "source_index_sha256": "d0d957ec35388e5cdc599ac330894a6f5f071f53966b94d5138950bd29da69a6",
+        "tie_policy": "source_rowid_desc",
+        "answer_acceptance_enabled": false
+      },
+      "shared_pool": {
+        "shared_candidate_ids": [
+          "ae46603a85122376673238885d913c822a1b518e85b6aeba1e7b4a0db315e486",
+          "cfdb4f2ec9c50d52ca60ca3f0779fad35ee13bbb930fd2ad6fd2c711b48bfcf9",
+          "a42c1fb6a5a9f367c0bc6085018b89a94943f4839855b78c856fe02a26976316",
+          "7c2d9e3c9969ffa82e4b42c8abc6145168388041d3b94796d3d56cf2226a8d61",
+          "1b062cce4767d551072330fe43486184aeeb8aea662bb7301e162f4740d419c5",
+          "e2057a88d5c07a2058f13b4eb3d4a05bc2e72fdb9054daf7a67143807bec18d5",
+          "f2a61f3343a1b6213537c608589f08d503e79b6226a51846bf81a6be0e533ce2",
+          "fa586c4040f5930da8558d5940e385ffb19b7f8295d15b68aea42729989dacc3",
+          "7d78eaebf5ed96933058ebf8a34a92c15563ed8561604d4f72cdb16dedc9460a",
+          "79978a15d3ef1e2ed3d1704445194f7262acc69f8ee0b37826f306a9dc37bb5f",
+          "96c0428f948a145267380bfa6d3b810208f5c84650263bac7d776aa6cd662d5e",
+          "9cb3f997e1da39e29308823bb838f8b85bacdee94354bf7f57eed44fd255ccec"
+        ],
+        "shared_candidate_counts": {
+          "web": 12,
+          "api": 0
+        },
+        "retrieval_pool_policy": "rank_union_once_then_filter_for_source_controls",
+        "retrieval_score_is_semantic_support": false,
+        "actual_answer_generation_calls": 0
+      },
+      "controls": {
+        "web_only/top_k": {
+          "mode": "web_only",
+          "method": "top_k",
+          "candidate_ids": [
+            "ae46603a85122376673238885d913c822a1b518e85b6aeba1e7b4a0db315e486",
+            "cfdb4f2ec9c50d52ca60ca3f0779fad35ee13bbb930fd2ad6fd2c711b48bfcf9",
+            "a42c1fb6a5a9f367c0bc6085018b89a94943f4839855b78c856fe02a26976316",
+            "7c2d9e3c9969ffa82e4b42c8abc6145168388041d3b94796d3d56cf2226a8d61",
+            "1b062cce4767d551072330fe43486184aeeb8aea662bb7301e162f4740d419c5",
+            "e2057a88d5c07a2058f13b4eb3d4a05bc2e72fdb9054daf7a67143807bec18d5",
+            "f2a61f3343a1b6213537c608589f08d503e79b6226a51846bf81a6be0e533ce2",
+            "fa586c4040f5930da8558d5940e385ffb19b7f8295d15b68aea42729989dacc3",
+            "7d78eaebf5ed96933058ebf8a34a92c15563ed8561604d4f72cdb16dedc9460a",
+            "79978a15d3ef1e2ed3d1704445194f7262acc69f8ee0b37826f306a9dc37bb5f",
+            "96c0428f948a145267380bfa6d3b810208f5c84650263bac7d776aa6cd662d5e",
+            "9cb3f997e1da39e29308823bb838f8b85bacdee94354bf7f57eed44fd255ccec"
+          ],
+          "full_reserved_tokens": 1686,
+          "prompt_sha256": "251226841380eeea5e54ba662b6c5eecf02941042f6a4db48fb69c70a41ab6d7",
+          "proxy_requirements": [
+            "actress",
+            "angelina",
+            "has",
+            "jolie",
+            "meryl",
+            "more",
+            "movie",
+            "roles",
+            "streep"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1590,
+          "selected_ids": [
+            "1b062cce4767d551072330fe43486184aeeb8aea662bb7301e162f4740d419c5",
+            "7c2d9e3c9969ffa82e4b42c8abc6145168388041d3b94796d3d56cf2226a8d61",
+            "a42c1fb6a5a9f367c0bc6085018b89a94943f4839855b78c856fe02a26976316",
+            "ae46603a85122376673238885d913c822a1b518e85b6aeba1e7b4a0db315e486",
+            "cfdb4f2ec9c50d52ca60ca3f0779fad35ee13bbb930fd2ad6fd2c711b48bfcf9"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        },
+        "web_only/joint": {
+          "mode": "web_only",
+          "method": "joint",
+          "candidate_ids": [
+            "ae46603a85122376673238885d913c822a1b518e85b6aeba1e7b4a0db315e486",
+            "cfdb4f2ec9c50d52ca60ca3f0779fad35ee13bbb930fd2ad6fd2c711b48bfcf9",
+            "a42c1fb6a5a9f367c0bc6085018b89a94943f4839855b78c856fe02a26976316",
+            "7c2d9e3c9969ffa82e4b42c8abc6145168388041d3b94796d3d56cf2226a8d61",
+            "1b062cce4767d551072330fe43486184aeeb8aea662bb7301e162f4740d419c5",
+            "e2057a88d5c07a2058f13b4eb3d4a05bc2e72fdb9054daf7a67143807bec18d5",
+            "f2a61f3343a1b6213537c608589f08d503e79b6226a51846bf81a6be0e533ce2",
+            "fa586c4040f5930da8558d5940e385ffb19b7f8295d15b68aea42729989dacc3",
+            "7d78eaebf5ed96933058ebf8a34a92c15563ed8561604d4f72cdb16dedc9460a",
+            "79978a15d3ef1e2ed3d1704445194f7262acc69f8ee0b37826f306a9dc37bb5f",
+            "96c0428f948a145267380bfa6d3b810208f5c84650263bac7d776aa6cd662d5e",
+            "9cb3f997e1da39e29308823bb838f8b85bacdee94354bf7f57eed44fd255ccec"
+          ],
+          "full_reserved_tokens": 1759,
+          "prompt_sha256": "7115c7a3a8f1dbd1dfdae002a444cf552c78c78c2d39db06e9dab7255d9b86a0",
+          "proxy_requirements": [
+            "actress",
+            "angelina",
+            "has",
+            "jolie",
+            "meryl",
+            "more",
+            "movie",
+            "roles",
+            "streep"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1663,
+          "selected_ids": [
+            "1b062cce4767d551072330fe43486184aeeb8aea662bb7301e162f4740d419c5",
+            "a42c1fb6a5a9f367c0bc6085018b89a94943f4839855b78c856fe02a26976316",
+            "ae46603a85122376673238885d913c822a1b518e85b6aeba1e7b4a0db315e486",
+            "cfdb4f2ec9c50d52ca60ca3f0779fad35ee13bbb930fd2ad6fd2c711b48bfcf9",
+            "fa586c4040f5930da8558d5940e385ffb19b7f8295d15b68aea42729989dacc3"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        },
+        "api_only/top_k": {
+          "mode": "api_only",
+          "method": "top_k",
+          "candidate_ids": [],
+          "full_reserved_tokens": 222,
+          "prompt_sha256": "13ac397de5405995d07ff81f7b8426ccf4a4352fa18dae6e68dc51c6495c2609",
+          "proxy_requirements": [
+            "actress",
+            "angelina",
+            "has",
+            "jolie",
+            "meryl",
+            "more",
+            "movie",
+            "roles",
+            "streep"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 126,
+          "selected_ids": [],
+          "selected_source_kinds": []
+        },
+        "api_only/joint": {
+          "mode": "api_only",
+          "method": "joint",
+          "candidate_ids": [],
+          "full_reserved_tokens": 222,
+          "prompt_sha256": "13ac397de5405995d07ff81f7b8426ccf4a4352fa18dae6e68dc51c6495c2609",
+          "proxy_requirements": [
+            "actress",
+            "angelina",
+            "has",
+            "jolie",
+            "meryl",
+            "more",
+            "movie",
+            "roles",
+            "streep"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 126,
+          "selected_ids": [],
+          "selected_source_kinds": []
+        },
+        "combined/top_k": {
+          "mode": "combined",
+          "method": "top_k",
+          "candidate_ids": [
+            "ae46603a85122376673238885d913c822a1b518e85b6aeba1e7b4a0db315e486",
+            "cfdb4f2ec9c50d52ca60ca3f0779fad35ee13bbb930fd2ad6fd2c711b48bfcf9",
+            "a42c1fb6a5a9f367c0bc6085018b89a94943f4839855b78c856fe02a26976316",
+            "7c2d9e3c9969ffa82e4b42c8abc6145168388041d3b94796d3d56cf2226a8d61",
+            "1b062cce4767d551072330fe43486184aeeb8aea662bb7301e162f4740d419c5",
+            "e2057a88d5c07a2058f13b4eb3d4a05bc2e72fdb9054daf7a67143807bec18d5",
+            "f2a61f3343a1b6213537c608589f08d503e79b6226a51846bf81a6be0e533ce2",
+            "fa586c4040f5930da8558d5940e385ffb19b7f8295d15b68aea42729989dacc3",
+            "7d78eaebf5ed96933058ebf8a34a92c15563ed8561604d4f72cdb16dedc9460a",
+            "79978a15d3ef1e2ed3d1704445194f7262acc69f8ee0b37826f306a9dc37bb5f",
+            "96c0428f948a145267380bfa6d3b810208f5c84650263bac7d776aa6cd662d5e",
+            "9cb3f997e1da39e29308823bb838f8b85bacdee94354bf7f57eed44fd255ccec"
+          ],
+          "full_reserved_tokens": 1686,
+          "prompt_sha256": "251226841380eeea5e54ba662b6c5eecf02941042f6a4db48fb69c70a41ab6d7",
+          "proxy_requirements": [
+            "actress",
+            "angelina",
+            "has",
+            "jolie",
+            "meryl",
+            "more",
+            "movie",
+            "roles",
+            "streep"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1590,
+          "selected_ids": [
+            "1b062cce4767d551072330fe43486184aeeb8aea662bb7301e162f4740d419c5",
+            "7c2d9e3c9969ffa82e4b42c8abc6145168388041d3b94796d3d56cf2226a8d61",
+            "a42c1fb6a5a9f367c0bc6085018b89a94943f4839855b78c856fe02a26976316",
+            "ae46603a85122376673238885d913c822a1b518e85b6aeba1e7b4a0db315e486",
+            "cfdb4f2ec9c50d52ca60ca3f0779fad35ee13bbb930fd2ad6fd2c711b48bfcf9"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        },
+        "combined/joint": {
+          "mode": "combined",
+          "method": "joint",
+          "candidate_ids": [
+            "ae46603a85122376673238885d913c822a1b518e85b6aeba1e7b4a0db315e486",
+            "cfdb4f2ec9c50d52ca60ca3f0779fad35ee13bbb930fd2ad6fd2c711b48bfcf9",
+            "a42c1fb6a5a9f367c0bc6085018b89a94943f4839855b78c856fe02a26976316",
+            "7c2d9e3c9969ffa82e4b42c8abc6145168388041d3b94796d3d56cf2226a8d61",
+            "1b062cce4767d551072330fe43486184aeeb8aea662bb7301e162f4740d419c5",
+            "e2057a88d5c07a2058f13b4eb3d4a05bc2e72fdb9054daf7a67143807bec18d5",
+            "f2a61f3343a1b6213537c608589f08d503e79b6226a51846bf81a6be0e533ce2",
+            "fa586c4040f5930da8558d5940e385ffb19b7f8295d15b68aea42729989dacc3",
+            "7d78eaebf5ed96933058ebf8a34a92c15563ed8561604d4f72cdb16dedc9460a",
+            "79978a15d3ef1e2ed3d1704445194f7262acc69f8ee0b37826f306a9dc37bb5f",
+            "96c0428f948a145267380bfa6d3b810208f5c84650263bac7d776aa6cd662d5e",
+            "9cb3f997e1da39e29308823bb838f8b85bacdee94354bf7f57eed44fd255ccec"
+          ],
+          "full_reserved_tokens": 1759,
+          "prompt_sha256": "7115c7a3a8f1dbd1dfdae002a444cf552c78c78c2d39db06e9dab7255d9b86a0",
+          "proxy_requirements": [
+            "actress",
+            "angelina",
+            "has",
+            "jolie",
+            "meryl",
+            "more",
+            "movie",
+            "roles",
+            "streep"
+          ],
+          "groups": [],
+          "conflicts": [],
+          "semantic_support_verified": false,
+          "answer_acceptance_enabled": false,
+          "input_tokens": 1663,
+          "selected_ids": [
+            "1b062cce4767d551072330fe43486184aeeb8aea662bb7301e162f4740d419c5",
+            "a42c1fb6a5a9f367c0bc6085018b89a94943f4839855b78c856fe02a26976316",
+            "ae46603a85122376673238885d913c822a1b518e85b6aeba1e7b4a0db315e486",
+            "cfdb4f2ec9c50d52ca60ca3f0779fad35ee13bbb930fd2ad6fd2c711b48bfcf9",
+            "fa586c4040f5930da8558d5940e385ffb19b7f8295d15b68aea42729989dacc3"
+          ],
+          "selected_source_kinds": [
+            "web",
+            "web",
+            "web",
+            "web",
+            "web"
+          ]
+        }
+      },
+      "all_api_fields_source_verified": true,
+      "actual_answer_generation_calls": 0,
+      "semantic_identity_verified": false,
+      "semantic_support_verified": false
+    }
+  ]
+}

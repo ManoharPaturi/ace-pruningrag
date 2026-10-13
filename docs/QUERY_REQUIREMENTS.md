@@ -88,3 +88,38 @@ input/padding/output/call costs, progress, runtime and dependency isolation. Thi
 checks recorded execution, not an independent rerun of neural inference. Review all
 fifty questions for misbound roles, lost constraints and omitted requirements before
 promotion. A structurally valid proposal remains semantically unverified.
+
+
+## Completed execution and all-output role review
+
+Version 1 completed and [execution reconstruction](../results/version1/requirements_verification.json)
+checks all fifty tasks, 13 generate calls, 31,078 input tokens, 31,426 padded input
+tokens, 12,184 output tokens and 2,707 maximum reserved request tokens. Generation
+took 494.744 seconds; model loading took 6.717 seconds. The generation interval
+includes token filtering and excludes preparation/setup. There are no capped or
+unextracted outputs and no new answer generations.
+
+All fifty outputs are complete JSON but fail requirement validation. The
+[all-output AI role review](../results/version1/requirements_review_progress.json)
+reconstructs execution again and binds every exact input/proposal to a private
+query-only checklist and review. All fifty show misbound or incomplete requirements.
+This is qualitative AI review, not independent semantic accuracy. Reviewed coverage
+means every proposal was assessed; it does not verify exhaustive requirements.
+
+Observed failures include using number answers as subjects, song/film names as
+periods, non-count words as cardinality, missing measurement operands, duplicate
+clauses and self-dependent operations. The singer query still fails to represent
+explicit 14 as a bound award-count condition. The rectangle query retains 17/66 but
+misbinds their roles and omits the area operation. Do not promote the schema merely
+because it supports correct hand-written examples.
+
+The query gate fails. Preserve this protocol/trace and test role-aware decoding and
+extractor capacity as separately versioned factors with costs counted. Keep the
+answer-generator control unchanged; do not weaken role validation or manufacture
+independent labels. Full source-support composition and broader research remain open.
+
+```sh
+uv run --locked --no-editable --extra generation --extra constraints \
+  python scripts/verify_requirements_reviews.py \
+  --output runs/requirements-review-reconstruction.json
+```

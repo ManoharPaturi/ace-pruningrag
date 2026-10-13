@@ -1,0 +1,40 @@
+{
+  "scope": "Three inspected development questions; query-copied manual lookup proposals, no generated answers or independent accuracy",
+  "queries": [
+    {
+      "interaction_id": "2776a8f2-8b20-41bd-87fa-9e932f24c184",
+      "requests": [
+        {
+          "kind": "movie",
+          "span": "snow on tha bluff"
+        }
+      ]
+    },
+    {
+      "interaction_id": "4767a282-a3a4-4025-81c3-b58c0bc541a0",
+      "requests": [
+        {
+          "kind": "movie",
+          "span": "the terminator"
+        },
+        {
+          "kind": "movie",
+          "span": "the fast and the furious"
+        }
+      ]
+    },
+    {
+      "interaction_id": "47d44ffb-10f8-43df-a7de-d1d296544afc",
+      "requests": [
+        {
+          "kind": "person",
+          "span": "meryl streep"
+        },
+        {
+          "kind": "person",
+          "span": "angelina jolie"
+        }
+      ]
+    }
+  ]
+}
