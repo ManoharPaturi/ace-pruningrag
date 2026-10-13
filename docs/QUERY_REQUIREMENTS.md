@@ -43,9 +43,48 @@ uv run --locked --no-editable --extra constraints \
 ```
 
 This checkpoint implements representation, prompting, decoding grammar and validation.
-It has no submitted GPU run or measured neural quality. Next, freeze a separate
-query-only protocol on the fifty existing development questions, count full extraction
-budgets and reconstruct outputs before reviewing roles and omissions. Retain the
+A separate query-only protocol has now been submitted on the fifty existing
+development questions. Neural quality is not measured yet; reconstruct outputs and
+full extraction budgets before reviewing roles and omissions. Retain the
 negative inventory control and keep answer-generation settings fixed. The source
 statement/context protocol and web/API support composition remain subsequent work.
 Fresh independently reviewed evaluation remains a separate scientific gate.
+
+
+## Frozen query-only GPU diagnostic
+
+`configs/query_requirements.json` pins the prompt/grammar hash, eight variables,
+twelve clauses, 2,048 output tokens, 4,096 total tokens, FP32 and seed 42. The query
+prompt and representation differ from the frozen inventory control; improvement
+must be measured, not inferred. The answer generator is unchanged.
+
+[Tokenizer preflight](../results/version1/requirements_preflight.json) verifies all
+50 requests: 31,078 input tokens and 2,707 maximum input-plus-output reserve. It
+makes no model calls. The private bundle excludes source excerpts, predictions and
+reference answers, retains task identities and permits at most 13 generate calls.
+
+[Submission](../results/version1/requirements_submission.json) records version 1 of
+`ionrey/ace-requirements-0f48b7f420a648cdbf532361c3fd13a8`, observed RUNNING.
+Keep this identity and collect its terminal output rather than submitting a duplicate.
+All 219 local tests pass, including protocol drift and label/source isolation tests.
+
+```sh
+uv tool run --from kaggle==2.2.4 kaggle kernels status \
+  ionrey/ace-requirements-0f48b7f420a648cdbf532361c3fd13a8
+uv tool run --from kaggle==2.2.4 kaggle kernels output \
+  ionrey/ace-requirements-0f48b7f420a648cdbf532361c3fd13a8 \
+  -p runs/version1/requirements-output-v1
+uv run --locked --no-editable --extra generation --extra constraints \
+  python scripts/verify_requirements_extraction.py \
+  --bundle runs/version1/requirements-kernel-v1 \
+  --run runs/version1/requirements-output-v1/requirements-pilot \
+  --source-trace runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl \
+  --output results/version1/requirements_verification.json
+```
+
+Reconstruction checks bundle/source hashes, blinded inputs, decoded token IDs,
+canonical grammar (including incomplete capped prefixes), independent validation,
+input/padding/output/call costs, progress, runtime and dependency isolation. This
+checks recorded execution, not an independent rerun of neural inference. Review all
+fifty questions for misbound roles, lost constraints and omitted requirements before
+promotion. A structurally valid proposal remains semantically unverified.

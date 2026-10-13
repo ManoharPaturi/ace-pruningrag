@@ -4,7 +4,7 @@
 **Repository:** https://github.com/ManoharPaturi/ace-pruningrag
 **Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
-**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `5fae7d2` before this update; all three required checks passed on that head. Recheck CI for each new head.
+**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `1440177` before this update; test and finance-smoke passed, with data-smoke still running at the last observation. Recheck CI for each new head.
 **Local continuation state:** all 444 admitted responses and all 386 constrained extraction tasks have bound AI assessments. A live browser→API→GPU→evidence flow has been executed and verified on one development question. The separately versioned Unicode GPU correction completed and reconstructs; its one changed proposal has a fresh bound review. Independent review and the full scientific gates remain open. See the [current completion audit](VERSION1_COMPLETION_AUDIT.md) and [research report](RESEARCH_STATUS_REPORT.md).
 
 ## Owner-led continuation — current checkpoint
@@ -18,8 +18,9 @@
 | Five-selector GPU experiment | 250/250 outputs verified across 50 questions | Reuse completed version 1; no new GPU run needed for review |
 | Cohort AI source review | 250/250 responses, 50/50 questions | Read the completed audit; preserve AI/human separation and implement the prioritized fixes |
 | Independent prospective evidence review | Pending | Import attested human requirements and support sets through the existing review workflow |
+| Query-only logical extraction | Fifty-question private version 1 submitted, observed RUNNING; 219 local tests pass | Collect the same job, reconstruct all outputs/costs and review roles/omissions |
 | Demo | 444 admitted replays, fresh BM25 retrieval and a verified live one-question GPU flow with restart recovery | Generalize claim-level support and adaptive source integration; one inspected case is not general accuracy |
-| Required CI | All three required jobs passed at `5fae7d2` before this update | Require all three again on each new head |
+| Required CI | All three passed at `5fae7d2`; test/finance passed and data-smoke was running at `1440177` | Require all three again on each new head |
 | Constrained extraction review | All 386 tasks assessed; 335 valid source proposals / 300 distinct pairs, with no source proposals pending | Preserve exact outputs and qualitative AI scope; full requirements and external truth remain unverified |
 | Unicode decoder correction | All386 GPU sequences reconstruct; one full-name change reviewed, with semantic row mixing unchanged | Preserve controls and costs; do not claim general semantic improvement |
 | Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel complete and reconstructed; 21 valid inventories reviewed | Collect/reconstruct the same job, audit real roles/completeness and then compose support |
@@ -545,3 +546,14 @@ and provides bounded canonical decoding plus independent clause/role/operation
 validation. Neural quality is not measured yet; the next execution is a separately
 versioned fifty-question development diagnostic. Source composition, independent
 evaluation and final scientific completion remain open.
+
+
+### Query-requirement execution submitted
+
+The [query-only protocol](QUERY_REQUIREMENTS.md) is frozen and privately submitted:
+fifty questions, at most thirteen batched extraction calls, same pinned Qwen model,
+FP32 and seed, changed query prompt/representation. Tokenizer preflight fits every
+request; all 219 local tests pass. Version 1 of
+`ionrey/ace-requirements-0f48b7f420a648cdbf532361c3fd13a8` was observed RUNNING.
+Collect and reconstruct that same job, then review every role/omission before source
+support integration. No completed neural quality or semantic improvement is claimed.

@@ -262,3 +262,14 @@ validation checks local spans, variable roles, operation arity and self-dependen
 This is implemented infrastructure, not a measured extraction improvement. A separate
 query-only GPU protocol and full role/omission audit are next; source requirements,
 semantic support and independent evaluation remain open.
+
+
+### Query-requirement execution submitted
+
+The [query-only protocol](QUERY_REQUIREMENTS.md) is frozen and privately submitted:
+fifty questions, at most thirteen batched extraction calls, same pinned Qwen model,
+FP32 and seed, changed query prompt/representation. Tokenizer preflight fits every
+request; all 219 local tests pass. Version 1 of
+`ionrey/ace-requirements-0f48b7f420a648cdbf532361c3fd13a8` was observed RUNNING.
+Collect and reconstruct that same job, then review every role/omission before source
+support integration. No completed neural quality or semantic improvement is claimed.

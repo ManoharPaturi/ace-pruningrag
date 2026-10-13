@@ -1,0 +1,22 @@
+{
+  "protocol_id": "query_requirements_v1",
+  "span_policy_sha256": "6d01a430d522e227fec2476d3dd6c53f33208a3783fbb85935d5187734a3be0b",
+  "tasks": 50,
+  "query_tasks": 50,
+  "source_tasks": 0,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "tasks_sha256": "c2541e01762cf3c735b88329a3282cfccbb2c201ba50bd481597295f32569165",
+  "kernel_id": "ionrey/ace-requirements-0f48b7f420a648cdbf532361c3fd13a8",
+  "max_generate_invocations": 13,
+  "max_total_reserved_tokens": 204800,
+  "new_answer_generation_calls": 0,
+  "submitted_version": 1,
+  "provider_status_last_observed": "RUNNING",
+  "observation_time_UTC": "2026-10-13T18:17:13+00:00",
+  "bundle_manifest_sha256": "375254661df01872209b91d4b378df2521e12303b55b6391f9955376f09c5e54",
+  "kernel_metadata_sha256": "50e71788c1d447199837219ef2b0de8443e0aa47d65f7c09aec8066080cb7b8e",
+  "preflight_sha256": "088642ce73017722e9255718a2c435c58f84b5b04a0e80a8a855638763a5b0da",
+  "completed_execution_verified": false,
+  "answer_acceptance_enabled": false,
+  "semantic_requirement_improvement_established": false
+}
