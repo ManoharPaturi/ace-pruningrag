@@ -97,3 +97,8 @@ The existing GPU job is COMPLETE. All 250 outputs passed full reconstruction; [s
 
 
 The latest source-review checkpoint covers **289 accepted response records** (194 prior plus 95 cohort); 155 cohort records remain. The five room-area errors show a missing arithmetic verification path beyond the price-only verifier. Negative eligibility, answer type, comparison completeness and temporal/source conflicts also remain general reliability gaps. See the current selector report for retained failures and uncertainty.
+
+
+### Reconciled handoff checkpoint — 13 October
+
+The sixth saved cohort AI review batch also validates against the exact trace. Current coverage is **115/250 responses across 23/50 questions**, with **135 responses pending**. Verdict counts are 25 correct, 26 incorrect, 37 uncertain and 27 abstained. These are AI-assisted assessments, not independent human semantic labels. See `results/version1/cohort/ai_review_progress.json` and [the contributor handoff](PROJECT_HANDOFF.md) for the current continuation instructions. Earlier partial checkpoints remain historical.

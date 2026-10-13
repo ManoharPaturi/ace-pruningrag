@@ -53,3 +53,8 @@ The expanded inspection identifies concrete failures:
 The election question conflates winning the popular vote with winning the presidency. Several methods give an electoral total or an unsupported margin; top-K/joint reproduce an older selected popular-vote report. Final FEC totals imply a different margin (65,853,514 − 62,984,828 = 2,868,686). This is a reference/source conflict, not a reason to silently rewrite the frozen reference or supply external information to inference. [FEC 2016 results](https://www.fec.gov/documents/1889/federalelections2016.pdf).
 
 Full source review is still incomplete. External audit checks are recorded separately, and the original generation trace and independent-human gates remain unchanged.
+
+
+### Reconciled handoff checkpoint — 13 October
+
+The sixth saved cohort AI review batch also validates against the exact trace. Current coverage is **115/250 responses across 23/50 questions**, with **135 responses pending**. Verdict counts are 25 correct, 26 incorrect, 37 uncertain and 27 abstained. These are AI-assisted assessments, not independent human semantic labels. See `results/version1/cohort/ai_review_progress.json` and [the contributor handoff](PROJECT_HANDOFF.md) for the current continuation instructions. Earlier partial checkpoints remain historical.
