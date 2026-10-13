@@ -278,3 +278,15 @@ event and measurement times. Corrected-policy neural execution and general suppo
 verification are next implementation steps. Original research assets, genuine
 cross-source controls, independent evaluation and full ablations remain required
 for the complete five-phase objective.
+
+
+### Corrected-policy GPU worker submitted
+
+[Versioned Unicode protocol](UNICODE_SPAN_POLICY.md) now has a separate builder,
+driver, configuration and independent reconstruction path. The private version-1
+kernel is confirmed RUNNING; its final outputs and costs remain unverified. No
+completion is inferred from submission or local tests. The frozen v1 source and
+outputs remain intact. All 186 local tests pass, including drift and blinded-bundle
+checks. Collect and reconstruct this same kernel, then review changed proposals
+before assessing the correction. General role/support and scientific gates remain
+open.

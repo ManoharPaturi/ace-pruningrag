@@ -1,0 +1,21 @@
+{
+  "protocol_id": "unicode_combining_marks_v2",
+  "span_policy_sha256": "89b92eef949a919998a2316861d7058a78c7933f89bdce87a7833903a1a1363e",
+  "tasks": 386,
+  "query_tasks": 50,
+  "source_tasks": 336,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "tasks_sha256": "f26f3fb5895f3f7d4ba0877fb6b41b4f406936f8acb5325ceb7c9dbaaffc424a",
+  "kernel_id": "ionrey/ace-unicode-64945d4d23544527a191211fce4741e3",
+  "max_generate_invocations": 97,
+  "max_total_reserved_tokens": 790528,
+  "new_answer_generation_calls": 0,
+  "submitted_version": 1,
+  "provider_status_last_observed": "RUNNING",
+  "observation_time_UTC": "2026-10-13T13:10:29.462166+00:00",
+  "bundle_manifest_sha256": "b330bbeb2a0d5553be51cc5ba7b82c4e8e794ccbb64636c529612a64c588ce7e",
+  "kernel_metadata_sha256": "b511a1a4f07d32f274465b54b728172fa5f2a9191f476ea3a51dc3b6d6f37f76",
+  "completed_execution_verified": false,
+  "answer_acceptance_enabled": false,
+  "semantic_role_improvement_established": false
+}

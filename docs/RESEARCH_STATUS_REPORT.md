@@ -148,6 +148,14 @@ outputs rejects one truncated-name proposal that v1 permitted. This is a policy
 revalidation, not corrected neural generation or semantic-role improvement. The
 submitted v1 source, all outputs and all previous outcome counts remain intact.
 
+A separate corrected-policy GPU worker was submitted as private kernel
+`ionrey/ace-unicode-64945d4d23544527a191211fce4741e3`, version
+1. Its submission record reports
+RUNNING at the recorded observation,
+with a cap of 386 extraction sequences / 97 generate invocations. Completed execution,
+decoded outputs and measured costs remain unverified; submission and local protocol
+tests do not establish corrected neural results or semantic improvement.
+
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible
 units; it is not silently applied to arbitrary room questions. Across all 444 admitted
