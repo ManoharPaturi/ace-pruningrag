@@ -46,10 +46,11 @@
     "results/version1/requirements_contract_diagnostic.json": "43a411abbc5f8d7cfb68d11807185a9fa40b8f5ce2ea8f99b731e303ef943f5f",
     "results/version1/query_graph_verification.json": "83751b237c3195b652d4dea4407f39df09b044dce5abfe21c1243dc34e34230b",
     "results/version1/query_graph_preflight.json": "5d6731b04523cb2d2f84fbf431f32d9d511f050049b3381a3c5f06f753781c94",
-    "results/version1/query_graph_submission.json": "26aaa9bf9c825611c239854f714ecb04449e65fc5c1a46f61e9c7335663d8fe1"
+    "results/version1/query_graph_submission.json": "26aaa9bf9c825611c239854f714ecb04449e65fc5c1a46f61e9c7335663d8fe1",
+    "results/version1/query_graph_review_progress.json": "19241be01827e98a1e000ca209bdbc20a3e99165b0e6bea07e6c3e17d7cb3749"
   },
-  "renderer_sha256": "2de4896a4f0d800462881df5bef8882985597045eab698d77b8047593105624d",
-  "report_sha256": "3366055b44d9f4a2abcbadd1e28b053c6c21348fc1bc66128d37b80ab7daea69",
+  "renderer_sha256": "82ba7236e691fdd36eb72ea9495e36f2e449f8b378caf78d45fec484eff20426",
+  "report_sha256": "45f79cf797fa9482d650815c96f84fb4a1b7728282bb0312fdf08da185f27ed4",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

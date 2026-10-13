@@ -1,4 +1,4 @@
-# Typed query graph v2 — infrastructure checkpoint
+# Typed query graph v2 — executed and reviewed diagnostic
 
 The assistant owns continuation at the owner's request. The owner alone merges
 main; implementation remains on draft PR #16 with required CI.
@@ -54,7 +54,7 @@ The source trace is private local development data; it is not committed. Task
 construction strips reference answers, predictions and selected evidence before
 creating model messages. The public receipt contains hashes and counts only.
 
-## Completed execution; semantic review pending
+## Completed execution and AI review
 
 The isolated GPU worker, bundle isolation test and synthetic output reconstruction
 test are implemented. Private Kaggle kernel
@@ -71,9 +71,14 @@ Forty-eight graphs remain unresolved; two are structurally linked (indices 21 an
 35). Initial inspection shows that the first drops top-ten cardinality and ranks
 a query-time anchor with SPY as candidate. The second treats the unresolved latest
 president description as a context constant and misbinds the spouse relation.
-These are examples of semantic errors despite structural linking, not evidence
-of improved answer quality. Exact-output AI assessment of all fifty is next;
-zero completed bound v2 review records are claimed at this checkpoint.
+These are semantic errors despite structural linking, not evidence of improved
+answer quality. The [review proof](../results/version1/query_graph_review_progress.json)
+now binds all fifty proposals to their exact query, raw output and validation. All
+151 query-only checklist items were assessed. Three graphs preserve coherent
+partial cores (indices 3, 6 and 20), while 47 are misbound or incomplete. All fifty
+remain incomplete; these categories are qualitative AI judgments, not independent
+accuracy. No reference answer, generated answer or source excerpt was used for
+this query-only requirements assessment.
 
 Neither the grammar nor its validator verifies complete question interpretation,
 source support, units compatible for computation, factual truth or answer quality.
@@ -93,3 +98,18 @@ uv run --locked --no-editable --extra generation --extra constraints \
   --source-trace runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl \
   --output runs/version1/query-graph-verification-v2.json
 ```
+
+## Reproduce review verification
+
+```sh
+uv run --locked --no-editable --extra generation --extra constraints \
+  python scripts/verify_query_graph_reviews.py \
+  --output runs/version1/query-graph-review-verification-repeat.json
+```
+
+The checker freshly reconstructs the complete GPU execution before admitting the
+review batch. It preserves the original v1 query-only checklist because task
+identities are unchanged, verifies its original bundle binding, then rejects
+missing checks, changed text/output hashes, incomplete coverage, duplicate tasks
+and forged human/coverage/acceptance claims. Raw traces, checklist and review
+batch are private local artifacts; the public ledger binds their hashes.

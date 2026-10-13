@@ -604,8 +604,10 @@ immutable token constraints and complete synthetic prompt examples. All fifty qu
 requests pass pinned-tokenizer preflight (3,405 maximum reserved tokens; zero model calls).
 V2 kernel version 1 completed; all fifty outputs, thirteen calls and token costs
 reconstruct. Forty-eight graphs remain unresolved and two are structurally linked.
-Initial inspection of both linked outputs finds semantic errors. All-output bound
-assessment is next; scientific acceptance stays disabled. See the execution proof
+Both linked outputs have semantic errors. All fifty outputs now have exact-output
+AI assessments covering 151 query-only checks: three coherent partial cores and
+47 misbound/incomplete proposals. Full coverage remains unverified and scientific
+acceptance stays disabled. See the execution proof
 linked in the graph document.
 
 

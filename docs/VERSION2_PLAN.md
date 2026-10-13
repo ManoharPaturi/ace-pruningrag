@@ -324,5 +324,36 @@ composition, fresh evaluation, faithful-artifact and evidence-backed final-paper
 
 [The new graph contract](QUERY_GRAPH_V2.md) now separates variable types from clause
 argument positions and supports dependent typed operations. Fifty development requests
-fit the pinned tokenizer budget. GPU extraction and semantic assessment remain pending;
-structural linking does not certify completeness or enable answer acceptance.
+fit the pinned tokenizer budget. GPU extraction completed and reconstructs fifty sequences. All fifty exact-output
+AI assessments cover 151 checks: three coherent partial cores and 47 misbound or
+incomplete proposals. Structural linking does not certify completeness or enable
+answer acceptance.
+
+
+### Decision after the typed graph v2 diagnostic
+
+Keep the v1 and v2 runs as immutable negative controls. The new grammar enforces
+syntactic/type/local-span discipline, but it does not establish complete semantic
+requirements. Adding a structure-success label or tightening validation after the
+run would conceal the measured failure rather than fix it.
+
+The next extraction trial should separate query interpretation from compilation:
+first propose a small set of atomic requested facts, known query conditions and
+unknown intermediate values; then compile actor/relation/value/period roles and
+operations into a graph. Test this as an explicit multi-call protocol, retaining
+the single-call v2 control and charging every pass. Do not call it an improvement
+until exact-output comparison demonstrates fewer omissions and wrong associations.
+
+Required cases for that trial include known names versus unresolved descriptions,
+query-time anchors versus observed measurement dates, two distinct comparison
+operands, negative eligibility, explicit top-N cardinality and result units.
+Preserve partial successes such as the copied 17-by-66 product; extra unused dates
+must remain observable. Keep extracted requirements out of answer acceptance until
+complete source support is separately verified.
+
+Finish the remaining 275 plural-inventory source assessments and source-only
+control work in parallel with engineering preparation. The seen fifty-question
+cohort is development data. Fresh entity/event-audited cases, independent support
+labels, calibrated routing, complete baselines/ablations and original upstream
+artifact resolution remain the scientific promotion gates. AI-assisted review
+cannot be relabeled as independent human review.

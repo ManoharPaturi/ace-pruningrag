@@ -52,6 +52,7 @@ SOURCES = {
     "query_graph_execution": "results/version1/query_graph_verification.json",
     "query_graph_preflight": "results/version1/query_graph_preflight.json",
     "query_graph_submission": "results/version1/query_graph_submission.json",
+    "query_graph_reviews": "results/version1/query_graph_review_progress.json",
 }
 
 
@@ -61,6 +62,7 @@ def render(root):
         data[k]
         for k in ("query_graph_execution", "query_graph_preflight", "query_graph_submission")
     )
+    graph_reviews = data["query_graph_reviews"]
     if (
         graph_run["status"] != "query_graph_spans_decode_and_costs_reconstructed"
         or graph_run["tasks"] != 50
@@ -73,6 +75,14 @@ def render(root):
         or graph_run["input_tokens"] != graph_preflight["input_tokens"]
         or graph_run["contract_sha256"] != graph_preflight["contract_sha256"]
         or graph_run["answer_acceptance_enabled"] is not False
+        or graph_reviews["execution_verification_sha256"]
+        != sha256_file(root / SOURCES["query_graph_execution"])
+        or graph_reviews["extraction_trace_sha256"] != graph_run["trace_sha256"]
+        or graph_reviews["AI_reviewed_proposals"] != 50
+        or graph_reviews["query_check_items_assessed"] != 151
+        or graph_reviews["structurally_linked_proposals"] != 2
+        or graph_reviews["full_requirement_coverage_verified"] is not False
+        or graph_reviews["answer_acceptance_enabled"] is not False
         or any(
             sha256_file(root / name) != digest
             for name, digest in graph_run["contract_sha256"].items()
@@ -524,10 +534,13 @@ Generation took {graph_run["timing"]["generation_seconds"]:.2f} seconds; model l
 took {graph_run["timing"]["model_loading_seconds"]:.2f} seconds. Prompt, schema and
 grammar changed together, while the 3B model and decoding defaults remain pinned.
 Forty-eight graphs are unresolved and two are structurally linked. All fifty
-exact-output semantic assessments remain to be bound. Initial inspection of both
-linked graphs finds query-time ranking and unresolved-president-as-constant errors;
-linking is not semantic completeness. No semantic improvement or answer acceptance
-is established. The seen development cohort cannot supply fresh accuracy.
+exact-output AI assessments now bind to the same query-only checklist, covering
+151 checks: three coherent partial cores and 47 misbound/incomplete proposals.
+Both linked graphs have query-time ranking or unresolved-president-as-constant
+errors. Partial cores include the explicit dimension product and director/team
+lookup, with missing unit, answer or season links retained. Linking is not semantic
+completeness. No semantic improvement or answer acceptance is established.
+The seen development cohort cannot supply fresh accuracy.
 
 The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 111 tasks:
 all fifty query inventories and 61 source inventories, including ninety rejected
