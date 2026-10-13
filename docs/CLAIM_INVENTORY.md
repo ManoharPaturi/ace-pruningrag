@@ -34,7 +34,7 @@ Units remain proposed spans; it does not yet prove that a span is a measurement 
 Six regression tests cover multi-event date isolation, directed role representation,
 comparison operands, query answer exclusion and label blinding, qualifications,
 observation dates, duplicates/caps, hallucinations, combining-mark truncation,
-repeated text and question warnings. All 197 local tests pass with demo/constraints.
+repeated text and question warnings. All 200 local tests pass with demo/constraints.
 
 ```sh
 uv run --locked --no-editable --extra demo --extra constraints \
@@ -98,3 +98,42 @@ decoded IDs, closed ordered JSON, statement-local bindings, cap termination, pro
 input/padded/output costs, runtime and dependency isolation. Capped/invalid outputs
 remain recorded. Audit the actual frames and omitted requirements before composing
 support sets or promoting this representation into an acceptance path.
+
+
+## Output audit before semantic review
+
+`scripts/audit_inventory_extraction.py` requires and freshly reconstructs the
+completed execution proof before auditing real outputs. It checks every task hash,
+rejects duplicate/changed identities and reruns the frozen inventory validator.
+It records query/source counts, parsed frame counts, structural admission, proposed
+inventory states, warning distributions, nonnull roles and decoder cap flags.
+
+Parsed and admitted frames are distinct: invalid inventories can contain parseable
+frames, but none are promoted to structurally admitted frames. A capped incomplete
+JSON output has no parsed frame count; this does not prove that its prefix contained
+no attempted claims. Empty valid inventories are retained and still need review of
+omitted requirements/evidence. Every task remains pending semantic review, including
+proposed_complete inventories, questions and capped failures. The per-task ledger
+binds input text and raw proposal hashes without publishing the full private text.
+
+The audit is deterministic bookkeeping, not an AI/human correctness assessment.
+It makes no new model calls and leaves role verification, complete requirement
+coverage and answer acceptance false. Three tests reject identity/coverage/validation
+tampering and confirm that questions, empty inventories, query-answer violations
+and cap failures remain visible. The full 200-test suite passes.
+
+Run only after the real job completes and its execution verifier succeeds:
+
+```sh
+uv run --locked --no-editable --extra generation --extra constraints \
+  python scripts/audit_inventory_extraction.py \
+  --bundle runs/version1/inventory-kernel-v1 \
+  --run runs/version1/inventory-output-v1/inventory-pilot \
+  --source-trace runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl \
+  --verification results/version1/inventory_verification.json \
+  --output results/version1/inventory_structural_audit.json
+```
+
+The job is still queued at this checkpoint. No real inventory-audit result has
+been fabricated or substituted for the pending output collection. Source excerpts
+and proposed frames must be inspected together before any semantic conclusion.

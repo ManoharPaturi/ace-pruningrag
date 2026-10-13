@@ -214,7 +214,7 @@ uv run --locked --no-editable ruff format --check src tests scripts
 uv run --locked --no-editable --extra demo --extra constraints pytest -q
 ```
 
-The current owner workspace has **197 passing tests with the demo and constraints extras**. This is the PR branch, not the merged-main test count. All three required CI jobs passed at `7c7bff9` before this update. CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
+The current owner workspace has **200 passing tests with the demo and constraints extras**. This is the PR branch, not the merged-main test count. All three required CI jobs passed at `7c7bff9` before this update. CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
 
 Download data and run a small retrieval check, using a new output directory:
 
@@ -499,3 +499,14 @@ Its new prompt and 2,048-output/4,096-request caps are explicit changed factors.
 Use the [same-job collection commands](CLAIM_INVENTORY.md) and retain failed/capped
 outputs. No automatic acceptance, complete-coverage proof or new baseline answer
 generation is introduced by this run.
+
+
+### Inventory audit preparation
+
+All 200 local tests pass. Real inventory output auditing now requires freshly
+reconstructed execution and exact source/proposal identities. Parsed and structurally
+admitted frames remain distinct, and every task remains pending semantic assessment.
+The current private inventory kernel is still queued, not completed. Follow the
+[post-completion audit command](CLAIM_INVENTORY.md) after output verification.
+All three required CI jobs passed at implementation head `761920b` before this update;
+require them again on the new head.

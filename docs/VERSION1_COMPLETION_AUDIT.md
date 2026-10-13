@@ -319,3 +319,14 @@ and observed QUEUED; final execution and role/completeness review remain pending
 The changed prompt and expanded 2,048-output/4,096-request limits are explicit
 experimental factors, not a same-budget control. The local suite totals 197 tests.
 No answer generation or semantic acceptance is enabled by this diagnostic.
+
+
+### Inventory output-audit tooling ready; same execution remains queued
+
+The deterministic [inventory audit](CLAIM_INVENTORY.md) now requires fresh full
+execution reconstruction, checks exact task/proposal bindings and separates parsed
+frames, structural admission and semantic review. It retains capped/invalid/empty
+inventories and never promotes proposed_complete to verified completeness. Three
+regression tests reject changed identities and forged validation, and preserve
+pending review counts. All 200 local tests pass. The existing private kernel still
+reports QUEUED; no output audit or role/completeness result is claimed yet.
