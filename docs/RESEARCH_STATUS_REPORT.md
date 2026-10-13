@@ -183,9 +183,18 @@ Structural outcomes are 21 valid inventories, 361 rejected inventories and four
 retained capped JSON failures. Twenty valid queries remain partial/misbound under
 qualitative AI review; the one valid source is an unrelated conditional geometry
 example with role errors. All 21 valid inventories are review-bound, while 365
-rejected inventories lack full semantic assessment. Parsed frames total 66 query
+rejected inventories lacked assessment at the initial valid-only checkpoint.
+Parsed frames total 66 query
 and 1,551 source frames; only 21 frames are structurally admitted. Neither grammar
 nor a proposed_complete status establishes exhaustive requirements or role quality.
+
+The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 71 tasks:
+all fifty query inventories and 21 source inventories, including fifty rejected
+outputs. The 71 task records contain 69 distinct input/proposal pairs and 142
+parsed frames; 315 rejected source tasks remain unassessed. Source observations
+include navigation-as-facts, caption dates borrowed for unrelated events, missing
+row/actor associations and procedural examples promoted into assertions. Coherent
+partial facts are retained without establishing full coverage or external truth.
 
 The separately versioned [query-only logical representation](QUERY_REQUIREMENTS.md)
 preserves known conditions independently of unknown answer/intermediate variables.
@@ -207,10 +216,26 @@ has now been submitted with the same fifty tasks, prompts, grammar, FP32, seed,
 batch size and explicit control decoding defaults. Preflight verifies identical
 input token IDs for all fifty requests. The 3B checkpoint's default repetition
 penalty differs; it is explicitly restored to the control value of 1.1. Private
-kernel `ionrey/ace-req3b-7f328043258c497fb9b1c758bbebf8c8`, version 1, was observed RUNNING.
-This is not completed execution or evidence of improved extraction. Compare actual
-runtime, reconstruct costs and assess every role/omission before interpreting results.
-The answer-generator control is unchanged, and automatic acceptance remains off.
+kernel `ionrey/ace-req3b-7f328043258c497fb9b1c758bbebf8c8`, version 1, completed; its initial RUNNING
+observation is historical. All fifty sequences / thirteen invocations reconstruct,
+with matching actual runtime/dependency identities and input tokens. The variant
+produced 11,071 output tokens in a
+560.17-second generation interval, with
+10.93 seconds of model loading.
+Five proposals pass structural validation and 45 fail; all five admitted proposals
+have only null clause roles. Every output has bound AI role/omission review, and
+all fifty remain misbound/incomplete under that qualitative assessment. Structural
+counts do not establish semantic improvement; timing is not an unbiased hardware
+benchmark. The answer generator and acceptance boundary remain unchanged.
+
+A retained post-hoc synthetic [contract diagnosis](REQUIREMENTS_MODEL_VARIANT.md)
+identifies prompt/grammar/validator misalignment: nullable operation fields are
+allowed by decoding but rejected for known operations; a fixed variable role
+rejects an entity used as subject in one edge and object in another unless its role
+is erased to unknown; nonempty clause text with no linked roles can pass structural
+validation. These engineering demonstrations make zero model calls and do not
+alter either frozen run's scores. Correct the contract in a separate protocol before
+attributing all failures to model capacity or escalating model size again.
 
 The original [movie/person/year snapshot](MOVIE_SNAPSHOT.md) is now restored separately:
 three checksum-verified files totaling 235,448,639 bytes. A disk-backed

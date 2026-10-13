@@ -1,0 +1,57 @@
+{
+  "scope": "Executed model-variant comparison on inspected development tasks; no independent accuracy",
+  "tasks": 50,
+  "same_task_payload": true,
+  "same_prompts": true,
+  "same_reconstructed_input_ids": true,
+  "same_runtime_and_dependencies": true,
+  "same_span_policy_and_budgets": true,
+  "control_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "variant_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "variant_decode_defaults_sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+  "raw_proposals_changed": 50,
+  "control_validation_counts": {
+    "invalid_requirement_proposal": 50
+  },
+  "variant_validation_counts": {
+    "bound_requirement_proposal": 5,
+    "invalid_requirement_proposal": 45
+  },
+  "variant_bound_indices": [
+    0,
+    8,
+    11,
+    18,
+    25
+  ],
+  "variant_bound_with_all_clause_roles_null": [
+    0,
+    8,
+    11,
+    18,
+    25
+  ],
+  "control_costs": {
+    "generate_invocations": 13,
+    "input_tokens": 31078,
+    "padded_input_tokens": 31426,
+    "output_tokens": 12184,
+    "generation_seconds": 494.74403672799986,
+    "model_loading_seconds": 6.716577208000018
+  },
+  "variant_costs": {
+    "generate_invocations": 13,
+    "input_tokens": 31078,
+    "padded_input_tokens": 31426,
+    "output_tokens": 11071,
+    "generation_seconds": 560.1697541740002,
+    "model_loading_seconds": 10.92965484399997
+  },
+  "control_trace_sha256": "5b0544de7999e62c4baf1883ff760000c2f34a39eae8a3c7779eaed2e1fe7ee7",
+  "variant_trace_sha256": "36c799e8bd0c699bfa93c062b0d1e13f108a1bf6961911fb230240d1f70c88ab",
+  "variant_review_progress_sha256": "9624f552a31c6e770a91c1dbd40d8dbcfd84e26aca66620ed69ee600d78d29bc",
+  "independent_human_review": false,
+  "semantic_requirement_improvement_established": false,
+  "answer_acceptance_enabled": false,
+  "timing_is_unbiased_hardware_benchmark": false
+}

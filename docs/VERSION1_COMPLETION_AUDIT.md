@@ -413,3 +413,21 @@ factor, not the answer generator. Fifty sequences / thirteen generate calls are 
 bounds. Version 1 was submitted and observed RUNNING; completed quality remains
 unverified. Preserve the failed 1.5B control and compare actual runtime before
 interpreting changes. All 227 local tests pass. Full roadmap completion remains open.
+
+
+### Priorities from the completed 3B comparison and contract diagnosis
+
+All fifty 3B outputs reconstruct and have bound AI assessments. Five pass structural
+checks, but all five have no linked clause roles; semantic improvement is not
+established. Actual runtime/input/decode identities match the retained 1.5B control.
+Before another model change, align prompt/grammar/validator operation requirements,
+separate variable entity/measurement type from per-relation subject/object position,
+and distinguish disconnected/all-null clauses from meaningful linked requirements.
+Preserve frozen scores; synthetic contract examples are engineering evidence, not
+new neural quality. See [the completed model diagnostic](REQUIREMENTS_MODEL_VARIANT.md).
+
+Continue rejected inventory assessment: 71/386 tasks now covered, with all fifty
+queries and 21 sources assessed; 315 source tasks remain. Retain coherent partial
+facts and metadata context without promoting navigation/examples into assertions.
+All 229 local tests pass. These steps do not close independent labels, full source
+composition, fresh evaluation, faithful-artifact and evidence-backed final-paper gates.

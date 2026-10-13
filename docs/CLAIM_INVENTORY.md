@@ -172,3 +172,33 @@ roles. Query known constants must also be distinct from unknown answer variables
 blanket query value-null rule cannot naturally represent a known 14-award constraint.
 Do not relax validation or reuse invalid inventories merely to increase pass counts.
 Preserve this failed control and measure each representation/model change separately.
+
+
+## Extended rejected-output assessment
+
+The [combined assessment progress](../results/version1/inventory_role_review_progress.json)
+now binds 71 of 386 tasks: all fifty query inventories and 21 source inventories,
+including fifty rejected outputs beyond the original 21 valid-output reviews. The
+71 records contain 69 distinct input/proposal pairs and 142 parsed frames. Two source
+assessments are reused only for exact identical input/proposal pairs. Three hundred
+fifteen rejected source tasks, including the remaining capped failures, still need
+assessment. No full all-output semantic review is claimed yet.
+
+Observed source problems include navigation labels as facts, photo dates attached
+to vote/album events, year 2000 copied across unrelated election claims, missing
+row/actor associations and procedural geometry examples promoted into assertions.
+Partly coherent quantities/captions/reporting cores remain visible without proving
+external truth or exhaustive coverage. These are qualitative AI judgments, not
+independent human labels. Original execution/structural/valid-only proofs are unchanged.
+
+```sh
+uv run --locked --no-editable --extra generation --extra constraints \
+  python scripts/verify_inventory_role_reviews.py \
+  --batch runs/version1/inventory-rejected-ai-review-01.json \
+  --output runs/inventory-role-progress.json
+```
+
+The checker freshly reconstructs the original execution and valid-output reviews,
+then validates rejected input/output identities, frame counts, scope and exact reuse.
+Two regression tests reject changed source text, proposal hashes, incomplete frame
+assessment, duplicate identities, forged human/acceptance scope and unequal reuse.

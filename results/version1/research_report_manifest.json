@@ -38,10 +38,15 @@
     "results/phase1/movie_evidence_smoke.json": "3689099fd229de3cab9cb601435c6fe246b3a9962714e55df9d3c5e0005e4ae4",
     "results/version1/requirements_3b_preflight.json": "249386bf0f538c0872936a4620bbb895f31e24321fb9a3c669cd33dd3c835a8f",
     "results/version1/requirements_3b_preflight_comparison.json": "9ec2e0787cf11045806d23739faa3bc7ef373689ab176edcba9e4663a37084d6",
-    "results/version1/requirements_3b_submission.json": "b5f3505d21db3cc702bfaedee59dd669266ab995cdb5b6494e6cfbd5fec20fca"
+    "results/version1/requirements_3b_submission.json": "b5f3505d21db3cc702bfaedee59dd669266ab995cdb5b6494e6cfbd5fec20fca",
+    "results/version1/requirements_3b_verification.json": "016c98933813440dae196a7764ec920a15bc4bef236f900945eee1d739ef6128",
+    "results/version1/requirements_3b_review_progress.json": "9624f552a31c6e770a91c1dbd40d8dbcfd84e26aca66620ed69ee600d78d29bc",
+    "results/version1/requirements_model_comparison.json": "1cd06e24c2eb021ba9ff1147be33d6bc3fb9be0abe117f67c40129fbb4903921",
+    "results/version1/inventory_role_review_progress.json": "e6b68ac24f02bffce20c6687ca73f8fb0c3693b2486b9e53186cff3ab309ddba",
+    "results/version1/requirements_contract_diagnostic.json": "43a411abbc5f8d7cfb68d11807185a9fa40b8f5ce2ea8f99b731e303ef943f5f"
   },
-  "renderer_sha256": "2d27ecb2ae6890d61df10f130f2a633697dc88cbe5b702602ef5c030eb4f4138",
-  "report_sha256": "6f6efb3db354a486889d21cafabbd6e14f42bc032b090eac2153d03ec7d238a6",
+  "renderer_sha256": "c15665b79c6145c331e16b52de1a8477e99d39d5c7de3dcbd6fb68df8bb3cb9f",
+  "report_sha256": "c73eabbd865767386ebb719d8668aedc2e39bd59cb7f7cb1d638304124a147b7",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

@@ -71,3 +71,57 @@ Retain failed/capped cases. Structural admission is not semantic completeness or
 independent human accuracy, and no answer-acceptance promotion follows automatically.
 The original artifact, fresh independent evaluation, source support, cross-source
 benefit, adaptive integration and final-paper gates remain open.
+
+
+## Completed execution and all-output review
+
+The same version 1 kernel completed. [Execution reconstruction](../results/version1/requirements_3b_verification.json)
+verifies fifty sequences / thirteen invocations, 31,078 input tokens, 31,426 padded
+input tokens, 11,071 outputs and 2,707 maximum reserved tokens. Generation took
+560.170 seconds and model loading 10.930 seconds, excluding downloads/setup and
+constraint preparation. Actual Torch/CUDA/GPU/dtype and dependency identities match
+the 1.5B control. The [comparison](../results/version1/requirements_model_comparison.json)
+reconstructs both jobs and verifies matching prompts, input tokens, spans and budgets.
+All fifty raw proposals changed.
+
+Five proposals pass the frozen structural validator and 45 fail, with no capped or
+unextracted cases. All five structurally admitted outputs have null roles in every
+clause; unused variables and copied clause text do not provide a logical requirement
+binding. [All fifty AI assessments](../results/version1/requirements_3b_review_progress.json)
+are bound to exact outputs and the same query-only checklist. Every proposal remains
+misbound/incomplete in this qualitative review. This is not independent accuracy.
+Automatic acceptance remains disabled and semantic improvement is not established.
+
+## Contract diagnosis before another model change
+
+The [retained synthetic diagnosis](../results/version1/requirements_contract_diagnostic.json)
+makes no model calls and never changes the frozen scores. It demonstrates three
+engineering problems that need a separately versioned fix:
+
+1. The prompt says operation cue/result may be null and the grammar allows that,
+   while the validator requires nonnull cue/result for known operations. Prompt,
+   grammar and validation must describe the same conditional requirements.
+2. A company can publish a journal and be owned by a person. It is the subject of
+   one relation and object of another. Fixed per-variable subject/object roles
+   reject this chain unless role is erased to unknown. Entity type belongs to the
+   variable; argument position belongs to each relation. Preserve numeric/time type
+   checks when separating those concepts.
+3. Nonempty clause text with every role null and unused answer/context variables can
+   pass structural checks. The future protocol must distinguish an unresolved plan
+   from meaningful linked requirements, without claiming exhaustive coverage merely
+   because syntactic links exist.
+
+Do not attribute every failure to extractor capacity or launch a larger model before
+aligning the contract. Keep both measured controls, test the new protocol with the
+same query-only inputs, charge every call and review omissions/roles before promotion.
+Independent labels, fresh entity/event-audited evaluation and general support remain
+open. The local suite now totals 229 tests.
+
+```sh
+uv run --locked --no-editable --extra generation --extra constraints \
+  python scripts/verify_requirements_3b_reviews.py \
+  --output runs/requirements-3b-role-reconstruction.json
+uv run --locked --no-editable --extra generation --extra constraints \
+  python scripts/compare_requirements_models.py \
+  --output runs/requirements-model-comparison.json
+```

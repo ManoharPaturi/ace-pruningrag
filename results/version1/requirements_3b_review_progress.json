@@ -1,0 +1,525 @@
+{
+  "scope": "All decoded query proposals AI role/omission reviewed; not independent accuracy",
+  "tasks": 50,
+  "AI_reviewed_proposals": 50,
+  "query_proposal_role_review_complete": true,
+  "structurally_bound_proposals": 5,
+  "structural_status_counts": {
+    "bound_requirement_proposal": 5,
+    "invalid_requirement_proposal": 45
+  },
+  "AI_semantic_categories": {
+    "misbound_or_incomplete_requirements": 50
+  },
+  "semantic_requirement_accuracy": null,
+  "full_requirement_coverage_verified": false,
+  "independent_human_review": false,
+  "answer_acceptance_enabled": false,
+  "records": [
+    {
+      "index": 0,
+      "task_sha256": "c3c6e492a291be6e2b712146a8d8003bce835c1d953e6d504a61ba906d293d88",
+      "raw_proposal_sha256": "07934657fbe3e7e29134f92b3284058038ce6fe9636ed8a53f3d22b44c2ed0e4",
+      "structural_status": "bound_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Unknown album and label context survive, but every clause role is null and no founder/release-date/ranking path links the variables; proposed completeness is unsupported despite structural admission.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 1,
+      "task_sha256": "3de9457e09e5aa1ecd1c394d46a74e3ec7cadd6b4586fdfaba1176ca847a9301",
+      "raw_proposal_sha256": "8a25dc1dabd6bcdab4148b62de8029a6a702496941558e0f53e2dc2f58f7373c",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Vote-margin result and Clinton/election/year words survive but clause roles are empty, year is an entity object and difference uses its own result with null cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 2,
+      "task_sha256": "767d832b70d2f5ba4f35e0dc7a678655c7909028b9b0ee63afa58c354926b53a",
+      "raw_proposal_sha256": "a3173054055a8bb45bfd9cd55231ba9ca8a5b3fda021f0a578bbc773df90257a",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Known songs become unknown date answers used as subject/object; release relation is partial but no dated operands or completed comparison exists.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 3,
+      "task_sha256": "762e1459a64f4e06501f7097b253c332fd4eae1b4cbfc46f3e8852ffe3bef9d1",
+      "raw_proposal_sha256": "2d787e5dde11ac539ed725d203a1502881667c693730247eeb83d45045d70fd1",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "17/66 dimensions and product are partly retained, but room is this, answer is a subject, dimension roles are objects and product has null cue/result; full area/unit binding is absent.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 4,
+      "task_sha256": "59d061e058e626f40802e1989e01dba41c4fbeacda620ad24c23f9a6e71d3ae4",
+      "raw_proposal_sha256": "391ae3b507389740e6fcee51460f427657b56b710f2dfdf2d40ec8926536a7f2",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Full film title survives correctly rather than being split, but premiere relation/unknown date are not linked and unary/empty equality is incomplete.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 5,
+      "task_sha256": "33562f02f5d646c2ff1669315905b90cfc538b2fd35e553fa4c7e0e07264c941",
+      "raw_proposal_sha256": "68ff0fd2080dd055afbce604e3da97625aa4854361548681e8f4415082ddca87",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Beyoncé/album terms and certified-unit relation survive, but known entity is object-used-as-subject, no best-selling album/measure is linked and argmax lacks inputs/cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 6,
+      "task_sha256": "dd4f7820a9dcd23216ecf05db6bfd46a5a2138bc2cb848fa19da80f85cdd7cb2",
+      "raw_proposal_sha256": "fa3ed0ee14420cd1566fa879876486854d54bb020bc7b95f74c38091463f3bd1",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Film context and unknown director survive but all clause roles are null; equality has no inputs/cue/result and the director relation is never bound.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 7,
+      "task_sha256": "400e1d6e474577304a6f69468dbb173136f4417cbdffac410c2c81a16391fcff",
+      "raw_proposal_sha256": "3256fae79864387b74a1dbd23f4b2636f06b56db070f015681bb8bf670064ed6",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Career-passing/never-won phrases survive as context result sets, but fragmented clauses have no actor/measurement bindings; argmax has no output/cue and cannot rank qualifying players.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 8,
+      "task_sha256": "2f5ac077fa567e1755233c849029203f67477de3939a5a101d2beed6f98dc7db",
+      "raw_proposal_sha256": "178d0de65727a7de4b4a6907349985c1d0fb6e5611ec22db77527537756b3f93",
+      "structural_status": "bound_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "All three named works become unknown answer sets; every clause role is null and neither Louvre nor non-display eligibility links to candidates. Structural admission is not a qualifying-set plan.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 9,
+      "task_sha256": "e3835d073ce84858c9b7524f3806808934dc79c6298a4fd5fc3177e0fad8dfd3",
+      "raw_proposal_sha256": "8015b15c9d0e1ec077bbf355933f071d2297308bf02bf6fa3e186b2a291bea3b",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Federations become unknown sets and duplicate blank clauses replace membership-count requirements; less has no cue/result and lacks measured operands.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 10,
+      "task_sha256": "bb0dbd0f3e8c81aca6551ad97adc322033fe86091691f4894d08fc27d7509228",
+      "raw_proposal_sha256": "2a8f21ddafaafdcb89f32ea51bce15fdac0a0b258593828f933ec701ef44d08d",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Oldest-brother phrase becomes a known date and requested age is a date answer; no brother selection/birth-date/age link, with empty difference operands.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 11,
+      "task_sha256": "7b6331f0201b5376000b431740b06f0f2b82c2a272c32bcde281ad02d5514f9a",
+      "raw_proposal_sha256": "f3da757be13c38f7b848e7298c5b34da6935021e080bbd1d2593e84264eca7c9",
+      "structural_status": "bound_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Unknown numeric score and test/film contexts survive but Elle and score relation are unbound; the blank clause and unknown operation are structurally admitted without meaningful requirements.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 12,
+      "task_sha256": "cfdab457cb20120fd98a34e8a25b1a3f9d97d1c54cb1d54a992fe7d3f34842cb",
+      "raw_proposal_sha256": "13c3e5dbea5db6a1e041b567002352e25bdc68ccd98cfc446ac95230e1f270da",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Olivia/award phrases become date contexts, blank clause loses the win event and equality has no inputs/cue; date output is not linked to the award.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 13,
+      "task_sha256": "866484ce6cf842cb989936a5e6fca68dcd9fc4ce9e9c333f310e8f7356b73474",
+      "raw_proposal_sha256": "201d06b6cb9f161f03bc1c78b1c838c4f36fdab6af4c1c45ce3f784138331b8e",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "When is duplicated as date context, team/join/league roles remain empty and equality lacks inputs/cue; premise/date requirements are unresolved.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 14,
+      "task_sha256": "72fb9ba0d860e3601a229c86b526cb856753dcc6a581a4fc90a9699990753d19",
+      "raw_proposal_sha256": "8201b59f32bf745e6426ba42bc27b26ed2ca2facdcae482aef56025418a8b32c",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Film titles become answer sets, empty/title-only fragments omit sequel counts and argmax lacks output/cue; no fixed entities with distinct measurements.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 15,
+      "task_sha256": "20db6c6b2c8bdf40587ffb165de9e8f1f1b3a1862dd61a30605bd84777d7ee8c",
+      "raw_proposal_sha256": "91a7fff0c6387bd6b2496bb51a3eac40ac90a0df5216fbcc15146dd385cf70e1",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Actress names become unknown sets and colon a numeric-intermediate cue; only Streep is referenced in an empty-relation clause and greater compares entities instead of role counts.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 16,
+      "task_sha256": "f133cf0aa0c5358c9351688dd9575355260190de3a761b5229f3aa7437ac0ef3",
+      "raw_proposal_sha256": "6a3e470e352a9231969552696392cb66127a91e0cbc0847fc8e1f867d0b55f00",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Birth is a known date, date output cue is them and all event roles are null; actor/mother/referent ambiguity is unresolved and equality lacks operands/output/cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 17,
+      "task_sha256": "193319fe1225773ee5b4cc2d0d77bd9233c2f505293e8f15969b1d066ea06930",
+      "raw_proposal_sha256": "067910f96e15d9cd03b31f04ccf1e6d29ee35a0e7276824877e6b5df6f5e7735",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Company context truncates the warrant; dividend/year phrases are detached qualifications with no linked event/date, and equality has no operands/cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 18,
+      "task_sha256": "630188ea12b9851cc8e5edbca16df0b2a82b47178ec1ea77f9c095d52db702a6",
+      "raw_proposal_sha256": "47d1ea8cf8266d795541c588a7c897c202b53eab7995e19d729a842012515350",
+      "structural_status": "bound_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "USA/platform contexts and unknown song survive but the clause is empty and no chart ranking/time links exist. Structural admission does not establish the requested current top song.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 19,
+      "task_sha256": "5fb2a7fa971d3346ed296886819b63da3357c98935462f8e6657cb9a7cb6c59b",
+      "raw_proposal_sha256": "39946dc738d7d2d672c8f2fea187eb06cfb38d0477044470b96af88434b9044d",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Ambiguous status is appropriate for unspecified dialogue comparison, but reference versions/language relation are not linked and equality lacks cue/operands/result.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 20,
+      "task_sha256": "15ccd8dab6238dcd7c4cecbcfdc15c11640ef12b01256081911b82611ac75592",
+      "raw_proposal_sha256": "e0b24d948066ab30a388c0127b049008402301f162e8cf25ed84f5dd641f2b51",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "NFL/playoff context words survive, but year and qualification/teams relation are absent from clause fields; empty equality is not team enumeration.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 21,
+      "task_sha256": "ccec8826f60006dd1014d42c01db23a02178be4afc5f46962adf5150735cd2bf",
+      "raw_proposal_sha256": "ee5b33ef2db17eb21d63e7ae7bb2fc4e2789bbad023643a71f253e9b6a664564",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Explicit top-ten cardinality is lost, SPY survives but all clause roles are null; argmax takes the output set as its sole input and has no result/cue or holding weights.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 22,
+      "task_sha256": "1d35b62ea466afd70de157cd579b24920fc631c265c2a8b3227486fde593be85",
+      "raw_proposal_sha256": "aacb8882fb1997dd21d8973e947fd9090abf92be8fc03863d8d334fff9be7e49",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Unknown actor cue is the character and Suits context is unused; all played-role bindings are null and equality is incomplete.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 23,
+      "task_sha256": "af043afc6e68c7bc29d7bc977a64b4741d3082511230a5962998a13c19800ae8",
+      "raw_proposal_sha256": "2106f9e81706ec1e13939561db4cdb492c8645e55630b8a79b16cd4ff460d320",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Lille is a known date, last-week phrase has no typed period binding and all scoring roles are null; calculation operation is unresolved despite proposed completeness.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 24,
+      "task_sha256": "7e55e46cf36c679aee88e8bc2a1e941799a4914ce3b9097ad760f604a6ef07e2",
+      "raw_proposal_sha256": "24d633e04356e679847f25eeb3bb60806b81c7dc00dece9f0548660488df2d9e",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Dam names become unknown numeric answers instead of known entities with unknown heights; title-only values and meters partly survive but difference has no result/cue or linked measurement subjects.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 25,
+      "task_sha256": "3e1905f5c2c05489b76afb55dd469e8a8a23bddcc0e5c32e59f274487b051c4d",
+      "raw_proposal_sha256": "d45b9ec70dcc0025ed08ca10d1270846109190439b2a220e6b5da7725164639d",
+      "structural_status": "bound_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Full warrant identity and unknown numeric price survive, but all quote/time/currency roles are null and operation unknown. Structural admission leaves the current quote requirement unbound.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 26,
+      "task_sha256": "3ec3b2b656353584429b255cbdab0de9e62f1f2bc3c4bb9850bfabbabfa93113",
+      "raw_proposal_sha256": "cc7371a70181806643959d617ea5ada6f983f3e005517c29d94e8df2c257aaee",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Murray and unknown title count survive, but win/competition/count relation is absent and equality is empty rather than a linked career count.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 27,
+      "task_sha256": "71e7e17c597c2b93acc5c0b8a499954e07209c7b0a9def9fc4f49f75ca86944f",
+      "raw_proposal_sha256": "fc860d4758e3c99ff7589300af5ab7546faafec799f3d0f2746aa7ddf3ff83ba",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "The whole conversational tail is a date context; price is partly referenced but Impinj/day/opening quote roles remain empty, and equality overwrites context.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 28,
+      "task_sha256": "af5c98b20552d524cf349b27cb35b5beb603b813972211a1594f9334c4eba053",
+      "raw_proposal_sha256": "c3751de8148accba5ca2731888e075eb61316eb5f866eb68b7bf2f4a95f06ca4",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Index/time contexts and percentage-change relation survive, but no numeric changes are linked to candidate companies, latent comparison cue is punctuation and argmax has null cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 29,
+      "task_sha256": "4a8c953d788d073c53956ab232b173af1dc92124937d66d1d91271bf31af867e",
+      "raw_proposal_sha256": "ea0297595b92c56e1a5df6f0ea9ab276e0f1498a9d486c6468c8536fb1e7bece",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Films become unknown answers and empty fragments omit production durations; greater compares entities and has no result/cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 30,
+      "task_sha256": "56011e23ccf82e2d80cb8713d2e77a11b3ab26411592b680d6c5d19065df7e18",
+      "raw_proposal_sha256": "d33f2880820c5e8b8a8b6303027eb45ca9b52b28a7d48502c3f9781ed0dd25fd",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "USA/China contexts survive but duplicate empty clauses omit year/event and per-country gold counts; equality is empty rather than a medal comparison.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 31,
+      "task_sha256": "f9fd5788476833b362590bcd5cb51f84fce154378a06c717e752c38a9d4b6da3",
+      "raw_proposal_sha256": "11f82ce502902cda1ce2253b1bb02e822747087b8964f56866a360b4884b6702",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Hero/live-action contexts partly survive, but no portrayal relation/release dates are linked and argmax points in the wrong direction for first.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 32,
+      "task_sha256": "caad6fab2d9f16f8a084de19e2f4867c3ff12dfc313808d64ce73da06a12b9fd",
+      "raw_proposal_sha256": "b1700cd71b56f582bc2a6d3ce5484174df54be6b4d82125e65d410d86b5453e2",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Year is truncated to year, player uses inconsistent roles and time becomes value; count/tour interval is unbound and argmax returns an intermediate with no inputs/cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 33,
+      "task_sha256": "65d3076fd5082c6b83a89ac27bcfa989314454da803d65d912d43703da951c77",
+      "raw_proposal_sha256": "e9ef8cf100fe0fd7182a92d71f519ad02682ca52990b8908eaeb86042f46a865",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Explicit three is lost, lake/location phrase is context but roles mismatch and ranking has no measurements/cue; unknown intermediate rather than requested lake set is returned.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 34,
+      "task_sha256": "1fc2709332d62bb46f971c02aac5642d906c45c5c973bc01ee1dadc128fd498e",
+      "raw_proposal_sha256": "d43b672f3cf8db0bc43b73460b76159ad8fdb1613343cfe67dedfbdc21a434b1",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Decade survives as date context but answer number is subject, win/period fields cross fragments and interval is a unit; argmax cannot count championships.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 35,
+      "task_sha256": "266cd2cd1cf2e89c9705f2533867a3b27f87e309cc45aff4495beba87f742995",
+      "raw_proposal_sha256": "5075297a5b4fb51134985835f1c501415a39855b3c745397070e96e8d1b9ebd0",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Requested count is an entity answer, president phrase a known set result and many empty fragments repeat; spouse history/count is absent and count overwrites context with no input/cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 36,
+      "task_sha256": "2e448f0381e49552b85f233a37b7d752d78df3f535b05c41c14d2b883f14b5f8",
+      "raw_proposal_sha256": "31f0d0a4ee45c255cd74d91736dd7c761793d5949f49ad0ab439396c4ed0d362",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Rihanna/planning-to-launch relation partly survives, but date answer is podcast object and new upcoming known date; planned date/premise is unresolved and equality is empty.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 37,
+      "task_sha256": "f0cdf62cb58afb8a55595943c7e6b5302a0d90de318d412992ab35f044e979c6",
+      "raw_proposal_sha256": "f92bca19672780c83603334ead7021ee57af584d55e3acd581d2f02622acfaf3",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Entire question is a known date and output date a subject; artist and dated releases are not linked, and equality has no operands/cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 38,
+      "task_sha256": "2c027a83f99c54dd6043c0e95f28f73e145761e124f7a414dfbfaafb05feafc8",
+      "raw_proposal_sha256": "2e221fbdda02e6a2682fe3bcbd95b8a77055c36dec0d5d0b54004902cbc5fdd1",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Team and goals terms survive in repeated blank fragments; no week scoring aggregation exists and argmax over requested count is the wrong operation with null cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 39,
+      "task_sha256": "6e7e880f4323d557de6d7d74808ec48dfd7652a3de6686f2c940b393f88bec8e",
+      "raw_proposal_sha256": "f2549461d3224aa380b10229239eda9bd19901c9e813fad79601a2d89856bf3a",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Film names become unknown answers and are incorrectly subject-used; no release dates or ordered comparison exist and argmin has no result/cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 40,
+      "task_sha256": "e7e37d712a30e13e72ebb6425f45ecb6057e65c9d4c2eaf92c65067ad7c938bc",
+      "raw_proposal_sha256": "93057104ffb45b13d2a82e6485a30c8ce4630dfaa907a72575c4df0b62277c3e",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Microsoft survives but price number is subject, IPO becomes date/object and price/date relations are not coherent; equality has no inputs/cue/result.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 41,
+      "task_sha256": "9f6fdff730cc14c1ed4d0ba22721de204875a46a791b11ae52373f442a706d57",
+      "raw_proposal_sha256": "344a6857a44804493a0619e7f28709f5e9433da0328ea5b320f730c601194675",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "2000 survives but publisher description becomes a known entity while owner cue is the title; no two-step publishing/ownership edges are linked, with empty equality.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 42,
+      "task_sha256": "4ed1e2e44261e110024d00883464a335c1fd1db787901bfbc8c220f6cad96036",
+      "raw_proposal_sha256": "e8b84320e9b24768b26b4cf8f6d6a3144559b5b739a3343e9b5e33b6870228e2",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "All/performing phrases become known dates and date output is subject; band/event/start-date binding is missing and equality is empty.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 43,
+      "task_sha256": "99add4f0b886519b3242864e2262df950237ca50206122a0e67479175f7be311",
+      "raw_proposal_sha256": "0f4ad2221ba0609465ddf49cb8bb29fd3fb3eaa1f780d11343cd0491a8b7f5ff",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Singer output survives but duplicate song-tail constants replace nationality/genre contexts; all clauses are empty and explicit 14/award/song-identity conjunction is not linked.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 44,
+      "task_sha256": "c7ca7d4c3741720b8d7e705b874b3fb222185316965a5e2645b4460955b86ab9",
+      "raw_proposal_sha256": "fb8b5255b590c37e6d317d8445d30167e05ea6981c554c952bf8a9c3d169e60b",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Largest-reptile phrase is a known object without size/population/metric relation; unary equality has no result/cue and scope ambiguity is not represented.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 45,
+      "task_sha256": "6692a1a89f8d08eca2943ef74a583060ec3233a03bf1374c4ded3bd1d26911f7",
+      "raw_proposal_sha256": "7d13dff0c4ae05e5c1f1b5142b5bacb922cecd7a963f6dc24a02c4837ea903e1",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "INDB and today fragments survive but market-worth relation and date/measure are unbound; sum over requested value has wrong arity and no result/cue.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 46,
+      "task_sha256": "5466f2336689bb555e5953a4c670c234e037c22ff2648479d285e6241d2437ac",
+      "raw_proposal_sha256": "cbc56468d0fbe082a292708837b674c1c202b071faf56ea8ff15040f8e72046b",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Both people survive as context but relationship references/durations are absent; greater is unary over the result and has no output/cue or resolved scope.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 47,
+      "task_sha256": "82e99ae6a98cc7b5af34dde8c9e7c2e94fa24bdb26126da4c26ab8035f038df1",
+      "raw_proposal_sha256": "2710c7f1fcdba652addf11d5268f62b30a44154b9acb4ece6bf49e2627408f0f",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Whole question becomes a date context and price output is unlinked; interval maximum/issuer are missing and calculation remains unknown despite proposed completeness.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 48,
+      "task_sha256": "cfbbff79574e193b17c4e14957c6f8377c4529b952082b206724e9299f93f958",
+      "raw_proposal_sha256": "fe7ee7d97907983a83c2b45d186004741c295e0fb1871b518176a4abb0da6d34",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "Unknown lake is referenced as value with result role, otherwise clauses empty; US/size eligibility is unbound and equality incomplete.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    },
+    {
+      "index": 49,
+      "task_sha256": "858e2a63f522c323ddd3c4a934cfae940fcae863e06f1fe8e5d43d45ec1c96c2",
+      "raw_proposal_sha256": "83e925522fa397f4aa1208770f2831bbc49c5d7d07f4317835d23edc955f16e6",
+      "structural_status": "invalid_requirement_proposal",
+      "semantic_status": "misbound_or_incomplete_requirements",
+      "rationale": "People become unknown entity answers and blank clause omits heights; equality rather than greater/argmax has no result/cue or measurement operands.",
+      "reviewer_type": "AI",
+      "independent_human_review": false
+    }
+  ],
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "extraction_trace_sha256": "36c799e8bd0c699bfa93c062b0d1e13f108a1bf6961911fb230240d1f70c88ab",
+  "execution_verification_sha256": "016c98933813440dae196a7764ec920a15bc4bef236f900945eee1d739ef6128",
+  "query_checklist_sha256": "f75689e5f092f7f76031d846ee82ec9ce8b6bb233bb475789d4793fcb27b0a3d",
+  "AI_review_batch_sha256": "de076c917f887959735fda5be23825e20b250b233c43be6596763f88544e7ae8"
+}

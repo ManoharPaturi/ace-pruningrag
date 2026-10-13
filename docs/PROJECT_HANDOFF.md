@@ -4,7 +4,7 @@
 **Repository:** https://github.com/ManoharPaturi/ace-pruningrag
 **Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
-**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `4732cb3` before this update; all three required CI jobs passed. Recheck CI for each new head.
+**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `1bea150` before this update; all three required CI jobs passed. Recheck CI for each new head.
 **Local continuation state:** all 444 admitted responses and all 386 constrained extraction tasks have bound AI assessments. A live browser→API→GPU→evidence flow has been executed and verified on one development question. The separately versioned Unicode GPU correction completed and reconstructs; its one changed proposal has a fresh bound review. Independent review and the full scientific gates remain open. See the [current completion audit](VERSION1_COMPLETION_AUDIT.md) and [research report](RESEARCH_STATUS_REPORT.md).
 
 ## Owner-led continuation — current checkpoint
@@ -20,7 +20,7 @@
 | Independent prospective evidence review | Pending | Import attested human requirements and support sets through the existing review workflow |
 | Query-only logical extraction | All fifty outputs reconstruct and have bound AI role reviews; all fifty fail validation | Retain the failed control; test extractor capacity/role-aware decoding separately before source-support promotion |
 | Demo | 444 admitted replays, fresh BM25 retrieval and a verified live one-question GPU flow with restart recovery | Generalize claim-level support and adaptive source integration; one inspected case is not general accuracy |
-| Required CI | All three passed at `4732cb3` before this update | Require all three again on each new head |
+| Required CI | All three passed at `1bea150` before this update | Require all three again on each new head |
 | Constrained extraction review | All 386 tasks assessed; 335 valid source proposals / 300 distinct pairs, with no source proposals pending | Preserve exact outputs and qualitative AI scope; full requirements and external truth remain unverified |
 | Unicode decoder correction | All386 GPU sequences reconstruct; one full-name change reviewed, with semantic row mixing unchanged | Preserve controls and costs; do not claim general semantic improvement |
 | Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel complete and reconstructed; 21 valid inventories reviewed | Collect/reconstruct the same job, audit real roles/completeness and then compose support |
@@ -580,3 +580,18 @@ All fifty input token sequences match the control. Private version 1 of
 result is claimed. Collect and reconstruct that same job, compare actual runtime
 and assess all outputs against the same AI checklist. All 227 local tests pass;
 required CI includes generation dependencies to exercise the reconstruction test.
+
+
+### Completed model comparison and extended inventory review
+
+Both query-model runs reconstruct with matching actual runtime and inputs. The 3B
+run has five structurally admitted outputs, but all five contain only null clause
+roles. All fifty 3B proposals have exact-output AI assessments and remain incomplete.
+The [contract diagnosis](REQUIREMENTS_MODEL_VARIANT.md) identifies nullable-operation
+misalignment, fixed global roles and empty-clause admission; correct these in a
+separate protocol before another capacity change. Do not rescore frozen outputs.
+
+[Inventory assessment](CLAIM_INVENTORY.md) now covers 71/386 tasks (all fifty queries
+and 21 sources), including fifty rejected inventories; 315 source tasks remain.
+All 229 local tests pass. Independent semantic labels, general source support and
+full roadmap completion remain open.
