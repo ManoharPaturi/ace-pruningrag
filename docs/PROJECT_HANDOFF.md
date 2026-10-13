@@ -602,5 +602,6 @@ full roadmap completion remain open.
 [Query graph v2](QUERY_GRAPH_V2.md) implements typed clause roles, dependent operations,
 immutable token constraints and complete synthetic prompt examples. All fifty query-only
 requests pass pinned-tokenizer preflight (3,405 maximum reserved tokens; zero model calls).
-This checkpoint has not executed a v2 neural run. Worker reconstruction, bounded GPU
-execution and all-output assessment are next; scientific acceptance stays disabled.
+The worker and reconstruction tests pass; v2 kernel version 1 is submitted and observed
+RUNNING. Completion verification and all-output assessment are next; scientific
+acceptance stays disabled. See the submission receipt linked in the graph document.

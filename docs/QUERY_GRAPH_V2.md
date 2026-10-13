@@ -56,10 +56,15 @@ creating model messages. The public receipt contains hashes and counts only.
 
 ## Pending execution and promotion
 
-No v2 neural extraction run has been executed at this checkpoint. Next, build
-and test an isolated GPU worker and output reconstruction, freeze its bundle,
-run one bounded fifty-question diagnostic, then bind an AI assessment to every
-exact output. Preserve capped, invalid and unresolved cases.
+The isolated GPU worker, bundle isolation test and synthetic output reconstruction
+test are implemented. The full local suite passes 242 tests. The frozen bundle
+was submitted as private Kaggle kernel
+`ionrey/ace-qg2-a22c852d067f4ab8ad7b43804c946d2c`, version 1. The
+[submission receipt](../results/version1/query_graph_submission.json) records an
+authoritative RUNNING observation; it does not prove completion. Next, reconstruct
+all outputs, costs and spans, then bind an AI assessment to every exact output.
+Preserve capped, invalid and unresolved cases. Do not resubmit a live job because
+of an observation timeout.
 
 Neither the grammar nor its validator verifies complete question interpretation,
 source support, units compatible for computation, factual truth or answer quality.
@@ -68,3 +73,14 @@ Ranked set element types and operand/candidate semantic alignment need review.
 Operations are proposed, not executed. The input cohort has already been seen
 and cannot provide fresh evaluation accuracy. Independent requirements/support
 labels and a fresh cohort remain necessary for scientific promotion.
+
+GPU output reconstruction command after provider completion:
+
+```sh
+uv run --locked --no-editable --extra generation --extra constraints \
+  python scripts/verify_query_graph.py \
+  --bundle runs/version1/query-graph-kernel-v2 \
+  --run runs/version1/query-graph-output-v2/query-graph-pilot \
+  --source-trace runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl \
+  --output runs/version1/query-graph-verification-v2.json
+```

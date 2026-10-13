@@ -1,0 +1,28 @@
+{
+  "protocol_id": "query_graph_v2",
+  "contract_sha256": {
+    "src/ace_pruningrag/query_graph.py": "11832c67081f3e7cd83ee1f17c8489d30778abd14c8111d5914638467d5500b3",
+    "src/ace_pruningrag/query_graph_decoder.py": "82484b485ea294598d7e8d0ba28113b0037008c5a9459c0ddf26dafa94e14997",
+    "src/ace_pruningrag/query_graph_prompt.py": "157d079d1a43eeece773de6f5f3b44a34b9dd002b26117b673f9d17e819ee15b"
+  },
+  "tasks": 50,
+  "query_tasks": 50,
+  "source_tasks": 0,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "tasks_sha256": "c2541e01762cf3c735b88329a3282cfccbb2c201ba50bd481597295f32569165",
+  "kernel_id": "ionrey/ace-qg2-a22c852d067f4ab8ad7b43804c946d2c",
+  "max_generate_invocations": 13,
+  "max_total_reserved_tokens": 204800,
+  "new_answer_generation_calls": 0,
+  "submitted_version": 1,
+  "provider_status_last_observed": "RUNNING",
+  "observation_time_UTC": "2026-10-13T21:05:39.764952+00:00",
+  "extractor_repository": "Qwen/Qwen2.5-3B-Instruct",
+  "extractor_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "completed_execution_verified": false,
+  "answer_acceptance_enabled": false,
+  "semantic_requirement_improvement_established": false,
+  "bundle_manifest_sha256": "fecf96d71a9a79aecad1dbe14a9f5293cb9e271cc38a17ba093cd6c821ac17e0",
+  "kernel_metadata_sha256": "f8df7323cd7cf36f46cefaba4150550968eb4eb2badd8b90f383dd7161401c4c",
+  "preflight_sha256": "5d6731b04523cb2d2f84fbf431f32d9d511f050049b3381a3c5f06f753781c94"
+}
