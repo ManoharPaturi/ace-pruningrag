@@ -20,6 +20,11 @@
       "path": "runs/kaggle/regeneration-output-v2/phase3-pilot/regenerated/predictions.jsonl",
       "sha256": "13835929b5148ab9a7f7747d5fc37f52ff6b8f5c6ac30144be0a649fbfc274af",
       "responses": 8
+    },
+    "cohort": {
+      "path": "runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl",
+      "sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+      "responses": 250
     }
   }
 }

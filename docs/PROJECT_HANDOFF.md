@@ -1,6 +1,6 @@
 # ACE-PruningRAG: phase tracker and contributor handoff
 
-**Updated:** 12 October 2026 (Asia/Kolkata)
+**Updated:** 13 October 2026 (Asia/Kolkata)
 **Repository:** https://github.com/ManoharPaturi/ace-pruningrag
 **Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
@@ -15,7 +15,7 @@ The repository has working research infrastructure and several completed develop
 
 The current adapted generator is Qwen2.5-1.5B-Instruct, rather than the original paper's model contract. The router uses keyword rules; selection support features are lexical proxies; reliability verification currently handles a narrow historical closing-price contract. No general cross-source benefit, held-out semantic accuracy improvement, or publication readiness has been established.
 
-**The immediate engineering task is to finish the response audit and verify the queued five-selector GPU run when it completes.** Independent human evidence review remains an open scientific gate. AI-assisted assessments and successful provenance checks do not satisfy that gate.
+**The immediate engineering task is to finish the response audit and finish source review of the verified five-selector GPU run.** Independent human evidence review remains an open scientific gate. AI-assisted assessments and successful provenance checks do not satisfy that gate.
 
 Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evaluation protocol](EVALUATION_PROTOCOL.md), and [prospective review protocol](PROSPECTIVE_EVALUATION.md). Older reports describe historical snapshots; use later reports for the work that supersedes them.
 
@@ -126,7 +126,7 @@ See [reliability replay](PHASE4_RELIABILITY.md), [bounded regeneration](PHASE4_B
 - Duplicate question text and shared canonical source pages are excluded against prior cases and within the new set.
 - Packet SHA-256: `324b5c35dc08ac43ce9c841f1a6a35086007badc8436b1d139f2fb01d3a80b33`.
 - All source pages/candidate spans were reconstructed and verified. Altered source text and exclusion records were rejected.
-- The frozen evidence packet itself made **zero model calls**. PR #16 now adds a separate 250-request generation experiment; its GPU job is **QUEUED**, with no completed output verified as of this update. Independent human annotations remain pending.
+- The frozen evidence packet itself made **zero model calls**. PR #16 now adds a separate 250-request generation experiment; its GPU job completed; all 250 outputs are verified, and AI source review is in progress. Independent human annotations remain pending.
 
 This is prospective relative to documented pilots, not an independently sealed or fully entity/event-disjoint benchmark. It is web-only and cannot prove cross-source necessity. See [protocol](PROSPECTIVE_EVALUATION.md) and [frozen manifest](../results/evaluation/prospective_v1/manifest.json).
 
@@ -182,7 +182,7 @@ uv run --locked --no-editable ruff format --check src tests scripts
 uv run --locked --no-editable --extra demo pytest -q
 ```
 
-The current owner workspace has **135 passing tests with the demo extra** (12 October). This includes the PR abstention-consistency test; it is not the merged-main test count. All three required CI jobs passed on PR #16 implementation commit `ca6a090`; CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
+The current owner workspace has **136 passing tests with the demo extra** (12 October). This includes the PR abstention-consistency test; it is not the merged-main test count. All three required CI jobs passed on PR #16 implementation commit `ca6a090`; CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
 
 Download data and run a small retrieval check, using a new output directory:
 
@@ -300,10 +300,10 @@ Read [current-version completion audit](VERSION1_COMPLETION_AUDIT.md) and [next-
 | --- | --- | --- |
 | Pushed PR #16 code | `configs/cohort_evaluation.json`, `src/ace_pruningrag/cohort.py`, `scripts/cohort_driver.py`, `scripts/cohort_preflight.py`, `scripts/verify_cohort.py`, `scripts/cohort_metrics.py`, `src/ace_pruningrag/response_audit.py` | Explicit cohort selection/generation, verification, paired literal diagnostics and review provenance validation exist; execution/results remain separate gates |
 | Preflight complete | [local preflight](../results/version1/cohort/local_preflight.json) | 50 questions, 250 prepared requests, maximum reserved tokens 2,036; **zero actual generation calls** |
-| Submitted GPU bundle | [bundle manifest](../results/version1/cohort/submitted_bundle_manifest.json), owner’s `runs/kaggle/cohort-kernel-v1/` | Private kernel `ionrey/ace-pruningrag-prospective-selectors`, version 1; last live status QUEUED, no failure message |
+| Submitted GPU bundle | [bundle manifest](../results/version1/cohort/submitted_bundle_manifest.json), owner’s `runs/kaggle/cohort-kernel-v1/` | Private kernel `ionrey/ace-pruningrag-prospective-selectors`, version 1; live status COMPLETE, no failure message; all 250 outputs verified |
 | Legacy verification | [generation verification](../results/version1/legacy_generation_verification.json), [human validation](../results/version1/legacy_human_validation.json) | All 150 accepted development outputs and 150 original human records revalidated; two question-level human judgments remain uncertain |
 | PR audit progress | [review progress](../results/version1/legacy_review_progress.json), [AI audit validation](../results/version1/legacy_ai_audit_validation.json) | Nine AI review batches cover all 50 distinct questions / 150 responses; historical and regeneration audits are also complete |
-| PR code/test | `src/ace_pruningrag/response_audit.py`, `tests/test_response_audit.py` | Added rejection of an abstention verdict that contradicts actual answer text; covered by the 135-test workspace check |
+| PR code/test | `src/ace_pruningrag/response_audit.py`, `tests/test_response_audit.py` | Added rejection of an abstention verdict that contradicts actual answer text; covered by the 136-test workspace check |
 | Private audit records | owner’s `runs/version1/legacy-ai-audit-batch1.json` through `legacy-ai-audit-batch9.json` | Must be transferred with the exact original predictions trace to reproduce audit validation; these are ignored and absent from Git |
 
 The audit progress and validation changes have been preserved in this PR update. Do not discard other local changes when continuing. A branch push does not include ignored run artifacts. Transfer the full relevant directories through an owner-approved private channel, without credentials. Preserve hashes and original human exports; do not silently replace judgments with AI assessments.
@@ -334,7 +334,7 @@ uv run --locked --no-editable --extra generation python scripts/cohort_preflight
   --output runs/friend/cohort-preflight-v1
 ```
 
-The contract is five selectors (`top_k`, `mmr`, `coverage`, `joint`, `exact`), 12 shared candidates, at most five selected excerpts, pinned Qwen2.5-1.5B-Instruct, greedy seed 42, 96 output tokens, 2,048 total request tokens and at most 250 generations. Groups/conflicts are disabled and support is a query-term proxy. This tests the configured selector objective, not genuine evidence complementarity.
+The contract is five selectors (`top_k`, `mmr`, `coverage`, `joint`, `exact`), 12 shared candidates, at most five selected excerpts, pinned Qwen2.5-1.5B-Instruct, greedy seed 42, 96 output tokens, 2,048 total request tokens and 250 verified generations. Groups/conflicts are disabled and support is a query-term proxy. This tests the configured selector objective, not genuine evidence complementarity.
 
 For the existing job, use authenticated Kaggle access arranged by the owner. Check status before downloading; do not submit another copy just because the queue is slow:
 
@@ -375,9 +375,14 @@ If the existing job cannot be accessed, agree on ownership of a replacement run 
 
 The historical and regeneration verification and AI inspection are complete: [44-record audit](../results/version1/historical_regeneration_ai_audit.json), [historical verification](../results/version1/historical_reverification.json), [regeneration verification](../results/version1/regeneration_reverification.json). Total inspected accepted response records are 194, across 50 legacy questions and six historical questions with repeated controls/retries. This is not an independent 194-case benchmark.
 
-Transfer `runs/version1/historical-ai-audit-v1.json`, `regeneration_initial-ai-audit-v1.json` and `regeneration_retry-ai-audit-v1.json` with the exact original traces. All eight retries matched direct all-source controls; dollar-denominated answers remain uncertain where currency metadata is absent. BLACW remains an abstention with an available numeric field. The queued 250-response run, scientific gates and demo are still unfinished.
+Transfer `runs/version1/historical-ai-audit-v1.json`, `regeneration_initial-ai-audit-v1.json` and `regeneration_retry-ai-audit-v1.json` with the exact original traces. All eight retries matched direct all-source controls; dollar-denominated answers remain uncertain where currency metadata is absent. BLACW remains an abstention with an available numeric field. The 250-response run is verified; source review is still incomplete. Scientific and live-generation demo gates remain open.
 
 
 ### Local demo handoff
 
 The [FastAPI/Next.js explorer](DEMO.md) now builds and its browser flow is verified for recorded answers, exact source provenance and fresh BM25 retrieval. Live local URLs are API `http://127.0.0.1:8060` and UI `http://127.0.0.1:3060` while the owner’s processes are running. These addresses do not provide remote access. Clone and start both services using the documented commands. Required CI now includes the web production build; backend tests require `--extra demo`. The full demo gate still needs live generation and the remaining research requirements.
+
+
+### Completed cohort execution checkpoint — 13 October
+
+All 250 outputs from the existing version-1 kernel are downloaded and verified. Read [selector results](COHORT_SELECTOR_RESULTS.md) and `results/version1/cohort/verification.json`, `paired_metrics.json`, `gpu_summary.json`, and `ai_review_progress.json`. Fifteen responses are AI source-reviewed; 235 remain. The explorer now admits all 444 verified accepted response records, while semantic review coverage is 209 records (194 prior plus 15 cohort). Do not confuse trace verification with complete semantic review. Raw new artifacts are in `runs/kaggle/cohort-output-v1/cohort-pilot/generated/` and the first private review batch is `runs/version1/cohort-ai-audit-batch1.json`.

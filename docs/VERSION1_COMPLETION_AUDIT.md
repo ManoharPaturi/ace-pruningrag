@@ -10,7 +10,7 @@ Audit opened 12 October 2026. The user requested completion of the current versi
 | Faithful original PruningRAG baseline | Original router/checkpoints, full API backing data and paper model/evaluator contract | Not achieved; upstream releases empty and `models/router` lookup returned 404 during fresh audit | Obtain original artifacts or keep adapted-only claims explicit; do not invent a reproduced baseline |
 | Shared-budget five-selector implementation | Selection code, smoke traces and budget verifiers | Implemented; prior contexts were engineering smoke | Execute the separately scoped explicit-cohort comparison |
 | Main complementary-evidence scientific hypothesis | Reviewed atomic support labels, genuine cross-source cases, source-only controls | Not achieved; current real candidate pools are web-only and groups/conflicts are disabled | Retain this limitation; build genuine cross-source evaluation |
-| Explicit prospective-cohort generation | Frozen packet/config/IDs, 250 requests, GPU traces | New runner added; tokenizer preflight complete; private GPU job submitted | Verify all outputs against original inputs and decoding |
+| Explicit prospective-cohort generation | Frozen packet/config/IDs, 250 requests, GPU traces | Runner, tokenizer preflight and 250 real generations complete; all outputs reconstructed | Complete source review of remaining 235 outputs; independent review still required |
 | Source routing and bounded reliability | Historical runs, independent verifiers, source/time/price-field checks | Narrow six-case implementation verified; general source/claim verification absent | Audit old and new responses; preserve scope and negative outcomes |
 | Check every response | Per-answer audit records bound to exact prediction/prompt/evidence | Legacy 50-question / 150-response AI source audit complete; new cohort outputs not yet available; historical/regeneration response audits now complete as recorded below | AI-assisted review of each output; do not label it independent human review |
 | Independent human annotation and semantic evaluation | Attested reviewer exports matched to frozen traces | First-50 development review exists; prospective evidence and newer answer review unresolved | Preserve missing/uncertain status; AI review cannot satisfy the independent-human gate |
@@ -89,3 +89,8 @@ The accepted current-run audit coverage is now **194 response records** (150 leg
 ### Demo implementation checkpoint
 
 A read-only FastAPI/Next.js evidence explorer is now implemented; see [demo setup](DEMO.md). Backend HTTP checks compared all 194 admitted responses to their trace records and checked fresh BM25 excerpt spans against pinned source text. Three additional tests exercise tampering, unavailable artifacts, field exclusion and API errors. Recorded answers are explicitly replays; live inference and the complete roadmap demo gate remain pending. The production build and browser→proxy→API→data→answer/retrieval flow now pass. Live generation remains pending.
+
+
+### Cohort execution completed — 13 October
+
+The existing GPU job is COMPLETE. All 250 outputs passed full reconstruction; [selector results](COHORT_SELECTOR_RESULTS.md) record exact protocol, costs and exploratory paired metrics. Source review has reached 15 responses, with 235 still pending. Literal abstention undercounts explicitly declining prose in the first inspected case; frozen diagnostics remain unchanged and AI semantic abstention is tracked separately with exact response spans. The overall goal remains incomplete.

@@ -52,8 +52,17 @@ def validate_ai_audits(paths, trace):
                 "i do not know",
                 "i do not know.",
             )
-            if (review["semantic_assessment"] == "abstained") != abstained:
+            span = review.get("explicit_abstention_span")
+            prose_abstention = (
+                isinstance(span, str)
+                and span.strip().casefold()
+                in ("i don't know", "i don't know.", "i do not know", "i do not know.")
+                and span in original["prediction"]
+            )
+            if abstained and review["semantic_assessment"] != "abstained":
                 raise ValueError("AI abstention verdict contradicts the actual response")
+            if review["semantic_assessment"] == "abstained" and not (abstained or prose_abstention):
+                raise ValueError("AI abstention verdict requires an actual bound response span")
             if not all(
                 isinstance(review.get(k), str) and review[k].strip()
                 for k in ("grounding_assessment", "reason")
@@ -71,6 +80,10 @@ def validate_ai_audits(paths, trace):
         "full_ai_response_audit_complete": seen == set(lookup),
         "ai_semantic_verdicts": dict(Counter(r["semantic_assessment"] for r in assessments)),
         "ai_grounding_verdicts": dict(Counter(r["grounding_assessment"] for r in assessments)),
+        "explicit_prose_abstentions": sum(
+            r["semantic_assessment"] == "abstained" and bool(r.get("explicit_abstention_span"))
+            for r in assessments
+        ),
         "independent_human_review": False,
         "semantic_truth_verified_by_validator": False,
         "limitations": [

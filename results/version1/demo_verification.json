@@ -1,11 +1,12 @@
 {
   "scope": "Read-only replay and fresh BM25 retrieval; live generation remains pending",
-  "http_replay_records_checked": 194,
+  "http_replay_records_checked": 444,
   "fresh_retrieval_source_spans_verified": true,
   "production_build": "passed",
   "browser_flow": "historical UBSI / all_available answer, dated API provenance, fresh retrieval 558 words",
   "browser_console_warnings_errors": [],
-  "tests_with_demo_extra": 135,
+  "tests_with_demo_extra": 136,
   "screenshot_sha256": "1a6ff98b5b2069cc047b797352647d781d2f9faa718b779f8a1abe25c60b4459",
-  "actual_new_llm_calls": 0
+  "actual_new_llm_calls": 0,
+  "new_cohort_browser_verification": "pending"
 }

@@ -65,3 +65,8 @@ Promotion requires fresh reviewed cases with the old inspected questions exclude
 Retain direct all-source retrieval as a mandatory cost control: all eight actual retries reproduced its evidence, prompt and answer. On the inspected six-case set, retry adds generation cost without improving the resulting answer over fetching the eligible source initially. Do not generalize this to representative routing performance without a fresh cohort.
 
 Separate three failure states in the next verifier: wrong-date evidence, correct numeric field with missing currency/adjustment metadata, and generator abstention despite sufficient field evidence. Test any structured extraction/rendering path as its own ablation against unchanged generator controls. Never infer missing currency from ticker familiarity or quietly replace an abstaining generator output in reported baseline results.
+
+
+### Cohort execution findings — 13 October
+
+The 250-response selector run is complete and structurally verified; full source review remains pending. Prioritize entity/role binding, time-window completeness and semantic abstention measurement. Coverage uses less context and abstains more often; compare complete support, substantive answer quality and total cost before promoting this behavior. The observed +1 literal match for several methods is not a demonstrated semantic improvement. Preserve the original metric and report reviewed prose abstentions separately.

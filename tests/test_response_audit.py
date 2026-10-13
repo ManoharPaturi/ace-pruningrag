@@ -83,3 +83,22 @@ def test_false_abstention_label_rejected(tmp_path):
     write_json(path, audit)
     with pytest.raises(ValueError, match="abstention"):
         validate_ai_audits([path], trace)
+
+
+def test_prose_abstention_requires_an_exact_actual_response_span(tmp_path):
+    trace, audit = packet(tmp_path)
+    original = json.loads(trace.read_text())
+    original["prediction"] = "No dated evidence is supplied. I don't know."
+    trace.write_text(json.dumps(original) + "\n")
+    audit["trace_sha256"] = sha256_file(trace)
+    review = audit["reviews"][0]
+    review["prediction"] = original["prediction"]
+    review["semantic_assessment"] = "abstained"
+    review["explicit_abstention_span"] = "I don't know."
+    path = tmp_path / "audit.json"
+    write_json(path, audit)
+    assert validate_ai_audits([path], trace)["explicit_prose_abstentions"] == 1
+    review["explicit_abstention_span"] = "I do not know."
+    write_json(path, audit)
+    with pytest.raises(ValueError, match="span"):
+        validate_ai_audits([path], trace)

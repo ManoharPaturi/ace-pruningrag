@@ -1,0 +1,29 @@
+{
+  "status": "ai_assessments_structurally_validated",
+  "trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "response_count": 250,
+  "ai_reviewed_responses": 15,
+  "ai_reviewed_questions": 3,
+  "unreviewed_responses": 235,
+  "full_ai_response_audit_complete": false,
+  "ai_semantic_verdicts": {
+    "abstained": 7,
+    "uncertain": 4,
+    "incorrect": 4
+  },
+  "ai_grounding_verdicts": {
+    "not_applicable": 7,
+    "unsupported_full_claim": 4,
+    "wrong_entity_and_nonanswer": 4
+  },
+  "explicit_prose_abstentions": 4,
+  "independent_human_review": false,
+  "semantic_truth_verified_by_validator": false,
+  "limitations": [
+    "Binding identifies the assessed response; it does not prove the AI judgment correct.",
+    "AI assessments cannot replace independent human labels or resolve them silently."
+  ],
+  "batch_sha256": {
+    "cohort-ai-audit-batch1.json": "84a0c285b56e8a3637a2c9d7376f07c5f71c6a826b0e0ad316e59853728767c5"
+  }
+}
