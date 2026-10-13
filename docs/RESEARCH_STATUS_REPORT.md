@@ -131,12 +131,12 @@ None of 1,105 constrained literal comparisons has complete unambiguous alignment
 950 are unresolved and 155 have different explicit fields. All 50 question proposals
 have AI role rationales; 48 are partial/misbound, one is a coherent minimal count core,
 and one has underspecified query scope. These post-hoc categories are qualitative,
-not calibrated accuracy. All 185 valid source proposals
+not calibrated accuracy. All 135 valid source proposals
 still require role review. The partial source review covers
-150 records / 136
+200 records / 181
 distinct text/proposal pairs. Its coherent-claim judgments cover
-7 records but only
-5 distinct pairs; repeated copies are not
+10 records but only
+8 distinct pairs; repeated copies are not
 independent confirmation. Mixed facts, missing subjects, metadata and field-role
 errors remain visible. These qualitative AI categories do not establish calibrated
 accuracy or external truth. Structural success is not general support or complete

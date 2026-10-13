@@ -235,3 +235,13 @@ sources pending. The latest source sample demonstrates film-installment date
 confusion, row/count/percentage mixing and loss of event attribution; seven coherent
 records represent five distinct pairs, not independent confirmations. Keep these
 qualitative AI findings distinct from calibrated accuracy and human review.
+
+
+### Source-role audit progressed to 200/335
+
+All 251 current review records bind to exact inputs/proposals and validated execution.
+There are 135 source proposals remaining. Coherent reported forecasts/quotes retain
+explicit qualifications and do not establish current, opening-price or externally
+verified values. The current report is regenerated from the new progress artifact;
+source category totals and distinct-pair counts reconstruct. The general support,
+independent review and remaining five-phase gates remain open.

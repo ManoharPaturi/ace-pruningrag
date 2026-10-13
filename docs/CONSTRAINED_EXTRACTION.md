@@ -174,3 +174,16 @@ claims and metadata such as playlist update frequency; none is automatically an
 answer to its associated question or external factual confirmation. There are
 185 source proposals remaining. Source-category counts and pair deduplication are
 recomputed from every bound private batch. Earlier 100-record counts are historical.
+
+
+### Source-role audit at 200/335
+
+The fifth private batch brings source coverage to 200 records / 181 distinct
+text-proposal pairs. Ten coherent-claim records represent eight distinct pairs.
+They include a reported forecast, a dated quote, one title win and update-frequency
+metadata; these categories must not become verified current answers. There are
+135 valid source proposals pending, plus 50 completed query reviews and the one
+assessed cap failure (251 bound records total). Latest failures include actor/character
+inversion, a lost negative career statement, denominator-as-goals confusion,
+construction/location/cost mixing and puppet-versus-film-versus-photography durations.
+All interpretation remains qualitative AI-assisted excerpt review.
