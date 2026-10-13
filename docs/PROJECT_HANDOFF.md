@@ -4,7 +4,7 @@
 **Repository:** https://github.com/ManoharPaturi/ace-pruningrag
 **Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
-**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `5cada89` before this update; all three required CI jobs passed. Recheck CI for each new head.
+**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `4732cb3` before this update; all three required CI jobs passed. Recheck CI for each new head.
 **Local continuation state:** all 444 admitted responses and all 386 constrained extraction tasks have bound AI assessments. A live browser→API→GPU→evidence flow has been executed and verified on one development question. The separately versioned Unicode GPU correction completed and reconstructs; its one changed proposal has a fresh bound review. Independent review and the full scientific gates remain open. See the [current completion audit](VERSION1_COMPLETION_AUDIT.md) and [research report](RESEARCH_STATUS_REPORT.md).
 
 ## Owner-led continuation — current checkpoint
@@ -20,7 +20,7 @@
 | Independent prospective evidence review | Pending | Import attested human requirements and support sets through the existing review workflow |
 | Query-only logical extraction | All fifty outputs reconstruct and have bound AI role reviews; all fifty fail validation | Retain the failed control; test extractor capacity/role-aware decoding separately before source-support promotion |
 | Demo | 444 admitted replays, fresh BM25 retrieval and a verified live one-question GPU flow with restart recovery | Generalize claim-level support and adaptive source integration; one inspected case is not general accuracy |
-| Required CI | All three passed at `5cada89` before this update | Require all three again on each new head |
+| Required CI | All three passed at `4732cb3` before this update | Require all three again on each new head |
 | Constrained extraction review | All 386 tasks assessed; 335 valid source proposals / 300 distinct pairs, with no source proposals pending | Preserve exact outputs and qualitative AI scope; full requirements and external truth remain unverified |
 | Unicode decoder correction | All386 GPU sequences reconstruct; one full-name change reviewed, with semantic row mixing unchanged | Preserve controls and costs; do not claim general semantic improvement |
 | Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel complete and reconstructed; 21 valid inventories reviewed | Collect/reconstruct the same job, audit real roles/completeness and then compose support |
@@ -569,3 +569,14 @@ source fidelity and pinned-tokenizer budgets checked on three inspected question
 Two union-ranked pools exclude all API fields, so their API-only contexts are empty.
 All 224 local tests pass. These results do not establish independent accuracy or
 cross-source benefit. Required data-smoke CI repeats the real candidate probe.
+
+
+### Controlled extractor model variant running
+
+The [3B diagnostic](REQUIREMENTS_MODEL_VARIANT.md) changes only the extractor model
+variant, with frozen v1 query prompts/grammar and explicitly matched decode defaults.
+All fifty input token sequences match the control. Private version 1 of
+`ionrey/ace-req3b-7f328043258c497fb9b1c758bbebf8c8` was observed RUNNING; no quality
+result is claimed. Collect and reconstruct that same job, compare actual runtime
+and assess all outputs against the same AI checklist. All 227 local tests pass;
+required CI includes generation dependencies to exercise the reconstruction test.

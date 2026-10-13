@@ -41,6 +41,9 @@ SOURCES = {
     "requirements_execution": "results/version1/requirements_verification.json",
     "requirements_reviews": "results/version1/requirements_review_progress.json",
     "movie_evidence": "results/phase1/movie_evidence_smoke.json",
+    "requirements_3b_preflight": "results/version1/requirements_3b_preflight.json",
+    "requirements_3b_match": "results/version1/requirements_3b_preflight_comparison.json",
+    "requirements_3b_submission": "results/version1/requirements_3b_submission.json",
 }
 
 
@@ -49,6 +52,30 @@ def render(root):
     requirements_run, requirements_reviews, movie_evidence = (
         data[k] for k in ("requirements_execution", "requirements_reviews", "movie_evidence")
     )
+    model_preflight, model_match, model_submission = (
+        data[k]
+        for k in (
+            "requirements_3b_preflight",
+            "requirements_3b_match",
+            "requirements_3b_submission",
+        )
+    )
+    if (
+        model_preflight["tasks"] != 50
+        or model_match["same_encoded_input_ids"] is not True
+        or model_match["control_preflight_sha256"]
+        != sha256_file(root / SOURCES["requirements_preflight"])
+        or model_match["variant_preflight_sha256"]
+        != sha256_file(root / SOURCES["requirements_3b_preflight"])
+        or model_submission["preflight_sha256"]
+        != sha256_file(root / SOURCES["requirements_3b_preflight"])
+        or model_submission["preflight_comparison_sha256"]
+        != sha256_file(root / SOURCES["requirements_3b_match"])
+        or model_submission["tasks_sha256"] != requirements_run["tasks_sha256"]
+        or model_submission["completed_execution_verified"] is not False
+        or model_submission["semantic_requirement_improvement_established"] is not False
+    ):
+        raise ValueError("pending model-variant task/preflight/submission scope differs")
     if (
         requirements_run["status"] != "requirements_spans_decode_and_costs_reconstructed"
         or requirements_run["tasks"] != 50
@@ -440,6 +467,16 @@ have exact-output-bound qualitative AI role/omission reviews, with mixed roles,
 misplaced cardinality, missing measurements and self-dependent operations. This is
 a retained negative result, not independently measured accuracy. The extraction
 gate fails; no source-support or answer-acceptance promotion follows.
+
+A separately pinned [3B extractor model variant](REQUIREMENTS_MODEL_VARIANT.md)
+has now been submitted with the same fifty tasks, prompts, grammar, FP32, seed,
+batch size and explicit control decoding defaults. Preflight verifies identical
+input token IDs for all fifty requests. The 3B checkpoint's default repetition
+penalty differs; it is explicitly restored to the control value of 1.1. Private
+kernel `{model_submission["kernel_id"]}`, version 1, was observed RUNNING.
+This is not completed execution or evidence of improved extraction. Compare actual
+runtime, reconstruct costs and assess every role/omission before interpreting results.
+The answer-generator control is unchanged, and automatic acceptance remains off.
 
 The original [movie/person/year snapshot](MOVIE_SNAPSHOT.md) is now restored separately:
 three checksum-verified files totaling {data["movie_assets"]["bytes"]:,} bytes. A disk-backed

@@ -35,10 +35,13 @@
     "results/version1/requirements_submission.json": "e490f52d86c26d0efeea0ff5acb6a9ecadebd48e0bde61cad9a280ddde3c25ab",
     "results/version1/requirements_verification.json": "49c931e599fb4037bb4221a6b10994022976239b8b2fcad79512c6c6da848d1d",
     "results/version1/requirements_review_progress.json": "5c89239f829c893527452a69da3e397bbd177cef7c1fbd37bc56500b57e6567d",
-    "results/phase1/movie_evidence_smoke.json": "3689099fd229de3cab9cb601435c6fe246b3a9962714e55df9d3c5e0005e4ae4"
+    "results/phase1/movie_evidence_smoke.json": "3689099fd229de3cab9cb601435c6fe246b3a9962714e55df9d3c5e0005e4ae4",
+    "results/version1/requirements_3b_preflight.json": "249386bf0f538c0872936a4620bbb895f31e24321fb9a3c669cd33dd3c835a8f",
+    "results/version1/requirements_3b_preflight_comparison.json": "9ec2e0787cf11045806d23739faa3bc7ef373689ab176edcba9e4663a37084d6",
+    "results/version1/requirements_3b_submission.json": "b5f3505d21db3cc702bfaedee59dd669266ab995cdb5b6494e6cfbd5fec20fca"
   },
-  "renderer_sha256": "8b5453a312ac50ad8b9dad14aa22d0fb1382a36b7e01c3f654375bd371244695",
-  "report_sha256": "2d6df4fc3ba9f1c7922d534d477419a5815b0e5c17f133bca8f2c16cc63220c2",
+  "renderer_sha256": "2d27ecb2ae6890d61df10f130f2a633697dc88cbe5b702602ef5c030eb4f4138",
+  "report_sha256": "6f6efb3db354a486889d21cafabbd6e14f42bc032b090eac2153d03ec7d238a6",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

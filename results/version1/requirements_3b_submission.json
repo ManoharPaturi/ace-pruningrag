@@ -1,0 +1,33 @@
+{
+  "protocol_id": "query_requirements_model_3b_v1",
+  "span_policy_sha256": "6d01a430d522e227fec2476d3dd6c53f33208a3783fbb85935d5187734a3be0b",
+  "tasks": 50,
+  "query_tasks": 50,
+  "source_tasks": 0,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "tasks_sha256": "c2541e01762cf3c735b88329a3282cfccbb2c201ba50bd481597295f32569165",
+  "kernel_id": "ionrey/ace-req3b-7f328043258c497fb9b1c758bbebf8c8",
+  "max_generate_invocations": 13,
+  "max_total_reserved_tokens": 204800,
+  "new_answer_generation_calls": 0,
+  "submitted_version": 1,
+  "provider_status_last_observed": "RUNNING",
+  "observation_time_UTC": "2026-10-13T19:12:55+00:00",
+  "bundle_manifest_sha256": "b4a73cdaef3a17a43ed6fe71ed1bdff493f726bce689991687ea9c4dcbfb932d",
+  "kernel_metadata_sha256": "76733fa5f7fbff0c9783e0ecd175bc047c58493b1a8a79c6c4b28ae0900bd6c5",
+  "preflight_sha256": "249386bf0f538c0872936a4620bbb895f31e24321fb9a3c669cd33dd3c835a8f",
+  "preflight_comparison_sha256": "9ec2e0787cf11045806d23739faa3bc7ef373689ab176edcba9e4663a37084d6",
+  "extractor_repository": "Qwen/Qwen2.5-3B-Instruct",
+  "extractor_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "completed_execution_verified": false,
+  "answer_acceptance_enabled": false,
+  "semantic_requirement_improvement_established": false,
+  "metadata_rejections_before_creation": [
+    {
+      "requested_slug": "ace-requirements3b-7f328043258c497fb9b1c758bbebf8c8",
+      "provider_http_status": 400,
+      "matching_job_found_in_authenticated_inventory": false,
+      "reason_observed": "First title/slug mismatch; second matching 51-character name rejected without detailed reason"
+    }
+  ]
+}

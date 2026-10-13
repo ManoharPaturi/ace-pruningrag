@@ -202,6 +202,16 @@ misplaced cardinality, missing measurements and self-dependent operations. This 
 a retained negative result, not independently measured accuracy. The extraction
 gate fails; no source-support or answer-acceptance promotion follows.
 
+A separately pinned [3B extractor model variant](REQUIREMENTS_MODEL_VARIANT.md)
+has now been submitted with the same fifty tasks, prompts, grammar, FP32, seed,
+batch size and explicit control decoding defaults. Preflight verifies identical
+input token IDs for all fifty requests. The 3B checkpoint's default repetition
+penalty differs; it is explicitly restored to the control value of 1.1. Private
+kernel `ionrey/ace-req3b-7f328043258c497fb9b1c758bbebf8c8`, version 1, was observed RUNNING.
+This is not completed execution or evidence of improved extraction. Compare actual
+runtime, reconstruct costs and assess every role/omission before interpreting results.
+The answer-generator control is unchanged, and automatic acceptance remains off.
+
 The original [movie/person/year snapshot](MOVIE_SNAPSHOT.md) is now restored separately:
 three checksum-verified files totaling 235,448,639 bytes. A disk-backed
 index covers 64,283 movie,
