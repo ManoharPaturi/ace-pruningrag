@@ -5,6 +5,50 @@ from collections import Counter
 
 from .artifacts import read_json, sha256_file
 
+REVIEW_REUSE_FIELDS = (
+    "interaction_id",
+    "policy",
+    "query",
+    "query_time",
+    "prediction",
+    "prompt_sha256",
+    "selected",
+    "input_tokens",
+    "output_tokens",
+    "output_ids",
+)
+
+
+def verify_assessment_reuse(source_trace, source_audits, target_trace):
+    """Permit review reuse only for identical full review inputs, after validating the source."""
+    source_validation = validate_ai_audits(source_audits, source_trace)
+    if not source_validation["full_ai_response_audit_complete"]:
+        raise ValueError("source response audit must be complete before reuse")
+    original = {
+        (r["interaction_id"], r["policy"]): r
+        for r in map(json.loads, source_trace.read_text().splitlines())
+    }
+    targets = list(map(json.loads, target_trace.read_text().splitlines()))
+    keys = {(r["interaction_id"], r["policy"]) for r in targets}
+    if len(keys) != len(targets):
+        raise ValueError("duplicate reuse target identity")
+    for row in targets:
+        key = (row["interaction_id"], row["policy"])
+        if key not in original or any(
+            field not in row or field not in original[key] or row[field] != original[key][field]
+            for field in REVIEW_REUSE_FIELDS
+        ):
+            raise ValueError("response reuse inputs differ")
+    return {
+        "status": "full_review_input_equivalence_verified",
+        "source_trace_sha256": sha256_file(source_trace),
+        "target_trace_sha256": sha256_file(target_trace),
+        "response_count": len(targets),
+        "comparison_fields": list(REVIEW_REUSE_FIELDS),
+        "independent_new_observations": 0,
+        "independent_human_review": False,
+    }
+
 
 def validate_ai_audits(paths, trace):
     rows = [json.loads(line) for line in trace.read_text().splitlines()]

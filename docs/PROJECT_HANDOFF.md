@@ -439,3 +439,8 @@ Confirmed live: main is `ba30586`; PR #15 is merged; PR #16 is draft/open at imp
 ### Current owner-led continuation checkpoint
 
 The owner has asked the assistant to continue implementation; a friend handoff is no longer required for progress. All 444 admitted accepted outputs are now AI-audited; the cohort is 250/250 across 50 questions with eleven batches. See [the completed cohort audit](COHORT_RESPONSE_AUDIT.md) and [next implementation priorities](VERSION2_PLAN.md). Earlier partial checkpoint counts below/above are historical; use the current compact progress file and completed report. There are 138 passing local tests. Independent human/scientific and live-generation requirements remain open.
+
+
+### Retained output inventory checkpoint
+
+All ten declared local prediction paths have bound AI assessments; see [retained audit](RETAINED_RESPONSE_AUDIT.md), `configs/retained_audits.json`, and `results/version1/retained_trace_audit.json`. Eight distinct file hashes contain 620 records; a second 26-record download brings stored-path accounting to 646. Only 444 records remain admitted. Transfer the three private excluded/superseded audit files named in the report to reproduce this check. Local tests now total 147. Live inference, general reliability and scientific gates remain open.

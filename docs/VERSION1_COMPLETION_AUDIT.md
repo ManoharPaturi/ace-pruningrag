@@ -112,3 +112,8 @@ All 444 admitted records now have source-bound AI assessments, including all 250
 ### Answer-form checks added
 
 [Query-only answer diagnostics](ANSWER_CHECKS.md) now run in the replay API/UI; all 444 original outputs remain unchanged. Twelve responses have observable form flags, including four identifiers returned as answers. Explicit rectangle arithmetic is unit-tested on fresh cases, but no admitted query meets its strict geometry contract. There are 141 passing local tests and the production web build passes. General entity/date/unit/claim verification, live inference and scientific validation remain open; these checks do not close those requirements.
+
+
+### Declared retained-output audit complete
+
+[Retained response audit](RETAINED_RESPONSE_AUDIT.md) now covers all ten declared local prediction-file paths: 646 stored records, 620 across eight unique file hashes. Failed float16 outputs are punctuation-only nonanswers; superseded regeneration assessments require full input equivalence before reuse. The accepted 444-record results are unchanged. There are 147 passing local tests. This closes the declared local AI audit, not remote-artifact completeness or independent scientific evaluation.

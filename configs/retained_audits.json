@@ -1,0 +1,130 @@
+{
+  "scope": "Retained local Kaggle prediction traces as of 13 October 2026",
+  "discovery_root": "runs/kaggle",
+  "traces": [
+    {
+      "name": "legacy",
+      "trace": "runs/kaggle/generated-output-v3/phase3-pilot/generated/predictions.jsonl",
+      "audits": [
+        "runs/version1/legacy-ai-audit-batch1.json",
+        "runs/version1/legacy-ai-audit-batch2.json",
+        "runs/version1/legacy-ai-audit-batch3.json",
+        "runs/version1/legacy-ai-audit-batch4.json",
+        "runs/version1/legacy-ai-audit-batch5.json",
+        "runs/version1/legacy-ai-audit-batch6.json",
+        "runs/version1/legacy-ai-audit-batch7.json",
+        "runs/version1/legacy-ai-audit-batch8.json",
+        "runs/version1/legacy-ai-audit-batch9.json"
+      ],
+      "acceptance": "admitted",
+      "trace_sha256": "6858c1e0a46cbe7acc4d7306ee0a29706aa2afa52cc89892bd5f54f9c6ef4827"
+    },
+    {
+      "name": "historical",
+      "trace": "runs/kaggle/historical-output-v1/phase3-pilot/generated/predictions.jsonl",
+      "audits": [
+        "runs/version1/historical-ai-audit-v1.json"
+      ],
+      "acceptance": "admitted",
+      "trace_sha256": "d9222b675cd4504d7502b8a1b70c5893e4455a086e6a54def2c58f7dd4389d60"
+    },
+    {
+      "name": "regeneration_initial",
+      "trace": "runs/kaggle/regeneration-output-v2/phase3-pilot/generated/predictions.jsonl",
+      "audits": [
+        "runs/version1/regeneration_initial-ai-audit-v1.json"
+      ],
+      "acceptance": "admitted",
+      "trace_sha256": "4bacd65c561ad26acb07a2a78de70e04191ef1f9669867e59bfa6caf08ee6bc6"
+    },
+    {
+      "name": "regeneration_retry",
+      "trace": "runs/kaggle/regeneration-output-v2/phase3-pilot/regenerated/predictions.jsonl",
+      "audits": [
+        "runs/version1/regeneration_retry-ai-audit-v1.json"
+      ],
+      "acceptance": "admitted",
+      "trace_sha256": "13835929b5148ab9a7f7747d5fc37f52ff6b8f5c6ac30144be0a649fbfc274af"
+    },
+    {
+      "name": "cohort",
+      "trace": "runs/kaggle/cohort-output-v1/cohort-pilot/generated/predictions.jsonl",
+      "audits": [
+        "runs/version1/cohort-ai-audit-batch1.json",
+        "runs/version1/cohort-ai-audit-batch2.json",
+        "runs/version1/cohort-ai-audit-batch3.json",
+        "runs/version1/cohort-ai-audit-batch4.json",
+        "runs/version1/cohort-ai-audit-batch5.json",
+        "runs/version1/cohort-ai-audit-batch6.json",
+        "runs/version1/cohort-ai-audit-batch7.json",
+        "runs/version1/cohort-ai-audit-batch8.json",
+        "runs/version1/cohort-ai-audit-batch9.json",
+        "runs/version1/cohort-ai-audit-batch10.json",
+        "runs/version1/cohort-ai-audit-batch11.json"
+      ],
+      "acceptance": "admitted",
+      "trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73"
+    },
+    {
+      "name": "excluded_float16",
+      "trace": "runs/kaggle/generated-output-v1/phase3-pilot/generated/predictions.jsonl",
+      "audits": [
+        "runs/version1/excluded_float16-ai-audit-v1.json"
+      ],
+      "acceptance": "excluded",
+      "trace_sha256": "49e5f2264eb91ef4674b412791e0d2295b950c4647f41b81887421a1107b82a1"
+    },
+    {
+      "name": "regeneration-output-v1_initial",
+      "trace": "runs/kaggle/regeneration-output-v1/phase3-pilot/generated/predictions.jsonl",
+      "audits": [
+        "runs/version1/superseded_regeneration_initial-ai-audit-v1.json"
+      ],
+      "acceptance": "superseded_excluded",
+      "trace_sha256": "0887e03b5212946908360f2954166a74b12f21e56222116fd0dc93b05408a68b",
+      "reuse_source_trace": "runs/kaggle/regeneration-output-v2/phase3-pilot/generated/predictions.jsonl",
+      "reuse_source_audits": [
+        "runs/version1/regeneration_initial-ai-audit-v1.json"
+      ]
+    },
+    {
+      "name": "regeneration-progress-v1_initial",
+      "trace": "runs/kaggle/regeneration-progress-v1/phase3-pilot/generated/predictions.jsonl",
+      "audits": [
+        "runs/version1/superseded_regeneration_initial-ai-audit-v1.json"
+      ],
+      "acceptance": "superseded_excluded",
+      "trace_sha256": "0887e03b5212946908360f2954166a74b12f21e56222116fd0dc93b05408a68b",
+      "reuse_source_trace": "runs/kaggle/regeneration-output-v2/phase3-pilot/generated/predictions.jsonl",
+      "reuse_source_audits": [
+        "runs/version1/regeneration_initial-ai-audit-v1.json"
+      ]
+    },
+    {
+      "name": "regeneration-output-v1_retry",
+      "trace": "runs/kaggle/regeneration-output-v1/phase3-pilot/regenerated/predictions.jsonl",
+      "audits": [
+        "runs/version1/superseded_regeneration_retry-ai-audit-v1.json"
+      ],
+      "acceptance": "superseded_excluded",
+      "trace_sha256": "9de4f6ed738bb6102681e2ab7af9203f948363e1092145f1b181a8f9ca4537f6",
+      "reuse_source_trace": "runs/kaggle/regeneration-output-v2/phase3-pilot/regenerated/predictions.jsonl",
+      "reuse_source_audits": [
+        "runs/version1/regeneration_retry-ai-audit-v1.json"
+      ]
+    },
+    {
+      "name": "regeneration-progress-v1_retry",
+      "trace": "runs/kaggle/regeneration-progress-v1/phase3-pilot/regenerated/predictions.jsonl",
+      "audits": [
+        "runs/version1/superseded_regeneration_retry-ai-audit-v1.json"
+      ],
+      "acceptance": "superseded_excluded",
+      "trace_sha256": "9de4f6ed738bb6102681e2ab7af9203f948363e1092145f1b181a8f9ca4537f6",
+      "reuse_source_trace": "runs/kaggle/regeneration-output-v2/phase3-pilot/regenerated/predictions.jsonl",
+      "reuse_source_audits": [
+        "runs/version1/regeneration_retry-ai-audit-v1.json"
+      ]
+    }
+  ]
+}
