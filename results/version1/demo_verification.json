@@ -8,5 +8,6 @@
   "tests_with_demo_extra": 136,
   "screenshot_sha256": "1a6ff98b5b2069cc047b797352647d781d2f9faa718b779f8a1abe25c60b4459",
   "actual_new_llm_calls": 0,
-  "new_cohort_browser_verification": "pending"
+  "new_cohort_browser_verification": "Passed: cohort / Real Sociedad / top_k; answer and source excerpts rendered; no console warnings/errors",
+  "cohort_preview_sha256": "7b407f678d87dce798236bbc6283a66368c924c2af761b134724d1b0379616b5"
 }
