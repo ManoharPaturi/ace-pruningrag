@@ -4,12 +4,12 @@
 **Repository:** https://github.com/ManoharPaturi/ace-pruningrag
 **Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
-**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, verified implementation head `214905b` (before this documentation update).
-**Local continuation state:** the five-selector GPU run and output verification are complete; cohort source review is 250/250 responses, and the replay/retrieval demo is implemented; see section 11. This file distinguishes these states so a fresh clone is not mistaken for the owner’s full workspace.
+**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, implementation head `4c0d0c6` before this tracker update; all three required checks passed on the earlier `f1f13ac` head. Recheck CI for each new head.
+**Local continuation state:** all 444 admitted responses and all 386 constrained extraction tasks have bound AI assessments. A live browser→API→GPU→evidence flow has been executed and verified on one development question. The separately versioned Unicode GPU correction is running; final outputs and costs remain unverified. Independent review and the full scientific gates remain open. See the [current completion audit](VERSION1_COMPLETION_AUDIT.md) and [research report](RESEARCH_STATUS_REPORT.md).
 
-## Friend’s quick start — current checkpoint
+## Owner-led continuation — current checkpoint
 
-**Start here:** PR #16 contains the latest implementation; merged main stops at PR #15. The owner alone merges main. Use your own fork and a feature branch as shown in section 11.
+**Start here:** the owner has asked the assistant to perform the continuation; work does not depend on a friend starting. PR #16 contains the latest implementation; main is verified at `ba30586` and stops at PR #15. The owner alone merges main. Contributor fork instructions remain available for optional future collaboration.
 
 | Item | Current state | Next action |
 | --- | --- | --- |
@@ -18,13 +18,15 @@
 | Five-selector GPU experiment | 250/250 outputs verified across 50 questions | Reuse completed version 1; no new GPU run needed for review |
 | Cohort AI source review | 250/250 responses, 50/50 questions | Read the completed audit; preserve AI/human separation and implement the prioritized fixes |
 | Independent prospective evidence review | Pending | Import attested human requirements and support sets through the existing review workflow |
-| Demo | 444 admitted replay records; fresh BM25 retrieval; HTTP/browser flow verified | Add and verify live generation and claim-level citations in a later feature PR |
-| Required CI | `test`, `data-smoke`, `finance-smoke` passed at `214905b` | Require them again on each new head |
+| Demo | 444 admitted replays, fresh BM25 retrieval and a verified live one-question GPU flow with restart recovery | Generalize claim-level support and adaptive source integration; one inspected case is not general accuracy |
+| Required CI | All three passed at `f1f13ac`; `test` and `finance-smoke` passed at `4c0d0c6`, with `data-smoke` still running at observation | Require all three again on each new head |
+| Constrained extraction review | All 386 tasks assessed; 335 valid source proposals / 300 distinct pairs, with no source proposals pending | Preserve exact outputs and qualitative AI scope; full requirements and external truth remain unverified |
+| Unicode decoder correction | Versioned code, protocol drift checks and 186 local tests pass; private GPU job is running | Poll the same kernel, collect fresh output, reconstruct IDs/spans/costs and review changed proposals |
 | Research conclusion | Cross-source benefit and faithful reproduction are unproved | Keep these gates open; complete controls, labels and ablations |
 
-**First work session:** set up the PR branch, run the checks, obtain the private run artifacts listed below, and reproduce the completed eleven-batch cohort summary. Then follow the implementation order in the next-version plan. Follow [the next-version plan](VERSION2_PLAN.md) after retaining the current version’s open gates. Do not tune on this inspected cohort and later call it unseen evaluation data.
+**Current work session:** continue in the owner workspace on the PR branch, retain the existing private artifacts, collect the same running Unicode kernel and reconstruct its results. Then follow [the next-version plan](VERSION2_PLAN.md) while retaining the current version’s open gates. Do not tune on this inspected cohort and later call it unseen evaluation data.
 
-**Artifact transfer required:** a Git clone contains code and compact results, not raw predictions or private review records. Ask the owner for the five trace directories in `configs/demo.json`, `runs/version1/cohort-ai-audit-batch1.json` through `cohort-ai-audit-batch11.json`, and original review exports. Preserve relative paths and verify hashes. Share no API tokens or account credentials.
+**For a future contributor, artifact transfer is required:** a Git clone contains code and compact results, not raw predictions or private review records. Ask the owner for the five trace directories in `configs/demo.json`, `runs/version1/cohort-ai-audit-batch1.json` through `cohort-ai-audit-batch11.json`, and original review exports. Preserve relative paths and verify hashes. Share no API tokens or account credentials.
 
 ## 1. Read this first
 
@@ -34,7 +36,7 @@ The repository has working research infrastructure and several completed develop
 
 The current adapted generator is Qwen2.5-1.5B-Instruct, rather than the original paper's model contract. The router uses keyword rules; selection support features are lexical proxies; reliability verification currently handles a narrow historical closing-price contract. No general cross-source benefit, held-out semantic accuracy improvement, or publication readiness has been established.
 
-**The accepted-output AI audit is complete. The next engineering work is query-only answer contracts, conservative acceptance checks and live inference in the existing demo, followed by the open research gates.** Independent human evidence review remains an open scientific gate. AI-assisted assessments and successful provenance checks do not satisfy that gate.
+**The accepted-output and constrained proposal-role AI audits are complete. Query-only form checks, conservative date contracts, the live GPU demo path and the versioned Unicode correction are implemented. The next execution gate is reconstruction of the running corrected-policy job; general atomic requirements, semantic role/support checks and adaptive multi-source integration remain unfinished.** Independent human evidence review remains an open scientific gate. AI-assisted assessments and successful provenance checks do not satisfy that gate.
 
 Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evaluation protocol](EVALUATION_PROTOCOL.md), and [prospective review protocol](PROSPECTIVE_EVALUATION.md). Older reports describe historical snapshots; use later reports for the work that supersedes them.
 
@@ -43,10 +45,10 @@ Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evalua
 | Phase | Intended outcome | Implemented and verified | Remaining completion gate | Status |
 | --- | --- | --- | --- | --- |
 | **1 — Feasibility and baseline** | Reproducible environment, real inputs, faithful baseline or explicit adaptations | Pinned upstream/dataset/assets; strict loader; BM25 and BGE retrieval pilots; original finance snapshot slice; guarded GPU generation | Original router/checkpoint, complete API backing data, generator/judge and paper configuration still unresolved | Engineering foundation complete; faithful reproduction blocked |
-| **2 — Evidence selection** | Joint selection beats appropriate baselines at the same budget | Unified evidence schema; top-K, MMR, coverage-only, joint pair selection and bounded exact search; 25-question/125-context smoke and provenance verification | Reviewed support sets, evidence-completeness evaluation, genuinely cross-source cases and generated-answer comparisons | Implemented; scientific gate open |
+| **2 — Evidence selection** | Joint selection beats appropriate baselines at the same budget | Unified evidence schema; top-K, MMR, coverage-only, joint pair selection and bounded exact search; 25-question/125-context smoke, 250 generated outputs across 50 shared questions, paired literal diagnostics and complete AI source audit | Independently reviewed support sets/outcomes, evidence-completeness evaluation and genuinely cross-source/source-only controls | Implemented; scientific gate open |
 | **3 — Adaptive routing** | Measured quality/cost trade-off against fixed and all-source retrieval | Three routing policies; shared budgets/date gates; 8,118 real-data plans; 150-answer development pilot with human review; six-question historical GPU comparison | Trained/calibrated router, source-necessity labels, broader reviewed evaluation and representative trade-offs | Development experiments complete; broader gate open |
-| **4 — Reliability and hard evaluation** | Conflict handling, bounded retrieval, claim verification and reviewed evaluation | Comparable structured-price conflict checks; one-extra-lookup sufficiency loop; strict price-field verifier; actual bounded regeneration; fresh 50-question evidence-review workflow | Prospective human annotations; general web/cross-source claim verification; reviewed semantic outcomes; entity/event overlap audit | Bounded price implementation complete; general research gate open |
-| **5 — Final validation and packaging** | Full ablations/statistics, defensible research report/paper, cited demo | Reproducible configs, manifests, review pages, 250-output verification, paired literal diagnostics and verified FastAPI/Next.js replay/retrieval explorer | Full semantic/coverage evaluation and ablations, final paper/report, live generation and claim-level citations | Final research/product phase not completed |
+| **4 — Reliability and hard evaluation** | Conflict handling, bounded retrieval, claim verification and reviewed evaluation | Comparable structured-price conflict checks; one-extra-lookup sufficiency loop; strict price-field verifier; actual bounded regeneration; fresh 50-question evidence-review workflow; query-only contracts; NLI diagnostics; unconstrained/constrained extraction and completed proposal-role review | Prospective independent annotations; general web/cross-source claim verification; calibrated semantic outcomes; fresh entity/event overlap audit | Bounded price implementation complete; general research gate open |
+| **5 — Final validation and packaging** | Full ablations/statistics, defensible research report/paper, cited demo | Reproducible configs, manifests, review pages, 250-output verification, paired literal diagnostics and verified FastAPI/Next.js replay/retrieval explorer and one live GPU/browser flow; reproducible research-status draft | Full semantic/coverage evaluation and ablations, evidence-backed final paper, general claim-level support and adaptive multi-source product verification | Final research/product phase not completed |
 
 ### Tracking checklist
 
@@ -66,7 +68,11 @@ Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evalua
 - [x] Complete GPU generation and verify all 250 outputs (PR #16, pending merge).
 - [x] Complete cohort AI source review: 250/250 responses across 50/50 questions reviewed; zero responses remain.
 - [x] Build and verify the FastAPI/Next.js replay/retrieval explorer across 444 admitted records (PR #16).
-- [ ] Complete live inference and claim-level citation verification for the demo.
+- [x] Execute and reconstruct a live browser→API→GPU→evidence flow with same-job restart recovery on one development question.
+- [ ] Complete general claim-level support verification and adaptive multi-source live integration.
+- [x] Complete qualitative AI role review of all 386 constrained extraction tasks.
+- [x] Implement a separately versioned Unicode decoder correction and submit its bounded GPU control.
+- [ ] Collect/reconstruct the corrected-policy GPU outputs and review changed proposals.
 - [x] Finish the separate AI-assisted legacy audit: complete for all 50 questions / 150 responses; historical/regeneration audits also complete; cohort source review is now complete.
 - [ ] Establish genuine cross-source necessity and compare source-only controls.
 - [ ] Extend reliability beyond the narrow historical-price contract.
@@ -90,7 +96,7 @@ Start with this file, then the [approved roadmap](../ROADMAP_REVIEW.md), [evalua
 | Review imports | [generated_reviews.py](../src/ace_pruningrag/generated_reviews.py), [reviews.py](../src/ace_pruningrag/reviews.py), [prospective.py](../src/ace_pruningrag/prospective.py) | Hash/provenance binding, attestation checks, duplicate rejection, immutable original exports and explicit unresolved counts |
 | Execution and verification | [scripts](../scripts), [CI](../.github/workflows/ci.yml) | Private allowlisted Kaggle bundles; isolated inference dependencies; independent trace verifiers; three required CI jobs |
 
-A local FastAPI/Next.js replay and fresh-retrieval explorer is implemented in PR #16; see [demo setup](DEMO.md). Live model inference and deployment remain unfinished. No general web claim extractor, trained router or full knowledge graph API is implemented yet.
+A local FastAPI/Next.js replay and fresh-retrieval explorer is implemented in PR #16; see [demo setup](DEMO.md). Bounded live GPU inference is implemented and executed; see [live flow evidence](LIVE_DEMO_FLOW.md). General claim-level support, adaptive multi-source inference and deployment remain unfinished. Structured claim extraction diagnostics exist, with role failures audited; they do not establish a general semantic verifier. No trained/calibrated router or full knowledge graph API is implemented.
 
 ## 4. Verified experiments and what they mean
 
@@ -148,7 +154,7 @@ See [reliability replay](PHASE4_RELIABILITY.md), [bounded regeneration](PHASE4_B
 - Duplicate question text and shared canonical source pages are excluded against prior cases and within the new set.
 - Packet SHA-256: `324b5c35dc08ac43ce9c841f1a6a35086007badc8436b1d139f2fb01d3a80b33`.
 - All source pages/candidate spans were reconstructed and verified. Altered source text and exclusion records were rejected.
-- The frozen evidence packet itself made **zero model calls**. PR #16 now adds a separate 250-request generation experiment; its GPU job completed; all 250 outputs are verified, and AI source review is in progress. Independent human annotations remain pending.
+- The frozen evidence packet itself made **zero model calls**. PR #16 now adds a separate 250-request generation experiment; its GPU job completed; all 250 outputs are verified, and the AI source review is complete. Independent human annotations remain pending.
 
 This is prospective relative to documented pilots, not an independently sealed or fully entity/event-disjoint benchmark. It is web-only and cannot prove cross-source necessity. See [protocol](PROSPECTIVE_EVALUATION.md) and [frozen manifest](../results/evaluation/prospective_v1/manifest.json).
 
@@ -198,13 +204,13 @@ For a friend without write access, fork first using their own GitHub account:
 ```bash
 gh repo fork ManoharPaturi/ace-pruningrag --clone
 cd ace-pruningrag
-uv sync --locked --no-editable --extra demo --python 3.12
+uv sync --locked --no-editable --extra demo --extra constraints --python 3.12
 uv run --locked --no-editable ruff check src tests scripts
 uv run --locked --no-editable ruff format --check src tests scripts
-uv run --locked --no-editable --extra demo pytest -q
+uv run --locked --no-editable --extra demo --extra constraints pytest -q
 ```
 
-The current owner workspace has **138 passing tests with the demo extra** (recorded implementation checkpoint). This includes the PR abstention-consistency test; it is not the merged-main test count. All three required CI jobs passed on PR #16 verified implementation head `214905b` (before this documentation update); CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
+The current owner workspace has **186 passing tests with the demo and constraints extras**. This is the PR branch, not the merged-main test count. All three required CI jobs passed at `f1f13ac`; `test` and `finance-smoke` passed at `4c0d0c6`, while `data-smoke` was still running at observation. CI must pass again on each new PR head. CI additionally runs real dataset/finance/tokenizer checks; passing unit tests alone is insufficient.
 
 Download data and run a small retrieval check, using a new output directory:
 
@@ -338,8 +344,8 @@ After forking/cloning as in section 6, fetch the owner’s PR branch into your o
 git remote add upstream https://github.com/ManoharPaturi/ace-pruningrag.git
 git fetch upstream
 git switch -c codex/continue-version1 upstream/feat/prospective-selector-evaluation
-uv sync --locked --no-editable --extra demo --python 3.12
-uv run --locked --no-editable --extra demo pytest -q
+uv sync --locked --no-editable --extra demo --extra constraints --python 3.12
+uv run --locked --no-editable --extra demo --extra constraints pytest -q
 uv run --locked --no-editable ruff check src tests scripts
 uv run --locked --no-editable ruff format --check src tests scripts
 ```
@@ -438,9 +444,30 @@ Confirmed live: main is `ba30586`; PR #15 is merged; PR #16 is draft/open at imp
 
 ### Current owner-led continuation checkpoint
 
-The owner has asked the assistant to continue implementation; a friend handoff is no longer required for progress. All 444 admitted accepted outputs are now AI-audited; the cohort is 250/250 across 50 questions with eleven batches. See [the completed cohort audit](COHORT_RESPONSE_AUDIT.md) and [next implementation priorities](VERSION2_PLAN.md). Earlier partial checkpoint counts below/above are historical; use the current compact progress file and completed report. There are 138 passing local tests. Independent human/scientific and live-generation requirements remain open.
+The owner has asked the assistant to continue implementation; a friend handoff is no longer required for progress. All 444 admitted accepted outputs are now AI-audited; the cohort is 250/250 across 50 questions with eleven batches. See [the completed cohort audit](COHORT_RESPONSE_AUDIT.md) and [next implementation priorities](VERSION2_PLAN.md). Earlier partial checkpoint counts below/above are historical; use the current compact progress file and completed report. That checkpoint had 138 local tests and preceded the executed live flow. It is historical; current checks and completion gates are in the top table.
 
 
 ### Retained output inventory checkpoint
 
 All ten declared local prediction paths have bound AI assessments; see [retained audit](RETAINED_RESPONSE_AUDIT.md), `configs/retained_audits.json`, and `results/version1/retained_trace_audit.json`. Eight distinct file hashes contain 620 records; a second 26-record download brings stored-path accounting to 646. Only 444 records remain admitted. Transfer the three private excluded/superseded audit files named in the report to reproduce this check. Local tests now total 147. Live inference, general reliability and scientific gates remain open.
+
+
+### Current continuation: complete audit and corrected-policy execution
+
+The current phase table supersedes historical snapshots below/above. The assistant
+is doing the continuation, with owner-only merging through PR #16. Main was checked
+against GitHub at `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`.
+
+All 444 admitted responses have source-bound AI assessments. All 386 constrained
+extraction tasks are assessed, including 335 valid sources (300 distinct pairs),
+50 queries and one cap failure. Fifteen coherent excerpt-claim records represent
+13 distinct pairs; no automatic acceptance, independent truth or calibrated accuracy
+is established. The versioned decoder job is still running, not verified complete.
+See [the explicit worker identity and collection commands](UNICODE_SPAN_POLICY.md).
+
+The next actions are to collect/reconstruct that same kernel, review changed outputs,
+then implement multi-claim requirements with directed roles, separate event/observation
+times, units, polarity and attribution. Full cross-source controls, legitimate router
+labels, fresh entity/event-audited evaluation, independent annotations, full ablations
+and final evidence-backed paper remain required. A friend handoff, CI success or a
+completed bounded diagnostic does not substitute for these deliverables.
