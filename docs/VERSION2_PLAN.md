@@ -351,7 +351,7 @@ Preserve partial successes such as the copied 17-by-66 product; extra unused dat
 must remain observable. Keep extracted requirements out of answer acceptance until
 complete source support is separately verified.
 
-Finish the remaining 215 plural-inventory source assessments and source-only
+Finish the remaining 145 plural-inventory source assessments and source-only
 control work in parallel with engineering preparation. The seen fifty-question
 cohort is development data. Fresh entity/event-audited cases, independent support
 labels, calibrated routing, complete baselines/ablations and original upstream

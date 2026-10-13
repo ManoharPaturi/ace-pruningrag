@@ -4,7 +4,7 @@
 **Repository:** https://github.com/ManoharPaturi/ace-pruningrag
 **Main tracking-ref snapshot:** `ba30586ce85c15503a0df2ce4bb78a079c49e3ed`
 **Merged work:** PRs #1–#15.
-**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, all three required CI jobs passed at `9acca7d`; further source-assessment commits require fresh checks. Recheck CI for each new head.
+**Pending implementation:** [draft PR #16](https://github.com/ManoharPaturi/ace-pruningrag/pull/16), branch `feat/prospective-selector-evaluation`, all three required CI jobs passed at `27b3f41`; further source-assessment commits require fresh checks. Recheck CI for each new head.
 **Local continuation state:** all 444 admitted responses and all 386 constrained extraction tasks have bound AI assessments. A live browser→API→GPU→evidence flow has been executed and verified on one development question. The separately versioned Unicode GPU correction completed and reconstructs; its one changed proposal has a fresh bound review. Independent review and the full scientific gates remain open. See the [current completion audit](VERSION1_COMPLETION_AUDIT.md) and [research report](RESEARCH_STATUS_REPORT.md).
 
 ## Owner-led continuation — current checkpoint
@@ -18,12 +18,13 @@
 | Five-selector GPU experiment | 250/250 outputs verified across 50 questions | Reuse completed version 1; no new GPU run needed for review |
 | Cohort AI source review | 250/250 responses, 50/50 questions | Read the completed audit; preserve AI/human separation and implement the prioritized fixes |
 | Independent prospective evidence review | Pending | Import attested human requirements and support sets through the existing review workflow |
-| Query-only logical extraction | All fifty outputs reconstruct and have bound AI role reviews; all fifty fail validation | Retain the failed control; test extractor capacity/role-aware decoding separately before source-support promotion |
+| Query-only v1 logical control | All fifty outputs reconstruct and have bound AI role reviews; all fifty fail validation | Retain the failed control and the separately executed 3B/v2 trials; no source-support promotion |
+| Typed graph v2 | All 50 outputs reconstructed and AI-reviewed against 151 query checks; 48 unresolved, two linked but semantically wrong | Preserve negative control; separate interpretation from graph compilation; acceptance disabled |
 | Demo | 444 admitted replays, fresh BM25 retrieval and a verified live one-question GPU flow with restart recovery | Generalize claim-level support and adaptive source integration; one inspected case is not general accuracy |
-| Required CI | All three passed at `9acca7d` before this additional source-assessment update | Require all three again on each new head |
+| Required CI | All three passed at `27b3f41` before this additional source-assessment update | Require all three again on each new head |
 | Constrained extraction review | All 386 tasks assessed; 335 valid source proposals / 300 distinct pairs, with no source proposals pending | Preserve exact outputs and qualitative AI scope; full requirements and external truth remain unverified |
 | Unicode decoder correction | All386 GPU sequences reconstruct; one full-name change reviewed, with semantic row mixing unchanged | Preserve controls and costs; do not claim general semantic improvement |
-| Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel complete and reconstructed; 21 valid inventories reviewed | Collect/reconstruct the same job, audit real roles/completeness and then compose support |
+| Plural claim inventory | Closed bounded decoder and independent verifier implemented; all 386 real prompts fit preflight; private version 1 kernel complete and reconstructed; all 50 queries and 191 sources assessed | Assess the remaining 145 source outputs, including one capped failure; keep semantic support unverified |
 | Research conclusion | Cross-source benefit and faithful reproduction are unproved | Keep these gates open; complete controls, labels and ablations |
 
 **Current work session:** continue in the owner workspace on the PR branch, retain the existing private artifacts and retain the completed negative inventory control and implement the schema/grammar fixes in the next-version plan. Then follow [the next-version plan](VERSION2_PLAN.md) while retaining the current version’s open gates. Do not tune on this inspected cohort and later call it unseen evaluation data.
@@ -591,8 +592,8 @@ The [contract diagnosis](REQUIREMENTS_MODEL_VARIANT.md) identifies nullable-oper
 misalignment, fixed global roles and empty-clause admission; correct these in a
 separate protocol before another capacity change. Do not rescore frozen outputs.
 
-[Inventory assessment](CLAIM_INVENTORY.md) now covers 171/386 tasks (all fifty queries
-and 121 sources), including 150 rejected inventories; 215 source tasks remain.
+[Inventory assessment](CLAIM_INVENTORY.md) now covers 241/386 tasks (all fifty queries
+and 191 sources), including 220 rejected inventories; 145 source tasks remain.
 All 229 local tests pass. Independent semantic labels, general source support and
 full roadmap completion remain open.
 

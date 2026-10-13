@@ -177,10 +177,10 @@ Preserve this failed control and measure each representation/model change separa
 ## Extended rejected-output assessment
 
 The [combined assessment progress](../results/version1/inventory_role_review_progress.json)
-now binds 171 of 386 tasks: all fifty query inventories and 121 source inventories,
-including 150 rejected outputs beyond the original 21 valid-output reviews. The
-171 records contain 161 distinct input/proposal pairs and 614 parsed frames. Ten source
-assessments are reused only for exact identical input/proposal pairs. 215 rejected source tasks, including the remaining capped failures, still need
+now binds 241 of 386 tasks: all fifty query inventories and 191 source inventories,
+including 220 rejected outputs beyond the original 21 valid-output reviews. The
+241 records contain 224 distinct input/proposal pairs and 926 parsed frames. Seventeen source
+assessments are reused only for exact identical input/proposal pairs. 145 rejected source tasks, including the remaining capped failures, still need
 assessment. No full all-output semantic review is claimed yet.
 
 Observed source problems include navigation labels as facts, photo dates attached
@@ -199,6 +199,8 @@ uv run --locked --no-editable --extra generation --extra constraints \
   --batch runs/version1/inventory-rejected-ai-review-04.json \
   --batch runs/version1/inventory-rejected-ai-review-05.json \
   --batch runs/version1/inventory-rejected-ai-review-06.json \
+  --batch runs/version1/inventory-rejected-ai-review-07.json \
+  --batch runs/version1/inventory-rejected-ai-review-08.json \
   --output runs/inventory-role-progress.json
 ```
 
@@ -212,7 +214,8 @@ one capped unparseable JSON output. Its visible repeated depth-claim prefix was
 qualitatively assessed; it contributes zero fully parsed frames. Nine complete
 outputs contribute 32 frames, including procedural examples, formula/navigation
 mixing and Titanic role/date/attribution errors. No partial prefix is admitted
-as a complete inventory. Three capped outputs still await assessment.
+as a complete inventory. Three capped outputs still awaited assessment at that checkpoint. The seventh
+batch subsequently assessed two of them; one capped output remains pending.
 
 The third and fourth batches add thirty source assessments (179 parsed frames).
 Exact input/proposal pairs 83/86 and 103/104 reuse identical judgments. Observations
@@ -232,4 +235,17 @@ The new findings include bibliography retrieval dates used as award dates,
 image indices used as film years, a date from one film attached to another,
 actor-versus-character confusion and generic fund education treated as specific
 financial events. Missing or paywalled values stay missing; N/A and Upgrade
-are not numeric measurements. No new neural calls were needed for this review.
+are not numeric measurements. No additional experimental extraction or answer-generation calls were made.
+
+The seventh and eighth batches add seventy source assessments (312 fully parsed
+frames), including seven exact input/proposal reuses and two additional capped
+JSON failures. The capped navigation-copy and repeated league-statistic prefixes
+are assessed qualitatively and contribute zero fully parsed frames. Their raw
+outputs and original extraction budgets remain unchanged.
+
+Observed failures include annual-global versus current-USA music charts, playoff
+elimination versus qualification, aggregate ETF concentration versus actual
+holdings, actor/character reversals, match/season statistic confusion, forecast
+horizon versus observation time and medal/title/player contamination. Useful
+numeric cores remain visible without establishing complete source support or
+external truth. No extra experimental model calls were made.

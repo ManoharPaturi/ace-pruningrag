@@ -204,10 +204,10 @@ lookup, with missing unit, answer or season links retained. Linking is not seman
 completeness. No semantic improvement or answer acceptance is established.
 The seen development cohort cannot supply fresh accuracy.
 
-The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 171 tasks:
-all fifty query inventories and 121 source inventories, including 150 rejected
-outputs. The 171 task records contain 161 distinct input/proposal pairs and 614
-parsed frames; 215 rejected source tasks remain unassessed. Source observations
+The [extended inventory assessment](CLAIM_INVENTORY.md) now covers 241 tasks:
+all fifty query inventories and 191 source inventories, including 220 rejected
+outputs. The 241 task records contain 224 distinct input/proposal pairs and 926
+parsed frames; 145 rejected source tasks remain unassessed. Source observations
 include navigation-as-facts, caption dates borrowed for unrelated events, missing
 row/actor associations and procedural examples promoted into assertions. Coherent
 partial facts are retained without establishing full coverage or external truth.
