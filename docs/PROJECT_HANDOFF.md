@@ -617,3 +617,9 @@ seconds stops instead of retrying early. Checksum, partial-file and permanent
 HTTP failures remain terminal. The local cached-asset preflight completed all
 150 requests at a maximum reserve of 2,028 tokens with zero model calls; it
 does not prove an uncached remote download. Require fresh CI on this change.
+
+The separate finance job at `954b4a8` also encountered HTTP 429 in
+`historical_preflight.py`. That preflight now uses the same bounded helper.
+Its cached-asset execution prepared 18 frozen requests and eight retry requests
+(1,657 maximum reserved tokens, ten local finance calls, zero model calls).
+Remote smoke checks still must pass at the final PR head.
