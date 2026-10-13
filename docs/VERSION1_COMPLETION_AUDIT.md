@@ -245,3 +245,18 @@ explicit qualifications and do not establish current, opening-price or externall
 verified values. The current report is regenerated from the new progress artifact;
 source category totals and distinct-pair counts reconstruct. The general support,
 independent review and remaining five-phase gates remain open.
+
+
+### Source-role audit progressed to 250/335
+
+The sixth bound batch adds 50 excerpt/proposal assessments. All 301 current review
+records reconstruct: 50 questions, 250 valid sources and one cap failure. There are
+85 valid source proposals remaining. Source counts are recomputed across every
+batch, with 225 distinct reviewed pairs and ten distinct coherent pairs. These are
+qualitative AI judgments; copied claims, reported forecasts and release rumors
+remain unsuitable as independent factual confirmation.
+
+The progress limitations now match the current pending count rather than retaining
+a stale 285-source message. The report and manifest are regenerated from this
+checkpoint. General support verification, corrected neural execution, independent
+review and the five-phase scientific gates remain open.

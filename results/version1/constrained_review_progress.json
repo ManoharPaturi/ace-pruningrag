@@ -3,9 +3,9 @@
   "total_tasks": 386,
   "structurally_valid_proposals": 385,
   "AI_reviewed_query_proposals": 50,
-  "AI_reviewed_source_proposals": 200,
+  "AI_reviewed_source_proposals": 250,
   "structural_failure_assessments": 1,
-  "unreviewed_source_proposals": 135,
+  "unreviewed_source_proposals": 85,
   "independent_human_review": false,
   "full_semantic_review_complete": false,
   "full_requirement_coverage_verified": false,
@@ -38,6 +38,11 @@
       "name": "constrained-ai-audit-batch5.json",
       "sha256": "8490c4a3b3ca86f76f4f988b47057ea8fd0121aa7051f64d678d65859b5df733",
       "records": 50
+    },
+    {
+      "name": "constrained-ai-audit-batch6.json",
+      "sha256": "4ce49faa47cf62f474ff615e8472bace781fd540b1c5713de473e3f4d8561529",
+      "records": 50
     }
   ],
   "query_review_counts": {
@@ -48,16 +53,16 @@
   "limitations": [
     "These post-hoc AI judgments are qualitative and not calibrated extraction accuracy.",
     "Schema/span validity is not complete requirement or factual verification.",
-    "285 span-valid source proposals still require role review."
+    "85 span-valid source proposals still require role review."
   ],
   "source_review_counts": {
-    "metadata_or_nonclaim": 24,
-    "mixed_facts": 82,
-    "missing_subject_or_antecedent": 8,
-    "role_or_scope_error": 33,
-    "coherent_claim_in_excerpt": 10,
-    "partial_binding_with_role_error": 43
+    "metadata_or_nonclaim": 27,
+    "mixed_facts": 93,
+    "missing_subject_or_antecedent": 15,
+    "role_or_scope_error": 40,
+    "coherent_claim_in_excerpt": 12,
+    "partial_binding_with_role_error": 63
   },
-  "distinct_reviewed_source_pairs": 181,
-  "distinct_coherent_source_pairs": 8
+  "distinct_reviewed_source_pairs": 225,
+  "distinct_coherent_source_pairs": 10
 }

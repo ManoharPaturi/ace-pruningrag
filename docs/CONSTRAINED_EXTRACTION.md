@@ -187,3 +187,19 @@ assessed cap failure (251 bound records total). Latest failures include actor/ch
 inversion, a lost negative career statement, denominator-as-goals confusion,
 construction/location/cost mixing and puppet-versus-film-versus-photography durations.
 All interpretation remains qualitative AI-assisted excerpt review.
+
+
+### Source-role audit at 250/335
+
+The sixth private batch brings source coverage to 250 records / 225 distinct
+text-proposal pairs. Twelve coherent-claim records represent ten distinct pairs;
+all remain qualified source reports, not accepted or externally verified answers.
+There are 85 valid sources pending. Together with 50 query reviews and the cap
+failure, 301 records bind to the frozen tasks and raw proposals.
+
+New observations include cross-row lake facts, a website statistics cutoff assigned
+to a navigation team, tour completion mixed with album development, incomplete
+currency amounts, and reported plans or rumors losing their attribution. Competition
+names, stages and publication outlets also appear as measurement units. Complete
+requirements, calibrated accuracy and independent human review remain unverified.
+Earlier checkpoints are historical; the progress artifact holds current counts.
