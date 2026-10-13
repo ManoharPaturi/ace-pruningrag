@@ -85,7 +85,11 @@ The cohort used 333,101 input / 2,858 output tokens,
 7.25 seconds; generation took
 468.24 seconds. These exclude queue, acquisition, setup and
 local reconstruction, and are not a production latency guarantee. Monetary cost is
-not established; compute/tokens and call counts are the recorded costs.
+not established; compute/tokens and call counts are the recorded costs. Assistant
+AI-review token costs are outside the experiment's engine ledger and are not measured.
+Zero pipeline judge calls does not mean those reviews had no model cost. These
+per-run figures are not a reconciled whole-project bill; retained copies/superseded
+outputs cannot be summed as new calls without provider execution identity.
 
 ## Reliability diagnostics and retained negative results
 
@@ -113,7 +117,24 @@ passes it; AI review finds role/scope problems in five of those six. The remaini
 historical water-level tuple does not establish a current answer or external truth.
 All 1,105 question/source comparisons remain unresolved. Schema/span validation
 exposes failures; it does not prove semantic roles. The separate constrained experiment
-is running or pending reconstruction and is not included as a successful outcome here.
+completed the same 386 tasks and passed complete reconstruction. Its completed
+proposals include 385 structurally
+valid objects and one retained capped invalid object, compared with six valid objects
+in the control. Task identities, prompts, input counts and generator configuration
+match; token filtering and its dependency overlay are changed factors. It used
+16,198 output tokens, with the same 124,383 unpadded inputs.
+Generation took 433.46 seconds and model loading
+6.82 seconds; constraint preparation and
+other setup are excluded, so these do not establish an end-to-end speed improvement.
+
+None of 1,105 constrained literal comparisons has complete unambiguous alignment:
+950 are unresolved and 155 have different explicit fields. All 50 question proposals
+have AI role rationales; 48 are partial/misbound, one is a coherent minimal count core,
+and one has underspecified query scope. These post-hoc categories are qualitative,
+not calibrated accuracy. All 335 valid source proposals
+still require role review. Structural success is not general support or complete
+claim coverage; automatic acceptance remains disabled. See
+[constrained reconstruction and review](CONSTRAINED_EXTRACTION.md).
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible

@@ -191,3 +191,14 @@ and refuses overwriting. Required CI reconstructs and compares the checked-in re
 This closes a report-draft packaging task, not the full baseline/ablation, independent
 evaluation or final-paper requirements. README entry points and test setup now match
 the current branch; earlier phase counts are explicitly historical.
+
+
+### Constrained extraction executed and reconstructed
+
+The same private kernel completed all 386 sequences. [Structural reconstruction and
+control comparison](CONSTRAINED_EXTRACTION.md) confirm the same tasks, prompts and
+model configuration. Valid proposals rise from six to 385; one capped invalid object
+remains. This is structural success only. All 50 question proposals have bound AI
+role rationales, while all 335 valid source proposals remain unreviewed. The 1,105
+literal comparisons contain no complete aligned pair. Keep general support and
+automatic acceptance unresolved. Earlier QUEUED/RUNNING entries are historical.

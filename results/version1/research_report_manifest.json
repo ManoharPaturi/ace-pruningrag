@@ -10,10 +10,14 @@
     "results/version1/extraction_verification.json": "6c1f308c47c4eaabb9937fea1c7bd4f1a4d86168756c342af19fe186b56fe5d3",
     "results/version1/extraction_audit.json": "1c6e8b6b64da702cfcbecd9264121232e1cb571b5662b922b15c5372680a5e2f",
     "results/version1/live_demo_verification.json": "fb3febe49094c2fe5d9fdb51b7ac555aea06141090c8b008440d24404ed7a7f1",
-    "results/phase4/regeneration/control_comparison.json": "792d90654d1fb3810e714dcf481634fcf26a46dedbebf3058c932d7652dce92d"
+    "results/phase4/regeneration/control_comparison.json": "792d90654d1fb3810e714dcf481634fcf26a46dedbebf3058c932d7652dce92d",
+    "results/version1/constrained_verification.json": "4192bfbaf3ee1f18c58419f16c2dcc16eab0383090f4597b4e16bcc06ff1913c",
+    "results/version1/constrained_alignment_replay.json": "87dc2ae68811c6e5022b3f2d0d94ce3213d7a6d4f9dd864ed6f751fcea140485",
+    "results/version1/constrained_review_progress.json": "2a908c3f0bed6ef27849939d316cbe1ac6358fa7feeb7421b2e153207c9b0c4f",
+    "results/version1/constrained_control_comparison.json": "874f6d96fb97ced58b342b471534cffafe6b8cd156c405e49dea2abd4606d36d"
   },
-  "renderer_sha256": "b1bf346b27dcf3a09334634e51ed8c7931ddf4ca34e1d684df3b9dafd38cc9e2",
-  "report_sha256": "2f1306a3fd0f96d45fca92ba08d730b52c89e009f7b678ba49082fe7a3f01140",
+  "renderer_sha256": "770e7dae0ef2cc578eedbb31260adbcf3aa56379d7e7790f48bcfade90c8657e",
+  "report_sha256": "b8b37e5a21b3fbbf5191cfcc07b79ea4b3c3315aa8f887bd48dceff612f2481f",
   "publication_ready": false,
   "five_phase_goal_complete": false
 }

@@ -37,10 +37,12 @@ runtime versions and all constraint dependency versions must be recorded and che
 ## Execution state and bounds
 
 Private kernel `ionrey/ace-constrained-2588acf828b5428082b6f66256a1632c`, version 1,
-was submitted successfully and observed **QUEUED**. [Submission record](../results/version1/constrained_submission.json)
-binds the original trace, blinded task payload, control trace and protocol. Completion,
-output reconstruction, role audit and control comparison are **pending**. Poll the
-same kernel; an observation failure is not grounds for resubmission.
+completed and passed full input/output/span/cost reconstruction. [Submission record](../results/version1/constrained_submission.json)
+binds the original trace, blinded task payload, control trace and protocol.
+[Reconstruction](../results/version1/constrained_verification.json) checks all 386 outputs.
+[Control comparison](../results/version1/constrained_control_comparison.json) confirms identical
+tasks, prompts, input token counts and generator configuration. Full semantic role
+review remains pending; completion of execution is not completion of verification.
 
 The run permits at most 386 extraction sequences, 97 model `generate` invocations,
 61,760 output tokens and 790,528 cumulative reserved request tokens. All extraction
@@ -82,3 +84,45 @@ competition stage to a unit.** Every proposal retains `semantic_tuple_verified=f
 Review field roles against complete excerpts and evaluate full requirement/support
 coverage before using these proposals. Fresh independent review, cross-source/source-only
 controls and the other open roadmap gates remain required.
+
+
+## Completed structural outcomes and partial role audit
+
+| Input kind | Control span-valid | Constrained span-valid | Constrained cap failure |
+| --- | ---: | ---: | ---: |
+| 50 questions | 0 | 50 | 0 |
+| 336 excerpts | 6 | 335 | 1 |
+
+All 386 sequences / 97 batch invocations were reconstructed. Inputs are 124,383
+unpadded / 148,610 padded tokens; outputs are 16,198 tokens; maximum request reserve
+is 890. Generation took 433.46 seconds and model load 6.82 seconds. These timings
+exclude constraint/trie preparation, tokenizer preprocessing, queue, acquisition and
+setup. Do not claim improved end-to-end latency from them. The one cap failure remains
+invalid JSON; it is not repaired or counted as valid. No baseline answer changed.
+
+[Literal alignment](../results/version1/constrained_alignment_replay.json) yields
+950 unresolved and 155 different-field comparisons across 1,105 selected pairs.
+No pair has complete unambiguous literal field alignment. Different strings can be
+aliases or paraphrases; these counts are not semantic support or accuracy. All results
+retain acceptance disabled.
+
+[Role-review progress](../results/version1/constrained_review_progress.json) binds
+50 question proposals with AI rationales plus the one deterministic cap-failure
+assessment. Post-hoc query review identifies 48 partial/misbound requirements, one
+coherent minimal count core and one underspecified query scope. These are qualitative
+AI diagnostic categories, not independently validated extraction accuracy. Typical
+failures include a second comparison entity omitted, movie-title words assigned to
+period, question marks assigned to unit and a negative eligibility placed in unit.
+**All 335 span-valid source proposals still require role review.** Structural success
+does not authorize general verification, factual support or answer acceptance.
+
+The current partial review bindings can be checked with:
+
+```sh
+uv run --locked --no-editable python scripts/verify_constrained_reviews.py
+```
+
+Full private review records are required. The verifier recomputes coverage and rejects
+changed inputs, proposals, identities, batch hashes, counts or human-review promotion.
+The report remains partial until every source proposal is assessed. Earlier queued
+status is historical; do not resubmit this completed kernel.

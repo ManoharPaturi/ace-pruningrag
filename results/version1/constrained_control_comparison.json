@@ -1,0 +1,45 @@
+{
+  "scope": "Same blinded tasks/messages/model config; structural outcomes, not semantic improvement",
+  "tasks": 386,
+  "all_task_bindings_equal": true,
+  "all_prompts_equal": true,
+  "all_input_token_counts_equal": true,
+  "generator_config_sha256": "223dd11154b5681cbba90aa98d0bcde3111f820a2049d950e97a9edaee6371a8",
+  "control_trace_sha256": "66b75e941c882a8b8a4e8a41fa3ed535cd61f77320dcf8885ff4eb9d00afd01c",
+  "constrained_trace_sha256": "eeb3304a11e59799a0df6bd5ab6e51b6e4c65a3b98cc659cc1585dec99855fc8",
+  "by_kind": {
+    "query": {
+      "tasks": 50,
+      "control_validation_counts": {
+        "invalid_schema": 6,
+        "invalid_proposal": 44
+      },
+      "constrained_validation_counts": {
+        "constrained_span_proposal": 50
+      }
+    },
+    "source": {
+      "tasks": 336,
+      "control_validation_counts": {
+        "invalid_json": 65,
+        "invalid_proposal": 264,
+        "span_bound_proposal": 6,
+        "invalid_schema": 1
+      },
+      "constrained_validation_counts": {
+        "constrained_span_proposal": 335,
+        "invalid_json": 1
+      }
+    }
+  },
+  "control_output_tokens": 17991,
+  "constrained_output_tokens": 16198,
+  "control_cap_failures": 3,
+  "constrained_cap_failures": 1,
+  "inference_changes": [
+    "Closed ordered JSON/span token filter",
+    "Pinned enforcement dependency overlay"
+  ],
+  "semantic_role_improvement_established": false,
+  "answer_acceptance_enabled": false
+}

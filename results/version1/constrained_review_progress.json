@@ -1,0 +1,33 @@
+{
+  "scope": "Bound source-free question-role AI review and structural cap failure; source-tuple review incomplete",
+  "total_tasks": 386,
+  "structurally_valid_proposals": 385,
+  "AI_reviewed_query_proposals": 50,
+  "AI_reviewed_source_proposals": 0,
+  "structural_failure_assessments": 1,
+  "unreviewed_source_proposals": 335,
+  "independent_human_review": false,
+  "full_semantic_review_complete": false,
+  "full_requirement_coverage_verified": false,
+  "answer_acceptance_enabled": false,
+  "extraction_trace_sha256": "eeb3304a11e59799a0df6bd5ab6e51b6e4c65a3b98cc659cc1585dec99855fc8",
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "verification_sha256": "4192bfbaf3ee1f18c58419f16c2dcc16eab0383090f4597b4e16bcc06ff1913c",
+  "audit_batches": [
+    {
+      "name": "constrained-ai-audit-batch1.json",
+      "sha256": "a03fa12eef620005e8805bfa28cde984302237eb10d51d1b3dabe285dbbf9cc5",
+      "records": 51
+    }
+  ],
+  "query_review_counts": {
+    "coherent_minimal_core": 1,
+    "underspecified_query_scope": 1,
+    "partial_or_misbound_requirements": 48
+  },
+  "limitations": [
+    "These post-hoc AI judgments are qualitative and not calibrated extraction accuracy.",
+    "Schema/span validity is not complete requirement or factual verification.",
+    "All 335 span-valid source proposals still require role review."
+  ]
+}

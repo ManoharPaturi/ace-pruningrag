@@ -16,6 +16,10 @@ SOURCES = {
     "extraction_audit": "results/version1/extraction_audit.json",
     "live": "results/version1/live_demo_verification.json",
     "retry_control": "results/phase4/regeneration/control_comparison.json",
+    "constrained": "results/version1/constrained_verification.json",
+    "constrained_alignment": "results/version1/constrained_alignment_replay.json",
+    "constrained_progress": "results/version1/constrained_review_progress.json",
+    "constrained_comparison": "results/version1/constrained_control_comparison.json",
 }
 
 
@@ -61,6 +65,23 @@ def render(root):
             raise ValueError("bootstrap scope differs from frozen report")
     if len(data["nli_comparison"]["incorrect_answer_entailment_examples"]) != 27:
         raise ValueError("NLI disagreement count differs")
+    constrained = data["constrained"]
+    progress = data["constrained_progress"]
+    comparison = data["constrained_comparison"]
+    if (
+        constrained["trace_sha256"] != progress["extraction_trace_sha256"]
+        or comparison["control_trace_sha256"] != extraction["trace_sha256"]
+        or comparison["constrained_trace_sha256"] != constrained["trace_sha256"]
+        or not all(
+            comparison[k] is True
+            for k in (
+                "all_task_bindings_equal",
+                "all_prompts_equal",
+                "all_input_token_counts_equal",
+            )
+        )
+    ):
+        raise ValueError("constrained control/report bindings differ")
     methods = ("top_k", "mmr", "coverage", "joint", "exact")
     table, ai_table = [], []
     for name in methods:
@@ -186,7 +207,11 @@ The cohort used {gpu["input_tokens"]:,} input / {gpu["output_tokens"]:,} output 
 {gpu["model_loading_seconds"]:.2f} seconds; generation took
 {gpu["generation_seconds"]:.2f} seconds. These exclude queue, acquisition, setup and
 local reconstruction, and are not a production latency guarantee. Monetary cost is
-not established; compute/tokens and call counts are the recorded costs.
+not established; compute/tokens and call counts are the recorded costs. Assistant
+AI-review token costs are outside the experiment's engine ledger and are not measured.
+Zero pipeline judge calls does not mean those reviews had no model cost. These
+per-run figures are not a reconciled whole-project bill; retained copies/superseded
+outputs cannot be summed as new calls without provider execution identity.
 
 ## Reliability diagnostics and retained negative results
 
@@ -214,7 +239,24 @@ passes it; AI review finds role/scope problems in five of those six. The remaini
 historical water-level tuple does not establish a current answer or external truth.
 All 1,105 question/source comparisons remain unresolved. Schema/span validation
 exposes failures; it does not prove semantic roles. The separate constrained experiment
-is running or pending reconstruction and is not included as a successful outcome here.
+completed the same 386 tasks and passed complete reconstruction. Its completed
+proposals include {constrained["validation_counts"]["constrained_span_proposal"]} structurally
+valid objects and one retained capped invalid object, compared with six valid objects
+in the control. Task identities, prompts, input counts and generator configuration
+match; token filtering and its dependency overlay are changed factors. It used
+{constrained["output_tokens"]:,} output tokens, with the same 124,383 unpadded inputs.
+Generation took {constrained["timing"]["generation_seconds"]:.2f} seconds and model loading
+{constrained["timing"]["model_loading_seconds"]:.2f} seconds; constraint preparation and
+other setup are excluded, so these do not establish an end-to-end speed improvement.
+
+None of 1,105 constrained literal comparisons has complete unambiguous alignment:
+950 are unresolved and 155 have different explicit fields. All 50 question proposals
+have AI role rationales; 48 are partial/misbound, one is a coherent minimal count core,
+and one has underspecified query scope. These post-hoc categories are qualitative,
+not calibrated accuracy. All {progress["unreviewed_source_proposals"]} valid source proposals
+still require role review. Structural success is not general support or complete
+claim coverage; automatic acceptance remains disabled. See
+[constrained reconstruction and review](CONSTRAINED_EXTRACTION.md).
 
 Query-only form checks retain source-identifier answers and incomplete/unparsed lists
 as warnings. The strict rectangle calculator requires explicit geometry and compatible
