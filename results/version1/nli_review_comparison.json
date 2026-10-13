@@ -260,5 +260,20 @@
       ]
     }
   ],
-  "answer_acceptance_enabled": false
+  "answer_acceptance_enabled": false,
+  "source_trace_sha256": "f4bdcdcdd6de097ec9ae46ceacf9cc1d1251285bdababac82467d42780003e73",
+  "nli_trace_sha256": "ca7bdb3ade4729142f90bdf5705108c2ab47fb48571cf96fd5f3883c1cc8cf30",
+  "ai_audit_batch_sha256": {
+    "cohort-ai-audit-batch1.json": "84a0c285b56e8a3637a2c9d7376f07c5f71c6a826b0e0ad316e59853728767c5",
+    "cohort-ai-audit-batch10.json": "6ee49c4c0560522e8ffc694b731a22d9413cb73466e91445ee44f223ef981caa",
+    "cohort-ai-audit-batch11.json": "dcbbe8d2abfe63de5860ad451c847f2ab48129d1ad0760662076761d469cb339",
+    "cohort-ai-audit-batch2.json": "79a7f2a2fb378884436c41db45aebad9d67e6e5899458dac1e281a6023aad9bf",
+    "cohort-ai-audit-batch3.json": "756892ce2d8c9deca13f0e7c1dd4027eef385fcc55ec69b5c33312d012dac080",
+    "cohort-ai-audit-batch4.json": "29404ada077282b3637e51d40c572f674add94c49c1a4784ae733d8ea996f828",
+    "cohort-ai-audit-batch5.json": "2eeafcd2d88eb9945b7f328c916ac8b41f37cc891ba7d5bb7bc739b1bbecce62",
+    "cohort-ai-audit-batch6.json": "571d751f964bf2c2159b32a91eb4e20118654b390f48e9382100e54755bd0db2",
+    "cohort-ai-audit-batch7.json": "e9af475e9d3c1f815d72c6569eac4e05999671592a0f1719919f871b3fa1f8d2",
+    "cohort-ai-audit-batch8.json": "66fc0859062f0afad52efae3b4205f14be41b7aa63a60543805deb8323d7ca7a",
+    "cohort-ai-audit-batch9.json": "1112521693e1b6dbe82e394bdf711973391d02378749d95ecb164c0971fb4e25"
+  }
 }
